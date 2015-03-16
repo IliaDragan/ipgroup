@@ -1,0 +1,75 @@
+<?php
+/**
+ * Implementation of hook_theme().
+ */
+function air_theme(&$vars) {
+  $items = array();
+
+  $items['node'] = array(
+    'arguments' => array('node' => NULL, 'teaser' => FALSE, 'page' => FALSE),
+    'template' => 'node',
+    'path' => drupal_get_path('theme', 'air') .'/templates/nodes',
+  );
+
+  return $items;
+}
+
+/**
+ * Override or insert variables into the html template.
+ */
+function air_preprocess_html(&$vars) {
+  global $theme_path;
+  global $language;
+
+  $page_title = drupal_get_title();
+
+  // Check if current page is frontpage
+  if ($vars['is_front'] || empty($page_title)) {
+    $vars['head_title'] = variable_get('site_name');
+  } else {
+    // Serve proper content title if is_front is false
+    $vars['head_title'] = implode(' | ', array($page_title, variable_get('site_name', '')));
+  }
+
+  // Clean up the lang attributes
+  $vars['html_attributes'] = 'version="HTML+RDFa 1.1" lang="' . $language->language . '" dir="' . $language->dir . '"';
+
+  // Add conditional CSS for IE8 and below.
+  drupal_add_css(path_to_theme() . '/styles/css/ie/ie.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'lt IE 9', '!IE' => FALSE), 'preprocess' => FALSE));
+  // Add conditional CSS for IE6.
+  drupal_add_css(path_to_theme() . '/styles/css/ie/ie7.css', array('group' => CSS_THEME, 'browsers' => array('IE' => 'IE 7', '!IE' => FALSE), 'preprocess' => FALSE));
+}
+
+
+/**
+ * Override of theme_pager().
+ */
+function air_pager($vars) {
+  $tags = $vars['tags'];
+  $element = $vars['element'];
+  $parameters = $vars['parameters'];
+  $quantity = $vars['quantity'];
+  $pager_list = theme('pager_list', $vars);
+
+  $links = array();
+  $links['pager-previous'] = theme('pager_previous', array(
+    'text' => (isset($tags[1]) ? $tags[1] : t('Prev')),
+    'element' => $element,
+    'interval' => 1,
+    'parameters' => $parameters
+  ));
+  $links['pager-next'] = theme('pager_next', array(
+    'text' => (isset($tags[3]) ? $tags[3] : t('Next')),
+    'element' => $element,
+    'interval' => 1,
+    'parameters' => $parameters
+  ));
+  $links = array_filter($links);
+  $pager_links = theme('links', array(
+    'links' => $links,
+    'attributes' => array('class' => 'links pager pager-links')
+  ));
+  if ($pager_list) {
+    return "<div class='pager clearfix'>$pager_list $pager_links</div>";
+  }
+}
