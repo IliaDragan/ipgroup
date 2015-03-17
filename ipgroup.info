@@ -29,3 +29,6 @@ dependencies[] = rdf
 ; Helper modules.
 dependencies[] = views
 dependencies[] = date
+
+; Features
+dependencies[] = localization
