@@ -2,6 +2,7 @@ name = IPGroup
 description = Install custom IPGroup with commonly used features pre-configured.
 version = 7.x-1.0
 core = 7.x
+; Core modules.
 dependencies[] = block
 dependencies[] = contextual
 dependencies[] = dashboard
@@ -20,3 +21,7 @@ dependencies[] = toolbar
 dependencies[] = field_ui
 dependencies[] = file
 dependencies[] = rdf
+
+; Helper modules.
+dependencies[] = views
+dependencies[] = date
