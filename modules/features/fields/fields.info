@@ -1,0 +1,17 @@
+name = Fields
+description = Fields and related Taxonomy
+core = 7.x
+package = IPGroup
+version = 7.x-1.0
+project = fields
+dependencies[] = date
+dependencies[] = features
+dependencies[] = image
+dependencies[] = taxonomy
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_base][] = field_category
+features[field_base][] = field_image
+features[field_base][] = field_time_of_publishing
+features[taxonomy][] = categories
