@@ -75,7 +75,18 @@
           <?php if ($site_slogan): ?>
           <small><?php print $site_slogan; ?></small>
           <?php endif; ?>
-          <?php print theme('links__system_secondary_menu', array('links' => $secondary_menu, 'attributes' => array('id' => 'secondary-menu', 'class' => array('secondary')))); ?>
+          <?php
+            // Todo: move it to preprocess function.
+            print theme('links__system_secondary_menu',
+              array(
+                'links' => $secondary_menu,
+                'attributes' => array(
+                  'id' => 'secondary-menu',
+                  'class' => array('secondary'),
+                ),
+              )
+            );
+          ?>
         </div>
       </div>
       <div class="top">
@@ -88,7 +99,18 @@
         <?php endif; ?>
         <div class="navhead">
          <nav>
-           <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('primary')), 'heading' => t('Main menu'))); ?>
+           <?php
+             print theme('links__system_main_menu',
+               array(
+                 'links' => $main_menu,
+                 'attributes' => array(
+                   'id' => 'main-menu',
+                   'class' => array('primary'),
+                 ),
+                 'heading' => t('Main menu'),
+               )
+             );
+           ?>
           </nav>
           <?php print render($page['header']); ?>
         </div>

@@ -177,9 +177,7 @@
     border-color: #eaeaea;
   }
   div.deck.deck-5 section.pane-pco-blocks img {
-    width: 48.3870968%;
-    /* 360 / 744 */
-  
+    width: 48.3870968%;  /* 360 / 744 */
   }
   section.pane-pco-blocks h1 {
     margin: 0 0 5px;
@@ -220,9 +218,7 @@
   /* @end */
   /* @group view-employees */
   div.view.view-employees div.views-row > div {
-    padding: 30px 2% 0 39.4366197%;
-    /* 140 / 355 */
-  
+    padding: 30px 2% 0 39.4366197%;  /* 140 / 355 */
   }
   /* @end */
   /* @group view-departments */
@@ -230,9 +226,7 @@
     float: left;
     margin: 0;
     padding: 0;
-    width: 47.6190476%;
-    /* 300 / 630 */
-  
+    width: 47.6190476%;  /* 300 / 630 */
   }
   div.view.view-departments .views-row.views-row-1 {
     padding: 0 2.3809524% 0 0;
@@ -328,14 +322,10 @@
   div.view.view-employees div.views-row {
     float: left;
     margin: 0 4.0540541% 20px 0;
-    width: 47.972973%;
-    /* 355 / 740 */
-  
+    width: 47.972973%;  /* 355 / 740 */
   }
   div.view.view-employees div.views-row > div {
-    padding: 30px 8.4507042% 0;
-    /* 30 / 355 */
-  
+    padding: 30px 8.4507042% 0;  /* 30 / 355 */
   }
   div.view.view-employees div.views-row .views-field-picture {
     display: none;
@@ -361,9 +351,7 @@
   header[role="banner"] div.tophead,
   header[role="banner"] div.navhead {
     margin: 0 auto;
-    width: 96.969697%;
-    /* 960 / 990 */
-  
+    width: 96.969697%;  /* 960 / 990 */
     max-width: 960px;
   }
   header[role="banner"] div.block-apachesolr-panels {
@@ -381,9 +369,7 @@
   div.top div.navhead > div {
     position: relative;
     margin: 0 auto;
-    width: 96.969697%;
-    /* 960 / 990 */
-  
+    width: 96.969697%;  /* 960 / 990 */
     max-width: 960px;
   }
   div[role="navigation"] nav {
@@ -414,10 +400,6 @@
   }
   div[role="navigation"] nav.active h2 {
     background: #ff7200 url(../../images/icons.png) no-repeat 100% -525.5px;
-  }
-  div[role="navigation"] nav ul {
-    /*border-top: 1px solid rgb(234,234,234);*/
-  
   }
   div[role="navigation"] nav ul li {
     display: block;
@@ -628,9 +610,7 @@
     margin: 0 0 10px;
     padding: 0;
     border-bottom: 1px solid #e0e0e0;
-    width: 100%;
-    /* 300 / 630 */
-  
+    width: 100%;  /* 300 / 630 */
   }
   div.view.view-departments .views-row p {
     padding: 0 0 15px;

@@ -9,7 +9,7 @@
  * - $css: An array of CSS files for the current page.
  * - $language: (object) The language the site is being displayed in.
  *   $language->language contains its textual representation.
- *   $language->dir contains the language direction. It will either be 'ltr' or 'rtl'.
+ *   $language->dir contains the language direction. It will be 'ltr' or 'rtl'.
  * - $rdf_namespaces: All the RDF namespace prefixes used in the HTML document.
  * - $grddl_profile: A GRDDL profile allowing agents to extract the RDF data.
  * - $head_title: A modified version of the page title, for use in the TITLE
@@ -36,7 +36,8 @@
  * - $classes String of classes that can be used to style contextually through
  *   CSS.
  *
- * Old content for google site verification: <meta name="google-site-verification"
+ * Old content for google site verification:
+ * <meta name="google-site-verification"
  * content="DpflHKhMblYDnm1_3foRIwC8pBat4T3SuEeUQnkbmRE" />.
  *
  * @see template_preprocess()
