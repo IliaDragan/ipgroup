@@ -1,0 +1,40 @@
+body {
+  font-family: "Lucida Grande", sans-serif;
+  font-size: 13px;
+}
+a {
+  color: #0074bd;
+  text-decoration: none;
+}
+blockquote {
+  margin: 0 0 20px;
+  padding: 16px 5.7692308% 15px;
+  font-size: .933333333em;
+  line-height: 1.5em;
+  font-style: italic;
+  background: #eaeaea;
+}
+blockquote a {
+  color: #ff7200;
+}
+blockquote.darkgray {
+  background: #2a2a2a;
+  color: #fff;
+}
+blockquote.darkgray strong {
+  color: #ff7200;
+  font-size: 14px;
+}
+blockquote.lightgray {
+  background: #eaeaea;
+}
+blockquote.lightgray a {
+  font-weight: bold;
+}
+blockquote.orange {
+  background: #ff7200;
+  color: #fff;
+}
+blockquote.orange a {
+  color: #000;
+}
