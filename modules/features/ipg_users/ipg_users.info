@@ -1,0 +1,11 @@
+name = IPG Users
+description = Site users custom fields, related taxonomy and views.
+core = 7.x
+package = IPGroup
+version = 7.x-1.0
+project = ipg_users
+dependencies[] = taxonomy
+features[features_api][] = api:2
+features[taxonomy][] = department
+features_exclude[dependencies][features] = features
+project path = profiles/ipgroup/modules/features
