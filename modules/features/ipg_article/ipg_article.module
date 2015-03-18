@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the IPG_article feature.
+ */
+
+include_once 'ipg_article.features.inc';
