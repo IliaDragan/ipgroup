@@ -18,8 +18,14 @@ projects[devel][subdir] = "contrib"
 projects[features][version] = "2.4"
 projects[features][subdir] = "contrib"
 
+projects[i18n][version] = "1.12"
+projects[i18n][subdir] = "contrib"
+
 projects[module_filter][version] = "2.0"
 projects[module_filter][subdir] = "contrib"
+
+projects[variable][version] = "2.5"
+projects[variable][subdir] = "contrib"
 
 projects[views][version] = "3.10"
 projects[views][subdir] = "contrib"

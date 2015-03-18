@@ -270,5 +270,10 @@ function ipgroup_install() {
   variable_set('node_admin_theme', '1');
 
   // Todo: change defaut theme
-  variable_set('theme_default', 'bartik');
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', 'air')
+    ->execute();
+  variable_set('theme_default', 'air');
 }

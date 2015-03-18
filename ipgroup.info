@@ -2,6 +2,10 @@ name = IPGroup
 description = Install custom IPGroup with commonly used features pre-configured.
 version = 7.x-1.0
 core = 7.x
+
+; Mark installation profile as exclusive (the installer will auto-select it).
+exclusive = true
+
 ; Core modules.
 dependencies[] = block
 dependencies[] = contextual
@@ -25,3 +29,7 @@ dependencies[] = rdf
 ; Helper modules.
 dependencies[] = views
 dependencies[] = date
+
+; Features
+dependencies[] = localization
+dependencies[] = ipg_users
