@@ -20,11 +20,6 @@ regions[content] = Content
 
 scripts[] = scripts/theme.js
 
-
-; Development
-scripts[] = scripts/hashgrid/hashgrid.js
-stylesheets[all][] = scripts/hashgrid/hashgrid.css
-
 ; Drupal system overrides
 stylesheets[all][] = styles/css/drupal.css
 
