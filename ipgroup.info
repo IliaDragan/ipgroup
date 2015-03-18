@@ -32,3 +32,4 @@ dependencies[] = date
 
 ; Features
 dependencies[] = localization
+dependencies[] = ipg_users
