@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the IPG Users feature.
  */
+
+include_once 'ipg_users.features.inc';
