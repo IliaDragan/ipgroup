@@ -3,6 +3,9 @@ api = 2
 
 ; Contribution modules
 
+projects[admin_menu][version] = "3.0-rc5"
+projects[admin_menu][subdir] = "contrib"
+
 projects[ctools][version] = "1.6"
 projects[ctools][subdir] = "contrib"
 
@@ -20,6 +23,9 @@ projects[field_group][subdir] = "contrib"
 
 projects[i18n][version] = "1.12"
 projects[i18n][subdir] = "contrib"
+
+projects[module_filter][version] = "2.0"
+projects[module_filter][subdir] = "contrib"
 
 projects[pathauto][version] = "1.2"
 projects[pathauto][subdir] = "contrib"
