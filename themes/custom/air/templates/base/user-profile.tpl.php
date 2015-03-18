@@ -36,19 +36,15 @@
     <?php print render($user_profile['user_picture']); ?>
     <div class="content">
       <h1><?php print render($user_profile['field_name']); ?></h1>
-      <?php print render($user_profile['field_job_title']); ?>
-      <?php print render($user_profile['field_work_number']); ?>
-      <?php print render($user_profile['field_mobile_number']); ?>
+      <?php print render($user_profile['field_position']); ?>
+      <?php print render($user_profile['field_phone']); ?>
       <div class="field field-label-inline clearfix">
         <div class="field-label"><?php print t('E-mail'); ?>:&nbsp;</div>
         <?php print l($variables['elements']['#account']->mail, 'mailto:' . $variables['elements']['#account']->mail, array('absolute' => TRUE)); ?>
       </div>
     </div>
   </header>
-  <div class="link-to-description">
-    <?php print $user_profile['need_dk_description'] ? t('Vi har dessverre ikke noen norsk versjon, klikk her for å se') . ' ' . l(t('den danske versjonen.'), '#', array('external' => TRUE)) : ''; ?>
-  </div>
   <div class="prose">
-    <?php print render($user_profile['field_employee_description']); ?>
+    <?php print render($user_profile['field_description']); ?>
   </div>
 </article>
