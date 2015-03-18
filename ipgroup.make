@@ -30,6 +30,9 @@ projects[variable][subdir] = "contrib"
 projects[views][version] = "3.10"
 projects[views][subdir] = "contrib"
 
+projects[panels][version] = "3.5"
+projects[panels][subdir] = "contrib"
+
 projects[wysiwyg][version] = "2.2"
 projects[wysiwyg][subdir] = "contrib"
 
