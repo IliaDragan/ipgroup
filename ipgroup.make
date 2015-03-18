@@ -15,8 +15,20 @@ projects[devel][subdir] = "contrib"
 projects[features][version] = "2.4"
 projects[features][subdir] = "contrib"
 
+projects[field_group][version] = "1.4"
+projects[field_group][subdir] = "contrib"
+
 projects[i18n][version] = "1.12"
 projects[i18n][subdir] = "contrib"
+
+projects[pathauto][version] = "1.2"
+projects[pathauto][subdir] = "contrib"
+
+projects[strongarm][version] = "2.0"
+projects[strongarm][subdir] = "contrib"
+
+projects[token][version] = "1.6"
+projects[token][subdir] = "contrib"
 
 projects[variable][version] = "2.5"
 projects[variable][subdir] = "contrib"
