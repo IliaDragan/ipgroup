@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the IPG_Vacancies feature.
+ */
+
+include_once 'ipg_vacancies.features.inc';

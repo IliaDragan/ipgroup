@@ -25,8 +25,8 @@ function ipgroup_form_install_configure_form_alter(&$form, $form_state) {
   $form['admin_account']['account']['pass']['#value'] = $pass;
 
   // Pre-populate site with server settings.
-  $form['server_settings']['site_default_country']['#value'] = 'MD';
-  $form['server_settings']['date_default_timezone']['#value'] = 'Europe/Chisinau';
+  $form['server_settings']['site_default_country']['#default_value'] = 'MD';
+  $form['server_settings']['date_default_timezone']['#default_value'] = 'Europe/Chisinau';
 
   // Pre-populate site with update status.
   $form['update_notifications']['update_status_module']['#value'] = 0;
