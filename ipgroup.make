@@ -48,9 +48,6 @@ projects[variable][subdir] = "contrib"
 projects[views][version] = "3.10"
 projects[views][subdir] = "contrib"
 
-projects[strongarm][version] = "2.0"
-projects[strongarm][subdir] = "contrib"
-
 projects[wysiwyg][version] = "2.2"
 projects[wysiwyg][subdir] = "contrib"
 
