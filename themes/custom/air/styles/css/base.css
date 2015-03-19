@@ -398,8 +398,25 @@ div[role="navigation"] div.header {
   z-index: 5;
   position: relative;
 }
+/* @group Section head */
+header[role="section-head"] {
+  background: #ff7200;
+  font: normal 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  padding: 20px 0 5px;
+  display: block;
+}
+header[role="section-head"] .section-head {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 96.9697%;
+}
+header[role="section-head"] h1 {
+  font-size: 4.28571em;
+  line-height: 1em;
+  width: 48.4375%;
+  color: #ffffff;
+}
 /* @group block-system / header */
-div.block-system .content > header,
 div.block-system .content .contextual-links-region > header {
   color: #ffffff;
   font: normal 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
@@ -413,9 +430,7 @@ div.block-system .content .contextual-links-region > header {
 div.block-system .content > header h1,
 div.block-system .content .contextual-links-region > header h1 {
   float: left;
-  width: 48.4375%;
-  /* 465 / 960 */
-
+  width: 48.4375%; /* 465 / 960 */
   font-size: 4.285714286em;
   line-height: 1em;
   color: #ffffff;
@@ -446,8 +461,7 @@ article.profile header h1 {
   margin: 0;
   padding: 0 0 5px;
 }
-article.profile header div.field-name-field-job-title,
-article.profile header div.field-name-field-job-title-no {
+article.profile header div.field-name-field-position {
   margin: 0 0 20px;
   font-size: 16px;
   color: #787878;
@@ -471,6 +485,9 @@ article.profile header div.user-picture {
 }
 article.profile header div.user-picture img {
   float: left;
+}
+article.profile .prose {
+  text-align: justify;
 }
 /* @end */
 /* @end */
