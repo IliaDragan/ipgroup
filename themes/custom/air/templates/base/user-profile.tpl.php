@@ -33,7 +33,9 @@
 ?>
 <article class="profile"<?php print $attributes; ?>>
   <header>
-    <?php print render($user_profile['user_picture']); ?>
+    <div class="user-picture">
+      <?php print $user_image; ?>
+    </div>
     <div class="content">
       <h1><?php print render($user_profile['field_name']); ?></h1>
       <?php print render($user_profile['field_position']); ?>

@@ -54,6 +54,17 @@ function air_preprocess_html(&$vars) {
   );
 }
 
+/**
+ * Override or insert variables into the page template.
+ */
+function air_preprocess_page(&$vars) {
+  if (!drupal_is_front_page()) {
+    $item = menu_get_active_trail();
+    if (!empty($item[1]['link_title'])) {
+      $vars['section_head'] = $item[1]['link_title'];
+    }
+  }
+}
 
 /**
  * Override of theme_pager().
@@ -86,4 +97,32 @@ function air_pager($vars) {
   if ($pager_list) {
     return "<div class='pager clearfix'>$pager_list $pager_links</div>";
   }
+}
+
+/**
+ * Implements template_preprocess_user_profile().
+ */
+function air_preprocess_user_profile(&$vars) {
+  $theme_path = path_to_theme();
+  $link_options = array(
+    'html' => TRUE,
+    'attributes' => array(),
+  );
+  if (!empty($vars['field_photo'])) {
+    $photo_path = image_style_url('avatar', $vars['field_photo'][0]['uri']);
+    if (!empty($vars['field_caricature'][0]['uri'])) {
+      $img_uri = $vars['field_caricature'][0]['uri'];
+    }
+    else {
+      $img_uri = $vars['field_photo'][0]['uri'];
+    }
+    $link_options['attributes']['img_src'] = image_style_url('avatar', $img_uri);
+    $link_options['attributes']['photo_src'] = $photo_path;
+    drupal_add_js($theme_path . '/scripts/user.js');
+  }
+  else {
+    $photo_path = $theme_path . '/images/silhouette-female.png';
+  }
+  $img = theme('image', array('path' => $photo_path));
+  $vars['user_image'] = l($img, 'employee/' . $vars['user']->uid, $link_options);
 }
