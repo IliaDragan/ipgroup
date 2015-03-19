@@ -499,4 +499,7 @@ div.view-testimonials span.views-field-field-name {
 #mini-panel-cta_contact_person_no .cta-title h2 {
   line-height: 0.8em;
 }
+.field-content {
+  margin-right: 20px;
+}
 /* @end */

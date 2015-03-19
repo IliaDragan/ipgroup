@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ipg_article.features.inc
+ * ipg_event.features.inc
  */
 
 /**
  * Implements hook_ctools_plugin_api().
  */
-function ipg_article_ctools_plugin_api($module = NULL, $api = NULL) {
+function ipg_event_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "page_manager" && $api == "pages_default") {
     return array("version" => "1");
   }
@@ -17,21 +17,14 @@ function ipg_article_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
- * Implements hook_views_api().
- */
-function ipg_article_views_api($module = NULL, $api = NULL) {
-  return array("api" => "3.0");
-}
-
-/**
  * Implements hook_node_info().
  */
-function ipg_article_node_info() {
+function ipg_event_node_info() {
   $items = array(
-    'article' => array(
-      'name' => t('Article'),
+    'event' => array(
+      'name' => t('Event'),
       'base' => 'node_content',
-      'description' => t('Use <em>articles</em> for project, vacancy, tech blog and article posts.'),
+      'description' => '',
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
