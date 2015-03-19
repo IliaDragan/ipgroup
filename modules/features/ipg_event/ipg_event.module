@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the IPG_Event feature.
+ */
+
+include_once 'ipg_event.features.inc';
