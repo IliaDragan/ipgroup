@@ -10,9 +10,9 @@
 function ipg_roles_and_permision_user_default_roles() {
   $roles = array();
 
-  // Exported role: Employer.
-  $roles['Employer'] = array(
-    'name' => 'Employer',
+  // Exported role: Employee.
+  $roles['Employee'] = array(
+    'name' => 'Employee',
     'weight' => 3,
   );
 
