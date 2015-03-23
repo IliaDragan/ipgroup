@@ -50,7 +50,7 @@ function ipg_event_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'image_views',
+    'image_style' => 'image_views_event',
     'image_link' => 'content',
   );
   /* Filter criterion: Content: Published */
