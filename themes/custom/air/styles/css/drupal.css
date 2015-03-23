@@ -17,7 +17,7 @@
 div#edit-openid-identifier-wrapper {
   display: block;
 }
-html.js #user-login-form div#edit-openid-identifier-wrapper,
+html.js #user-navheadin-form div#edit-openid-identifier-wrapper,
 html.js #user-login div#edit-openid-identifier-wrapper {
   display: none;
 }
