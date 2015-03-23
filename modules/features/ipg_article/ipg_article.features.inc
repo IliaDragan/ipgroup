@@ -24,6 +24,47 @@ function ipg_article_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function ipg_article_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: image_article.
+  $styles['image_article'] = array(
+    'label' => 'image_article',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 500,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: image_views.
+  $styles['image_views'] = array(
+    'label' => 'image_views',
+    'effects' => array(
+      2 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 200,
+          'height' => 150,
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function ipg_article_node_info() {
