@@ -266,7 +266,7 @@ function ipg_event_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'text_plain',
+      'formatter' => 'text_default',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
@@ -414,7 +414,7 @@ function ipg_event_default_page_manager_pages() {
     $pane->panel = 'events';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'markup' => 'h2',
