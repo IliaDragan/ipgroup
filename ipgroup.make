@@ -6,7 +6,7 @@ api = 2
 projects[admin_menu][version] = "3.0-rc5"
 projects[admin_menu][subdir] = "contrib"
 
-projects[ctools][version] = "1.6"
+projects[ctools][version] = "1.7"
 projects[ctools][subdir] = "contrib"
 
 projects[date][version] = "2.8"

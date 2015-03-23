@@ -119,7 +119,7 @@
     <?php endif; ?>
   </header> <!-- /header[role="banner"] -->
   <div id="main-content" role="main">
-    <?php if ($section_head): ?>
+    <?php if (!empty($section_head)): ?>
       <header role="section-head">
         <div class="section-head">
           <h1><?php print $section_head; ?></h1>
