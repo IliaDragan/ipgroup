@@ -410,6 +410,32 @@ function ipg_event_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-10412248-651a-4364-8181-3fe834b044ff';
+    $pane->panel = 'events';
+    $pane->type = 'page_title';
+    $pane->subtype = 'page_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'markup' => 'h2',
+      'class' => '',
+      'id' => '',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '10412248-651a-4364-8181-3fe834b044ff';
+    $display->content['new-10412248-651a-4364-8181-3fe834b044ff'] = $pane;
+    $display->panels['events'][0] = 'new-10412248-651a-4364-8181-3fe834b044ff';
+    $pane = new stdClass();
     $pane->pid = 'new-9d5d44ef-024b-4c9e-8428-8e04c42f2602';
     $pane->panel = 'events';
     $pane->type = 'block';
@@ -427,11 +453,11 @@ function ipg_event_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '9d5d44ef-024b-4c9e-8428-8e04c42f2602';
     $display->content['new-9d5d44ef-024b-4c9e-8428-8e04c42f2602'] = $pane;
-    $display->panels['events'][0] = 'new-9d5d44ef-024b-4c9e-8428-8e04c42f2602';
+    $display->panels['events'][1] = 'new-9d5d44ef-024b-4c9e-8428-8e04c42f2602';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

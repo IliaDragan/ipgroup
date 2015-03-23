@@ -29,11 +29,11 @@ function ipg_event_views_api($module = NULL, $api = NULL) {
 function ipg_event_image_default_styles() {
   $styles = array();
 
-  // Exported image style: image_views.
-  $styles['image_views'] = array(
-    'label' => 'image_views',
+  // Exported image style: image_views_event.
+  $styles['image_views_event'] = array(
+    'label' => 'image_views_event',
     'effects' => array(
-      2 => array(
+      3 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 200,
