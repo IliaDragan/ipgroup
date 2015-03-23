@@ -124,5 +124,49 @@ function air_preprocess_user_profile(&$vars) {
     $photo_path = $theme_path . '/images/silhouette-female.png';
   }
   $img = theme('image', array('path' => $photo_path));
-  $vars['user_image'] = l($img, 'employee/' . $vars['user']->uid, $link_options);
+  $vars['user_image'] = l($img, 'employee/' . $vars['name'][0]['value'], $link_options);
+}
+
+function air_preprocess_views_view_fields(&$vars) {
+  // todo: if view = employee
+  //name
+  //field_position
+  //field_phone
+  //mail
+  //field_name
+  //field_caricature
+  //field_photo
+  //field_department
+
+
+  $fields = $vars['row'];
+  $employee = array();
+
+  // Add field picture.
+  $theme_path = path_to_theme();
+  $link_options = array(
+    'html' => TRUE,
+    'attributes' => array(),
+  );
+
+  if (!empty($fields->field_field_photo)) {
+    $photo_path = image_style_url('miniavatar', $fields->field_field_photo[0]['rendered']['#item']['uri']);
+    if (!empty($fields->field_field_caricature[0]['rendered']['#item']['uri'])) {
+      $img_uri = $fields->field_field_caricature[0]['rendered']['#item']['uri'];
+    }
+    else {
+      $img_uri = $fields->field_field_photo[0]['rendered']['#item']['uri'];
+    }
+    $link_options['attributes']['img_src'] = image_style_url('miniavatar', $img_uri);
+    $link_options['attributes']['photo_src'] = $photo_path;
+    drupal_add_js($theme_path . '/scripts/user.js');
+  }
+  else {
+    $photo_path = $theme_path . '/images/silhouette-female.png';
+  }
+  $img = theme('image', array('path' => $photo_path));
+  $employee['picture'] = l($img, 'employee/' . $vars['user']->uid, $link_options);
+
+
+  $vars['employee'] = $employee;
 }
