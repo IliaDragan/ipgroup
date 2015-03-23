@@ -50,7 +50,7 @@ function ipg_article_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'views_image',
+    'image_style' => 'image_views',
     'image_link' => 'content',
   );
   /* Filter criterion: Content: Published */
@@ -70,6 +70,7 @@ function ipg_article_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['path'] = 'articles';
 
   /* Display: Block */
