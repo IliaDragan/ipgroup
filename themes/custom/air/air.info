@@ -36,6 +36,7 @@ stylesheets[all][] = styles/css/nodes.css
 stylesheets[all][] = styles/css/modal.css
 stylesheets[all][] = styles/css/grid.css
 stylesheets[print][] = styles/css/print.css
+stylesheets[print][] = styles/css/wysiwyg.css
 
 ; Omit core stylesheets.
 ; Note that several stylesheets are left included because of their non-invasive

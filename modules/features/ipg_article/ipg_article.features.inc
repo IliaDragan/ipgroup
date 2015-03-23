@@ -45,9 +45,9 @@ function ipg_article_image_default_styles() {
     ),
   );
 
-  // Exported image style: image_views.
-  $styles['image_views'] = array(
-    'label' => 'image_views',
+  // Exported image style: image_views_article.
+  $styles['image_views_article'] = array(
+    'label' => 'image_views_article',
     'effects' => array(
       2 => array(
         'name' => 'image_scale',
