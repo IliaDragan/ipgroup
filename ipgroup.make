@@ -24,6 +24,9 @@ projects[features][subdir] = "contrib"
 projects[field_group][version] = "1.4"
 projects[field_group][subdir] = "contrib"
 
+projects[jquery_update][version] = "2.4"
+projects[jquery_update][subdir] = "contrib"
+
 projects[i18n][version] = "1.12"
 projects[i18n][subdir] = "contrib"
 
@@ -47,6 +50,9 @@ projects[variable][subdir] = "contrib"
 
 projects[views][version] = "3.10"
 projects[views][subdir] = "contrib"
+
+projects[wysiwyg_template][version] = 2.11
+projects[wysiwyg_template][subdir] = contrib
 
 projects[wysiwyg][version] = "2.2"
 projects[wysiwyg][subdir] = "contrib"
