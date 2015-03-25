@@ -44,7 +44,18 @@ function ipg_event_strongarm() {
           'weight' => '-5',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'language' => array(
+          'default' => array(
+            'weight' => '3',
+            'visible' => FALSE,
+          ),
+          'teaser' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__event'] = $strongarm;
@@ -53,7 +64,7 @@ function ipg_event_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_event';
-  $strongarm->value = '0';
+  $strongarm->value = '2';
   $export['language_content_type_event'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -78,6 +89,8 @@ function ipg_event_strongarm() {
   $strongarm->name = 'node_options_event';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'promote',
+    2 => 'revision',
   );
   $export['node_options_event'] = $strongarm;
 
@@ -92,7 +105,7 @@ function ipg_event_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_event';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_event'] = $strongarm;
 
   return $export;
