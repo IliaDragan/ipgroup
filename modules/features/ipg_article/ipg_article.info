@@ -8,6 +8,7 @@ dependencies[] = date
 dependencies[] = features
 dependencies[] = options
 dependencies[] = page_manager
+dependencies[] = panels
 dependencies[] = panels_node
 dependencies[] = strongarm
 dependencies[] = taxonomy
