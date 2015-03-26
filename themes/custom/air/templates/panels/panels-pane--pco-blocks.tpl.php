@@ -27,12 +27,6 @@
     if (!empty($content['field_image'][0])) {
       print render($content['field_image'][0]);
     }
-    else if (!empty($content['field_frontpage_image'])) {
-      print render($content['field_frontpage_image']);
-    }
-    else if (!empty($content['field_image_gallery'][0])) {
-      print render($content['field_image_gallery'][0]);
-    }
   }
   ?>
   <div class="pane-content">
@@ -47,9 +41,9 @@
     <?php if ($title): ?>
 
       <?php if ($pane->configuration['titlesize'] == 'h2'): ?>
-        <h2 class="pane-title"><?php print l($title, 'node/' . $content['body']['#object']->nid); ?></h2>
+        <h2 class="pane-title"><?php print l($title, 'node/' . $content['field_body']['#object']->nid); ?></h2>
       <?php else: ?>
-        <h1 class="pane-title"><?php print l($title, 'node/' . $content['body']['#object']->nid); ?></h1>
+        <h1 class="pane-title"><?php print l($title, 'node/' . $content['field_body']['#object']->nid); ?></h1>
       <?php endif; ?>
 
     <?php endif; ?>
@@ -62,7 +56,7 @@
 
     <?php
       if ($pane->configuration['teaser'] == '1'):
-        print render($content['body']);
+        print render($content['field_body']);
       endif;
     ?>
   </div>
