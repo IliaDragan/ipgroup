@@ -36,12 +36,6 @@ function ipg_wysiwyg_templates_wysiwyg_default_profiles() {
           'Format' => 1,
           'Table' => 1,
         ),
-        'imce' => array(
-          'imce' => 1,
-        ),
-        'video_filter' => array(
-          'video_filter' => 1,
-        ),
         'templates' => array(
           'Templates' => 1,
         ),
@@ -56,7 +50,7 @@ function ipg_wysiwyg_templates_wysiwyg_default_profiles() {
       'remove_linebreaks' => 0,
       'apply_source_formatting' => 0,
       'paste_auto_cleanup_on_paste' => 0,
-      'block_formats' => 'p,address,pre,h2,h3',
+      'block_formats' => 'p,address,pre,h1,h2,h3',
       'css_setting' => 'self',
       'css_path' => '%b%t/styles/css/wysiwyg.css',
       'css_classes' => '',
