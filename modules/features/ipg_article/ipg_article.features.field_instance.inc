@@ -21,7 +21,7 @@ function ipg_article_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
-          'trim_length' => 600,
+          'trim_length' => 140,
         ),
         'type' => 'text_summary_or_trimmed',
         'weight' => 2,
@@ -30,7 +30,7 @@ function ipg_article_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
-          'trim_length' => 600,
+          'trim_length' => 140,
         ),
         'type' => 'text_summary_or_trimmed',
         'weight' => 2,
@@ -115,7 +115,7 @@ function ipg_article_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => 'content',
-          'image_style' => 'thumbnail',
+          'image_style' => 'image_06col',
         ),
         'type' => 'image',
         'weight' => 0,
