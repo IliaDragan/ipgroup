@@ -8,6 +8,7 @@ dependencies[] = ctools
 dependencies[] = date
 dependencies[] = features
 dependencies[] = page_manager
+dependencies[] = panels_node
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text
