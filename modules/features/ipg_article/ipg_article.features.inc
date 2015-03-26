@@ -29,6 +29,52 @@ function ipg_article_views_api($module = NULL, $api = NULL) {
 function ipg_article_image_default_styles() {
   $styles = array();
 
+  // Exported image style: image_06col.
+  $styles['image_06col'] = array(
+    'label' => 'image_06col',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 300,
+          'height' => 180,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: image_09col.
+  $styles['image_09col'] = array(
+    'label' => 'image_09col',
+    'effects' => array(
+      4 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 465,
+          'height' => 279,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: image_10col.
+  $styles['image_10col'] = array(
+    'label' => 'image_10col',
+    'effects' => array(
+      3 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 520,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: image_article.
   $styles['image_article'] = array(
     'label' => 'image_article',
