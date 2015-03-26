@@ -21,15 +21,29 @@ dependencies[] = taxonomy
 dependencies[] = dblog
 dependencies[] = search
 dependencies[] = shortcut
-dependencies[] = toolbar
 dependencies[] = field_ui
 dependencies[] = file
 dependencies[] = rdf
 
 ; Helper modules.
 dependencies[] = views
+dependencies[] = panels
 dependencies[] = date
+dependencies[] = admin_menu
+dependencies[] = devel
+dependencies[] = diff
+
+; Helper modules.
+dependencies[] = pco_blocks
+dependencies[] = pco_panels
 
 ; Features
 dependencies[] = localization
 dependencies[] = ipg_users
+dependencies[] = ipg_article
+dependencies[] = ipg_event
+dependencies[] = ipg_roles_and_permision
+dependencies[] = ipg_vacancies
+dependencies[] = ipg_wysiwyg_templates
+dependencies[] = site_common
+
