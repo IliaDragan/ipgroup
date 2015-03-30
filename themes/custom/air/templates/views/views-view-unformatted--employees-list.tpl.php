@@ -8,7 +8,9 @@
 ?>
 <div class="department-employees-list">
   <?php if (!empty($title)): ?>
-    <h3><?php print $title; ?></h3>
+    <h3 id="department-<?php print drupal_html_id($title); ?>">
+      <?php print $title; ?>
+    </h3>
   <?php endif; ?>
   <div  class="employees-wrapper">
     <?php foreach ($rows as $id => $row): ?>
