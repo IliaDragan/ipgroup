@@ -100,6 +100,7 @@ function ipg_users_views_default_views() {
   $handler->display->display_options['fields']['field_department']['field'] = 'field_department';
   $handler->display->display_options['fields']['field_department']['label'] = '';
   $handler->display->display_options['fields']['field_department']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_department']['type'] = 'i18n_taxonomy_term_reference_plain';
   /* Filter criterion: User: Active */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';

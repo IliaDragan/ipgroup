@@ -54,7 +54,7 @@ function ipg_users_default_page_manager_pages() {
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
+    'body_classes_to_add' => 'page-employees',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
@@ -84,6 +84,9 @@ function ipg_users_default_page_manager_pages() {
       'left' => NULL,
       'right' => NULL,
       'bottom' => NULL,
+    ),
+    'left' => array(
+      'style' => '-1',
     ),
   );
   $display->cache = array();
