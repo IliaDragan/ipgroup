@@ -7,27 +7,6 @@
  *
  */
 
-/* @group view-departments */
-div.view.view-departments .views-row {
-  float: left;
-  margin: 0;
-  padding: 0 1.5625%;  /* 15 / 960 */
-  width: 31.25%;  /* 300 / 960 */
-}
-div.view.view-departments .views-row.views-row-1 {
-  padding: 0 1.5625% 0 0;
-}
-div.view.view-departments .views-row.views-row-3 {
-  padding: 0 0 0 1.5625%;
-}
-div.view.view-departments .views-row.views-row-4 {
-  padding: 0 1.5625% 0 0;
-}
-div.view.view-departments .views-row.views-row-6 {
-  padding: 0 0 0 1.5625%;
-}
-/* @end */
-
 /* @group view-employees */
 .node-type-product .contact-person .view-employees .view-header {
   display: none;

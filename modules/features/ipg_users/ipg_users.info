@@ -50,4 +50,5 @@ features[variable][] = user_email_verification
 features[variable][] = user_pictures
 features[variable][] = user_register
 features[variable][] = user_signatures
+features[views_view][] = departments
 features[views_view][] = employees_list
