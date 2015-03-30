@@ -132,7 +132,8 @@ function air_preprocess_user_profile(&$vars) {
  * Implements template_preprocess_views_view_fields().
  */
 function air_preprocess_views_view_fields(&$vars) {
-  if ($vars['view']->name == 'employees_list') {
+  $view = $vars['view'];
+  if ($view->current_display == 'employees_list_pane') {
     $fields = $vars['row'];
 
     // Add field picture.

@@ -128,6 +128,38 @@ function ipg_users_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
+
+  /* Display: Employees names pane */
+  $handler = $view->new_display('panel_pane', 'Employees names pane', 'employees_names_pane');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Alphabetical order';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: User: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'users';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  /* Field: User: Name */
+  $handler->display->display_options['fields']['field_name']['id'] = 'field_name';
+  $handler->display->display_options['fields']['field_name']['table'] = 'field_data_field_name';
+  $handler->display->display_options['fields']['field_name']['field'] = 'field_name';
+  $handler->display->display_options['fields']['field_name']['label'] = '';
+  $handler->display->display_options['fields']['field_name']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_name']['alter']['path'] = 'employee/[name]';
+  $handler->display->display_options['fields']['field_name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: User: Name (field_name) */
+  $handler->display->display_options['sorts']['field_name_value']['id'] = 'field_name_value';
+  $handler->display->display_options['sorts']['field_name_value']['table'] = 'field_data_field_name';
+  $handler->display->display_options['sorts']['field_name_value']['field'] = 'field_name_value';
   $translatables['employees_list'] = array(
     t('Master'),
     t('more'),
@@ -139,6 +171,8 @@ function ipg_users_views_default_views() {
     t('Employees list pane'),
     t('List of employees grupped by Department'),
     t('View panes'),
+    t('Employees names pane'),
+    t('Alphabetical order'),
   );
   $export['employees_list'] = $view;
 
