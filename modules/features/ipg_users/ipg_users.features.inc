@@ -47,5 +47,20 @@ function ipg_users_image_default_styles() {
     ),
   );
 
+  // Exported image style: miniavatar.
+  $styles['miniavatar'] = array(
+    'label' => 'Miniavatar (136x136)',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 136,
+          'height' => 136,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }

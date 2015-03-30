@@ -39,6 +39,7 @@ features[field_instance][] = user-user-field_phone
 features[field_instance][] = user-user-field_photo
 features[field_instance][] = user-user-field_position
 features[image][] = avatar
+features[image][] = miniavatar
 features[page_manager_pages][] = employee
 features[taxonomy][] = department
 features[variable][] = pathauto_taxonomy_term_department_pattern
