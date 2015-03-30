@@ -118,6 +118,25 @@ function ipg_users_default_page_manager_pages() {
     $pane->uuid = '760d310c-acfa-44d2-855f-c400696746b6';
     $display->content['new-760d310c-acfa-44d2-855f-c400696746b6'] = $pane;
     $display->panels['left'][0] = 'new-760d310c-acfa-44d2-855f-c400696746b6';
+    $pane = new stdClass();
+    $pane->pid = 'new-7e2db371-8b49-48e9-8b06-8d23c2b2ec7b';
+    $pane->panel = 'right';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'employees_list-employees_names_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '7e2db371-8b49-48e9-8b06-8d23c2b2ec7b';
+    $display->content['new-7e2db371-8b49-48e9-8b06-8d23c2b2ec7b'] = $pane;
+    $display->panels['right'][0] = 'new-7e2db371-8b49-48e9-8b06-8d23c2b2ec7b';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
