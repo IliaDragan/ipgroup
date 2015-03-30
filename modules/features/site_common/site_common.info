@@ -18,5 +18,4 @@ features[filter][] = full_html
 features[filter][] = plain_text
 features[variable][] = pathauto_node_pattern
 features[variable][] = pathauto_taxonomy_term_pattern
-features[wysiwyg][] = filtered_html
 features[wysiwyg][] = full_html

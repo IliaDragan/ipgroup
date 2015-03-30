@@ -24,6 +24,31 @@ function ipg_event_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function ipg_event_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: image_views_event.
+  $styles['image_views_event'] = array(
+    'label' => 'image_views_event',
+    'effects' => array(
+      3 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 200,
+          'height' => 150,
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function ipg_event_node_info() {

@@ -1,0 +1,17 @@
+name = IPGroup wysiwyg templates
+core = 7.x
+package = IPGroup
+version = 7.x-1.0
+project = ipg_wysiwyg_templates
+dependencies[] = features
+dependencies[] = filter
+dependencies[] = ipg_article
+dependencies[] = ipg_event
+dependencies[] = wysiwyg
+dependencies[] = wysiwyg_template
+features[features_api][] = api:2
+features[filter][] = wysiwyg_
+features[wysiwyg][] = wysiwyg_
+features[wysiwyg_template][] = quote_dark_grey
+features[wysiwyg_template][] = quote_light_grey
+features[wysiwyg_template][] = quote_orange
