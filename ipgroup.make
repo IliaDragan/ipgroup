@@ -51,6 +51,9 @@ projects[variable][subdir] = "contrib"
 projects[views][version] = "3.10"
 projects[views][subdir] = "contrib"
 
+projects[views_slideshow][version] = "3.1"
+projects[views_slideshow][subdir] = "contrib"
+
 projects[wysiwyg_template][version] = 2.11
 projects[wysiwyg_template][subdir] = contrib
 

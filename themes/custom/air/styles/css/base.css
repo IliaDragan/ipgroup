@@ -229,7 +229,7 @@ footer > div div.deck,
 div[role="main"] div.grid-display,
 div[role="main"] div.system {
   margin: 0 auto;
-  width: 96.969697%;
+  width: 100%;
   max-width: 960px;
 }
 header[role="banner"] div.top {
@@ -432,7 +432,7 @@ div.block-system .content .contextual-links-region > header {
 div.block-system .content > header h1,
 div.block-system .content .contextual-links-region > header h1 {
   float: left;
-  width: 48.4375%; /* 465 / 960 */
+  width: 50.4375%; /* 465 / 960 */
   font-size: 4.285714286em;
   line-height: 1em;
   color: #ffffff;
@@ -668,6 +668,10 @@ ol.search-results li {
   height: 8px;
   text-indent: -9999px;
   background: transparent url('../../images/icons_remove.png') no-repeat 0 0;
+}
+.view-display-id-block{
+  width:100%;
+  background-color: #dadada;
 }
 /* @end */
 /* @end */
