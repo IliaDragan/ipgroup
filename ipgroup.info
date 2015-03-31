@@ -33,7 +33,6 @@ dependencies[] = admin_menu
 dependencies[] = devel
 dependencies[] = diff
 dependencies[] = views_slideshow
-dependencies[] = libraries
 dependencies[] = features_extra
 
 ; Helper modules.
