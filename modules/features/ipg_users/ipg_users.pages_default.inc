@@ -32,8 +32,8 @@ function ipg_users_default_page_manager_pages() {
   $page->arguments = array(
     'user' => array(
       'id' => 1,
-      'identifier' => 'User: ID',
-      'name' => 'entity_id:user',
+      'identifier' => 'User: name',
+      'name' => 'user_name',
       'settings' => array(),
     ),
   );
@@ -54,7 +54,7 @@ function ipg_users_default_page_manager_pages() {
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
+    'body_classes_to_add' => 'page-employees',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
@@ -67,7 +67,7 @@ function ipg_users_default_page_manager_pages() {
           'settings' => array(
             'exists' => '0',
           ),
-          'context' => 'argument_entity_id:user_1',
+          'context' => 'argument_user_name_1',
           'not' => FALSE,
         ),
       ),
@@ -85,6 +85,9 @@ function ipg_users_default_page_manager_pages() {
       'right' => NULL,
       'bottom' => NULL,
     ),
+    'left' => array(
+      'style' => '-1',
+    ),
   );
   $display->cache = array();
   $display->title = '';
@@ -92,16 +95,14 @@ function ipg_users_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-167a4ba6-df2f-477b-818d-b6c6839d29ef';
+    $pane->pid = 'new-760d310c-acfa-44d2-855f-c400696746b6';
     $pane->panel = 'left';
-    $pane->type = 'page_title';
-    $pane->subtype = 'page_title';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'employees_list-employees_list_pane';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'markup' => 'h1',
-      'class' => '',
-      'id' => '',
+      'path' => '',
       'override_title' => 0,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
@@ -114,11 +115,49 @@ function ipg_users_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '167a4ba6-df2f-477b-818d-b6c6839d29ef';
-    $display->content['new-167a4ba6-df2f-477b-818d-b6c6839d29ef'] = $pane;
-    $display->panels['left'][0] = 'new-167a4ba6-df2f-477b-818d-b6c6839d29ef';
+    $pane->uuid = '760d310c-acfa-44d2-855f-c400696746b6';
+    $display->content['new-760d310c-acfa-44d2-855f-c400696746b6'] = $pane;
+    $display->panels['left'][0] = 'new-760d310c-acfa-44d2-855f-c400696746b6';
+    $pane = new stdClass();
+    $pane->pid = 'new-3e96003a-6997-44a8-80a2-a00c535728d4';
+    $pane->panel = 'right';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'departments-employees_departments_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '3e96003a-6997-44a8-80a2-a00c535728d4';
+    $display->content['new-3e96003a-6997-44a8-80a2-a00c535728d4'] = $pane;
+    $display->panels['right'][0] = 'new-3e96003a-6997-44a8-80a2-a00c535728d4';
+    $pane = new stdClass();
+    $pane->pid = 'new-7e2db371-8b49-48e9-8b06-8d23c2b2ec7b';
+    $pane->panel = 'right';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'employees_list-employees_names_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '7e2db371-8b49-48e9-8b06-8d23c2b2ec7b';
+    $display->content['new-7e2db371-8b49-48e9-8b06-8d23c2b2ec7b'] = $pane;
+    $display->panels['right'][1] = 'new-7e2db371-8b49-48e9-8b06-8d23c2b2ec7b';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-167a4ba6-df2f-477b-818d-b6c6839d29ef';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $handler = new stdClass();
@@ -147,7 +186,7 @@ function ipg_users_default_page_manager_pages() {
           'settings' => array(
             'exists' => '1',
           ),
-          'context' => 'argument_entity_id:user_1',
+          'context' => 'argument_user_name_1',
           'not' => FALSE,
         ),
       ),

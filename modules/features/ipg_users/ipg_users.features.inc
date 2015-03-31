@@ -20,6 +20,13 @@ function ipg_users_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function ipg_users_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function ipg_users_image_default_styles() {
@@ -34,6 +41,21 @@ function ipg_users_image_default_styles() {
         'data' => array(
           'width' => 185,
           'height' => 185,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: miniavatar.
+  $styles['miniavatar'] = array(
+    'label' => 'Miniavatar (136x136)',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 136,
+          'height' => 136,
         ),
         'weight' => 1,
       ),

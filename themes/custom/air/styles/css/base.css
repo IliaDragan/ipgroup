@@ -165,6 +165,16 @@ blockquote.orange a {
 .page-employees .panels-ajax-tab li:hover a {
   color: #fff;
 }
+/* Added by IPGroup -- start*/
+.page-employees .center-wrapper .panel-col-first {
+  padding: 0 1.5625% 0 0;
+  width: 77.0833%;
+}
+.page-employees .center-wrapper .panel-col-last {
+  padding: 0 0 0 1.5625%;
+  width: 19.7917%;
+}
+/* Added by IPGroup -- end*/
 /* @end */
 /* @group Links */
 a,
@@ -247,7 +257,6 @@ header[role="banner"] div.top div.logo {
 header[role="banner"] div.top div.logo img {
   vertical-align: bottom;
   height: 70px;
-
 }
 header[role="banner"] div[role="navigation"] {
   width: 100%;

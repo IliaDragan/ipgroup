@@ -6,33 +6,7 @@
  * the Views module.
  *
  */
-/* Import LESS files */
-/**
- * @file
- * less/radius.css
- *
- * Contains variables and other LESS-specific CSS.
- */
-/* @group view-departments */
-div.view.view-departments .views-row {
-  float: left;
-  margin: 0;
-  padding: 0 1.5625%;  /* 15 / 960 */
-  width: 31.25%;  /* 300 / 960 */
-}
-div.view.view-departments .views-row.views-row-1 {
-  padding: 0 1.5625% 0 0;
-}
-div.view.view-departments .views-row.views-row-3 {
-  padding: 0 0 0 1.5625%;
-}
-div.view.view-departments .views-row.views-row-4 {
-  padding: 0 1.5625% 0 0;
-}
-div.view.view-departments .views-row.views-row-6 {
-  padding: 0 0 0 1.5625%;
-}
-/* @end */
+
 /* @group view-employees */
 .node-type-product .contact-person .view-employees .view-header {
   display: none;
@@ -58,51 +32,62 @@ div.view.view-departments .views-row.views-row-6 {
 .node-type-product .contact-person .view-employees div.views-row img {
   position: relative;
 }
-div.view.view-employees div.views-row {
+/* IPGroup change view styles -- start */
+div.view.view-employees-list .department-employees-list {
+  clear: both;
+  font: 1em/1.5em "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+  margin: 0 0 30px;
+  overflow: hidden;
+}
+div.view.view-employees-list h3 {
+  font-size: 1.71429em;
+  line-height: 1.1em;
+  padding: 0 0 20px;
+  color: #464646;
+}
+
+div.view.view-employees-list div.views-row {
   float: left;
   margin: 0 4.0540541% 20px 0;
   width: 47.972973%;  /* 355 / 740 */
 }
-.column.seven div.view.view-employees div.views-row {
+.column.seven div.view.view-employees-list div.views-row {
   width: 100%;
 }
-div.view.view-employees div.views-row > div {
+div.view.view-employees-list div.views-row > div {
   position: relative;
   padding: 8px 2% 0 45.0704225%;  /* 160 / 355 */
-  min-height: 136px;
+  min-height: 128px;
   font-size: .928571429em;
   line-height: 1.5em;
   color: #787878;
   border: 1px solid #eaeaea;
 }
-div.view.view-employees div.views-row.views-row-even {
+div.view.view-employees-list div.views-row.views-row-even {
   margin: 0 0 20px 0;
 }
-div.view.view-employees div.views-row img {
+div.view.view-employees-list div.views-row img {
   position: absolute;
   left: 0;
   bottom: 0;
   max-width: 136px;
   max-height: 100%;
 }
-div.view.view-employees div.views-row div.views-field-field-office {
-  color: #aaaaaa;
-}
-div.view.view-employees div.views-row div.views-field-field-name {
+div.view.view-employees-list div.views-row div.views-field-field-name {
   font-family: NewsGothicBT-Bold, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
   font-size: 1.285714286em;
   line-height: 1.5em;
 }
-div.view.view-employees div.views-row div.views-field-field-job-title {
+div.view.view-employees-list div.views-row div.views-field-field-position {
   color: #262626;
 }
-div.view.view-employees div.views-row div.views-field-field-name,
-div.view.view-employees div.views-row div.views-field-field-job-title,
-div.view.view-employees div.views-row div.views-field-field-work-number,
-div.view.view-employees div.views-row div.views-field-field-mobile-number {
+div.view.view-employees-list div.views-row div.views-field-field-name,
+div.view.view-employees-list div.views-row div.views-field-field-position,
+div.view.view-employees-list div.views-row div.views-field-field-phone {
   position: relative;
   z-index: 100;
 }
+/* IPGroup change view styles -- end */
 /* @end */
 /* @group view-slideshow-frontpage */
 section.panel-pane div.view-slideshow-frontpage ul,

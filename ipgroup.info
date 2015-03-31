@@ -32,6 +32,11 @@ dependencies[] = date
 dependencies[] = admin_menu
 dependencies[] = devel
 dependencies[] = diff
+dependencies[] = views_slideshow
+dependencies[] = fe_block
+dependencies[] = views_ui
+dependencies[] = views_slideshow
+dependencies[] = library
 
 ; Helper modules.
 dependencies[] = pco_blocks
@@ -46,4 +51,5 @@ dependencies[] = ipg_roles_and_permision
 dependencies[] = ipg_vacancies
 dependencies[] = ipg_wysiwyg_templates
 dependencies[] = site_common
+dependencies[] = ipg_front_page_slideshow_
 
