@@ -34,7 +34,7 @@ dependencies[] = devel
 dependencies[] = diff
 dependencies[] = views_slideshow
 dependencies[] = libraries
-dependencies[] = field_group
+dependencies[] = features_extra
 
 ; Helper modules.
 dependencies[] = pco_blocks

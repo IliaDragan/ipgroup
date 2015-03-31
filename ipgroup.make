@@ -33,6 +33,9 @@ projects[i18n][subdir] = "contrib"
 projects[module_filter][version] = "2.0"
 projects[module_filter][subdir] = "contrib"
 
+projects[features_extra][version] = "2.0-beta1"
+projects[features_extra][subdir] = contrib
+
 projects[panels][version] = "3.5"
 projects[panels][subdir] = "contrib"
 
