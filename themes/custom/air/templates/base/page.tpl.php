@@ -126,6 +126,11 @@
         </div>
       </header>
     <?php endif; ?>
+    <?php if (drupal_is_front_page()) : ?>
+      <?php if (!empty($page['promo'])) : ?>
+        <?php print render($page['promo']); ?>
+      <?php endif; ?>
+    <?php endif;?>
     <section>
       <?php print $messages; ?>
       <?php if ($page['highlighted']): ?>
