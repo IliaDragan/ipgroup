@@ -680,7 +680,15 @@ ol.search-results li {
 }
 .view-display-id-block{
   width:100%;
+  height: 300px;
   background-color: #dadada;
+}
+#views_slideshow_cycle_teaser_section_front_page_slideshow-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  height: 300px;
 }
 /* @end */
 /* @end */
