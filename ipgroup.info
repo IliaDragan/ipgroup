@@ -30,11 +30,8 @@ dependencies[] = views
 dependencies[] = panels
 dependencies[] = date
 dependencies[] = admin_menu
-dependencies[] = devel
-dependencies[] = diff
 dependencies[] = views_slideshow
 dependencies[] = fe_block
-dependencies[] = views_ui
 dependencies[] = views_slideshow
 dependencies[] = library
 
