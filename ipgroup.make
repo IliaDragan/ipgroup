@@ -36,8 +36,8 @@ projects[module_filter][subdir] = "contrib"
 projects[features_extra][version] = "1.0-beta1"
 projects[features_extra][subdir] = contrib
 
-projects[library][version] = "1.0-beta1"
-projects[library][subdir] = contrib
+projects[libraries][version] = "2.2"
+projects[libraries][subdir] = contrib
 
 projects[panels][version] = "3.5"
 projects[panels][subdir] = "contrib"

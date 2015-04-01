@@ -33,7 +33,6 @@ dependencies[] = admin_menu
 dependencies[] = views_slideshow
 dependencies[] = fe_block
 dependencies[] = views_slideshow
-dependencies[] = library
 
 ; Helper modules.
 dependencies[] = pco_blocks

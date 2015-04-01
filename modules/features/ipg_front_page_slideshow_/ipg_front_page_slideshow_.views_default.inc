@@ -31,12 +31,11 @@ function ipg_front_page_slideshow__views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['row_plugin'] = 'panels_fields';
-  /* Relationship: Nodequeue: Queue */
+  /* Relationship: Broken/missing handler */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
   $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
   $handler->display->display_options['relationships']['nodequeue_rel']['required'] = TRUE;
-  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -216,7 +215,7 @@ function ipg_front_page_slideshow__views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('queue'),
+    t('nodequeue_rel'),
     t('Category (field_category)'),
     t('Block'),
     t('field_category'),

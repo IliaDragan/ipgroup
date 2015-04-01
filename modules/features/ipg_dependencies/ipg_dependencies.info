@@ -5,6 +5,7 @@ package = IPGroup
 version = 7.x-1.0
 project = ipg_dependencies
 dependencies[] = devel
+dependencies[] = devel_generate
 dependencies[] = diff
 dependencies[] = module_filter
 dependencies[] = views_ui
