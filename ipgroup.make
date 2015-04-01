@@ -54,6 +54,9 @@ projects[token][subdir] = "contrib"
 projects[variable][version] = "2.5"
 projects[variable][subdir] = "contrib"
 
+projects[view_profiles_perms][version] = "1.0"
+projects[view_profiles_perms][subdir] = "contrib"
+
 projects[views][version] = "3.10"
 projects[views][subdir] = "contrib"
 
