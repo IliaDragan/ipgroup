@@ -688,7 +688,7 @@ ol.search-results li {
   margin-left: auto;
   margin-right: auto;
   width: 960px;
-  height: 300px;
+  height: 300px !important;
 }
 /* @end */
 /* @end */
