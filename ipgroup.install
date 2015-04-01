@@ -65,31 +65,10 @@ function ipgroup_install() {
       ),
     ),
   );
-  $full_html_format = (object) $full_html_format;
-  filter_format_save($full_html_format);
-
-  // Enable default permissions for system roles.
-  // Todo: add permissions for our roles
-  $filtered_html_permission = filter_permission_name($filtered_html_format);
-
-  // Create a default role for site administrators, with all available permissions assigned.
-  // Todo: add our custom roles
-  $admin_role = new stdClass();
-  $admin_role->name = 'administrator';
-  $admin_role->weight = 2;
-  user_role_save($admin_role);
-  user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
-  // Set this as the administrator role.
-  variable_set('user_admin_role', $admin_role->rid);
-
-  // Assign user 1 the "administrator" role.
-  db_insert('users_roles')
-    ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
-    ->execute();
 
   // Create a Home link in the main menu.
   $item = array(
-    'link_title' => st('Home'),
+    'link_title' => 'Home',
     'link_path' => '<front>',
     'menu_name' => 'main-menu',
   );
@@ -107,7 +86,7 @@ function ipgroup_install() {
   variable_set('admin_theme', 'seven');
   variable_set('node_admin_theme', '1');
 
-  // Todo: change defaut theme
+  // Enable air theme.
   db_update('system')
     ->fields(array('status' => 1))
     ->condition('type', 'theme')

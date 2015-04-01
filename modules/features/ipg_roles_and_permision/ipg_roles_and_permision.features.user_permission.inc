@@ -10,11 +10,22 @@
 function ipg_roles_and_permision_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'access Employee profiles'.
+  $permissions['access Employee profiles'] = array(
+    'name' => 'access Employee profiles',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'view_profiles_perms',
+  );
+
   // Exported permission: 'access content'.
   $permissions['access content'] = array(
     'name' => 'access content',
     'roles' => array(
-      'administrator' => 'administrator',
+      'Administrator' => 'Administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),

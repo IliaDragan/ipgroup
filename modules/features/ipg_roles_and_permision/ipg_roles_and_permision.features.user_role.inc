@@ -10,6 +10,12 @@
 function ipg_roles_and_permision_user_default_roles() {
   $roles = array();
 
+  // Exported role: Administrator.
+  $roles['Administrator'] = array(
+    'name' => 'Administrator',
+    'weight' => 2,
+  );
+
   // Exported role: Employee.
   $roles['Employee'] = array(
     'name' => 'Employee',

@@ -1,0 +1,63 @@
+<?php
+/**
+ * @file
+ * Install ipg_roles_and_permision feature module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function ipg_roles_and_permision_install() {
+  db_truncate('role')->execute();
+
+  // Restore built-in roles.
+  $rid_anonymous = db_insert('role')
+    ->fields(array('name' => 'anonymous user', 'weight' => 0))
+    ->execute();
+  $rid_authenticated = db_insert('role')
+    ->fields(array('name' => 'authenticated user', 'weight' => 1))
+    ->execute();
+
+  // Sanity check to ensure the anonymous and authenticated role IDs are the
+  // same as the drupal defined constants. In certain situations, this will
+  // not be true.
+  if ($rid_anonymous != DRUPAL_ANONYMOUS_RID) {
+    db_update('role')
+      ->fields(array('rid' => DRUPAL_ANONYMOUS_RID))
+      ->condition('rid', $rid_anonymous)
+      ->execute();
+  }
+  if ($rid_authenticated != DRUPAL_AUTHENTICATED_RID) {
+    db_update('role')
+      ->fields(array('rid' => DRUPAL_AUTHENTICATED_RID))
+      ->condition('rid', $rid_authenticated)
+      ->execute();
+  }
+
+  // Create custom roles with specific rid.
+  $custom_roles = array(
+    3 => 'Administrator',
+    4 => 'Employee',
+  );
+
+  foreach ($custom_roles as $rid => $name) {
+    $rid_default = db_insert('role')
+      ->fields(array('name' => $name, 'weight' => $rid - 1))
+      ->execute();
+
+    if ($rid_default != $rid) {
+      db_update('role')
+        ->fields(array('rid' => $rid))
+        ->condition('rid', $rid_default)
+        ->execute();
+    }
+  }
+
+  // Set Administrator as admin role.
+  variable_set('user_admin_role', 3);
+
+  // Assign user 1 the "Administrator" role.
+  db_insert('users_roles')
+    ->fields(array('uid' => 1, 'rid' => 3))
+    ->execute();
+}
