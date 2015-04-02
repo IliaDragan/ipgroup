@@ -1,0 +1,10 @@
+Site install documentation.
+
+1. Run makefile (drush -y make --working-copy --no-core --contrib-destination=. ipgroup.make)
+2. Install site from profile (run install.php file).
+3. Add following terms in "Category" vocabulary: Tech blog, Vacancy.
+4. Revert all features (drush fra -y)
+5. If you want to generate content, enable feature "IPG Depencencies".
+  5.1. Generate taxonomy terms for vocabulary "Departments".
+  5.2. Generate users with role "Employee".
+  5.3. Generate nodes of content type "Article".

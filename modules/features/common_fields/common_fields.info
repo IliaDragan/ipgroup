@@ -1,0 +1,12 @@
+name = Fields
+description = Field bases for more CT
+core = 7.x
+package = IPGroup
+version = 7.x-1.0
+project = common_fields
+dependencies[] = features
+dependencies[] = image
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_base][] = field_image
