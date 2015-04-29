@@ -20,6 +20,7 @@ features[field_instance][] = node-project-body
 features[field_instance][] = node-project-field_image
 features[field_instance][] = node-project-field_status
 features[field_instance][] = node-project-field_user
+features[image][] = project_image
 features[node][] = project
 features[page_manager_handlers][] = node_view__project
 features[taxonomy][] = project_status

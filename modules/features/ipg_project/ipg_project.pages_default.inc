@@ -151,7 +151,7 @@ function ipg_project_default_page_manager_handlers() {
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
       'formatter_settings' => array(
-        'image_style' => 'image_article',
+        'image_style' => 'project_image',
         'image_link' => '',
       ),
       'context' => 'argument_entity_id:node_1',
@@ -246,7 +246,7 @@ function ipg_project_default_page_manager_handlers() {
       'formatter_settings' => array(),
       'context' => 'argument_entity_id:node_1',
       'override_title' => 0,
-      'override_title_text' => '',
+      'override_title_text' => 'Status',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();

@@ -159,21 +159,21 @@ article.node-blog div.video-container iframe {
 /*Node type project*/
 .node-type-project .pane-node-field-user h2.pane-title {
   background: #eaeaea;
-  text-align: center;
-  margin: 0;
-  padding: 2%;
-  color: #787878;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  color: #787878;
+  margin: 0;
+  padding: 2%;
+  text-align: center;
 }
 .node-type-project .team-members {
-  border: 1px solid #eaeaea;
-  padding: 0 15px;
   background: url(../../images/gray-team.png) no-repeat 50% bottom;
-  min-height: 287px;
+  min-height: 315px;
+  padding: 0 15px;
+  position: relative;
 }
 .node-type-project .team-member {
-  margin-top: 15px;
+  padding-top: 15px;
 }
 .node-type-project .team-member-field-name a {
   font-family: NewsGothicBT-Bold, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
@@ -184,19 +184,46 @@ article.node-blog div.video-container iframe {
   margin-left: 1%;
 }
 .node-type-project .field-name-body {
-  text-align: justify;
   color: #464646;
+  text-align: justify;
 }
 .node-type-project .field-name-field-image img{
   border: 1px solid #eaeaea;
   border-radius: 5px;
+  height: 100%;
+  width: 100%;
 }
-/*
-.node-type-project .field-name-field-user .profile .field-name-field-name {
-  font-size: 16px;
-  font-weight: bold;
+.node-type-project .team-members-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2%;
+  background: #eaeaea;
 }
-*/
+.node-type-project .team-members-info .team-member-info {
+  text-align: center;
+}
+.node-type-project .team-members-info.hidden,
+.node-type-project .team-members-info .team-member-info.hidden {
+  display: none;
+}
+.team-member-photo img {
+  border-radius: 5px;
+}
+.node-type-project .center-wrapper .panel-col-first,
+.node-type-project .center-wrapper .panel-col-last {
+  min-width: 300px;
+}
+.node-type-project .panel-col-top .panel-separator,
+.node-type-project .panel-col-top .pane-node-title,
+.node-type-project .panel-col-top .pane-node-title h2{
+  margin: 0;
+  padding: 0;
+}
+.node-type-project .panel-col-top .field-name-field-status .field-label {
+  color: #464646;
+  font-weight: normal;
+}
 /*End node project*/
 
 

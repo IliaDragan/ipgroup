@@ -163,3 +163,29 @@ function air_preprocess_views_view_fields(&$vars) {
     $vars['picture'] = l($img, 'employee/' . $username, $link_options);
   }
 }
+
+function air_preprocess_field(&$variables) {
+  if($variables['element']['#field_name'] == 'field_user') {
+    $items = &$variables['items'];
+    foreach ($items as &$item) {
+      $entity = $item['#options']['entity'];
+      $path = 'employee/' . $entity->name;
+      if (!empty($entity->field_name['und'][0]['value'])) {
+        $item['name_link'] = l($entity->field_name['und'][0]['value'], $path);
+      }
+      if (!empty($entity->field_position['und'][0]['value'])) {
+        $item['position'] = $entity->field_position['und'][0]['value'];
+      }
+      $item['identifier'] = 'employee-' . $entity->uid;
+      if (!empty($entity->field_photo['und'][0]['uri'])) {
+        $photo_path = image_style_url('miniavatar', $entity->field_photo['und'][0]['uri']);
+        $item['photo'] = theme('image', array('path' => $photo_path));
+      }
+      if (!empty($entity->field_phone['und'][0]['value'])) {
+        $item['phone'] = $entity->field_phone['und'][0]['value'];
+      }
+    }
+    $theme_path = path_to_theme();
+    drupal_add_js($theme_path . '/scripts/field_user.js');
+  }
+}
