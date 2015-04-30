@@ -267,3 +267,93 @@ function ipg_project_default_page_manager_handlers() {
 
   return $export;
 }
+
+/**
+ * Implements hook_default_page_manager_pages().
+ */
+function ipg_project_default_page_manager_pages() {
+  $page = new stdClass();
+  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->api_version = 1;
+  $page->name = 'projects';
+  $page->task = 'page';
+  $page->admin_title = 'Projects';
+  $page->admin_description = 'List of all projects';
+  $page->path = 'projects';
+  $page->access = array();
+  $page->menu = array(
+    'type' => 'normal',
+    'title' => 'Projects',
+    'name' => 'main-menu',
+    'weight' => '5',
+    'parent' => array(
+      'type' => 'none',
+      'title' => '',
+      'name' => 'navigation',
+      'weight' => '0',
+    ),
+  );
+  $page->arguments = array();
+  $page->conf = array();
+  $page->default_handlers = array();
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_projects__panel_context_e2e4d5fc-e556-408d-88d5-656a0db8eee7';
+  $handler->task = 'page';
+  $handler->subtask = 'projects';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Landing page',
+    'no_blocks' => FALSE,
+    'pipeline' => 'ipe',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'center' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Projects';
+  $display->uuid = 'd2ea97c3-6de2-4a59-9b57-1a283db58547';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-dda680af-13b7-4d0b-9d1f-a9ec9882b64f';
+    $pane->panel = 'center';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'projects-projects_list_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'dda680af-13b7-4d0b-9d1f-a9ec9882b64f';
+    $display->content['new-dda680af-13b7-4d0b-9d1f-a9ec9882b64f'] = $pane;
+    $display->panels['center'][0] = 'new-dda680af-13b7-4d0b-9d1f-a9ec9882b64f';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $pages['projects'] = $page;
+
+  return $pages;
+
+}

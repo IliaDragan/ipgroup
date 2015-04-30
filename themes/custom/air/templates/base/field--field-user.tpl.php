@@ -1,3 +1,10 @@
+<?php
+/**
+ * @file
+ * Default theme implementation for user refernce field.
+ */
+?>
+
 <div class="team-members">
   <?php foreach ($items as $item): ?>
   <div class="team-member" id="<?php print $item['identifier']; ?>">
