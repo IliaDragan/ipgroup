@@ -53,7 +53,7 @@ function ipg_project_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_project';
-  $strongarm->value = 'main-menu:0';
+  $strongarm->value = 'main-menu:496';
   $export['menu_parent_project'] = $strongarm;
 
   $strongarm = new stdClass();

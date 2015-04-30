@@ -156,7 +156,7 @@ article.node-blog div.video-container iframe {
 }
 /* @end */
 
-/*Node type project*/
+/*Node type project - IPGroup*/
 .node-type-project .pane-node-field-user h2.pane-title {
   background: #eaeaea;
   border-top-left-radius: 5px;
@@ -187,7 +187,7 @@ article.node-blog div.video-container iframe {
   color: #464646;
   text-align: justify;
 }
-.node-type-project .field-name-field-image img{
+.node-type-project .field-name-field-image img {
   border: 1px solid #eaeaea;
   border-radius: 5px;
   height: 100%;
@@ -216,7 +216,7 @@ article.node-blog div.video-container iframe {
 }
 .node-type-project .panel-col-top .panel-separator,
 .node-type-project .panel-col-top .pane-node-title,
-.node-type-project .panel-col-top .pane-node-title h2{
+.node-type-project .panel-col-top .pane-node-title h2 {
   margin: 0;
   padding: 0;
 }
@@ -225,6 +225,3 @@ article.node-blog div.video-container iframe {
   font-weight: normal;
 }
 /*End node project*/
-
-
-

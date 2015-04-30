@@ -67,39 +67,6 @@ function air_preprocess_page(&$vars) {
 }
 
 /**
- * Override of theme_pager().
- */
-function air_pager($vars) {
-  $tags = $vars['tags'];
-  $element = $vars['element'];
-  $parameters = $vars['parameters'];
-  $quantity = $vars['quantity'];
-  $pager_list = theme('pager_list', $vars);
-
-  $links = array();
-  $links['pager-previous'] = theme('pager_previous', array(
-    'text' => (isset($tags[1]) ? $tags[1] : t('Prev')),
-    'element' => $element,
-    'interval' => 1,
-    'parameters' => $parameters,
-  ));
-  $links['pager-next'] = theme('pager_next', array(
-    'text' => (isset($tags[3]) ? $tags[3] : t('Next')),
-    'element' => $element,
-    'interval' => 1,
-    'parameters' => $parameters,
-  ));
-  $links = array_filter($links);
-  $pager_links = theme('links', array(
-    'links' => $links,
-    'attributes' => array('class' => 'links pager pager-links'),
-  ));
-  if ($pager_list) {
-    return "<div class='pager clearfix'>$pager_list $pager_links</div>";
-  }
-}
-
-/**
  * Implements template_preprocess_user_profile().
  */
 function air_preprocess_user_profile(&$vars) {
@@ -164,8 +131,11 @@ function air_preprocess_views_view_fields(&$vars) {
   }
 }
 
+/**
+ * Implements hook_preprocess_field().
+ */
 function air_preprocess_field(&$variables) {
-  if($variables['element']['#field_name'] == 'field_user') {
+  if ($variables['element']['#field_name'] == 'field_user') {
     $items = &$variables['items'];
     foreach ($items as &$item) {
       $entity = $item['#options']['entity'];
