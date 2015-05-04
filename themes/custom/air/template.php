@@ -63,6 +63,14 @@ function air_preprocess_page(&$vars) {
     if (!empty($item[1]['link_title'])) {
       $vars['section_head'] = $item[1]['link_title'];
     }
+    elseif (!empty($vars['node']->type)) {
+      $type = $vars['node']->type;
+      $types = node_type_get_types();
+      if (!empty($types[$type]->name)) {
+        $type_name = $types[$type]->name;
+        $vars['section_head'] = t('@type', array('@type' => $type_name));
+      }
+    }
   }
 }
 
