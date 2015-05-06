@@ -143,6 +143,7 @@ function air_preprocess_views_view_fields(&$vars) {
  * Implements hook_preprocess_field().
  */
 function air_preprocess_field(&$variables) {
+  // Preprocess field_user user reference field.
   if ($variables['element']['#field_name'] == 'field_user') {
     $items = &$variables['items'];
     foreach ($items as &$item) {
