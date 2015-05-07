@@ -6,6 +6,9 @@ api = 2
 projects[admin_menu][version] = "3.0-rc5"
 projects[admin_menu][subdir] = "contrib"
 
+projects[better_exposed_filters][version] = "3.2"
+projects[better_exposed_filters][subdir] = "contrib"
+
 projects[ctools][version] = "1.7"
 projects[ctools][subdir] = "contrib"
 
@@ -42,8 +45,11 @@ projects[libraries][subdir] = contrib
 projects[panels][version] = "3.5"
 projects[panels][subdir] = "contrib"
 
-projects[pathauto][version] = "1.2"
-projects[pathauto][subdir] = "contrib"
+projects[panels][version] = "3.5"
+projects[panels][subdir] = "contrib"
+
+projects[owlcarousel][version] = "1.4"
+projects[owlcarousel][subdir] = "contrib"
 
 projects[strongarm][version] = "2.0"
 projects[strongarm][subdir] = "contrib"
@@ -63,8 +69,8 @@ projects[views][subdir] = "contrib"
 projects[views_slideshow][version] = "3.1"
 projects[views_slideshow][subdir] = "contrib"
 
-projects[wysiwyg_template][version] = 2.11
-projects[wysiwyg_template][subdir] = contrib
+projects[wysiwyg_template][version] = "2.11"
+projects[wysiwyg_template][subdir] = "contrib"
 
 projects[wysiwyg][version] = "2.2"
 projects[wysiwyg][subdir] = "contrib"
