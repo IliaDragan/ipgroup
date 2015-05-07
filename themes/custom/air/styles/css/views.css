@@ -192,7 +192,7 @@ section.panel-pane ul#slide-nav li:hover {
 .views-slideshow-controls-text-previous-processed a {
   position: absolute;
   left: 0;
-  top: 1;
+  top: 1px;
 }
 .views-slideshow-controls-text-status-pause a {
   display: none;
@@ -399,4 +399,49 @@ font: normal 1.1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 /* @end */
 /* End projects page view */
+
+
+/* Vacancies page view - IPGroup */
+.page-vacancies .center-wrapper .panel-col-first {
+  width: 65%;
+}
+.page-vacancies .views-row {
+  border-bottom: 1px solid #eaeaea;
+  color: #3c3c3c;
+  font-size: 1em;
+  line-height: 1.5em;
+  overflow: hidden;
+  padding: 15px 0;
+}
+
+
+.page-vacancies .views-field-title h2 {
+  font: 1.28571em/1em NewsGothicBT-Bold,Arial,sans-serif;
+  margin-bottom: 5px;
+  padding: 0;
+}
+.page-vacancies .views-field-field-body {
+  color: #3c3c3c;
+  line-height: 1.5em;
+  font-size: 100%;
+}
+.page-vacancies .views-field-field-body p {
+  padding: 0;
+}
+.page-vacancies .views-field-created {
+  margin-bottom: 5px;
+  color: #6a6a6a;
+  font-size: 0.714286em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+
+
+.page-vacancies .center-wrapper .panel-col-last {
+  width: 34%;
+}
+
+/* End vacancies page view  */
 
