@@ -1,0 +1,13 @@
+name = IPG Employees Carousel
+description = Carousel with module Owl Carousel
+core = 7.x
+package = IPGroup
+version = 7.x-1.0
+project = ipg_employees_carousel
+dependencies[] = better_exposed_filters
+dependencies[] = owlcarousel_views
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = owl_employee_carousel
+features_exclude[dependencies][ctools] = ctools

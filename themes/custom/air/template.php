@@ -163,3 +163,13 @@ function air_preprocess_views_view_fields(&$vars) {
     $vars['picture'] = l($img, 'employee/' . $username, $link_options);
   }
 }
+
+function air_preprocess_views_view(&$vars) {
+  $view = $vars['view'];
+//  var_dump($view->current_display);
+  if ($view->current_display == 'owl_employee_carousel') {
+    $theme_path = path_to_theme();
+    drupal_add_js($theme_path . '/scripts/employe-carousel.js',
+      array('scope'=> 'footer', 'weight'=>100));
+  }
+}
