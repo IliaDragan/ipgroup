@@ -83,3 +83,8 @@ libraries[ckeditor][destination]    = "libraries"
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url]  = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.6.1/ckeditor_3.6.6.1.zip"
+
+libraries[owl-carousel][destination]    = "libraries"
+libraries[owl-carousel][directory_name] = "leaflet"
+libraries[owl-carousel][download][type] = "get"
+libraries[owl-carousel][download][url]  = "https://github.com/OwlFonk/OwlCarousel/tree/master/owl-carousel"
