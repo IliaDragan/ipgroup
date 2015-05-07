@@ -21,26 +21,26 @@ projects[devel][subdir] = "contrib"
 projects[diff][version] = "3.2"
 projects[diff][subdir] = "contrib"
 
-projects[features][version] = "2.4"
+projects[features][version] = "2.5"
 projects[features][subdir] = "contrib"
+
+projects[features_extra][version] = "1.0-beta1"
+projects[features_extra][subdir] = contrib
 
 projects[field_group][version] = "1.4"
 projects[field_group][subdir] = "contrib"
 
-projects[jquery_update][version] = "2.4"
+projects[jquery_update][version] = "2.5"
 projects[jquery_update][subdir] = "contrib"
 
 projects[i18n][version] = "1.12"
 projects[i18n][subdir] = "contrib"
 
-projects[module_filter][version] = "2.0"
-projects[module_filter][subdir] = "contrib"
-
-projects[features_extra][version] = "1.0-beta1"
-projects[features_extra][subdir] = contrib
-
 projects[libraries][version] = "2.2"
 projects[libraries][subdir] = contrib
+
+projects[module_filter][version] = "2.0"
+projects[module_filter][subdir] = "contrib"
 
 projects[panels][version] = "3.5"
 projects[panels][subdir] = "contrib"
@@ -50,6 +50,9 @@ projects[panels][subdir] = "contrib"
 
 projects[owlcarousel][version] = "1.4"
 projects[owlcarousel][subdir] = "contrib"
+
+projects[references][version] = "2.1"
+projects[references][subdir] = "contrib"
 
 projects[strongarm][version] = "2.0"
 projects[strongarm][subdir] = "contrib"
@@ -63,7 +66,7 @@ projects[variable][subdir] = "contrib"
 projects[view_profiles_perms][version] = "1.0"
 projects[view_profiles_perms][subdir] = "contrib"
 
-projects[views][version] = "3.10"
+projects[views][version] = "3.11"
 projects[views][subdir] = "contrib"
 
 projects[views_slideshow][version] = "3.1"
