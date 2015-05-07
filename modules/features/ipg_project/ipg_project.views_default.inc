@@ -74,23 +74,6 @@ function ipg_project_views_default_views() {
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
     'und' => 'und',
   );
-  /* Filter criterion: Content: Status (field_status) */
-  $handler->display->display_options['filters']['field_status_tid']['id'] = 'field_status_tid';
-  $handler->display->display_options['filters']['field_status_tid']['table'] = 'field_data_field_status';
-  $handler->display->display_options['filters']['field_status_tid']['field'] = 'field_status_tid';
-  $handler->display->display_options['filters']['field_status_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_status_tid']['expose']['operator_id'] = 'field_status_tid_op';
-  $handler->display->display_options['filters']['field_status_tid']['expose']['label'] = 'Status (field_status)';
-  $handler->display->display_options['filters']['field_status_tid']['expose']['operator'] = 'field_status_tid_op';
-  $handler->display->display_options['filters']['field_status_tid']['expose']['identifier'] = 'field_status_tid';
-  $handler->display->display_options['filters']['field_status_tid']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    3 => 0,
-    4 => 0,
-  );
-  $handler->display->display_options['filters']['field_status_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_status_tid']['vocabulary'] = 'project_status';
 
   /* Display: Projects list pane */
   $handler = $view->new_display('panel_pane', 'Projects list pane', 'projects_list_pane');
@@ -110,7 +93,6 @@ function ipg_project_views_default_views() {
     t('‹ prev'),
     t('next ›'),
     t('last »'),
-    t('Status (field_status)'),
     t('Projects list pane'),
     t('Last 10 projects list'),
     t('View panes'),
