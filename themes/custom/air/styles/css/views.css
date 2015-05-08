@@ -402,10 +402,16 @@ font: normal 1.1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 
 
 /* Vacancies page view - IPGroup */
+.page-vacancies #block-system-main {
+  margin-top: 20px;
+}
 .page-vacancies .center-wrapper .panel-col-first {
   width: 65%;
 }
-.page-vacancies .views-row {
+.page-vacancies .view-display-id-vacancies_list_pane .view-content {
+  border-top: 1px solid #eaeaea;
+}
+.page-vacancies .view-display-id-vacancies_list_pane .views-row {
   border-bottom: 1px solid #eaeaea;
   color: #3c3c3c;
   font-size: 1em;
