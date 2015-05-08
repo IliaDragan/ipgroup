@@ -30,22 +30,30 @@
   }
   ?>
   <div class="pane-content">
-    <?php if ($pane->configuration['category'] == '1'): ?>
-      <div class="meta">
-        <strong><?php print t($content['#bundle']) ?></strong>
+    <div class="meta">
+      <strong><?php print t($content['#bundle']) ?></strong>
+      <?php if ($pane->configuration['category'] == '1'): ?>
         <span class="div">|</span>
         <div class="tags"><?php print render($content['field_category']); ?></div>
-      </div>
-    <?php endif; ?>
-
-    <?php if ($title): ?>
-
-      <?php if ($pane->configuration['titlesize'] == 'h2'): ?>
-        <h2 class="pane-title"><?php print l($title, 'node/' . $content['field_body']['#object']->nid); ?></h2>
-      <?php else: ?>
-        <h1 class="pane-title"><?php print l($title, 'node/' . $content['field_body']['#object']->nid); ?></h1>
       <?php endif; ?>
+    </div>
 
+    <?php if ($content['#bundle'] == 'article'): ?>
+      <?php if ($title): ?>
+        <?php if ($pane->configuration['titlesize'] == 'h2'): ?>
+          <h2 class="pane-title"><?php print l($title, 'node/' . $content['field_image']['#object']->nid); ?></h2>
+        <?php else: ?>
+          <h1 class="pane-title"><?php print l($title, 'node/' . $content['field_image']['#object']->nid); ?></h1>
+        <?php endif; ?>
+      <?php endif; ?>
+    <?php else: ?>
+      <?php if ($title): ?>
+        <?php if ($pane->configuration['titlesize'] == 'h2'): ?>
+          <h2 class="pane-title"><?php print l($title, 'node/' . $content['body']['#object']->nid); ?></h2>
+        <?php else: ?>
+          <h1 class="pane-title"><?php print l($title, 'node/' . $content['body']['#object']->nid); ?></h1>
+        <?php endif; ?>
+      <?php endif; ?>
     <?php endif; ?>
 
     <?php if ($feeds): ?>
@@ -54,22 +62,30 @@
       </div>
     <?php endif; ?>
 
-    <?php
+    <?php if ($content['#bundle'] == 'article'): ?>
+      <?php
       if ($pane->configuration['teaser'] == '1'):
         print render($content['field_body']);
       endif;
-    ?>
+      ?>
+    <?php else: ?>
+      <?php
+      if ($pane->configuration['teaser'] == '1'):
+        print render($content['body']);
+      endif;
+      ?>
+    <?php endif; ?>
   </div>
 
   <?php if ($links): ?>
-  <div class="links">
-    <?php print $links; ?>
-  </div>
+    <div class="links">
+      <?php print $links; ?>
+    </div>
   <?php endif; ?>
 
   <?php if ($more): ?>
-  <div class="more-link">
-    <?php print $more; ?>
-  </div>
+    <div class="more-link">
+      <?php print $more; ?>
+    </div>
   <?php endif; ?>
 </section>
