@@ -146,12 +146,16 @@ function air_preprocess_views_view(&$vars) {
     $theme_path = path_to_theme();
     drupal_add_js($theme_path . '/scripts/employe-carousel.js',
       array('scope' => 'footer', 'weight' => 100));
+    drupal_add_css($theme_path . '/styles/css/carousel.css',
+      array('scope'=> 'footer', 'weight'=>100));
   }
 }
+
 /**
  * Implements hook_preprocess_field().
  */
-function air_preprocess_field(&$variables) {
+function air_preprocess_field(&$variables)
+{
   // Preprocess field_user user reference field.
   if ($variables['element']['#field_name'] == 'field_user') {
     $items = &$variables['items'];
@@ -173,7 +177,5 @@ function air_preprocess_field(&$variables) {
         $item['phone'] = $entity->field_phone['und'][0]['value'];
       }
     }
-    $theme_path = path_to_theme();
-    drupal_add_js($theme_path . '/scripts/field_user.js');
   }
 }
