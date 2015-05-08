@@ -50,6 +50,7 @@ projects[panels][subdir] = "contrib"
 
 projects[owlcarousel][version] = "1.4"
 projects[owlcarousel][subdir] = "contrib"
+projects[owlcarousel][patch][] = "http://am.storage.dev.inlead.dk/owlcarousel-fixed_libraries_owlcarousel_path.patch"
 
 projects[references][version] = "2.1"
 projects[references][subdir] = "contrib"
@@ -83,3 +84,8 @@ libraries[ckeditor][destination]    = "libraries"
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url]  = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.6.1/ckeditor_3.6.6.1.zip"
+
+libraries[owl-carousel][destination]    = "libraries"
+libraries[owl-carousel][directory_name] = "owl-carousel"
+libraries[owl-carousel][download][type] = "get"
+libraries[owl-carousel][download][url]  = "http://owlgraphic.com/owlcarousel/owl.carousel.zip"

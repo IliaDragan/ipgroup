@@ -23,8 +23,8 @@ function ipg_users_field_group_info() {
     'label' => 'Avatar',
     'weight' => '4',
     'children' => array(
-      0 => 'field_photo',
-      1 => 'field_caricature',
+      0 => 'field_caricature',
+      1 => 'field_photo',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
