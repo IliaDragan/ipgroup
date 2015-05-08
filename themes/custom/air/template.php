@@ -171,5 +171,7 @@ function air_preprocess_views_view(&$vars) {
     $theme_path = path_to_theme();
     drupal_add_js($theme_path . '/scripts/employe-carousel.js',
       array('scope'=> 'footer', 'weight'=>100));
+    drupal_add_css($theme_path . '/styles/css/carousel.css',
+      array('scope'=> 'footer', 'weight'=>100));
   }
 }
