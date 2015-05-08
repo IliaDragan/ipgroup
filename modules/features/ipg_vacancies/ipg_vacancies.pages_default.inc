@@ -54,12 +54,16 @@ function ipg_vacancies_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'flexible';
+  $display->layout = 'twocol_stacked';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
       'center' => NULL,
+      'top' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+      'bottom' => NULL,
     ),
   );
   $display->cache = array();
@@ -67,6 +71,25 @@ function ipg_vacancies_default_page_manager_pages() {
   $display->uuid = 'f2cf0208-6d18-43b0-817b-471fcd435bf5';
   $display->content = array();
   $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-2a285684-43b8-4155-a86e-8ccfa06799c2';
+    $pane->panel = 'left';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'article-vacancies_list_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '2a285684-43b8-4155-a86e-8ccfa06799c2';
+    $display->content['new-2a285684-43b8-4155-a86e-8ccfa06799c2'] = $pane;
+    $display->panels['left'][0] = 'new-2a285684-43b8-4155-a86e-8ccfa06799c2';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
