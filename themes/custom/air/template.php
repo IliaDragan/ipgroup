@@ -60,8 +60,8 @@ function air_preprocess_html(&$vars) {
 function air_preprocess_page(&$vars) {
   if (!drupal_is_front_page()) {
     $item = menu_get_active_trail();
-    if (!empty($item[1]['link_title'])) {
-      $vars['section_head'] = $item[1]['link_title'];
+    if (!empty($item[1]['title'])) {
+      $vars['section_head'] = $item[1]['title'];
     }
     elseif (!empty($vars['node']->type)) {
       $type = $vars['node']->type;
@@ -154,8 +154,7 @@ function air_preprocess_views_view(&$vars) {
 /**
  * Implements hook_preprocess_field().
  */
-function air_preprocess_field(&$variables)
-{
+function air_preprocess_field(&$variables) {
   // Preprocess field_user user reference field.
   if ($variables['element']['#field_name'] == 'field_user') {
     $items = &$variables['items'];
@@ -177,5 +176,7 @@ function air_preprocess_field(&$variables)
         $item['phone'] = $entity->field_phone['und'][0]['value'];
       }
     }
+    $theme_path = path_to_theme();
+    drupal_add_js($theme_path . '/scripts/field_user.js');
   }
 }
