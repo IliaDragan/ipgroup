@@ -48,6 +48,9 @@ projects[panels][subdir] = "contrib"
 projects[panels][version] = "3.5"
 projects[panels][subdir] = "contrib"
 
+projects[pathauto][version] = "1.2"
+projects[pathauto][subdir] = "contrib"
+
 projects[owlcarousel][version] = "1.4"
 projects[owlcarousel][subdir] = "contrib"
 projects[owlcarousel][patch][] = "http://am.storage.dev.inlead.dk/owlcarousel-fixed_libraries_owlcarousel_path.patch"
