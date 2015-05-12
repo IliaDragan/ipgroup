@@ -43,6 +43,12 @@ function ipg_event_strongarm() {
         'title' => array(
           'weight' => '-5',
         ),
+        'language' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(
         'language' => array(
