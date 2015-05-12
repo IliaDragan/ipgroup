@@ -38,21 +38,11 @@
       <?php endif; ?>
     </div>
 
-    <?php if ($content['#bundle'] == 'article'): ?>
-      <?php if ($title): ?>
-        <?php if ($pane->configuration['titlesize'] == 'h2'): ?>
-          <h2 class="pane-title"><?php print l($title, 'node/' . $content['field_image']['#object']->nid); ?></h2>
-        <?php else: ?>
-          <h1 class="pane-title"><?php print l($title, 'node/' . $content['field_image']['#object']->nid); ?></h1>
-        <?php endif; ?>
-      <?php endif; ?>
-    <?php else: ?>
-      <?php if ($title): ?>
-        <?php if ($pane->configuration['titlesize'] == 'h2'): ?>
-          <h2 class="pane-title"><?php print l($title, 'node/' . $content['body']['#object']->nid); ?></h2>
-        <?php else: ?>
-          <h1 class="pane-title"><?php print l($title, 'node/' . $content['body']['#object']->nid); ?></h1>
-        <?php endif; ?>
+    <?php if ($title): ?>
+      <?php if ($pane->configuration['titlesize'] == 'h2'): ?>
+        <h2 class="pane-title"><?php print l($title, 'node/' . $content['#node']->nid); ?></h2>
+      <?php else: ?>
+        <h1 class="pane-title"><?php print l($title, 'node/' . $content['#node']->nid); ?></h1>
       <?php endif; ?>
     <?php endif; ?>
 
