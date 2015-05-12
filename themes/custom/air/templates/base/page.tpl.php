@@ -74,7 +74,7 @@
             <div id="languages-region">
               <?php print render($page['languages']); ?>
             </div>
-          <? endif; ?>
+          <?php endif; ?>
           <?php if (!empty($secondary_menu)): ?>
           <div id="secondary-navigation">
             <?php if ($site_slogan): ?>
