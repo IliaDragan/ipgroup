@@ -693,3 +693,32 @@ ol.search-results li {
 /* @end */
 /* @end */
 /* @end */
+
+/* Language block theming - IPGroup */
+#languages-region {
+  display: inline-block;
+  float: right;
+  margin-left: 30px;
+  width: auto;
+}
+div.languages-and-navigation {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+}
+#languages-region li{
+  display: inline-block;
+}
+#languages-region li.active a{
+  font-weight: bold;
+  text-decoration: underline;
+}
+#secondary-navigation {
+  display: inline-block;
+  float: right;
+  width: auto;
+}
+#secondary-menu {
+  float: none;
+}
+/* End language block theming - IPGroup */

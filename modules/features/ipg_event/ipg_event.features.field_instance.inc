@@ -119,9 +119,9 @@ function ipg_event_field_default_field_instances() {
     'required' => 1,
     'settings' => array(
       'default_value' => 'now',
-      'default_value2' => 'same',
+      'default_value2' => 'strtotime',
       'default_value_code' => '',
-      'default_value_code2' => '',
+      'default_value_code2' => '+1 days',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -135,7 +135,7 @@ function ipg_event_field_default_field_instances() {
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
-      'type' => 'date_text',
+      'type' => 'date_popup',
       'weight' => -3,
     ),
   );
@@ -161,7 +161,7 @@ function ipg_event_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => 'content',
-          'image_style' => 'thumbnail',
+          'image_style' => 'image_06col',
         ),
         'type' => 'image',
         'weight' => 0,

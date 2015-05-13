@@ -1,18 +1,18 @@
 <?php
 /**
  * @file
- * ipg_article.features.taxonomy.inc
+ * ipg_project.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function ipg_article_taxonomy_default_vocabularies() {
+function ipg_project_taxonomy_default_vocabularies() {
   return array(
-    'categories' => array(
-      'name' => 'Categories',
-      'machine_name' => 'categories',
-      'description' => 'Use categories to group articles.',
+    'project_status' => array(
+      'name' => 'Project status',
+      'machine_name' => 'project_status',
+      'description' => 'Current status of project',
       'hierarchy' => 0,
       'module' => 'taxonomy',
       'weight' => 0,

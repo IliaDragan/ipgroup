@@ -14,7 +14,7 @@ function localization_locale_default_languages() {
   $languages['en'] = array(
     'language' => 'en',
     'name' => 'English',
-    'native' => 'English',
+    'native' => 'Eng',
     'direction' => 0,
     'enabled' => 1,
     'plurals' => 0,
@@ -27,7 +27,7 @@ function localization_locale_default_languages() {
   $languages['ro'] = array(
     'language' => 'ro',
     'name' => 'Romanian',
-    'native' => 'Română',
+    'native' => 'Rom',
     'direction' => 0,
     'enabled' => 1,
     'plurals' => 0,
@@ -40,7 +40,7 @@ function localization_locale_default_languages() {
   $languages['ru'] = array(
     'language' => 'ru',
     'name' => 'Russian',
-    'native' => 'Русский',
+    'native' => 'Rus',
     'direction' => 0,
     'enabled' => 1,
     'plurals' => 0,

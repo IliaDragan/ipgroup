@@ -19,7 +19,7 @@ function ipg_users_default_page_manager_pages() {
   $page->access = array();
   $page->menu = array(
     'type' => 'normal',
-    'title' => 'Employee',
+    'title' => 'Employees',
     'name' => 'main-menu',
     'weight' => '0',
     'parent' => array(
