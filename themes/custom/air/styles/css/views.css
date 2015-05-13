@@ -49,8 +49,9 @@ div.view.view-employees-list div.views-row img {
   max-height: 100%;
 }
 div.view.view-employees-list div.views-row div.views-field-field-name {
-  font-family: NewsGothicBT-Bold, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.285714286em;
+  font-weight: bold;
   line-height: 1.5em;
 }
 div.view.view-employees-list div.views-row div.views-field-field-position {
@@ -110,7 +111,7 @@ div.block-system .content .contextual-links-region > header div.view-slideshow-f
   max-width: 90%;
   width: auto;
   word-wrap: break-word;
-  font: normal 3.428571429em/1.2em NewsGothicBT-Roman, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
+  font: normal 3.428571429em/1.2em Arial, Helvetica, sans-serif;
 }
 div.view-slideshow-frontpage h1 a {
   color: #ffffff;
@@ -119,8 +120,8 @@ div.view-slideshow-frontpage h1 a:hover {
   text-decoration: none;
 }
 div.view-slideshow-frontpage h1 strong {
-  font-family: NewsGothicBT-Bold, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
-  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 div.view-slideshow-frontpage h1 span {
   float: left;
@@ -282,7 +283,7 @@ section.panel-pane ul#slide-nav li:hover {
   margin: 3%;
 }
 .page-projects .view-projects .views-field-title h2 {
-  font: 1.5em/1.2em NewsGothicBT-Bold,"Arial Narrow",Helvetica,Arial,sans-serif;
+  font: bold 1.5em/1.2em Arial, Helvetica, sans-serif;
   margin: 0;
 }
 .page-projects .view-projects .views-field-body .field-content {
@@ -324,7 +325,7 @@ section.panel-pane ul#slide-nav li:hover {
 
 
 .page-vacancies .views-field-title h2 {
-  font: 1.28571em/1em NewsGothicBT-Bold,Arial,sans-serif;
+  font: bold 1.28571em/1em Arial, Helvetica, sans-serif;
   margin-bottom: 5px;
   padding: 0;
 }
@@ -343,13 +344,8 @@ section.panel-pane ul#slide-nav li:hover {
   font-weight: bold;
   text-transform: uppercase;
 }
-
-
-
-
 .page-vacancies .center-wrapper .panel-col-last {
   width: 34%;
 }
 
 /* End vacancies page view  */
-
