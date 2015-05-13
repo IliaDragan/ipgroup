@@ -69,5 +69,12 @@ function ipg_employees_carousel_strongarm() {
   $strongarm->value = '800';
   $export['owlcarousel_pagination_speed_owlcarousel_settings_default'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'owlcarousel_rewind_speed_owlcarousel_settings_default';
+  $strongarm->value = '1000';
+  $export['owlcarousel_rewind_speed_owlcarousel_settings_default'] = $strongarm;
+
   return $export;
 }
