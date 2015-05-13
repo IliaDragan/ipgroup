@@ -21,5 +21,6 @@ features[variable][] = owlcarousel_navigation_text_owlcarousel_settings_default
 features[variable][] = owlcarousel_pagination_numbers_owlcarousel_settings_default
 features[variable][] = owlcarousel_pagination_owlcarousel_settings_default
 features[variable][] = owlcarousel_pagination_speed_owlcarousel_settings_default
+features[variable][] = owlcarousel_rewind_speed_owlcarousel_settings_default
 features[views_view][] = owl_employee_carousel
 features_exclude[dependencies][ctools] = ctools

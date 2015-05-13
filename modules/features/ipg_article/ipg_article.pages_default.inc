@@ -326,6 +326,36 @@ function ipg_article_default_page_manager_handlers() {
     $display->content['new-d5ca78de-6676-4cd3-a5a7-dbafdd58e982'] = $pane;
     $display->panels['author'][1] = 'new-d5ca78de-6676-4cd3-a5a7-dbafdd58e982';
     $pane = new stdClass();
+    $pane->pid = 'new-70774b42-92f4-492e-905c-77332b10f244';
+    $pane->panel = 'author';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'user:field_position';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'text_default',
+      'delta_limit' => 0,
+      'delta_offset' => '0',
+      'delta_reversed' => FALSE,
+      'formatter_settings' => array(),
+      'context' => 'relationship_entity_from_schema:uid-node-user_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '70774b42-92f4-492e-905c-77332b10f244';
+    $display->content['new-70774b42-92f4-492e-905c-77332b10f244'] = $pane;
+    $display->panels['author'][2] = 'new-70774b42-92f4-492e-905c-77332b10f244';
+    $pane = new stdClass();
     $pane->pid = 'new-806333af-2f3a-410f-81cd-cde3eaaeacfd';
     $pane->panel = 'author';
     $pane->type = 'entity_field';
@@ -356,11 +386,11 @@ function ipg_article_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = '806333af-2f3a-410f-81cd-cde3eaaeacfd';
     $display->content['new-806333af-2f3a-410f-81cd-cde3eaaeacfd'] = $pane;
-    $display->panels['author'][2] = 'new-806333af-2f3a-410f-81cd-cde3eaaeacfd';
+    $display->panels['author'][3] = 'new-806333af-2f3a-410f-81cd-cde3eaaeacfd';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
