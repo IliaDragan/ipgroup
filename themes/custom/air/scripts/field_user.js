@@ -24,7 +24,7 @@ Drupal.behaviors.userField = {
         $users.css('min-height', height);
       }
 
-      if (original_height <= height || height == 0) {
+      if ((original_height <= height) || (height == 0)) {
         $button.remove();
         $users.css('position', 'relative');
       }
