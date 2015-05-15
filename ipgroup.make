@@ -42,6 +42,9 @@ projects[geocoder][subdir] = "contrib"
 projects[geofield][version] = "2.3"
 projects[geofield][subdir] = "contrib"
 
+projects[geophp][version] = "1.7"
+projects[geophp][subdir] = "contrib"
+
 projects[jquery_update][version] = "2.5"
 projects[jquery_update][subdir] = "contrib"
 
