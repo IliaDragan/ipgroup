@@ -6,6 +6,9 @@ api = 2
 projects[admin_menu][version] = "3.0-rc5"
 projects[admin_menu][subdir] = "contrib"
 
+projects[addressfield][version] = "1.1"
+projects[addressfield][subdir] = "contrib"
+
 projects[better_exposed_filters][version] = "3.2"
 projects[better_exposed_filters][subdir] = "contrib"
 
@@ -51,8 +54,14 @@ projects[panels][subdir] = "contrib"
 projects[panels][version] = "3.5"
 projects[panels][subdir] = "contrib"
 
+projects[proj4js][version] = "1.2"
+projects[proj4js][subdir] = "contrib"
+
 projects[pathauto][version] = "1.2"
 projects[pathauto][subdir] = "contrib"
+
+projects[openlayers][version] = "2.0-beta11"
+projects[openlayers][subdir] = "contrib"
 
 projects[owlcarousel][version] = "1.4"
 projects[owlcarousel][subdir] = "contrib"
