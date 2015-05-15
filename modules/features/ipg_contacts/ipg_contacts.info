@@ -1,7 +1,7 @@
 name = IPG_Contacts
-description = Contacts 
+description = Contacts
 core = 7.x
-package = Features
+package = IPGroup
 version = 7.x-1.0
 project = ipg_contacts
 dependencies[] = addressfield
