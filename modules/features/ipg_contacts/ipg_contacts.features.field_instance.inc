@@ -118,7 +118,7 @@ function ipg_contacts_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'leaflet',
         'settings' => array(
           'height' => 400,
