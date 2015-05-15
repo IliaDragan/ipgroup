@@ -60,7 +60,8 @@ function air_preprocess_html(&$vars) {
 function air_preprocess_page(&$vars) {
   if (!drupal_is_front_page()) {
     $item = menu_get_active_trail();
-    if (!empty($item[1]['title']) && $item[1]['menu_name'] == 'main-menu') {
+    $is_menu_item = !empty($item[1]['title']) && !empty($item[1]['menu_name']);
+    if ($is_menu_item && $item[1]['menu_name'] == 'main-menu') {
       $vars['section_head'] = $item[1]['title'];
     }
     elseif (!empty($vars['node']->type)) {
