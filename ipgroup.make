@@ -36,14 +36,14 @@ projects[features_extra][subdir] = contrib
 projects[field_group][version] = "1.4"
 projects[field_group][subdir] = "contrib"
 
+projects[geocoder][version] = "1.2"
+projects[geocoder][subdir] = "contrib"
+
 projects[geofield][version] = "2.3"
 projects[geofield][subdir] = "contrib"
 
 projects[geophp][version] = "1.7"
 projects[geophp][subdir] = "contrib"
-
-projects[geocoder][version] = "1.2"
-projects[geocoder][subdir] = "contrib"
 
 projects[jquery_update][version] = "2.5"
 projects[jquery_update][subdir] = "contrib"
@@ -52,7 +52,7 @@ projects[i18n][version] = "1.13"
 projects[i18n][subdir] = "contrib"
 
 projects[leaflet][version] = "1.1"
-projects[leaflet][subdir] = "contrib"
+projects[leaflet][subdir] = contrib
 
 projects[libraries][version] = "2.2"
 projects[libraries][subdir] = contrib
@@ -110,3 +110,8 @@ libraries[owl-carousel][destination]    = "libraries"
 libraries[owl-carousel][directory_name] = "owl-carousel"
 libraries[owl-carousel][download][type] = "get"
 libraries[owl-carousel][download][url]  = "http://owlgraphic.com/owlcarousel/owl.carousel.zip"
+
+libraries[leaflet][destination]    = "libraries"
+libraries[leaflet][directory_name] = "leaflet"
+libraries[leaflet][download][type] = "get"
+libraries[leaflet][download][url]  = "http://leaflet-cdn.s3.amazonaws.com/build/leaflet-0.7.3.zip"
