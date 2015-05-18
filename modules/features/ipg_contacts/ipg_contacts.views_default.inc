@@ -31,12 +31,28 @@ function ipg_contacts_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_address_company']['id'] = 'field_address_company';
-  $handler->display->display_options['fields']['field_address_company']['table'] = 'field_data_field_address_company';
-  $handler->display->display_options['fields']['field_address_company']['field'] = 'field_address_company';
-  $handler->display->display_options['fields']['field_address_company']['label'] = '';
-  $handler->display->display_options['fields']['field_address_company']['element_label_colon'] = FALSE;
+  /* Field: Content: E-mail */
+  $handler->display->display_options['fields']['field_e_mail']['id'] = 'field_e_mail';
+  $handler->display->display_options['fields']['field_e_mail']['table'] = 'field_data_field_e_mail';
+  $handler->display->display_options['fields']['field_e_mail']['field'] = 'field_e_mail';
+  $handler->display->display_options['fields']['field_e_mail']['label'] = '';
+  $handler->display->display_options['fields']['field_e_mail']['element_label_colon'] = FALSE;
+  /* Field: Content: Telephone */
+  $handler->display->display_options['fields']['field_telephone']['id'] = 'field_telephone';
+  $handler->display->display_options['fields']['field_telephone']['table'] = 'field_data_field_telephone';
+  $handler->display->display_options['fields']['field_telephone']['field'] = 'field_telephone';
+  $handler->display->display_options['fields']['field_telephone']['label'] = '';
+  $handler->display->display_options['fields']['field_telephone']['element_label_colon'] = FALSE;
+  /* Field: Content: Telephone/Fax */
+  $handler->display->display_options['fields']['field_telephone_fax']['id'] = 'field_telephone_fax';
+  $handler->display->display_options['fields']['field_telephone_fax']['table'] = 'field_data_field_telephone_fax';
+  $handler->display->display_options['fields']['field_telephone_fax']['field'] = 'field_telephone_fax';
+  $handler->display->display_options['fields']['field_telephone_fax']['label'] = '';
+  $handler->display->display_options['fields']['field_telephone_fax']['element_label_colon'] = FALSE;
+  /* Field: Content: Geocode */
+  $handler->display->display_options['fields']['field_geocode']['id'] = 'field_geocode';
+  $handler->display->display_options['fields']['field_geocode']['table'] = 'field_data_field_geocode';
+  $handler->display->display_options['fields']['field_geocode']['field'] = 'field_geocode';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -67,6 +83,7 @@ function ipg_contacts_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
+    t('Geocode'),
     t('Block'),
   );
   $export['address_company'] = $view;
