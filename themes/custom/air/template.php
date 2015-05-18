@@ -60,7 +60,7 @@ function air_preprocess_html(&$vars) {
 function air_preprocess_page(&$vars) {
   if (!drupal_is_front_page()) {
     $item = menu_get_active_trail();
-    if (!empty($item[1]['title'])) {
+    if (!empty($item[1]['title']) && $item[1]['menu_name'] == 'main-menu') {
       $vars['section_head'] = $item[1]['title'];
     }
     elseif (!empty($vars['node']->type)) {
@@ -139,15 +139,17 @@ function air_preprocess_views_view_fields(&$vars) {
   }
 }
 
+/**
+ * Implements template_preprocess_views_view().
+ */
 function air_preprocess_views_view(&$vars) {
   $view = $vars['view'];
-//  var_dump($view->current_display);
   if ($view->current_display == 'owl_employee_carousel') {
     $theme_path = path_to_theme();
     drupal_add_js($theme_path . '/scripts/employe-carousel.js',
       array('scope' => 'footer', 'weight' => 100));
     drupal_add_css($theme_path . '/styles/css/carousel.css',
-      array('scope'=> 'footer', 'weight'=>100));
+      array('scope' => 'footer', 'weight' => 100));
   }
 }
 

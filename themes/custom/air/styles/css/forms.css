@@ -5,25 +5,7 @@
  * This stylesheet is intended for form
  * specific styling.
  */
-/* Import main LESS file */
-/**
- * @file
- * less/main.css
- *
- * Imports all less files into one single file
- */
-/**
- * @file
- * less/radius.css
- *
- * Contains variables and other LESS-specific CSS.
- */
-/**
- * @file
- * extend.css
- *
- * Contains variables and other LESS-specific CSS.
- */
+
 /* @group General */
 input.form-text,
 textarea {

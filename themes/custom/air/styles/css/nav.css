@@ -5,18 +5,12 @@
  * Navigation stylesheet for peytz.dk.
  * Contains styles for main navigation.
  */
-/* Import LESS files */
-/**
- * @file
- * less/radius.css
- *
- * Contains variables and other LESS-specific CSS.
- */
+
 div[role="navigation"] nav {
   float: left;
   padding: 40px 3px 0;
-  width: 590px;
-  font-family: NewsGothicBT-Bold, 'Arial Narrow', sans-serif, sans-serif;
+  width: 690px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 div[role="navigation"] nav h2 {
   display: none;
@@ -25,7 +19,7 @@ div[role="navigation"] nav h2 {
 }
 div[role="navigation"] nav ul li {
   display: inline;
-  font-size: 1.285714286em;
+  font-size: 1.2em;
   line-height: 1.2em;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -34,6 +28,12 @@ div[role="navigation"] nav ul li {
 div[role="navigation"] nav ul li a {
   margin: 0 0.071428571em;
   padding: 2px 8px;
+}
+div[role="navigation"] nav ul li a,
+div[role="navigation"] nav ul li a:active,
+div[role="navigation"] nav ul li a:hover,
+div[role="navigation"] nav ul li a:visited {
+  font-weight: bold;
 }
 div[role="navigation"] nav ul li a.active {
   color: #ffffff;

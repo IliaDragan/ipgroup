@@ -4,13 +4,6 @@
  *
  * These follow after primary styles so they will successfully override.
  */
-/* Import LESS files */
-/**
- * @file
- * less/radius.css
- *
- * Contains variables and other LESS-specific CSS.
- */
 
 /**
  * (max-width: 966px)
@@ -161,7 +154,7 @@
   div.block-system .content .contextual-links-region > header div.view-slideshow-frontpage h1 {
     left: 3.125%;
     bottom: 20%;
-    font: normal 2.571428571em/1.2em NewsGothicBT-Roman, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
+    font: normal 2.4em/1.2em Arial, Helvetica, sans-serif;
   }
   div.view-slideshow-frontpage div.actions {
     position: absolute;
@@ -391,7 +384,7 @@
     cursor: pointer;
     text-transform: uppercase;
     color: #ffffff;
-    font: normal 1.071428571em/1.3em NewsGothicBT-Bold, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
+    font: bold 1em/1.3em Arial, Helvetica, sans-serif;
     background: #6a6a6a url(../../images/icons.png) no-repeat 100% -452px;
     border-radius: 3px;
     -moz-border-radius: 3px;
@@ -598,7 +591,7 @@
   }
   div.block-system .content > header div.view-slideshow-frontpage h1,
   div.block-system .content .contextual-links-region > header div.view-slideshow-frontpage h1 {
-    font: normal 2.2em/1.2em NewsGothicBT-Roman, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
+    font: normal 2.2em/1.2em Arial, Helvetica, sans-serif;
   }
   section.panel-pane div.view-slideshow-frontpage div.view-content {
     padding: 0 0 45%;
@@ -645,7 +638,7 @@
   div.block-system .content > header div.view-slideshow-frontpage h1,
   div.block-system .content .contextual-links-region > header div.view-slideshow-frontpage h1 {
     bottom: 5%;
-    font: normal 1.7em/1.2em NewsGothicBT-Roman, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
+    font: normal 1.7em/1.2em Arial, Helvetica, sans-serif;
   }
   div.view-slideshow-frontpage div.actions {
     display: none;
