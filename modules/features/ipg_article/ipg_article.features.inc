@@ -82,7 +82,7 @@ function ipg_article_image_default_styles() {
       1 => array(
         'name' => 'image_scale',
         'data' => array(
-          'width' => 500,
+          'width' => 630,
           'height' => '',
           'upscale' => 0,
         ),
