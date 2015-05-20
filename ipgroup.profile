@@ -15,7 +15,7 @@ function ipgroup_form_install_configure_form_alter(&$form, $form_state) {
 
   // Pre-populate site name and site e-mail.
   $form['site_information']['site_name']['#default_value'] = 'IPGroup';
-  $form['site_information']['site_mail']['#default_value'] = 'mail@ipgroup.md';
+  $form['site_information']['site_mail']['#default_value'] = 'job@ipgroup.md';
 
   // Pre-populate site with admin account.
   $pass = 'IPGadmin123!';
