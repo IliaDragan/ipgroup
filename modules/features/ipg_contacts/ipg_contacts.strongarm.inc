@@ -99,7 +99,7 @@ function ipg_contacts_strongarm() {
       'display' => array(
         'language' => array(
           'teaser' => array(
-            'weight' => '0',
+            'weight' => '6',
             'visible' => FALSE,
           ),
         ),

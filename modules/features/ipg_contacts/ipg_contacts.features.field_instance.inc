@@ -78,7 +78,7 @@ function ipg_contacts_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -254,10 +254,10 @@ function ipg_contacts_field_default_field_instances() {
           ),
         ),
         'type' => 'geofield_leaflet',
-        'weight' => 6,
+        'weight' => 3,
       ),
       'teaser' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'leaflet',
         'settings' => array(
           'height' => 300,
