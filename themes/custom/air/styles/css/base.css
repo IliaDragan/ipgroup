@@ -715,4 +715,10 @@ div.languages-and-navigation {
 #secondary-menu {
   float: none;
 }
+#leaflet-map{
+  margin-top: 30px;
+}
+.contextual-links-region h2 {
+  padding-bottom: 5px;
+}
 /* End language block theming - IPGroup */
