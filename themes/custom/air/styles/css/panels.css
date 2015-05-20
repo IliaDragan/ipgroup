@@ -12,6 +12,7 @@ section.panel-pane {
   clear: both;
   overflow: hidden;
   font: normal 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  margin-bottom: 20px;
 }
 section.panel-pane.pane-node-content {
   overflow: visible;
