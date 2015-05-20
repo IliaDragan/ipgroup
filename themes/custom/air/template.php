@@ -65,11 +65,16 @@ function air_preprocess_page(&$vars) {
       $vars['section_head'] = $item[1]['title'];
     }
     elseif (!empty($vars['node']->type)) {
-      $type = $vars['node']->type;
-      $types = node_type_get_types();
-      if (!empty($types[$type]->name)) {
-        $type_name = $types[$type]->name;
-        $vars['section_head'] = t('@type', array('@type' => $type_name));
+      if (!empty($vars['node']->field_category['und'][0]['taxonomy_term']->name)) {
+        $vars['section_head'] = $vars['node']->field_category['und'][0]['taxonomy_term']->name;
+      }
+      else {
+        $type = $vars['node']->type;
+        $types = node_type_get_types();
+        if (!empty($types[$type]->name)) {
+          $type_name = $types[$type]->name;
+          $vars['section_head'] = t('@type', array('@type' => $type_name));
+        }
       }
     }
   }
