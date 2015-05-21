@@ -672,11 +672,11 @@ ol.search-results li {
   text-indent: -9999px;
   background: transparent url('../../images/icons_remove.png') no-repeat 0 0;
 }
-.view-display-id-block {
-  width: 100%;
-  height: 300px;
-  background-color: #dadada;
-}
+/*.view-display-id-block {*/
+/*width: 100%;*/
+/*height: 300px;*/
+/*background-color: #dadada;*/
+/*}*/
 #views_slideshow_cycle_teaser_section_front_page_slideshow-block {
   display: block;
   margin-left: auto;
@@ -714,5 +714,11 @@ div.languages-and-navigation {
 }
 #secondary-menu {
   float: none;
+}
+#leaflet-map{
+  margin-top: 30px;
+}
+.contextual-links-region h2 {
+  padding-bottom: 5px;
 }
 /* End language block theming - IPGroup */
