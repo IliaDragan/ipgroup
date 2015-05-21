@@ -347,5 +347,58 @@ section.panel-pane ul#slide-nav li:hover {
 .page-vacancies .center-wrapper .panel-col-last {
   width: 34%;
 }
-
+.view-new-event{
+  height: auto;
+}
+.view-new-event .view-content{
+  background-color: #ffffff;
+}
+.view-new-event .view-content .views-row-1 {
+  background-color: #FF7200;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.view-new-event .view-content .views-row-1 a {
+  color: #ffffff!important;
+  font-weight: 900;
+}
+.view-new-event .view-content .views-row-2{
+  background-color: #EAEAEA;
+  margin-bottom: 20px;
+  color: #2a2a2a;
+}
+.view-content .views-row-2 a{
+  color: #ff7200;
+  font-weight: 900;
+}
+.view-content .views-row-2 .views-field-type {
+  color: #6a6a6a;
+}
+.view-new-event .view-content .views-row-3{
+  background-color: #2a2a2a;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.view-content .views-row-3 a{
+  color: #ff7200!important;
+  font-weight: 900;
+}
+.view-new-event .views-field-type{
+  padding-left: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .714285714em;
+}
+.view-new-event .views-field-title{
+  padding-left: 10px;
+  font-weight: bold;
+  height: 30px;
+}
+.view-new-event .views-field-body {
+  padding: 0 10px 10px 10px;
+}
+.pane-new-event h2.pane-title{
+  margin-left: 10px;
+  color: #ff7200;
+}
 /* End vacancies page view  */
