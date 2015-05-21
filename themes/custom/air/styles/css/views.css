@@ -354,32 +354,32 @@ section.panel-pane ul#slide-nav li:hover {
   background-color: #ffffff;
 }
 .view-new-event .view-content .views-row-1 {
-  background-color: #FF7200;
+  background-color: #FF7200!important;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #ffffff!important;
 }
 .view-new-event .view-content .views-row-1 a {
   color: #ffffff!important;
   font-weight: 900;
 }
 .view-new-event .view-content .views-row-2{
-  background-color: #EAEAEA;
+  background-color: #EAEAEA!important;
   margin-bottom: 20px;
-  color: #2a2a2a;
+  color: #2a2a2a!important;
 }
-.view-content .views-row-2 a{
-  color: #ff7200;
+.view-new-event .view-content .views-row-2 a{
+  color: #ff7200!important;
   font-weight: 900;
 }
 .view-content .views-row-2 .views-field-type {
   color: #6a6a6a;
 }
 .view-new-event .view-content .views-row-3{
-  background-color: #2a2a2a;
+  background-color: #2a2a2a!important;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #ffffff!important;
 }
-.view-content .views-row-3 a{
+.view-new-event .view-content .views-row-3 a{
   color: #ff7200!important;
   font-weight: 900;
 }
@@ -400,5 +400,11 @@ section.panel-pane ul#slide-nav li:hover {
 .pane-new-event h2.pane-title{
   margin-left: 10px;
   color: #ff7200;
+}
+.panel-pane .pane-views .pane-all-event .view-all-even {
+  height: auto;
+}
+.view-all-event .views-row-even a {
+  color: #ffffff;
 }
 /* End vacancies page view  */

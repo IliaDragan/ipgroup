@@ -29,6 +29,3 @@ Drupal.behaviors.owlEmployeeCarousel  = {
     });
   }
 }
-
-
-
