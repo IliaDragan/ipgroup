@@ -244,3 +244,22 @@ article.node-blog div.video-container iframe {
   font-weight: normal;
 }
 /*End node project*/
+
+/* Event node style */
+
+.jcarousel-skin-default a.jcarousel-prev-horizontal,
+.jcarousel-skin-default a.jcarousel-prev-horizontal:hover,
+.jcarousel-skin-default a.jcarousel-next-horizontal,
+.jcarousel-skin-default a.jcarousel-next-horizontal:hover {
+  background-image: url(../../images/arrows.png);
+}
+.node-type-event a.colorbox img {
+  max-width: none;
+}
+.views-field-field-gallery-image .field-content {
+  margin-right: 0;
+}
+.node-type-event .jcarousel-skin-default .jcarousel-item {
+  border: none !important;
+}
+/*End event node*/

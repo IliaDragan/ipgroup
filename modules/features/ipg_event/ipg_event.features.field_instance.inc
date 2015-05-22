@@ -143,6 +143,63 @@ function ipg_event_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_gallery_image'
+  $field_instances['node-event-field_gallery_image'] = array(
+    'bundle' => 'event',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'colorbox',
+        'settings' => array(
+          'colorbox_caption' => 'none',
+          'colorbox_caption_custom' => '',
+          'colorbox_gallery' => 'post',
+          'colorbox_gallery_custom' => '',
+          'colorbox_image_style' => '960x500',
+          'colorbox_multivalue_index' => NULL,
+          'colorbox_node_style' => 'thumbnail',
+          'colorbox_node_style_first' => '',
+        ),
+        'type' => 'colorbox',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_gallery_image',
+    'label' => 'Gallery image',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => 'gallery',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 7,
+    ),
+  );
+
   // Exported field_instance: 'node-event-field_image'
   $field_instances['node-event-field_image'] = array(
     'bundle' => 'event',
@@ -202,6 +259,7 @@ function ipg_event_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Body');
   t('Category');
+  t('Gallery image');
   t('date');
   t('image');
 
