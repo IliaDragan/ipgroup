@@ -15,6 +15,9 @@ projects[better_exposed_filters][subdir] = "contrib"
 projects[ctools][version] = "1.7"
 projects[ctools][subdir] = "contrib"
 
+projects[colorbox][version] = "2.8"
+projects[colorbox][subdir] = "colorbox"
+
 projects[date][version] = "2.8"
 projects[date][subdir] = "contrib"
 
@@ -44,6 +47,9 @@ projects[geofield][subdir] = "contrib"
 
 projects[geophp][version] = "1.7"
 projects[geophp][subdir] = "contrib"
+
+projects[jcarousel][version] = "2.7"
+projects[jcarousel][subdir] = "jcarousel"
 
 projects[jquery_update][version] = "2.5"
 projects[jquery_update][subdir] = "contrib"
@@ -105,6 +111,11 @@ libraries[ckeditor][destination]    = "libraries"
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url]  = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.6.1/ckeditor_3.6.6.1.zip"
+
+libraries[colorbox][destination]    = "libraries"
+libraries[colorbox][directory_name] = "colorbox"
+libraries[colorbox][download][type] = "get"
+libraries[colorbox][download][url]  = "http://github.com/jackmoore/colorbox/archive/1.x.zip"
 
 libraries[owl-carousel][destination]    = "libraries"
 libraries[owl-carousel][directory_name] = "owl-carousel"
