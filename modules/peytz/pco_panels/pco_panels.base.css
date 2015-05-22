@@ -69,7 +69,7 @@ div.deck .ten {
 div.deck .right.seven {
   float: right;
   padding: 0;
-  width: 36.9791667%; /* 355 / 960 */
+  width: 30.9791667%; /* 355 / 960 */
 }
 
 div.deck .twelve {

@@ -721,4 +721,11 @@ div.languages-and-navigation {
 .contextual-links-region h2 {
   padding-bottom: 5px;
 }
+
+#edit-message {
+  width: 300px!important;
+  height: 170px;
+  resize:none;
+  overflow:auto;
+}
 /* End language block theming - IPGroup */
