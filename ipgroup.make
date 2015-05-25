@@ -16,7 +16,7 @@ projects[ctools][version] = "1.7"
 projects[ctools][subdir] = "contrib"
 
 projects[colorbox][version] = "2.8"
-projects[colorbox][subdir] = "colorbox"
+projects[colorbox][subdir] = "contrib"
 
 projects[date][version] = "2.8"
 projects[date][subdir] = "contrib"
@@ -49,7 +49,7 @@ projects[geophp][version] = "1.7"
 projects[geophp][subdir] = "contrib"
 
 projects[jcarousel][version] = "2.7"
-projects[jcarousel][subdir] = "jcarousel"
+projects[jcarousel][subdir] = "contrib"
 
 projects[jquery_update][version] = "2.5"
 projects[jquery_update][subdir] = "contrib"
@@ -66,8 +66,8 @@ projects[libraries][subdir] = contrib
 projects[module_filter][version] = "2.0"
 projects[module_filter][subdir] = "contrib"
 
-projects[panels][version] = "3.5"
-projects[panels][subdir] = "contrib"
+projects[multiupload_imagefield_widget][version] = "1.3"
+projects[multiupload_imagefield_widget][subdir] = "contrib"
 
 projects[panels][version] = "3.5"
 projects[panels][subdir] = "contrib"
