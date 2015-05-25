@@ -721,4 +721,17 @@ div.languages-and-navigation {
 .contextual-links-region h2 {
   padding-bottom: 5px;
 }
+#edit-message {
+  width: 300px!important;
+  height: 150px;
+  resize:none;
+  overflow:auto;
+}
+.page-contacts .pane-node h2.pane-title {
+  padding-bottom: 10px;
+}
+div.pane-content div.node>h2 {
+  display: none !important;
+  height: 0 !important;
+}
 /* End language block theming - IPGroup */
