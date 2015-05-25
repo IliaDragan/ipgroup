@@ -13,6 +13,7 @@ dependencies[] = date_views
 dependencies[] = features
 dependencies[] = field_group
 dependencies[] = jcarousel
+dependencies[] = multiupload_imagefield_widget
 dependencies[] = page_manager
 dependencies[] = panels_node
 dependencies[] = strongarm

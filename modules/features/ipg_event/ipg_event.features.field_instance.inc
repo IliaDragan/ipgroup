@@ -146,6 +146,7 @@ function ipg_event_field_default_field_instances() {
   // Exported field_instance: 'node-event-field_gallery_image'
   $field_instances['node-event-field_gallery_image'] = array(
     'bundle' => 'event',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -190,12 +191,12 @@ function ipg_event_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'multiupload_imagefield_widget',
       'settings' => array(
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
+      'type' => 'image_miw',
       'weight' => 7,
     ),
   );
