@@ -90,7 +90,7 @@ function ipg_contacts_default_page_manager_pages() {
     $pane->panel = 'left';
     $pane->type = 'node';
     $pane->subtype = 'node';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'nid' => '55',
@@ -114,6 +114,35 @@ function ipg_contacts_default_page_manager_pages() {
     $pane->uuid = 'b2f43f62-0275-47db-aad8-b74c9df2f5e8';
     $display->content['new-b2f43f62-0275-47db-aad8-b74c9df2f5e8'] = $pane;
     $display->panels['left'][0] = 'new-b2f43f62-0275-47db-aad8-b74c9df2f5e8';
+    $pane = new stdClass();
+    $pane->pid = 'new-bd2d73fe-fc01-4a8d-9c45-b77ba6effeed';
+    $pane->panel = 'left';
+    $pane->type = 'node';
+    $pane->subtype = 'node';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'nid' => '55',
+      'links' => 0,
+      'leave_node_title' => 0,
+      'identifier' => '',
+      'build_mode' => 'teaser',
+      'link_node_title' => 0,
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'bd2d73fe-fc01-4a8d-9c45-b77ba6effeed';
+    $display->content['new-bd2d73fe-fc01-4a8d-9c45-b77ba6effeed'] = $pane;
+    $display->panels['left'][1] = 'new-bd2d73fe-fc01-4a8d-9c45-b77ba6effeed';
     $pane = new stdClass();
     $pane->pid = 'new-fb06bb30-5ff3-4deb-828b-800c74e58524';
     $pane->panel = 'right';
