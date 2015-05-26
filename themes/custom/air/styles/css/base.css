@@ -715,7 +715,7 @@ div.languages-and-navigation {
 #secondary-menu {
   float: none;
 }
-#leaflet-map{
+#leaflet-map {
   margin-top: 30px;
 }
 .contextual-links-region h2 {
@@ -724,8 +724,8 @@ div.languages-and-navigation {
 #edit-message {
   width: 300px!important;
   height: 150px;
-  resize:none;
-  overflow:auto;
+  resize: none;
+  overflow: auto;
 }
 .page-contacts .pane-node h2.pane-title {
   padding-bottom: 10px;
@@ -735,3 +735,39 @@ div.pane-content div.node>h2 {
   height: 0 !important;
 }
 /* End language block theming - IPGroup */
+
+/* Colorbox default style change. */
+#cboxMiddleLeft,
+#cboxMiddleRight,
+#cboxTopCenter,
+#cboxTopLeft,
+#cboxTopRight,
+#cboxContent,
+#cboxBottomCenter,
+#cboxBottomLeft,
+#cboxBottomRight {
+  background-color: #ff7200;
+}
+
+#cboxCurrent {
+  color: #262626;
+}
+#cboxClose,
+#cboxClose:hover {
+  background: url(../../images/colorbox_controls.png) transparent no-repeat -36px 5px;
+}
+#cboxPrevious,
+#cboxPrevious:hover {
+  background: url(../../images/colorbox_controls.png) transparent no-repeat 0 5px;
+}
+#cboxNext,
+#cboxNext:hover {
+  background: url(../../images/colorbox_controls.png) transparent no-repeat -15px 5px;
+}
+#cboxCurrent {
+  color: #262626;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
