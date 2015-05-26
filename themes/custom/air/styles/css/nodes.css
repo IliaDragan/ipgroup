@@ -157,6 +157,14 @@ article.node-blog div.video-container iframe {
 /* @end */
 
 /*Node type project - IPGroup*/
+
+.node-type-project .center-wrapper .panel-col-last {
+  position: relative;
+}
+.node-type-project .center-wrapper .panel-col-last .inside {
+  position: absolute;
+  width: 100%;
+}
 .node-type-project .pane-node-field-user h2.pane-title {
   background: #eaeaea;
   border-top-left-radius: 5px;
@@ -178,19 +186,20 @@ article.node-blog div.video-container iframe {
 .node-type-project .team-members {
   background: none repeat scroll 0 0 white;
   border: 1px solid  #eaeaea;
-  padding: 1% 1% 22px;
+  padding: 5px 5px 22px;
   overflow: hidden;
-  position: absolute;
 }
 .node-type-project .team-members-collapse-expand {
   background: white url(../../images/icons.png) no-repeat 50% -325px;
+  border-bottom: 1px solid  #eaeaea;
   bottom: 0;
   cursor: pointer;
   display: block;
-  height: 22px;
+  height: 23px;
   position: absolute;
   text-align: center;
-  width: 100%;
+  width: 99%;
+  right: 1px;
 }
 .node-type-project .team-members-collapse-expand.expanded {
   background-position: 50% -255px;
