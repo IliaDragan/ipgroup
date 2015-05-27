@@ -22,7 +22,7 @@ function ipg_event_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'All Event';
+  $handler->display->display_options['title'] = 'All Events';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -106,7 +106,7 @@ function ipg_event_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $translatables['all_event'] = array(
     t('Master'),
-    t('All Event'),
+    t('All Events'),
     t('more'),
     t('Apply'),
     t('Reset'),
@@ -142,7 +142,7 @@ function ipg_event_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'jcarousel';
-  $handler->display->display_options['style_options']['wrap'] = 'circular';
+  $handler->display->display_options['style_options']['wrap'] = 'both';
   $handler->display->display_options['style_options']['visible'] = '';
   $handler->display->display_options['style_options']['responsive'] = 1;
   $handler->display->display_options['style_options']['scroll'] = '1';

@@ -89,6 +89,8 @@ function ipg_article_views_default_views() {
 
   /* Display: Vacancies pane */
   $handler = $view->new_display('panel_pane', 'Vacancies pane', 'vacancies_list_pane');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Vacancies';
   $handler->display->display_options['display_description'] = 'List of vacancies available on IPGroup';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
@@ -172,6 +174,7 @@ function ipg_article_views_default_views() {
     t('Page'),
     t('Block'),
     t('Vacancies pane'),
+    t('Vacancies'),
     t('List of vacancies available on IPGroup'),
     t('Vacancy | '),
     t('View panes'),
