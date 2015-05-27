@@ -102,7 +102,7 @@ function air_preprocess_user_profile(&$vars) {
     drupal_add_js($theme_path . '/scripts/user.js');
   }
   else {
-    $photo_path = $theme_path . '/images/silhouette-female.png';
+    $photo_path = $theme_path . '/images/silhouette.png';
   }
   $img = theme('image', array('path' => $photo_path));
   $username = $vars['elements']['#account']->name;
@@ -137,7 +137,7 @@ function air_preprocess_views_view_fields(&$vars) {
       drupal_add_js($theme_path . '/scripts/user.js');
     }
     else {
-      $photo_path = $theme_path . '/images/silhouette-female.png';
+      $photo_path = $theme_path . '/images/silhouette.png';
     }
     $img = theme('image', array('path' => $photo_path));
     $username = $vars['fields']['name']->raw;
