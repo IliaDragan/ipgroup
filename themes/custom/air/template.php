@@ -87,19 +87,9 @@ function air_preprocess_user_profile(&$vars) {
   $theme_path = path_to_theme();
   $link_options = array(
     'html' => TRUE,
-    'attributes' => array(),
   );
   if (!empty($vars['field_photo'])) {
     $photo_path = image_style_url('avatar', $vars['field_photo'][0]['uri']);
-    if (!empty($vars['field_caricature'][0]['uri'])) {
-      $img_uri = $vars['field_caricature'][0]['uri'];
-    }
-    else {
-      $img_uri = $vars['field_photo'][0]['uri'];
-    }
-    $link_options['attributes']['img_src'] = image_style_url('avatar', $img_uri);
-    $link_options['attributes']['photo_src'] = $photo_path;
-    drupal_add_js($theme_path . '/scripts/user.js');
   }
   else {
     $photo_path = $theme_path . '/images/silhouette.png';
@@ -107,6 +97,7 @@ function air_preprocess_user_profile(&$vars) {
   $img = theme('image', array('path' => $photo_path));
   $username = $vars['elements']['#account']->name;
   $vars['user_image'] = l($img, 'employee/' . $username, $link_options);
+  drupal_add_js($theme_path . '/scripts/user.js');
 }
 
 /**
