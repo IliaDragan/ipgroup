@@ -47,6 +47,10 @@ Drupal.behaviors.userField = {
           }
         });
       }
+
+      //Fix photo width.
+      var width = $photo.parents().width() - 2;
+      $photo.css('width', width + 'px');
     });
   }
 }
