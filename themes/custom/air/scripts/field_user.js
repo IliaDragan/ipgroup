@@ -9,6 +9,7 @@ Drupal.behaviors.userField = {
       var $users = jQuery('.team-members', context);
       var $title = jQuery('.pane-node-field-user .pane-title', context);
       var $button = jQuery('.team-members-collapse-expand', context);
+      var $region = jQuery('#block-system-main .panel-2col-stacked', context);
       var original_height = $users.height();
       var height = $photo.length ? $photo.height() : 0;
 
@@ -37,12 +38,18 @@ Drupal.behaviors.userField = {
             $users.animate({
               height: height
             }, 1000);
+            $region.animate({
+              'min-height': (height + 150)
+            }, 1000);
             $button.removeClass('expanded');
           }
           else {
             $button.addClass('expanded');
             $users.animate({
               height: original_height
+            }, 1000);
+            $region.animate({
+              'min-height': (original_height + 150)
             }, 1000);
           }
         });
