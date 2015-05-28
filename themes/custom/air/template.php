@@ -183,6 +183,10 @@ function air_preprocess_field(&$variables) {
         $photo_path = image_style_url('miniavatar', $entity->field_photo[LANGUAGE_NONE][0]['uri']);
         $item['photo'] = theme('image', array('path' => $photo_path));
       }
+      else {
+        $photo_path = path_to_theme() . '/images/silhouette.png';
+        $item['photo'] = theme('image', array('path' => $photo_path));
+      }
       if (!empty($entity->field_phone[$lang][0]['value'])) {
         $item['phone'] = $entity->field_phone[$lang][0]['value'];
       }
