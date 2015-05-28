@@ -314,8 +314,7 @@ div.header {
 }
 body > footer {
   overflow: hidden;
-  padding: 0 0 130px;
-  background: #000000 url(../../images/logo-footer-peytz.png) no-repeat center 168px;
+  background: #000000;
 }
 footer div.content {
   font-size: 1em;
@@ -734,5 +733,23 @@ div.pane-content div.node>h2 {
   display: none !important;
   height: 0 !important;
 }
->>>>>>> feature-md-IPG_6_Contacts
+footer{
+  padding: 0px;
+}
+#logo_footer{
+  width: 175px;
+  margin-left: 125px;
+}
+#contact_inf p{
+  padding: 0px;
+}
+#contact_inf{
+  margin-left: 0px;
+}
+ #contact_us{
+  margin-left:65px;
+}
+#footer_phone{
+  margin-left: 100px;
+}
 /* End language block theming - IPGroup */
