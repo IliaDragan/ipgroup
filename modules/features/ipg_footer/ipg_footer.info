@@ -11,5 +11,6 @@ features[ctools][] = panels_mini:panels_default:1
 features[fe_block_boxes][] = contacts_us
 features[fe_block_boxes][] = footer_phone
 features[fe_block_boxes][] = logo_footer
+features[fe_block_settings][] = panels_mini-footer
 features[features_api][] = api:2
 features[panels_mini][] = footer
