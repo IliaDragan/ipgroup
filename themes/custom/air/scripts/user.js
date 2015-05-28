@@ -8,7 +8,6 @@ Drupal.behaviors.userImageToggle = {
     var $header = jQuery('.profile header', context);
     if ($content.length && $header.length) {
       var width = $header.width() - 185;
-      alert(width);
       $content.css('width', width + 'px');
     }
   }
