@@ -14,7 +14,8 @@ Drupal.behaviors.allEvent  = {
       jQuery(this).css('background-color', bgcolor[colorCount])
         .css('color', color[colorCount])
         .css('margin-bottom',10+"px")
-        .css('padding-left',10+"px");
+        .css('padding-left',10+"px")
+        .css('padding-top',10+"px");
       console.log();
       count++;
       colorCount++;
