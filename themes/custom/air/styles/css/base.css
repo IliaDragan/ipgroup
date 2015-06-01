@@ -785,4 +785,7 @@ footer{
   text-align: center;
   width: 100%;
 }
+.resizable-textarea .grippie{
+  display: none;
+}
 /* End language block theming - IPGroup */
