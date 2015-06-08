@@ -225,29 +225,6 @@ function ipg_event_default_page_manager_handlers() {
     $display->content['new-024e80d7-a9e2-4b65-9ca1-1258e3b8c2a4'] = $pane;
     $display->panels['left-3'][2] = 'new-024e80d7-a9e2-4b65-9ca1-1258e3b8c2a4';
     $pane = new stdClass();
-    $pane->pid = 'new-231cde8c-1c15-4c3e-a48d-4f9e82e29c15';
-    $pane->panel = 'left-3';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'event_gallery-event_gallery_pane';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'context' => array(
-        0 => 'argument_entity_id:node_1',
-      ),
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 3;
-    $pane->locks = array();
-    $pane->uuid = '231cde8c-1c15-4c3e-a48d-4f9e82e29c15';
-    $display->content['new-231cde8c-1c15-4c3e-a48d-4f9e82e29c15'] = $pane;
-    $display->panels['left-3'][3] = 'new-231cde8c-1c15-4c3e-a48d-4f9e82e29c15';
-    $pane = new stdClass();
     $pane->pid = 'new-6cd8cc89-d737-48b6-a674-c6d8b4bce1f2';
     $pane->panel = 'left-3';
     $pane->type = 'entity_field';
@@ -272,11 +249,11 @@ function ipg_event_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = '6cd8cc89-d737-48b6-a674-c6d8b4bce1f2';
     $display->content['new-6cd8cc89-d737-48b6-a674-c6d8b4bce1f2'] = $pane;
-    $display->panels['left-3'][4] = 'new-6cd8cc89-d737-48b6-a674-c6d8b4bce1f2';
+    $display->panels['left-3'][3] = 'new-6cd8cc89-d737-48b6-a674-c6d8b4bce1f2';
     $pane = new stdClass();
     $pane->pid = 'new-668aa595-c2f7-407c-a55d-bebb9f933b37';
     $pane->panel = 'right-3';
@@ -300,6 +277,9 @@ function ipg_event_default_page_manager_handlers() {
       'override_title' => 0,
       'override_title_text' => 'Upcoming event',
       'override_title_heading' => 'h2',
+      'context' => array(
+        0 => 'argument_entity_id:node_1.nid',
+      ),
     );
     $pane->cache = array();
     $pane->style = array(
