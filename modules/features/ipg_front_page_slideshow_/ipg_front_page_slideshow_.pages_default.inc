@@ -306,6 +306,39 @@ function ipg_front_page_slideshow__default_page_manager_pages() {
     $pane->uuid = '5b259ad9-b9cb-44e4-93b4-4509eb02c536';
     $display->content['new-5b259ad9-b9cb-44e4-93b4-4509eb02c536'] = $pane;
     $display->panels['right-2'][0] = 'new-5b259ad9-b9cb-44e4-93b4-4509eb02c536';
+    $pane = new stdClass();
+    $pane->pid = 'new-7b89afb0-465b-49d6-92c3-e8493b16cf11';
+    $pane->panel = 'right-2';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'Facebook page plugin',
+      'title' => '',
+      'body' => '<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, \'script\', \'facebook-jssdk\'));</script>
+<div class="fb-page" data-href="https://www.facebook.com/IPGroupMD" data-width="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/IPGroupMD"><a href="https://www.facebook.com/IPGroupMD">IPGroup MD</a></blockquote></div></div>',
+      'format' => 'wysiwyg_',
+      'substitute' => TRUE,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '7b89afb0-465b-49d6-92c3-e8493b16cf11';
+    $display->content['new-7b89afb0-465b-49d6-92c3-e8493b16cf11'] = $pane;
+    $display->panels['right-2'][1] = 'new-7b89afb0-465b-49d6-92c3-e8493b16cf11';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-46d00f3b-fe62-4b4a-a90f-462590283f5f';
   $handler->conf['display'] = $display;

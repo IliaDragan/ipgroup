@@ -16,6 +16,8 @@ function ipg_front_page_slideshow__default_fe_block_settings() {
     'cache' => -1,
     'custom' => 0,
     'delta' => 'front_page_slideshow-block',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
     'module' => 'views',
     'node_types' => array(),
     'pages' => '',
