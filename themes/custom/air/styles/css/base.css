@@ -788,4 +788,7 @@ footer{
 .resizable-textarea .grippie{
   display: none;
 }
+.views-field .field-content a p{
+  color: #000000;
+}
 /* End language block theming - IPGroup */
