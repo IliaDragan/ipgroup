@@ -272,6 +272,32 @@ function ipg_front_page_slideshow__default_page_manager_pages() {
     $display->content['new-f9ba122f-b2d9-4ac6-8180-5a15b7cc73ea'] = $pane;
     $display->panels['middle-2'][2] = 'new-f9ba122f-b2d9-4ac6-8180-5a15b7cc73ea';
     $pane = new stdClass();
+    $pane->pid = 'new-bb1f6123-53e6-40b1-9a99-9100da44dff0';
+    $pane->panel = 'right-2';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'article-vacancies_list_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'empty',
+      ),
+      'override_title' => 1,
+      'override_title_text' => 'Vacancies',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = 'bb1f6123-53e6-40b1-9a99-9100da44dff0';
+    $display->content['new-bb1f6123-53e6-40b1-9a99-9100da44dff0'] = $pane;
+    $display->panels['right-2'][0] = 'new-bb1f6123-53e6-40b1-9a99-9100da44dff0';
+    $pane = new stdClass();
     $pane->pid = 'new-5b259ad9-b9cb-44e4-93b4-4509eb02c536';
     $pane->panel = 'right-2';
     $pane->type = 'views';
@@ -301,11 +327,11 @@ function ipg_front_page_slideshow__default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '5b259ad9-b9cb-44e4-93b4-4509eb02c536';
     $display->content['new-5b259ad9-b9cb-44e4-93b4-4509eb02c536'] = $pane;
-    $display->panels['right-2'][0] = 'new-5b259ad9-b9cb-44e4-93b4-4509eb02c536';
+    $display->panels['right-2'][1] = 'new-5b259ad9-b9cb-44e4-93b4-4509eb02c536';
     $pane = new stdClass();
     $pane->pid = 'new-7b89afb0-465b-49d6-92c3-e8493b16cf11';
     $pane->panel = 'right-2';
@@ -334,11 +360,11 @@ function ipg_front_page_slideshow__default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = '7b89afb0-465b-49d6-92c3-e8493b16cf11';
     $display->content['new-7b89afb0-465b-49d6-92c3-e8493b16cf11'] = $pane;
-    $display->panels['right-2'][1] = 'new-7b89afb0-465b-49d6-92c3-e8493b16cf11';
+    $display->panels['right-2'][2] = 'new-7b89afb0-465b-49d6-92c3-e8493b16cf11';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-46d00f3b-fe62-4b4a-a90f-462590283f5f';
   $handler->conf['display'] = $display;

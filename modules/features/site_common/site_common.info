@@ -7,6 +7,7 @@ project = site_common
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = filter
+dependencies[] = ipg_common
 dependencies[] = jquery_update
 dependencies[] = menu
 dependencies[] = pathauto

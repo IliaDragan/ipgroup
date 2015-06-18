@@ -49,6 +49,23 @@ function ipg_article_default_page_manager_handlers() {
           'context' => 'argument_entity_id:node_1',
           'not' => FALSE,
         ),
+        1 => array(
+          'name' => 'entity_field_value:node:article:field_category',
+          'settings' => array(
+            'field_category' => array(
+              'und' => array(
+                0 => array(
+                  'tid' => '4',
+                ),
+              ),
+            ),
+            'field_category_tid' => array(
+              0 => '4',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => TRUE,
+        ),
       ),
       'logic' => 'and',
     ),
