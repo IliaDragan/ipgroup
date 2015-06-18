@@ -63,6 +63,9 @@ projects[leaflet][subdir] = contrib
 projects[libraries][version] = "2.2"
 projects[libraries][subdir] = contrib
 
+projects[link][version] = "1.3"
+projects[link][subdir] = contrib
+
 projects[module_filter][version] = "2.0"
 projects[module_filter][subdir] = "contrib"
 

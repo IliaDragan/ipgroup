@@ -292,6 +292,44 @@ function ipg_event_default_page_manager_handlers() {
     $pane->uuid = '668aa595-c2f7-407c-a55d-bebb9f933b37';
     $display->content['new-668aa595-c2f7-407c-a55d-bebb9f933b37'] = $pane;
     $display->panels['right-3'][0] = 'new-668aa595-c2f7-407c-a55d-bebb9f933b37';
+    $pane = new stdClass();
+    $pane->pid = 'new-fd646ba0-fe01-48df-a3bc-a53e17a34478';
+    $pane->panel = 'right-3';
+    $pane->type = 'views';
+    $pane->subtype = 'last_evente';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '3',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'block',
+      'context' => array(
+        0 => 'argument_entity_id:node_1.nid',
+      ),
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'fd646ba0-fe01-48df-a3bc-a53e17a34478';
+    $display->content['new-fd646ba0-fe01-48df-a3bc-a53e17a34478'] = $pane;
+    $display->panels['right-3'][1] = 'new-fd646ba0-fe01-48df-a3bc-a53e17a34478';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -444,7 +482,7 @@ function ipg_event_default_page_manager_pages() {
       'override_pager_settings' => 0,
       'use_pager' => 1,
       'nodes_per_page' => '10',
-      'pager_id' => '0',
+      'pager_id' => '2',
       'offset' => '0',
       'more_link' => 0,
       'feed_icons' => 0,
@@ -453,7 +491,7 @@ function ipg_event_default_page_manager_pages() {
       'args' => '',
       'url' => '',
       'display' => 'block',
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
     );
