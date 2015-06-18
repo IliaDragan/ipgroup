@@ -46,3 +46,21 @@ function ipg_front_page_slideshow__image_default_styles() {
 
   return $styles;
 }
+
+/**
+ * Implements hook_node_info().
+ */
+function ipg_front_page_slideshow__node_info() {
+  $items = array(
+    'image_content' => array(
+      'name' => t('Image content'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+  );
+  drupal_alter('node_info', $items);
+  return $items;
+}
