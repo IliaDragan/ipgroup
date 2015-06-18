@@ -27,8 +27,8 @@ function ipg_front_page_slideshow__views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['row_plugin'] = 'panels_fields';
   /* Relationship: Broken/missing handler */
@@ -61,18 +61,6 @@ function ipg_front_page_slideshow__views_default_views() {
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
-  /* Sort criterion: Content: Category (field_category) */
-  $handler->display->display_options['sorts']['field_category_tid']['id'] = 'field_category_tid';
-  $handler->display->display_options['sorts']['field_category_tid']['table'] = 'field_data_field_category';
-  $handler->display->display_options['sorts']['field_category_tid']['field'] = 'field_category_tid';
-  /* Sort criterion: Content: Sticky */
-  $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
-  $handler->display->display_options['sorts']['sticky']['table'] = 'node';
-  $handler->display->display_options['sorts']['sticky']['field'] = 'sticky';
-  /* Sort criterion: Content: Promoted to front page */
-  $handler->display->display_options['sorts']['promote']['id'] = 'promote';
-  $handler->display->display_options['sorts']['promote']['table'] = 'node';
-  $handler->display->display_options['sorts']['promote']['field'] = 'promote';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -147,30 +135,15 @@ function ipg_front_page_slideshow__views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Category (field_category) */
-  $handler->display->display_options['relationships']['field_category_tid']['id'] = 'field_category_tid';
-  $handler->display->display_options['relationships']['field_category_tid']['table'] = 'field_data_field_category';
-  $handler->display->display_options['relationships']['field_category_tid']['field'] = 'field_category_tid';
-  $handler->display->display_options['relationships']['field_category_tid']['label'] = 'field_category';
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: image */
-  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
-  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
-  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
-  $handler->display->display_options['fields']['field_image']['label'] = '';
-  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => '960x500',
-    'image_link' => 'content',
-  );
-  /* Field: Content: Link */
-  $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
-  $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
-  $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
-  $handler->display->display_options['fields']['view_node']['label'] = '';
-  $handler->display->display_options['fields']['view_node']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  /* Field: Content: link field */
+  $handler->display->display_options['fields']['field_link_field']['id'] = 'field_link_field';
+  $handler->display->display_options['fields']['field_link_field']['table'] = 'field_data_field_link_field';
+  $handler->display->display_options['fields']['field_link_field']['field'] = 'field_link_field';
+  $handler->display->display_options['fields']['field_link_field']['label'] = '';
+  $handler->display->display_options['fields']['field_link_field']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_link_field']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_link_field']['click_sort_column'] = 'url';
   /* Field: Global: View result counter */
   $handler->display->display_options['fields']['counter']['id'] = 'counter';
   $handler->display->display_options['fields']['counter']['table'] = 'views';
@@ -180,6 +153,19 @@ function ipg_front_page_slideshow__views_default_views() {
   $handler->display->display_options['fields']['counter']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['counter']['counter_start'] = '1';
   $handler->display->display_options['fields']['counter']['reverse'] = 0;
+  /* Field: Content: image content */
+  $handler->display->display_options['fields']['field_image_content']['id'] = 'field_image_content';
+  $handler->display->display_options['fields']['field_image_content']['table'] = 'field_data_field_image_content';
+  $handler->display->display_options['fields']['field_image_content']['field'] = 'field_image_content';
+  $handler->display->display_options['fields']['field_image_content']['label'] = '';
+  $handler->display->display_options['fields']['field_image_content']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_image_content']['alter']['path'] = '[field_link_field]';
+  $handler->display->display_options['fields']['field_image_content']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_image_content']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_image_content']['settings'] = array(
+    'image_style' => '960x500',
+    'image_link' => '',
+  );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
@@ -194,19 +180,9 @@ function ipg_front_page_slideshow__views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'article' => 'article',
+    'image_content' => 'image_content',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Category (field_category) */
-  $handler->display->display_options['filters']['field_category_tid']['id'] = 'field_category_tid';
-  $handler->display->display_options['filters']['field_category_tid']['table'] = 'field_data_field_category';
-  $handler->display->display_options['filters']['field_category_tid']['field'] = 'field_category_tid';
-  $handler->display->display_options['filters']['field_category_tid']['value'] = array(
-    3 => '3',
-    1 => '1',
-  );
-  $handler->display->display_options['filters']['field_category_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_category_tid']['vocabulary'] = 'categories';
   $translatables['front_page_slideshow'] = array(
     t('Master'),
     t('more'),
@@ -218,7 +194,6 @@ function ipg_front_page_slideshow__views_default_views() {
     t('nodequeue_rel'),
     t('Category (field_category)'),
     t('Block'),
-    t('field_category'),
   );
   $export['front_page_slideshow'] = $view;
 
