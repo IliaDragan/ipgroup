@@ -311,10 +311,10 @@ section.panel-pane ul#slide-nav li:hover {
 .page-vacancies .center-wrapper .panel-col-first {
   width: 65%;
 }
-.page-vacancies .view-display-id-vacancies_list_pane .view-content {
+.view-display-id-vacancies_list_pane .view-content {
   border-top: 1px solid #eaeaea;
 }
-.page-vacancies .view-display-id-vacancies_list_pane .views-row {
+.view-display-id-vacancies_list_pane .views-row {
   border-bottom: 1px solid #eaeaea;
   color: #3c3c3c;
   font-size: 1em;
@@ -323,38 +323,43 @@ section.panel-pane ul#slide-nav li:hover {
   padding: 15px 0;
 }
 
+.view-display-id-vacancies_list_pane .views-field-field-image {
+  float: left;
+}
 
-.page-vacancies .views-field-title h2 {
+.view-display-id-vacancies_list_pane .views-field-title h2 {
   font: bold 1.28571em/1em Arial, Helvetica, sans-serif;
   margin-bottom: 5px;
   padding: 0;
 }
-.page-vacancies .views-field-field-body {
+.view-display-id-vacancies_list_pane .views-field-field-body {
   color: #3c3c3c;
   line-height: 1.5em;
   font-size: 100%;
+  text-align: justify;
 }
-.page-vacancies .views-field-field-body p {
+.view-display-id-vacancies_list_pane .views-field-field-body p {
   padding: 0;
 }
-.page-vacancies .views-field-created {
+.view-display-id-vacancies_list_pane .views-field-created {
   margin-bottom: 5px;
   color: #6a6a6a;
   font-size: 0.714286em;
   font-weight: bold;
   text-transform: uppercase;
 }
-.page-vacancies .center-wrapper .panel-col-last {
+.view-display-id-vacancies_list_pane .center-wrapper .panel-col-last {
   width: 34%;
 }
-.view-new-event{
+/* End vacancies page view  */
+.view-new-event {
   height: auto;
 }
-.view-new-event .view-content{
+.view-new-event .view-content {
   background-color: #ffffff;
 }
 .view-new-event .view-content .views-row-1 {
-  background-color: #FF7200!important;
+  background-color: #ff7200!important;
   margin-bottom: 20px;
   color: #ffffff!important;
 }
@@ -362,34 +367,34 @@ section.panel-pane ul#slide-nav li:hover {
   color: #ffffff!important;
   font-weight: 900;
 }
-.view-new-event .view-content .views-row-2{
-  background-color: #EAEAEA!important;
+.view-new-event .view-content .views-row-2 {
+  background-color: #eaeaea !important;
   margin-bottom: 20px;
   color: #2a2a2a!important;
 }
-.view-new-event .view-content .views-row-2 a{
+.view-new-event .view-content .views-row-2 a {
   color: #ff7200!important;
   font-weight: 900;
 }
 .view-content .views-row-2 .views-field-type {
   color: #6a6a6a;
 }
-.view-new-event .view-content .views-row-3{
+.view-new-event .view-content .views-row-3 {
   background-color: #2a2a2a!important;
   margin-bottom: 20px;
   color: #ffffff!important;
 }
-.view-new-event .view-content .views-row-3 a{
+.view-new-event .view-content .views-row-3 a {
   color: #ff7200!important;
   font-weight: 900;
 }
-.view-new-event .views-field-type{
+.view-new-event .views-field-type {
   padding-left: 10px;
   text-transform: uppercase;
   font-weight: bold;
   font-size: .714285714em;
 }
-.view-new-event .views-field-title{
+.view-new-event .views-field-title {
   padding-left: 10px;
   font-weight: bold;
   height: 30px;
@@ -397,7 +402,7 @@ section.panel-pane ul#slide-nav li:hover {
 .view-new-event .views-field-body {
   padding: 0 10px 10px 10px;
 }
-.pane-new-event h2.pane-title{
+.pane-new-event h2.pane-title {
   margin-left: 10px;
   color: #ff7200;
 }
@@ -407,4 +412,3 @@ section.panel-pane ul#slide-nav li:hover {
 .view-all-event .views-row-even a {
   color: #ffffff;
 }
-/* End vacancies page view  */

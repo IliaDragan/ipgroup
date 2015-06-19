@@ -91,6 +91,15 @@ function ipg_roles_and_permision_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'administer blocks'.
+  $permissions['administer blocks'] = array(
+    'name' => 'administer blocks',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'block',
+  );
+
   // Exported permission: 'administer contact forms'.
   $permissions['administer contact forms'] = array(
     'name' => 'administer contact forms',
@@ -665,16 +674,6 @@ function ipg_roles_and_permision_user_default_permissions() {
       'Employee' => 'Employee',
     ),
     'module' => 'panels',
-  );
-
-  // Exported permission: 'use text format filtered_html'.
-  $permissions['use text format filtered_html'] = array(
-    'name' => 'use text format filtered_html',
-    'roles' => array(
-      'Administrator' => 'Administrator',
-      'Employee' => 'Employee',
-    ),
-    'module' => 'filter',
   );
 
   // Exported permission: 'use text format full_html'.

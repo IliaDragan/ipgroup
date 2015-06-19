@@ -101,6 +101,7 @@ div.link-to-description {
 div.content > div.prose {
   clear: both;
 }
+
 blockquote {
   margin: 0 0 20px;
   padding: 30px 5.7692308% 15px;
@@ -206,7 +207,7 @@ div.prose ul > li,
 section.panel-pane div.prose ul > li {
   margin: 0;
   padding: 0;
-  list-style: disc;
+  list-style: square url(../../images/square.png);
   border: none;
 }
 div.prose ol > li {
@@ -731,23 +732,23 @@ div.pane-content div.node>h2 {
   height: 0 !important;
 }
 /*footer default style*/
-footer{
+footer {
   padding: 0px;
 }
-#logo_footer{
+#logo_footer {
   width: 175px;
   margin-left: 125px;
 }
-#contact_inf p{
+#contact_inf p {
   padding: 0px;
 }
-#contact_inf{
+#contact_inf {
   margin-left: 0px;
 }
- #contact_us{
-  margin-left:65px;
+#contact_us {
+  margin-left: 65px;
 }
-#footer_phone{
+#footer_phone {
   margin-left: 100px;
 }
 /* Colorbox default style change. */
@@ -785,10 +786,11 @@ footer{
   text-align: center;
   width: 100%;
 }
-.resizable-textarea .grippie{
+.resizable-textarea .grippie {
   display: none;
 }
-.views-field .field-content a p{
+/* End language block theming - IPGroup */
+
+.views-field .field-content a p {
   color: #000000;
 }
-/* End language block theming - IPGroup */
