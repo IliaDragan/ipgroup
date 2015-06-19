@@ -667,16 +667,6 @@ function ipg_roles_and_permision_user_default_permissions() {
     'module' => 'panels',
   );
 
-  // Exported permission: 'use text format filtered_html'.
-  $permissions['use text format filtered_html'] = array(
-    'name' => 'use text format filtered_html',
-    'roles' => array(
-      'Administrator' => 'Administrator',
-      'Employee' => 'Employee',
-    ),
-    'module' => 'filter',
-  );
-
   // Exported permission: 'use text format full_html'.
   $permissions['use text format full_html'] = array(
     'name' => 'use text format full_html',

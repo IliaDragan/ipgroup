@@ -197,4 +197,7 @@ function air_preprocess_field(&$variables) {
     $theme_path = path_to_theme();
     drupal_add_js($theme_path . '/scripts/field_user.js');
   }
+  elseif ($variables['element']['#field_name'] == 'field_body') {
+    $variables['theme_hook_suggestion'] = 'field__body';
+  }
 }

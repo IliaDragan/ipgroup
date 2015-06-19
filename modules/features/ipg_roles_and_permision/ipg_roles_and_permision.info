@@ -98,7 +98,6 @@ features[user_permission][] = translate node entities
 features[user_permission][] = translate user entities
 features[user_permission][] = translate user-defined strings
 features[user_permission][] = use panels dashboard
-features[user_permission][] = use text format filtered_html
 features[user_permission][] = use text format full_html
 features[user_permission][] = use text format wysiwyg_
 features[user_permission][] = view own unpublished content
