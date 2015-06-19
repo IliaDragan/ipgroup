@@ -790,3 +790,7 @@ footer {
   display: none;
 }
 /* End language block theming - IPGroup */
+
+.views-field .field-content a p {
+  color: #000000;
+}

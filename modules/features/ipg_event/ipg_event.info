@@ -52,6 +52,7 @@ features[variable][] = node_preview_event
 features[variable][] = node_submitted_event
 features[views_view][] = all_event
 features[views_view][] = event_gallery
+features[views_view][] = last_evente
 features[views_view][] = new_event
 features_exclude[dependencies][i18n_taxonomy] = i18n_taxonomy
 features_exclude[dependencies][image] = image
