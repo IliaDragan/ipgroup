@@ -91,6 +91,15 @@ function ipg_roles_and_permision_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'administer blocks'.
+  $permissions['administer blocks'] = array(
+    'name' => 'administer blocks',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'block',
+  );
+
   // Exported permission: 'administer contact forms'.
   $permissions['administer contact forms'] = array(
     'name' => 'administer contact forms',

@@ -12,6 +12,14 @@ function ipg_common_block_info() {
     'info' => t('Three articles block'),
     'cache' => DRUPAL_CACHE_GLOBAL,
   );
+  $blocks['text_before_vacancies'] = array(
+    'info' => t('Text before vacancies'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+  $blocks['text_after_vacancies'] = array(
+    'info' => t('Text after vacancies'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
 
   return $blocks;
 }
@@ -22,31 +30,51 @@ function ipg_common_block_info() {
 function ipg_common_block_configure($delta = '') {
   $form = array();
 
-  if ($delta == 'three_articles') {
-    $form['node_nids'] = array(
-      '#type' => 'fieldset',
-      '#title' => t('Insert nids of 3 nodes'),
-      '#description' => t('You must insert nids of source language article nodes (english).'),
-    );
-    $form['node_nids']['three_articles_block_node_1'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Node 1'),
-      '#default_value' => variable_get('three_articles_block_node_1', 0),
-      '#element_validate' => array('_article_nid_validate'),
-    );
-    $form['node_nids']['three_articles_block_node_2'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Node 2'),
-      '#default_value' => variable_get('three_articles_block_node_2', 0),
-      '#element_validate' => array('_article_nid_validate'),
-    );
-    $form['node_nids']['three_articles_block_node_3'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Node 3'),
-      '#default_value' => variable_get('three_articles_block_node_3', 0),
-      '#element_validate' => array('_article_nid_validate'),
-    );
+  switch ($delta) {
+    case 'three_articles':
+      $form['node_nids'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Insert nids of 3 nodes'),
+        '#description' => t('You must insert nids of source language article nodes (english).'),
+      );
+      $form['node_nids']['three_articles_block_node_1'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Node 1'),
+        '#default_value' => variable_get('three_articles_block_node_1', 0),
+        '#element_validate' => array('_article_nid_validate'),
+      );
+      $form['node_nids']['three_articles_block_node_2'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Node 2'),
+        '#default_value' => variable_get('three_articles_block_node_2', 0),
+        '#element_validate' => array('_article_nid_validate'),
+      );
+      $form['node_nids']['three_articles_block_node_3'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Node 3'),
+        '#default_value' => variable_get('three_articles_block_node_3', 0),
+        '#element_validate' => array('_article_nid_validate'),
+      );
+      break;
+
+    case 'text_before_vacancies':
+      $form['text_before_vacancies'] = array(
+        '#type' => 'textarea',
+        '#title' => t('Text before vacancies'),
+        '#default_value' => variable_get('text_before_vacancies', ''),
+      );
+      break;
+
+    case 'text_after_vacancies':
+      $form['text_after_vacancies'] = array(
+        '#type' => 'textarea',
+        '#title' => t('Text after vacancies'),
+        '#default_value' => variable_get('text_after_vacancies', ''),
+      );
+      break;
+
   }
+
   return $form;
 }
 
@@ -70,10 +98,21 @@ function _article_nid_validate($element, &$form_state, $form) {
  * Implements hook_block_save().
  */
 function ipg_common_block_save($delta = '', $edit = array()) {
-  if ($delta == 'three_articles') {
-    variable_set('three_articles_block_node_1', $edit['three_articles_block_node_1']);
-    variable_set('three_articles_block_node_2', $edit['three_articles_block_node_2']);
-    variable_set('three_articles_block_node_3', $edit['three_articles_block_node_3']);
+  switch ($delta) {
+    case 'three_articles':
+      variable_set('three_articles_block_node_1', $edit['three_articles_block_node_1']);
+      variable_set('three_articles_block_node_2', $edit['three_articles_block_node_2']);
+      variable_set('three_articles_block_node_3', $edit['three_articles_block_node_3']);
+      break;
+
+    case 'text_before_vacancies':
+      variable_set('text_before_vacancies', $edit['text_before_vacancies']);
+      break;
+
+    case 'text_after_vacancies':
+      variable_set('text_after_vacancies', $edit['text_after_vacancies']);
+      break;
+
   }
 }
 
@@ -87,6 +126,15 @@ function ipg_common_block_view($delta = '') {
     case 'three_articles':
       $block['content'] = ipg_common_three_articles_block();
       break;
+
+    case 'text_before_vacancies':
+      $block['content'] = variable_get('text_before_vacancies', '');
+      break;
+
+    case 'text_after_vacancies':
+      $block['content'] = variable_get('text_after_vacancies', '');
+      break;
+
   }
   return $block;
 }
