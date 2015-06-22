@@ -50,7 +50,7 @@ article.node div.image div.thumbs div.item.active a {
 article.node div.lead {
   margin: 0 0 20px;
   color: #6a6a6a;
-  font: normal 1.285714286em/1.4em Arial, Helvetica, sans-serif;
+  font: normal 1.285714286em/1.4em "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 article.node ul.links {
   margin: 0 0 20px;
@@ -165,7 +165,7 @@ article.node div.image.slideshow.slide-processed .item-list ul li {
   padding-top: 15px;
 }
 .node-type-project .team-member-field-name a {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: bold;
 }
@@ -226,5 +226,26 @@ article.node div.image.slideshow.slide-processed .item-list ul li {
 }
 .node-type-event .jcarousel-skin-default .jcarousel-item {
   border: none !important;
+}
+
+.node-type-event .column.left .pane-page-title {
+  margin: -60px 0 0 0;
+  background: #464646;
+  opacity: 0.8;
+  padding: 20px 10px;
+}
+.node-type-event .column.left .pane-page-title h2 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  opacity: 1;
+  padding: 0;
+}
+.node-type-event .column.left .pane-node-field-image {
+  margin-bottom: 0;
+}
+.node-type-event .column.left .pane-node-field-image img {
+  display: block;
 }
 /*End event node*/
