@@ -18,7 +18,7 @@ body {
 }
 body {
   color: #0e0e0e;
-  font: normal 14px/21px Georgia, "Times New Roman", serif;
+  font: normal 14px/21px "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 img,
@@ -96,8 +96,9 @@ textarea {
 div.prose,
 div.link-to-description {
   color: #3e3e3e;
-  font: normal 1.071428571em/1.5em Georgia, Times, "Times New Roman", serif;
+  font: normal 1.071428571em/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+section.pane-pco-blocks.orange div.prose,
 section.pane-pco-blocks.dark div.prose {
   color: #ffffff;
 }
@@ -537,7 +538,7 @@ div.meta .tags {
   position: relative;
   top: -1px;
   text-transform: lowercase;
-  font: italic 1.3em/14px Georgia, Times, "Times New Roman", serif;
+  font: italic 1.3em/14px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 div.meta .tags span {
   float: left;

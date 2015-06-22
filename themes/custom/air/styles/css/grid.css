@@ -154,7 +154,7 @@
   div.block-system .content .contextual-links-region > header div.view-slideshow-frontpage h1 {
     left: 3.125%;
     bottom: 20%;
-    font: normal 2.4em/1.2em Arial, Helvetica, sans-serif;
+    font: normal 2.4em/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   div.view-slideshow-frontpage div.actions {
     position: absolute;
@@ -384,7 +384,7 @@
     cursor: pointer;
     text-transform: uppercase;
     color: #ffffff;
-    font: bold 1em/1.3em Arial, Helvetica, sans-serif;
+    font: bold 1em/1.3em "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: #6a6a6a url(../../images/icons.png) no-repeat 100% -452px;
     border-radius: 3px;
     -moz-border-radius: 3px;
@@ -591,7 +591,7 @@
   }
   div.block-system .content > header div.view-slideshow-frontpage h1,
   div.block-system .content .contextual-links-region > header div.view-slideshow-frontpage h1 {
-    font: normal 2.2em/1.2em Arial, Helvetica, sans-serif;
+    font: normal 2.2em/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   section.panel-pane div.view-slideshow-frontpage div.view-content {
     padding: 0 0 45%;
@@ -638,7 +638,7 @@
   div.block-system .content > header div.view-slideshow-frontpage h1,
   div.block-system .content .contextual-links-region > header div.view-slideshow-frontpage h1 {
     bottom: 5%;
-    font: normal 1.7em/1.2em Arial, Helvetica, sans-serif;
+    font: normal 1.7em/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   div.view-slideshow-frontpage div.actions {
     display: none;

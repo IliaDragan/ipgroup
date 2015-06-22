@@ -190,7 +190,7 @@ div.comment > div.submitted p {
   padding: 0;
 }
 div.comment > div.content {
-  font: normal 1em/1.5em Georgia, Times New Roman, Times, serif;
+  font: normal 1em/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #4a4a4a;
 }
 /* @end */
