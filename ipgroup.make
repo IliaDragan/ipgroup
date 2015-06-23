@@ -112,6 +112,12 @@ projects[wysiwyg_template][subdir] = "contrib"
 projects[wysiwyg][version] = "2.2"
 projects[wysiwyg][subdir] = "contrib"
 
+projects[imce_wysiwyg][version] = "1.0"
+projects[imce_wysiwyg][subdir] = "contrib"
+
+projects[imce][version] = "1.9"
+projects[imce][subdir] = "contrib"
+
 ; Libraries
 libraries[ckeditor][destination]    = "libraries"
 libraries[ckeditor][directory_name] = "ckeditor"
