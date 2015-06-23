@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the IPGroup wysiwyg templates feature.
  */
+
+include_once 'ipg_wysiwyg_templates.features.inc';

@@ -41,6 +41,9 @@ function ipg_wysiwyg_templates_wysiwyg_default_profiles() {
           'FontSize' => 1,
           'Table' => 1,
         ),
+        'imce' => array(
+          'imce' => 1,
+        ),
         'templates' => array(
           'Templates' => 1,
         ),
