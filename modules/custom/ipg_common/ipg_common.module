@@ -1,0 +1,183 @@
+<?php
+/**
+ * @file
+ * Provide custom IPGroup site modifications and hooks implementations.
+ */
+
+/**
+ * Implements hook_block_info().
+ */
+function ipg_common_block_info() {
+  $blocks['three_articles'] = array(
+    'info' => t('Three articles block'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+  $blocks['text_before_vacancies'] = array(
+    'info' => t('Text before vacancies'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+  $blocks['text_after_vacancies'] = array(
+    'info' => t('Text after vacancies'),
+    'cache' => DRUPAL_CACHE_GLOBAL,
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_configure().
+ */
+function ipg_common_block_configure($delta = '') {
+  $form = array();
+
+  switch ($delta) {
+    case 'three_articles':
+      $form['node_nids'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Insert nids of 3 nodes'),
+        '#description' => t('You must insert nids of source language article nodes (english).'),
+      );
+      $form['node_nids']['three_articles_block_node_1'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Node 1'),
+        '#default_value' => variable_get('three_articles_block_node_1', 0),
+        '#element_validate' => array('_article_nid_validate'),
+      );
+      $form['node_nids']['three_articles_block_node_2'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Node 2'),
+        '#default_value' => variable_get('three_articles_block_node_2', 0),
+        '#element_validate' => array('_article_nid_validate'),
+      );
+      $form['node_nids']['three_articles_block_node_3'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Node 3'),
+        '#default_value' => variable_get('three_articles_block_node_3', 0),
+        '#element_validate' => array('_article_nid_validate'),
+      );
+      break;
+
+    case 'text_before_vacancies':
+      $form['text_before_vacancies'] = array(
+        '#type' => 'textarea',
+        '#title' => t('Text before vacancies'),
+        '#default_value' => variable_get('text_before_vacancies', ''),
+      );
+      break;
+
+    case 'text_after_vacancies':
+      $form['text_after_vacancies'] = array(
+        '#type' => 'textarea',
+        '#title' => t('Text after vacancies'),
+        '#default_value' => variable_get('text_after_vacancies', ''),
+      );
+      break;
+
+  }
+
+  return $form;
+}
+
+/**
+ * Provide validation for article node nid.
+ */
+function _article_nid_validate($element, &$form_state, $form) {
+  $node = node_load($element['#value']);
+  if (empty($node)) {
+    form_error($element, t('Node with this nid does not exist.'));
+  }
+  elseif ($node->type != 'article') {
+    form_error($element, t('Node is not article.'));
+  }
+  elseif ($node->status != 1) {
+    form_error($element, t('Node is not published.'));
+  }
+}
+
+/**
+ * Implements hook_block_save().
+ */
+function ipg_common_block_save($delta = '', $edit = array()) {
+  switch ($delta) {
+    case 'three_articles':
+      variable_set('three_articles_block_node_1', $edit['three_articles_block_node_1']);
+      variable_set('three_articles_block_node_2', $edit['three_articles_block_node_2']);
+      variable_set('three_articles_block_node_3', $edit['three_articles_block_node_3']);
+      break;
+
+    case 'text_before_vacancies':
+      variable_set('text_before_vacancies', $edit['text_before_vacancies']);
+      break;
+
+    case 'text_after_vacancies':
+      variable_set('text_after_vacancies', $edit['text_after_vacancies']);
+      break;
+
+  }
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function ipg_common_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'three_articles':
+      $block['content'] = ipg_common_three_articles_block();
+      break;
+
+    case 'text_before_vacancies':
+      $block['content'] = variable_get('text_before_vacancies', '');
+      break;
+
+    case 'text_after_vacancies':
+      $block['content'] = variable_get('text_after_vacancies', '');
+      break;
+
+  }
+  return $block;
+}
+
+/**
+ * Callback function for "three_articles" block content.
+ *
+ * @return string
+ *   Html containing list of three nodes photos.
+ */
+function ipg_common_three_articles_block() {
+  global $language;
+  $lang = $language->language;
+  $nids = array(
+    variable_get('three_articles_block_node_1', 0),
+    variable_get('three_articles_block_node_2', 0),
+    variable_get('three_articles_block_node_3', 0),
+  );
+  array_filter($nids);
+  $nodes = node_load_multiple($nids);
+  $items = array();
+  foreach ($nodes as &$node) {
+    if ($node->language != $lang) {
+      $translations = translation_node_get_translations($node->tnid);
+      if (!empty($translations[$lang])) {
+        $node = node_load($translations[$lang]->nid);
+      }
+    }
+
+    if (!empty($node->field_image[$lang][0]['uri'])) {
+      $photo_path = image_style_url('article_thumb', $node->field_image[$lang][0]['uri']);
+      $image = theme('image', array('path' => $photo_path));
+    }
+    elseif (!empty($node->field_image[LANGUAGE_NONE][0]['uri'])) {
+      $photo_path = image_style_url('article_thumb', $node->field_image[LANGUAGE_NONE][0]['uri']);
+      $image = theme('image', array('path' => $photo_path));
+    }
+    else {
+      $image = '<img src="http://dummyimage.com/200x170/eaeaea/ffffff.jpg&text=NO+IMAGE" />';
+    }
+
+    $items[] = l($image, 'node/' . $node->nid, array('html' => TRUE));
+  }
+
+  return theme('item_list', array('items' => $items, 'attributes' => array('class' => array('three-articles-list'))));
+}

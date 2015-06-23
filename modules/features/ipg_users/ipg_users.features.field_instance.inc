@@ -44,6 +44,7 @@ function ipg_users_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'user/avatar',
       'file_extensions' => 'png jpg jpeg',
       'max_filesize' => '2MB',
@@ -91,6 +92,7 @@ function ipg_users_field_default_field_instances() {
     'label' => 'Department',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => 0,
     ),
     'widget' => array(
@@ -129,6 +131,7 @@ function ipg_users_field_default_field_instances() {
     'label' => 'Description',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 1,
       'user_register_form' => 0,
     ),
@@ -170,6 +173,7 @@ function ipg_users_field_default_field_instances() {
     'label' => 'Name',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => 0,
     ),
@@ -211,6 +215,7 @@ function ipg_users_field_default_field_instances() {
     'label' => 'Phone',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => 0,
     ),
@@ -259,6 +264,7 @@ function ipg_users_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'user/avatar',
       'file_extensions' => 'png jpg jpeg',
       'max_filesize' => '2MB',
@@ -306,6 +312,7 @@ function ipg_users_field_default_field_instances() {
     'label' => 'Position',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => 0,
     ),

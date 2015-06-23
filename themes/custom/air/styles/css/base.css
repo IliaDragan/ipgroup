@@ -5,13 +5,7 @@
  * Main stylesheet for peytz.dk.
  * Contains general typography and theming
  */
-/* Import LESS files */
-/**
- * @file
- * less/radius.css
- *
- * Contains variables and other LESS-specific CSS.
- */
+
 /* @group Global */
 html {
   -webkit-text-size-adjust: none;
@@ -24,7 +18,7 @@ body {
 }
 body {
   color: #0e0e0e;
-  font: normal 14px/21px Georgia, "Times New Roman", serif;
+  font: normal 14px/21px "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 img,
@@ -40,7 +34,7 @@ h4,
 h5,
 h6 {
   font-weight: normal;
-  font-family: NewsGothicBT-Roman, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: #464646;
 }
 h1:empty,
@@ -79,14 +73,14 @@ div.prose h4 {
 }
 div.prose h3 {
   font-weight: bold;
-  font-family: NewsGothicBT-Bold, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 footer h2,
 footer h3,
 footer div.grid-display section.panel-pane h2,
 footer div.grid-display section.panel-pane h3 {
   font-size: 1.714285714em;
-  font-family: NewsGothicBT-Roman, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;;
 }
 footer .grid-display h2,
 footer .grid-display h2 {
@@ -102,11 +96,16 @@ textarea {
 div.prose,
 div.link-to-description {
   color: #3e3e3e;
-  font: normal 1.071428571em/1.5em Georgia, Times, "Times New Roman", serif;
+  font: normal 1.071428571em/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+section.pane-pco-blocks.orange div.prose,
+section.pane-pco-blocks.dark div.prose {
+  color: #ffffff;
 }
 div.content > div.prose {
   clear: both;
 }
+
 blockquote {
   margin: 0 0 20px;
   padding: 30px 5.7692308% 15px;
@@ -212,7 +211,7 @@ div.prose ul > li,
 section.panel-pane div.prose ul > li {
   margin: 0;
   padding: 0;
-  list-style: disc;
+  list-style: square url(../../images/square.png);
   border: none;
 }
 div.prose ol > li {
@@ -315,13 +314,12 @@ div#block-system-main {
 }
 footer,
 div.header {
-  font: normal 0.92857143em/2.4em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font: normal 0.82857143em/2.4em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
   color: #ffffff;
 }
 body > footer {
   overflow: hidden;
-  padding: 0 0 130px;
-  background: #000000 url(../../images/logo-footer-peytz.png) no-repeat center 168px;
+  background: #000000;
 }
 footer div.content {
   font-size: 1em;
@@ -422,7 +420,7 @@ header[role="section-head"] .section-head {
   width: 96.9697%;
 }
 header[role="section-head"] h1 {
-  font-size: 4.28571em;
+  font-size: 3.8em;
   line-height: 1em;
   width: 48.4375%;
   color: #ffffff;
@@ -464,8 +462,7 @@ div.block-system .content .contextual-links-region > header div.description p {
 article.profile header {
   position: relative;
   margin: 0 0 30px;
-  padding: 0 0 30px;
-  min-height: 148px;
+  min-height: 185px;
   border-bottom: 1px solid #eaeaea;
 }
 article.profile header h1 {
@@ -478,13 +475,11 @@ article.profile header div.field-name-field-position {
   color: #787878;
 }
 article.profile header div.field-label {
-  width: 42.4242424%;  /* 140 / 330 */
-
   text-transform: uppercase;
 }
 article.profile header div.content {
   position: relative;
-  width: 68.2692308%;  /* 520 */
+  width: 100%;
   z-index: 10;
 }
 article.profile header div.user-picture {
@@ -543,7 +538,7 @@ div.meta .tags {
   position: relative;
   top: -1px;
   text-transform: lowercase;
-  font: italic 1.3em/14px Georgia, Times, "Times New Roman", serif;
+  font: italic 1.3em/14px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 div.meta .tags span {
   float: left;
@@ -581,10 +576,10 @@ div.pager {
   margin: 30px 0 0;
   width: 100%;
   height: 21px;
-  font: bold 1.071428571em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font: bold 1em/1.5em Arial, Helvetica, sans-serif;
 }
 div.pager > .pager-links {
-  font: 1.071428571em/1.5em NewsGothicBT-Bold, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
+  font: bold 1em/1.5em Arial, Helvetica, sans-serif;
   text-transform: uppercase;
 }
 div.pager > .pager-links li {
@@ -639,7 +634,7 @@ div.pager > .pager-list li.pager-current span {
 ol.search-results article h2 {
   margin: 0;
   padding: 0;
-  font: bold 1.285714286em/1.5em NewsGothicBT-Bold, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
+  font: bold 1.2em/1.5em Arial, Helvetica, sans-serif;
 }
 ol.search-results article p {
   padding: 0 0 10px;
@@ -678,11 +673,11 @@ ol.search-results li {
   text-indent: -9999px;
   background: transparent url('../../images/icons_remove.png') no-repeat 0 0;
 }
-.view-display-id-block{
-  width:100%;
-  height: 300px;
-  background-color: #dadada;
-}
+/*.view-display-id-block {*/
+/*width: 100%;*/
+/*height: 300px;*/
+/*background-color: #dadada;*/
+/*}*/
 #views_slideshow_cycle_teaser_section_front_page_slideshow-block {
   display: block;
   margin-left: auto;
@@ -693,3 +688,113 @@ ol.search-results li {
 /* @end */
 /* @end */
 /* @end */
+
+/* Language block theming - IPGroup */
+#languages-region {
+  display: inline-block;
+  float: right;
+  margin-left: 30px;
+  width: auto;
+}
+div.languages-and-navigation {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+}
+#languages-region li {
+  display: inline-block;
+}
+#languages-region li.active a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+#secondary-navigation {
+  display: inline-block;
+  float: right;
+  width: auto;
+}
+#secondary-menu {
+  float: none;
+}
+#leaflet-map {
+  margin-top: 30px;
+}
+.contextual-links-region h2 {
+  padding-bottom: 5px;
+}
+#edit-message {
+  width: 300px!important;
+  height: 160px;
+  resize: none;
+  overflow: auto;
+}
+.page-contacts .pane-node h2.pane-title {
+  padding-bottom: 10px;
+}
+div.pane-content div.node>h2 {
+  display: none !important;
+  height: 0 !important;
+}
+/*footer default style*/
+footer {
+  padding: 0px;
+}
+#logo_footer {
+  width: 175px;
+  margin-left: 125px;
+}
+#contact_inf p {
+  padding: 0px;
+}
+#contact_inf {
+  margin-left: 0px;
+}
+#contact_us {
+  margin-left: 65px;
+}
+#footer_phone {
+  margin-left: 100px;
+}
+/* Colorbox default style change. */
+#cboxMiddleLeft,
+#cboxMiddleRight,
+#cboxTopCenter,
+#cboxTopLeft,
+#cboxTopRight,
+#cboxContent,
+#cboxBottomCenter,
+#cboxBottomLeft,
+#cboxBottomRight {
+  background-color: #ff7200;
+}
+
+#cboxCurrent {
+  color: #262626;
+}
+#cboxClose,
+#cboxClose:hover {
+  background: url(../../images/colorbox_controls.png) transparent no-repeat -36px 5px;
+}
+#cboxPrevious,
+#cboxPrevious:hover {
+  background: url(../../images/colorbox_controls.png) transparent no-repeat 0 5px;
+}
+#cboxNext,
+#cboxNext:hover {
+  background: url(../../images/colorbox_controls.png) transparent no-repeat -15px 5px;
+}
+#cboxCurrent {
+  color: #262626;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.resizable-textarea .grippie {
+  display: none;
+}
+/* End language block theming - IPGroup */
+
+.views-field .field-content a p {
+  color: #000000;
+}

@@ -67,28 +67,36 @@
  */
 ?>
   <header role="banner">
-    <?php if ($main_menu || $secondary_menu): ?>
     <div role="navigation">
-
       <div class="header">
-        <div>
-          <?php if ($site_slogan): ?>
-          <small><?php print $site_slogan; ?></small>
+        <div class="languages-and-navigation">
+          <?php if (!empty($page['languages'])): ?>
+            <div id="languages-region">
+              <?php print render($page['languages']); ?>
+            </div>
           <?php endif; ?>
-          <?php
-            // Todo: move it to preprocess function.
-            print theme('links__system_secondary_menu',
-              array(
-                'links' => $secondary_menu,
-                'attributes' => array(
-                  'id' => 'secondary-menu',
-                  'class' => array('secondary'),
-                ),
-              )
-            );
-          ?>
+          <?php if (!empty($secondary_menu)): ?>
+          <div id="secondary-navigation">
+            <?php if ($site_slogan): ?>
+            <small><?php print $site_slogan; ?></small>
+            <?php endif; ?>
+            <?php
+              // Todo: move it to preprocess function.
+              print theme('links__system_secondary_menu',
+                array(
+                  'links' => $secondary_menu,
+                  'attributes' => array(
+                    'id' => 'secondary-menu',
+                    'class' => array('secondary'),
+                  ),
+                )
+              );
+            ?>
+          </div>
+          <?php endif; ?>
         </div>
       </div>
+
       <div class="top">
         <?php if ($logo): ?>
         <div class="logo">
@@ -97,26 +105,31 @@
           </a>
         </div>
         <?php endif; ?>
+
         <div class="navhead">
-         <nav>
-           <?php
-             print theme('links__system_main_menu',
-               array(
-                 'links' => $main_menu,
-                 'attributes' => array(
-                   'id' => 'main-menu',
-                   'class' => array('primary'),
-                 ),
-                 'heading' => t('Main menu'),
-               )
-             );
-           ?>
-          </nav>
-          <?php print render($page['header']); ?>
+          <?php if (!empty($main_menu)): ?>
+           <nav>
+             <?php
+               print theme('links__system_main_menu',
+                 array(
+                   'links' => $main_menu,
+                   'attributes' => array(
+                     'id' => 'main-menu',
+                     'class' => array('primary'),
+                   ),
+                   'heading' => t('Main menu'),
+                 )
+               );
+             ?>
+            </nav>
+          <?php endif; ?>
+          <?php if (!empty($page['header'])): ?>
+            <?php print render($page['header']); ?>
+          <?php endif; ?>
         </div>
       </div>
     </div> <!-- /div[role="navigation"] -->
-    <?php endif; ?>
+
   </header> <!-- /header[role="banner"] -->
   <div id="main-content" role="main">
     <?php if (!empty($section_head)): ?>

@@ -29,6 +29,21 @@ function ipg_article_views_api($module = NULL, $api = NULL) {
 function ipg_article_image_default_styles() {
   $styles = array();
 
+  // Exported image style: article_thumb.
+  $styles['article_thumb'] = array(
+    'label' => 'Article thumb',
+    'effects' => array(
+      4 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 200,
+          'height' => 170,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: image_06col.
   $styles['image_06col'] = array(
     'label' => 'image_06col',
@@ -82,7 +97,7 @@ function ipg_article_image_default_styles() {
       1 => array(
         'name' => 'image_scale',
         'data' => array(
-          'width' => 500,
+          'width' => 630,
           'height' => '',
           'upscale' => 0,
         ),
@@ -101,6 +116,21 @@ function ipg_article_image_default_styles() {
           'width' => 200,
           'height' => 150,
           'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: vacancy_thumb.
+  $styles['vacancy_thumb'] = array(
+    'label' => 'Vacancy thumb',
+    'effects' => array(
+      3 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 65,
+          'height' => 65,
         ),
         'weight' => 1,
       ),

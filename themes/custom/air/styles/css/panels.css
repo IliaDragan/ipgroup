@@ -6,20 +6,13 @@
  * the Panels module and generated output.
  *
  */
-/* Import LESS files */
-/**
- * @file
- * less/radius.css
- *
- * Contains variables and other LESS-specific CSS.
- */
 
 /* @group General */
 section.panel-pane {
   clear: both;
   overflow: hidden;
-  margin: 0 0 30px;
-  font: normal 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font: normal 1em/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 20px;
 }
 section.panel-pane.pane-node-content {
   overflow: visible;
@@ -31,11 +24,19 @@ section.panel-pane.pane-page-tabs #tabs ul {
   overflow: hidden;
   margin: 0 0 30px;
 }
-div.grid-display section.panel-pane.pane-pco-blocks h1 {
-  font: 2em/1.2em NewsGothicBT-Bold, "Arial Narrow", Helvetica, Arial, sans-serif;
+div.grid-display section.panel-pane.pane-pco-blocks h1,
+div.grid-display section.panel-pane.pane-pco-blocks h1 a,
+div.grid-display section.panel-pane.pane-pco-blocks h1 a:active,
+div.grid-display section.panel-pane.pane-pco-blocks h1 a:hover,
+div.grid-display section.panel-pane.pane-pco-blocks h1 a:visited {
+  font: bold 1.34em/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-div.grid-display section.panel-pane.pane-pco-blocks h2 {
-  font: 1.5em/1.2em NewsGothicBT-Bold, "Arial Narrow", Helvetica, Arial, sans-serif;
+div.grid-display section.panel-pane.pane-pco-blocks h2,
+div.grid-display section.panel-pane.pane-pco-blocks h2 a,
+div.grid-display section.panel-pane.pane-pco-blocks h2 a:active,
+div.grid-display section.panel-pane.pane-pco-blocks h2 a:hover,
+div.grid-display section.panel-pane.pane-pco-blocks h2 a:visited {
+  font: bold 1.5em/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 section.panel-pane .meta {
   font-size: .714285714em;
@@ -73,7 +74,7 @@ section.panel-pane > .pane-content .item-list ul li {
   background-color: #ffffff;
 }
 .column.left section.panel-pane > .pane-content article.node-webform p {
-  font: normal 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  font: normal 1em/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .column.left section.panel-pane > .pane-content article.node-webform h2 a {
   color: #ffffff;
@@ -224,7 +225,7 @@ a.call-me {
   padding: 0 0 0 62px;
   width: 150px;
   color: #ffffff;
-  font: 2em/2.4em NewsGothicBT-Bold, "Arial Narrow", Helvetica, Arial, sans-serif;
+  font: bold 2em/2.4em "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 a.call-me:hover {
   text-decoration: none;
@@ -325,7 +326,7 @@ div#mini-panel-footer .pane-webform-client-block-127 div.field-name-body {
 /* @group div.pane-block-1 testimonial */
 footer div.view-testimonials div.views-field-body {
   margin: 0 0 20px;
-  font: italic 1.1em/1.5em Georgia, Times, "Times New Roman", serif;
+  font: italic 1.1em/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 div.view-testimonials span.views-field-field-name {
   display: block;
@@ -345,8 +346,9 @@ div.view-testimonials span.views-field-field-name {
 /* @group pane-client-logos-panel-pane-1, pane-client-logos-panel-pane-2 */
 .pane-client-logos-panel-pane-1 .pane-title,
 .pane-client-logos-panel-pane-2 .pane-title {
-  font-family: NewsGothicBT-Bold, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1em;
+  font-weight: bold;
   text-transform: uppercase;
   background-color: #2a2a2a;
   padding: 9px 9px 7px;

@@ -33,6 +33,7 @@ dependencies[] = admin_menu
 dependencies[] = views_slideshow
 dependencies[] = fe_block
 dependencies[] = views_slideshow
+dependencies[] = owlcarousel
 
 ; Helper modules.
 dependencies[] = pco_blocks
@@ -41,6 +42,7 @@ dependencies[] = pco_panels
 ; Features
 dependencies[] = localization
 dependencies[] = ipg_users
+dependencies[] = ipg_employees_carousel
 dependencies[] = ipg_article
 dependencies[] = ipg_event
 dependencies[] = ipg_roles_and_permision

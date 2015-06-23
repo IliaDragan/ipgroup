@@ -5,25 +5,7 @@
  * This stylesheet is intended for form
  * specific styling.
  */
-/* Import main LESS file */
-/**
- * @file
- * less/main.css
- *
- * Imports all less files into one single file
- */
-/**
- * @file
- * less/radius.css
- *
- * Contains variables and other LESS-specific CSS.
- */
-/**
- * @file
- * extend.css
- *
- * Contains variables and other LESS-specific CSS.
- */
+
 /* @group General */
 input.form-text,
 textarea {
@@ -208,7 +190,7 @@ div.comment > div.submitted p {
   padding: 0;
 }
 div.comment > div.content {
-  font: normal 1em/1.5em Georgia, Times New Roman, Times, serif;
+  font: normal 1em/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #4a4a4a;
 }
 /* @end */

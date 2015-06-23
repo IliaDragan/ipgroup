@@ -60,42 +60,23 @@ function air_preprocess_html(&$vars) {
 function air_preprocess_page(&$vars) {
   if (!drupal_is_front_page()) {
     $item = menu_get_active_trail();
-    if (!empty($item[1]['link_title'])) {
-      $vars['section_head'] = $item[1]['link_title'];
+    $is_menu_item = !empty($item[1]['title']) && !empty($item[1]['menu_name']);
+    if ($is_menu_item && $item[1]['menu_name'] == 'main-menu') {
+      $vars['section_head'] = $item[1]['title'];
     }
-  }
-}
-
-/**
- * Override of theme_pager().
- */
-function air_pager($vars) {
-  $tags = $vars['tags'];
-  $element = $vars['element'];
-  $parameters = $vars['parameters'];
-  $quantity = $vars['quantity'];
-  $pager_list = theme('pager_list', $vars);
-
-  $links = array();
-  $links['pager-previous'] = theme('pager_previous', array(
-    'text' => (isset($tags[1]) ? $tags[1] : t('Prev')),
-    'element' => $element,
-    'interval' => 1,
-    'parameters' => $parameters,
-  ));
-  $links['pager-next'] = theme('pager_next', array(
-    'text' => (isset($tags[3]) ? $tags[3] : t('Next')),
-    'element' => $element,
-    'interval' => 1,
-    'parameters' => $parameters,
-  ));
-  $links = array_filter($links);
-  $pager_links = theme('links', array(
-    'links' => $links,
-    'attributes' => array('class' => 'links pager pager-links'),
-  ));
-  if ($pager_list) {
-    return "<div class='pager clearfix'>$pager_list $pager_links</div>";
+    elseif (!empty($vars['node']->type)) {
+      if (!empty($vars['node']->field_category['und'][0]['taxonomy_term']->name)) {
+        $vars['section_head'] = $vars['node']->field_category['und'][0]['taxonomy_term']->name;
+      }
+      else {
+        $type = $vars['node']->type;
+        $types = node_type_get_types();
+        if (!empty($types[$type]->name)) {
+          $type_name = $types[$type]->name;
+          $vars['section_head'] = t('@type', array('@type' => $type_name));
+        }
+      }
+    }
   }
 }
 
@@ -106,26 +87,17 @@ function air_preprocess_user_profile(&$vars) {
   $theme_path = path_to_theme();
   $link_options = array(
     'html' => TRUE,
-    'attributes' => array(),
   );
   if (!empty($vars['field_photo'])) {
     $photo_path = image_style_url('avatar', $vars['field_photo'][0]['uri']);
-    if (!empty($vars['field_caricature'][0]['uri'])) {
-      $img_uri = $vars['field_caricature'][0]['uri'];
-    }
-    else {
-      $img_uri = $vars['field_photo'][0]['uri'];
-    }
-    $link_options['attributes']['img_src'] = image_style_url('avatar', $img_uri);
-    $link_options['attributes']['photo_src'] = $photo_path;
-    drupal_add_js($theme_path . '/scripts/user.js');
   }
   else {
-    $photo_path = $theme_path . '/images/silhouette-female.png';
+    $photo_path = $theme_path . '/images/silhouette.png';
   }
   $img = theme('image', array('path' => $photo_path));
   $username = $vars['elements']['#account']->name;
   $vars['user_image'] = l($img, 'employee/' . $username, $link_options);
+  drupal_add_js($theme_path . '/scripts/user.js');
 }
 
 /**
@@ -156,10 +128,76 @@ function air_preprocess_views_view_fields(&$vars) {
       drupal_add_js($theme_path . '/scripts/user.js');
     }
     else {
-      $photo_path = $theme_path . '/images/silhouette-female.png';
+      $photo_path = $theme_path . '/images/silhouette.png';
     }
     $img = theme('image', array('path' => $photo_path));
     $username = $vars['fields']['name']->raw;
     $vars['picture'] = l($img, 'employee/' . $username, $link_options);
+  }
+}
+
+/**
+ * Implements template_preprocess_views_view().
+ */
+function air_preprocess_views_view(&$vars) {
+  $view = $vars['view'];
+  if ($view->current_display == 'owl_employee_carousel') {
+    $theme_path = path_to_theme();
+    drupal_add_js($theme_path . '/scripts/employe-carousel.js',
+      array('scope' => 'footer', 'weight' => 100));
+    drupal_add_css($theme_path . '/styles/css/carousel.css',
+      array('scope' => 'footer', 'weight' => 100));
+  }
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function air_preprocess_field(&$variables) {
+  // Preprocess field_user user reference field.
+  if ($variables['element']['#field_name'] == 'field_user') {
+    global $language;
+    $lang = $language->language;
+    $items = &$variables['items'];
+    foreach ($items as &$item) {
+      $entity = $item['#options']['entity'];
+      $path = 'employee/' . $entity->name;
+      if (!empty($entity->field_name[$lang][0]['value'])) {
+        $item['name_link'] = l($entity->field_name[$lang][0]['value'], $path);
+      }
+      elseif (!empty($entity->field_name[LANGUAGE_NONE][0]['value'])) {
+        $item['name_link'] = l($entity->field_name[LANGUAGE_NONE][0]['value'], $path);
+      }
+      if (!empty($entity->field_position[$lang][0]['value'])) {
+        $item['position'] = $entity->field_position[$lang][0]['value'];
+      }
+      elseif (!empty($entity->field_position[LANGUAGE_NONE][0]['value'])) {
+        $item['position'] = $entity->field_position[LANGUAGE_NONE][0]['value'];
+      }
+      $item['identifier'] = 'employee-' . $entity->uid;
+      if (!empty($entity->field_photo[$lang][0]['uri'])) {
+        $photo_path = image_style_url('miniavatar', $entity->field_photo[$lang][0]['uri']);
+        $item['photo'] = theme('image', array('path' => $photo_path));
+      }
+      elseif (!empty($entity->field_photo[LANGUAGE_NONE][0]['uri'])) {
+        $photo_path = image_style_url('miniavatar', $entity->field_photo[LANGUAGE_NONE][0]['uri']);
+        $item['photo'] = theme('image', array('path' => $photo_path));
+      }
+      else {
+        $photo_path = path_to_theme() . '/images/silhouette.png';
+        $item['photo'] = theme('image', array('path' => $photo_path));
+      }
+      if (!empty($entity->field_phone[$lang][0]['value'])) {
+        $item['phone'] = $entity->field_phone[$lang][0]['value'];
+      }
+      elseif (!empty($entity->field_phone[LANGUAGE_NONE][0]['value'])) {
+        $item['phone'] = $entity->field_phone[LANGUAGE_NONE][0]['value'];
+      }
+    }
+    $theme_path = path_to_theme();
+    drupal_add_js($theme_path . '/scripts/field_user.js');
+  }
+  elseif ($variables['element']['#field_name'] == 'field_body') {
+    $variables['theme_hook_suggestion'] = 'field__body';
   }
 }
