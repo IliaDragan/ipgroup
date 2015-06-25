@@ -412,3 +412,11 @@ section.panel-pane ul#slide-nav li:hover {
 .view-all-event .views-row-even a {
   color: #ffffff;
 }
+
+.page-events .view-all-event .views-field-field-image {
+  float: left;
+}
+.page-events .view-all-event .views-row {
+  clear: both;
+  overflow: hidden;
+}

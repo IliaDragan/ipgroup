@@ -75,6 +75,9 @@ div.prose h3 {
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 }
+div.prose td {
+  padding: 15px;
+}
 footer h2,
 footer h3,
 footer div.grid-display section.panel-pane h2,

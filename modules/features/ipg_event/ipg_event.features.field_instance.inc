@@ -53,36 +53,39 @@ function ipg_event_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
   // Exported field_instance: 'node-event-field_category_event'
   $field_instances['node-event-field_category_event'] = array(
     'bundle' => 'event',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 'technical',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 1,
+        'type' => 'list_default',
+        'weight' => 6,
       ),
       'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'taxonomy',
+        'label' => 'above',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 1,
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_category_event',
     'label' => 'Category',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
@@ -92,7 +95,7 @@ function ipg_event_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => -2,
+      'weight' => 1,
     ),
   );
 
@@ -140,7 +143,7 @@ function ipg_event_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 

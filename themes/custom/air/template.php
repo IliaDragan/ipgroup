@@ -63,6 +63,10 @@ function air_preprocess_page(&$vars) {
     $is_menu_item = !empty($item[1]['title']) && !empty($item[1]['menu_name']);
     if ($is_menu_item && $item[1]['menu_name'] == 'main-menu') {
       $vars['section_head'] = $item[1]['title'];
+      if (!empty($vars['node']->title) && $item[1]['title'] == $vars['node']->title) {
+        // Hide node title if orange bar displays this title.
+        drupal_add_css('.pane-page-title {display: none;}', array('type' => 'inline'));
+      }
     }
     elseif (!empty($vars['node']->type)) {
       if (!empty($vars['node']->field_category['und'][0]['taxonomy_term']->name)) {

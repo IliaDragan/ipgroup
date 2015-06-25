@@ -75,6 +75,9 @@ projects[multiupload_filefield_widget][subdir] = "contrib"
 projects[multiupload_imagefield_widget][version] = "1.3"
 projects[multiupload_imagefield_widget][subdir] = "contrib"
 
+projects[node_revision_delete][version] = "2.6"
+projects[node_revision_delete][subdir] = "contrib"
+
 projects[panels][version] = "3.5"
 projects[panels][subdir] = "contrib"
 
