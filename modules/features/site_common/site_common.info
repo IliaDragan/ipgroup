@@ -12,6 +12,7 @@ dependencies[] = jquery_update
 dependencies[] = menu
 dependencies[] = navigation404
 dependencies[] = pathauto
+dependencies[] = rabbit_hole
 dependencies[] = strongarm
 dependencies[] = token
 dependencies[] = wysiwyg

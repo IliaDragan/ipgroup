@@ -91,6 +91,9 @@ projects[owlcarousel][version] = "1.4"
 projects[owlcarousel][subdir] = "contrib"
 projects[owlcarousel][patch][] = "http://am.storage.dev.inlead.dk/owlcarousel-fixed_libraries_owlcarousel_path.patch"
 
+projects[rabbit_hole][version] = "2.23"
+projects[rabbit_hole][subdir] = "contrib
+
 projects[references][version] = "2.1"
 projects[references][subdir] = "contrib"
 

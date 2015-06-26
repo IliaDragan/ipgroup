@@ -105,5 +105,33 @@ function ipg_contacts_strongarm() {
   $strongarm->value = 0;
   $export['node_submitted_address'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_action_address';
+  $strongarm->value = '2';
+  $export['rh_node_action_address'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_override_address';
+  $strongarm->value = 0;
+  $export['rh_node_override_address'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_redirect_address';
+  $strongarm->value = '';
+  $export['rh_node_redirect_address'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_redirect_response_address';
+  $strongarm->value = '301';
+  $export['rh_node_redirect_response_address'] = $strongarm;
+
   return $export;
 }
