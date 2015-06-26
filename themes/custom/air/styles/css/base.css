@@ -804,7 +804,7 @@ footer {
 }
 
 /*unclickable  status project*/
-.field-items .even a{
+.field-name-field-status .field-items .even a{
   pointer-events: none;
 }
 
