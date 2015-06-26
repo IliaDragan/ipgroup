@@ -81,6 +81,18 @@ function air_preprocess_page(&$vars) {
         }
       }
     }
+
+    // If page not found.
+    $header = drupal_get_http_header('status');
+    if ($header == '404 Not Found') {
+      $vars['theme_hook_suggestions'][] = 'page__404';
+      $img_path = base_path() . drupal_get_path('theme', 'air') . '/images/404white.png';
+      $vars['image_404'] = theme('image', array(
+        'path' => $img_path,
+        'alt' => t('Page not found.'),
+      ));
+
+    }
   }
 }
 

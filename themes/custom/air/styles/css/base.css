@@ -801,3 +801,11 @@ footer {
 .views-field .field-content a p {
   color: #000000;
 }
+/* Page 404 styles start. */
+.page-not-found-content,
+.page-not-found-image,
+.page-not-found-text {
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
