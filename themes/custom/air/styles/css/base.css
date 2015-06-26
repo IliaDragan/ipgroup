@@ -64,7 +64,8 @@ h5 {
   line-height: 1.428571429em;
 }
 div.prose h2 {
-  font-size: 1.714285714em;
+  font-size: 1.4em;
+  font-weight: bold;
 }
 div.prose h2,
 div.prose h3,
