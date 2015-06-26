@@ -63,6 +63,10 @@ function air_preprocess_page(&$vars) {
     $is_menu_item = !empty($item[1]['title']) && !empty($item[1]['menu_name']);
     if ($is_menu_item && $item[1]['menu_name'] == 'main-menu') {
       $vars['section_head'] = $item[1]['title'];
+      if (!empty($vars['node']->title) && $item[1]['title'] == $vars['node']->title) {
+        // Hide node title if orange bar displays this title.
+        drupal_add_css('.pane-page-title {display: none;}', array('type' => 'inline'));
+      }
     }
     elseif (!empty($vars['node']->type)) {
       if (!empty($vars['node']->field_category['und'][0]['taxonomy_term']->name)) {
@@ -76,6 +80,18 @@ function air_preprocess_page(&$vars) {
           $vars['section_head'] = t('@type', array('@type' => $type_name));
         }
       }
+    }
+
+    // If page not found.
+    $header = drupal_get_http_header('status');
+    if ($header == '404 Not Found') {
+      $vars['theme_hook_suggestions'][] = 'page__404';
+      $img_path = base_path() . drupal_get_path('theme', 'air') . '/images/404white.png';
+      $vars['image_404'] = theme('image', array(
+        'path' => $img_path,
+        'alt' => t('Page not found.'),
+      ));
+
     }
   }
 }

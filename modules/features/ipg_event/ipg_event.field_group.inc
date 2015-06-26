@@ -21,7 +21,7 @@ function ipg_event_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Gallery',
-    'weight' => '9',
+    'weight' => '7',
     'children' => array(
       0 => 'field_gallery_image',
     ),

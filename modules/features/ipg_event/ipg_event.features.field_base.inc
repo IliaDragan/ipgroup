@@ -18,24 +18,22 @@ function ipg_event_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_category_event',
     'indexes' => array(
-      'tid' => array(
-        0 => 'tid',
+      'value' => array(
+        0 => 'value',
       ),
     ),
     'locked' => 0,
-    'module' => 'taxonomy',
+    'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        0 => array(
-          'vocabulary' => 'categories',
-          'parent' => 0,
-        ),
+        'technical' => 'Technical',
+        'corporative' => 'Corporative',
       ),
+      'allowed_values_function' => '',
       'entity_translation_sync' => FALSE,
-      'options_list_callback' => 'i18n_taxonomy_allowed_values',
     ),
-    'translatable' => 0,
-    'type' => 'taxonomy_term_reference',
+    'translatable' => 1,
+    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_date'

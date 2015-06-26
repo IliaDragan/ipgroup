@@ -10,6 +10,7 @@ dependencies[] = filter
 dependencies[] = ipg_common
 dependencies[] = jquery_update
 dependencies[] = menu
+dependencies[] = navigation404
 dependencies[] = pathauto
 dependencies[] = strongarm
 dependencies[] = token
