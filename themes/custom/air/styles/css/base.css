@@ -558,6 +558,7 @@ div.meta .tags {
   float: left;
   display: block;
   margin: 0 3px 0;
+  pointer-events: none;
 }
 div.meta .tags a {
   margin: 0 3px 0 0;
@@ -801,6 +802,12 @@ footer {
 .views-field .field-content a p {
   color: #000000;
 }
+
+/*unclickable  status project*/
+.field-items .even a{
+  pointer-events: none;
+}
+
 /* Page 404 styles start. */
 .page-not-found-content,
 .page-not-found-image,
@@ -809,3 +816,4 @@ footer {
   text-align: center;
   width: 100%;
 }
+/* Page 404 styles end. */
