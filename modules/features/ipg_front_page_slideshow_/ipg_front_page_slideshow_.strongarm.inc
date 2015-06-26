@@ -115,6 +115,34 @@ function ipg_front_page_slideshow__strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_action_image_content';
+  $strongarm->value = '2';
+  $export['rh_node_action_image_content'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_override_image_content';
+  $strongarm->value = 0;
+  $export['rh_node_override_image_content'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_redirect_image_content';
+  $strongarm->value = '';
+  $export['rh_node_redirect_image_content'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_redirect_response_image_content';
+  $strongarm->value = '301';
+  $export['rh_node_redirect_response_image_content'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'site_frontpage';
   $strongarm->value = 'home';
   $export['site_frontpage'] = $strongarm;
