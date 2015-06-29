@@ -29,17 +29,48 @@ function ipg_project_views_api($module = NULL, $api = NULL) {
 function ipg_project_image_default_styles() {
   $styles = array();
 
+  // Exported image style: project-image.
+  $styles['project-image'] = array(
+    'label' => 'project-image-views',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_resize',
+        'data' => array(
+          'width' => 250,
+          'height' => 200,
+        ),
+        'weight' => 1,
+      ),
+      2 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 250,
+          'height' => 200,
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
   // Exported image style: project_image.
   $styles['project_image'] = array(
     'label' => 'Project image',
     'effects' => array(
-      1 => array(
+      4 => array(
+        'name' => 'image_resize',
+        'data' => array(
+          'width' => 470,
+          'height' => 400,
+        ),
+        'weight' => -10,
+      ),
+      3 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 470,
           'height' => 400,
         ),
-        'weight' => 1,
+        'weight' => -9,
       ),
     ),
   );

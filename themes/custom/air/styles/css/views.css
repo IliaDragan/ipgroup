@@ -279,11 +279,13 @@ section.panel-pane ul#slide-nav li:hover {
 
 /* Projects page view - IPGroup*/
 .page-projects .view-projects td .project-wrapper {
-  border-top: 1px solid #eaeaea;
+  /*border-top: 1px solid #eaeaea;*/
   margin: 3%;
 }
 .page-projects .view-projects .views-field-title h2 {
+  width: 233px;
   font: bold 1.5em/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
   margin: 0;
 }
 .page-projects .view-projects .views-field-body .field-content {
@@ -299,6 +301,11 @@ section.panel-pane ul#slide-nav li:hover {
 #mini-panel-cp_productpage_graybox div.view.view-employees div.views-row div.views-field-field-job-title {
   padding-right: 10px;
   float: left;
+}
+.page-projects .image-project a img:hover {
+    -webkit-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+    -moz-box-shadow:    4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+    box-shadow:         4px 4px 9px 0px rgba(50, 50, 50, 0.8);
 }
 /* @end */
 /* End projects page view */

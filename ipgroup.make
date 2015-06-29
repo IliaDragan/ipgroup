@@ -58,13 +58,13 @@ projects[i18n][version] = "1.13"
 projects[i18n][subdir] = "contrib"
 
 projects[leaflet][version] = "1.1"
-projects[leaflet][subdir] = contrib
+projects[leaflet][subdir] = "contrib"
 
 projects[libraries][version] = "2.2"
-projects[libraries][subdir] = contrib
+projects[libraries][subdir] = "contrib"
 
 projects[link][version] = "1.3"
-projects[link][subdir] = contrib
+projects[link][subdir] = "contrib"
 
 projects[module_filter][version] = "2.0"
 projects[module_filter][subdir] = "contrib"
@@ -92,7 +92,7 @@ projects[owlcarousel][subdir] = "contrib"
 projects[owlcarousel][patch][] = "http://am.storage.dev.inlead.dk/owlcarousel-fixed_libraries_owlcarousel_path.patch"
 
 projects[rabbit_hole][version] = "2.23"
-projects[rabbit_hole][subdir] = "contrib
+projects[rabbit_hole][subdir] = "contrib"
 
 projects[references][version] = "2.1"
 projects[references][subdir] = "contrib"
