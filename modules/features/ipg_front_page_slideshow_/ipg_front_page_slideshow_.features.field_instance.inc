@@ -67,7 +67,7 @@ function ipg_front_page_slideshow__field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'image_content',
+          'image_style' => '960x500',
         ),
         'type' => 'image',
         'weight' => 1,
