@@ -419,11 +419,19 @@ section.panel-pane ul#slide-nav li:hover {
 .view-all-event .views-row-even a {
   color: #ffffff;
 }
-
 .page-events .view-all-event .views-field-field-image {
   float: left;
 }
 .page-events .view-all-event .views-row {
   clear: both;
   overflow: hidden;
+}
+.page-events .view-all-event .views-row-odd a p{
+  color: #464646;
+}
+.page-events .view-all-event .views-row-even a p {
+  color: #ffffff;
+}
+.pane-new-event .view-new-event .views-row-odd a p {
+  color: #ffffff;
 }
