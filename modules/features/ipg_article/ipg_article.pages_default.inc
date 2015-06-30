@@ -201,39 +201,6 @@ function ipg_article_default_page_manager_handlers() {
     $display->content['new-aec8c1d0-6173-42f0-b034-1b3cf448a26d'] = $pane;
     $display->panels['left-3'][1] = 'new-aec8c1d0-6173-42f0-b034-1b3cf448a26d';
     $pane = new stdClass();
-    $pane->pid = 'new-87be8f37-6dda-4857-9901-20816a82c68a';
-    $pane->panel = 'left-3';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_image';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'image',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(
-        'image_style' => 'image_article',
-        'image_link' => '',
-      ),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $pane->uuid = '87be8f37-6dda-4857-9901-20816a82c68a';
-    $display->content['new-87be8f37-6dda-4857-9901-20816a82c68a'] = $pane;
-    $display->panels['left-3'][2] = 'new-87be8f37-6dda-4857-9901-20816a82c68a';
-    $pane = new stdClass();
     $pane->pid = 'new-41ee7d34-e9f0-4a7f-ba95-557639d928cb';
     $pane->panel = 'left-3';
     $pane->type = 'entity_field';
@@ -258,11 +225,11 @@ function ipg_article_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = '41ee7d34-e9f0-4a7f-ba95-557639d928cb';
     $display->content['new-41ee7d34-e9f0-4a7f-ba95-557639d928cb'] = $pane;
-    $display->panels['left-3'][3] = 'new-41ee7d34-e9f0-4a7f-ba95-557639d928cb';
+    $display->panels['left-3'][2] = 'new-41ee7d34-e9f0-4a7f-ba95-557639d928cb';
     $pane = new stdClass();
     $pane->pid = 'new-9c19830c-d66e-400a-af04-6c0a674ed8f0';
     $pane->panel = 'left-3';
@@ -288,11 +255,11 @@ function ipg_article_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = '9c19830c-d66e-400a-af04-6c0a674ed8f0';
     $display->content['new-9c19830c-d66e-400a-af04-6c0a674ed8f0'] = $pane;
-    $display->panels['left-3'][4] = 'new-9c19830c-d66e-400a-af04-6c0a674ed8f0';
+    $display->panels['left-3'][3] = 'new-9c19830c-d66e-400a-af04-6c0a674ed8f0';
     $pane = new stdClass();
     $pane->pid = 'new-534de015-7a01-4535-87d9-7df7e5c495b4';
     $pane->panel = 'right-3';
@@ -328,6 +295,32 @@ function ipg_article_default_page_manager_handlers() {
     $pane->uuid = '534de015-7a01-4535-87d9-7df7e5c495b4';
     $display->content['new-534de015-7a01-4535-87d9-7df7e5c495b4'] = $pane;
     $display->panels['right-3'][0] = 'new-534de015-7a01-4535-87d9-7df7e5c495b4';
+    $pane = new stdClass();
+    $pane->pid = 'new-2d93bc23-7ccf-40e1-b105-fa607aa23a3b';
+    $pane->panel = 'right-3';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'article-vacancies_list_pane';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'empty',
+      ),
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '2d93bc23-7ccf-40e1-b105-fa607aa23a3b';
+    $display->content['new-2d93bc23-7ccf-40e1-b105-fa607aa23a3b'] = $pane;
+    $display->panels['right-3'][1] = 'new-2d93bc23-7ccf-40e1-b105-fa607aa23a3b';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
