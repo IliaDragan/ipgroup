@@ -32,28 +32,69 @@ function ipg_common_block_configure($delta = '') {
 
   switch ($delta) {
     case 'three_articles':
+      $data = unserialize(variable_get('three_articles_block_data', ''));
       $form['node_nids'] = array(
         '#type' => 'fieldset',
         '#title' => t('Insert nids of 3 nodes'),
         '#description' => t('You must insert nids of source language article nodes (english).'),
       );
-      $form['node_nids']['three_articles_block_node_1'] = array(
+      $form['node_nids']['node_1'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Insert nid and image for node 1'),
+      );
+      $form['node_nids']['node_1']['node_1_nid'] = array(
         '#type' => 'textfield',
-        '#title' => t('Node 1'),
-        '#default_value' => variable_get('three_articles_block_node_1', 0),
+        '#title' => t('Node nid'),
+        '#default_value' => isset($data['node1']['nid']) ? $data['node1']['nid'] : 0,
         '#element_validate' => array('_article_nid_validate'),
       );
-      $form['node_nids']['three_articles_block_node_2'] = array(
+      $form['node_nids']['node_1']['node_1_fid'] = array(
+        '#type' => 'managed_file',
+        '#title' => t('Node image'),
+        '#default_value' => isset($data['node1']['fid']) ? $data['node1']['fid'] : 0,
+        '#upload_validators' => array(
+          'file_validate_extensions' => array('png gif jpg jpeg'),
+        ),
+        '#upload_location' => 'public://ipg_common',
+      );
+
+      $form['node_nids']['node_2'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Insert nid and image for node 2'),
+      );
+      $form['node_nids']['node_2']['node_2_nid'] = array(
         '#type' => 'textfield',
-        '#title' => t('Node 2'),
-        '#default_value' => variable_get('three_articles_block_node_2', 0),
+        '#title' => t('Node nid'),
+        '#default_value' => isset($data['node2']['nid']) ? $data['node2']['nid'] : 0,
         '#element_validate' => array('_article_nid_validate'),
       );
-      $form['node_nids']['three_articles_block_node_3'] = array(
+      $form['node_nids']['node_2']['node_2_fid'] = array(
+        '#type' => 'managed_file',
+        '#title' => t('Node image'),
+        '#default_value' => isset($data['node2']['fid']) ? $data['node2']['fid'] : 0,
+        '#upload_validators' => array(
+          'file_validate_extensions' => array('png gif jpg jpeg'),
+        ),
+        '#upload_location' => 'public://ipg_common',
+      );
+      $form['node_nids']['node_3'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('Insert nid and image for node 3'),
+      );
+      $form['node_nids']['node_3']['node_3_nid'] = array(
         '#type' => 'textfield',
-        '#title' => t('Node 3'),
-        '#default_value' => variable_get('three_articles_block_node_3', 0),
+        '#title' => t('Node nid'),
+        '#default_value' => isset($data['node3']['nid']) ? $data['node3']['nid'] : 0,
         '#element_validate' => array('_article_nid_validate'),
+      );
+      $form['node_nids']['node_3']['node_3_fid'] = array(
+        '#type' => 'managed_file',
+        '#title' => t('Node image'),
+        '#default_value' => isset($data['node3']['fid']) ? $data['node3']['fid'] : 0,
+        '#upload_validators' => array(
+          'file_validate_extensions' => array('png gif jpg jpeg'),
+        ),
+        '#upload_location' => 'public://ipg_common',
       );
       break;
 
@@ -100,9 +141,39 @@ function _article_nid_validate($element, &$form_state, $form) {
 function ipg_common_block_save($delta = '', $edit = array()) {
   switch ($delta) {
     case 'three_articles':
-      variable_set('three_articles_block_node_1', $edit['three_articles_block_node_1']);
-      variable_set('three_articles_block_node_2', $edit['three_articles_block_node_2']);
-      variable_set('three_articles_block_node_3', $edit['three_articles_block_node_3']);
+      $data = array(
+        'node1' => array('nid' => $edit['node_1_nid']),
+        'node2' => array('nid' => $edit['node_2_nid']),
+        'node3' => array('nid' => $edit['node_3_nid']),
+      );
+      if (!empty($edit['node_1_fid'])) {
+        $file = file_load($edit['node_1_fid']);
+        if ($file->status != FILE_STATUS_PERMANENT) {
+          $file->status = FILE_STATUS_PERMANENT;
+          file_save($file);
+          file_usage_add($file, 'ipg_common', 'node', $edit['node_1_nid']);
+        }
+        $data['node1']['fid'] = $file->fid;
+      }
+      if (!empty($edit['node_2_fid'])) {
+        $file = file_load($edit['node_2_fid']);
+        if ($file->status != FILE_STATUS_PERMANENT) {
+          $file->status = FILE_STATUS_PERMANENT;
+          file_save($file);
+          file_usage_add($file, 'ipg_common', 'node', $edit['node_2_nid']);
+        }
+        $data['node2']['fid'] = $file->fid;
+      }
+      if (!empty($edit['node_3_fid'])) {
+        $file = file_load($edit['node_3_fid']);
+        if ($file->status != FILE_STATUS_PERMANENT) {
+          $file->status = FILE_STATUS_PERMANENT;
+          file_save($file);
+          file_usage_add($file, 'ipg_common', 'node', $edit['node_3_nid']);
+        }
+        $data['node3']['fid'] = $file->fid;
+      }
+      variable_set('three_articles_block_data', serialize($data));
       break;
 
     case 'text_before_vacancies':
@@ -148,15 +219,11 @@ function ipg_common_block_view($delta = '') {
 function ipg_common_three_articles_block() {
   global $language;
   $lang = $language->language;
-  $nids = array(
-    variable_get('three_articles_block_node_1', 0),
-    variable_get('three_articles_block_node_2', 0),
-    variable_get('three_articles_block_node_3', 0),
-  );
-  array_filter($nids);
-  $nodes = node_load_multiple($nids);
+  $data = unserialize(variable_get('three_articles_block_data', ''));
+
   $items = array();
-  foreach ($nodes as &$node) {
+  foreach ($data as $node_info) {
+    $node = node_load($node_info['nid']);
     if ($node->language != $lang) {
       $translations = translation_node_get_translations($node->tnid);
       if (!empty($translations[$lang])) {
@@ -164,7 +231,13 @@ function ipg_common_three_articles_block() {
       }
     }
 
-    if (!empty($node->field_image[$lang][0]['uri'])) {
+    if (!empty($node_info['fid'])) {
+
+      $photo = file_load($node_info['fid']);
+      $photo_path = image_style_url('article_thumb', $photo->uri);
+      $image = theme('image', array('path' => $photo_path));
+    }
+    elseif (!empty($node->field_image[$lang][0]['uri'])) {
       $photo_path = image_style_url('article_thumb', $node->field_image[$lang][0]['uri']);
       $image = theme('image', array('path' => $photo_path));
     }
