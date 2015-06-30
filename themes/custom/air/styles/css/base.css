@@ -818,3 +818,9 @@ footer {
   width: 100%;
 }
 /* Page 404 styles end. */
+
+/* Page contacts styles start. */
+#leaflet-map {
+    margin-bottom: 20px;
+}
+/* Page contacts styles end. */
