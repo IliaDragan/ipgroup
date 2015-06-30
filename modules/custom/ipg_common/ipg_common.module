@@ -99,19 +99,29 @@ function ipg_common_block_configure($delta = '') {
       break;
 
     case 'text_before_vacancies':
-      $form['text_before_vacancies'] = array(
-        '#type' => 'textarea',
-        '#title' => t('Text before vacancies'),
-        '#default_value' => variable_get('text_before_vacancies', ''),
-      );
+      $data = unserialize(variable_get('text_before_vacancies', ''));
+      $languages = language_list();
+      foreach ($languages as $lang) {
+        $form['text_' . $lang->language] = array(
+          '#type' => 'text_format',
+          '#title' => t('Text before vacancies (@lang)', array('@lang' => $lang->name)),
+          '#format' => isset($data[$lang->language]['format']) ? $data[$lang->language]['format'] : NULL,
+          '#default_value' => isset($data[$lang->language]['value']) ? $data[$lang->language]['value'] : '',
+        );
+      }
       break;
 
     case 'text_after_vacancies':
-      $form['text_after_vacancies'] = array(
-        '#type' => 'textarea',
-        '#title' => t('Text after vacancies'),
-        '#default_value' => variable_get('text_after_vacancies', ''),
-      );
+      $data = unserialize(variable_get('text_after_vacancies', ''));
+      $languages = language_list();
+      foreach ($languages as $lang) {
+        $form['text_' . $lang->language] = array(
+          '#type' => 'text_format',
+          '#title' => t('Text after vacancies (@lang)', array('@lang' => $lang->name)),
+          '#format' => isset($data[$lang->language]['format']) ? $data[$lang->language]['format'] : NULL,
+          '#default_value' => isset($data[$lang->language]['value']) ? $data[$lang->language]['value'] : '',
+        );
+      }
       break;
 
   }
@@ -177,11 +187,13 @@ function ipg_common_block_save($delta = '', $edit = array()) {
       break;
 
     case 'text_before_vacancies':
-      variable_set('text_before_vacancies', $edit['text_before_vacancies']);
-      break;
-
     case 'text_after_vacancies':
-      variable_set('text_after_vacancies', $edit['text_after_vacancies']);
+      $data = array();
+      $languages = language_list();
+      foreach ($languages as $lang) {
+        $data[$lang->language] = $edit['text_' . $lang->language];
+      }
+      variable_set($delta, serialize($data));
       break;
 
   }
@@ -199,11 +211,8 @@ function ipg_common_block_view($delta = '') {
       break;
 
     case 'text_before_vacancies':
-      $block['content'] = variable_get('text_before_vacancies', '');
-      break;
-
     case 'text_after_vacancies':
-      $block['content'] = variable_get('text_after_vacancies', '');
+      $block['content'] = ipg_common_simple_text_block($delta);
       break;
 
   }
@@ -230,9 +239,7 @@ function ipg_common_three_articles_block() {
         $node = node_load($translations[$lang]->nid);
       }
     }
-
     if (!empty($node_info['fid'])) {
-
       $photo = file_load($node_info['fid']);
       $photo_path = image_style_url('article_thumb', $photo->uri);
       $image = theme('image', array('path' => $photo_path));
@@ -253,4 +260,21 @@ function ipg_common_three_articles_block() {
   }
 
   return theme('item_list', array('items' => $items, 'attributes' => array('class' => array('three-articles-list'))));
+}
+
+/**
+ * Callback function for simple text blocks content.
+ *
+ * @return string
+ *   Html containing translated text.
+ */
+function ipg_common_simple_text_block($delta) {
+  global $language;
+  $data = unserialize(variable_get($delta, ''));
+  if (isset($data[$language->language]['value'])) {
+    return $data[$language->language]['value'];
+  }
+  else {
+    return '';
+  }
 }
