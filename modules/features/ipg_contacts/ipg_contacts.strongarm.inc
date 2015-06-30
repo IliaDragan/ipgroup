@@ -53,6 +53,10 @@ function ipg_contacts_strongarm() {
             'weight' => '6',
             'visible' => FALSE,
           ),
+          'default' => array(
+            'weight' => '1',
+            'visible' => TRUE,
+          ),
         ),
       ),
     ),
