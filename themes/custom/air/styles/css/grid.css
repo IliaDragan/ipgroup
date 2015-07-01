@@ -479,7 +479,7 @@
   footer div.deck.deck-2 .column.six {
     clear: both;
     margin: 0;
-    padding: 0;
+    padding-left: 10px;
     width: 100%;
   }
   div.block-system .content > header div.description,
