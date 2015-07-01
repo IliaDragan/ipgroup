@@ -435,3 +435,9 @@ section.panel-pane ul#slide-nav li:hover {
 .pane-new-event .view-new-event .views-row-odd a p {
   color: #ffffff;
 }
+.views-field-field-date .date-style {
+  font-size: x-small;
+}
+span.date-display-single {
+  font-size: x-small;
+}

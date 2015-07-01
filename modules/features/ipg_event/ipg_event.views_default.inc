@@ -57,6 +57,7 @@ function ipg_event_views_default_views() {
   $handler->display->display_options['fields']['field_date']['alter']['trim_whitespace'] = TRUE;
   $handler->display->display_options['fields']['field_date']['element_type'] = 'span';
   $handler->display->display_options['fields']['field_date']['element_label_type'] = 'span';
+  $handler->display->display_options['fields']['field_date']['element_label_class'] = 'date-style';
   $handler->display->display_options['fields']['field_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_date']['settings'] = array(
     'format_type' => 'short',
