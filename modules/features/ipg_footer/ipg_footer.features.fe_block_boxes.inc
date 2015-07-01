@@ -14,15 +14,15 @@ function ipg_footer_default_fe_block_boxes() {
   $fe_block_boxes->info = 'contact_us';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'contacts_us';
-  $fe_block_boxes->body = '<div id="contact_us"><div id="contact_intro" style="text-align: justify;"><span style="font-size:12px;">Contact Us:</span></div><div id="contact_inf"><p style="text-align: justify;"><span style="font-size: 12px; line-height: 20.0063037872314px;">MD 2001 Republic of Moldova</span></p><p style="text-align: justify;"><span style="font-size: 12px; line-height: 20.0063037872314px;">Chisinau&nbsp;</span><span style="font-size: 12px; line-height: 20.0063037872314px;">&nbsp;Ismail&nbsp;</span><span style="font-size: 12px; line-height: 1.538em;">58/1 of. 3&nbsp;</span></p><p style="text-align: justify;">&nbsp;</p></div></div><p>&nbsp;</p>';
+  $fe_block_boxes->body = '<p><span style="font-size:20px;"><strong>Contact us:</strong></span></p><p><a href="/contacts"><img alt="" src="/sites/default/files/img/you-are-here.jpg" style="height: 15px; width: 15px;"></a> <span style="font-size:12px;"><a href="/contacts">MD-2001 Republic of Moldova<br>&nbsp; &nbsp; &nbsp; Chisinau Ismail 58/1 of. 3&nbsp;</a></span></p>';
 
   $export['contacts_us'] = $fe_block_boxes;
 
   $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'footer_phone';
-  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->format = 'wysiwyg_';
   $fe_block_boxes->machine_name = 'footer_phone';
-  $fe_block_boxes->body = '<div id="footer_phone"><div id="contact_intro" style="text-align: justify;"><span style="font-size:12px;">Phone/Fax: +373-22-885616</span></div><div id="mob_phone"><div id="contact_intro" style="text-align: justify;"><span style="font-size:12px;">Mob.Phone: +373-60799935</span></div><div style="text-align: justify;"><span style="font-size:12px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +373-68381231</span></div></div><p style="text-align: justify;"><span style="font-size:12px;">&nbsp;Email: <a href="/contacts">support@ipgroup.md</a></span></p></div><p>&nbsp;</p>';
+  $fe_block_boxes->body = '<table border="0" cellpadding="1" cellspacing="1" style="height: 100%;"><tbody><tr><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><img alt="" src="/sites/default/files/img/fax1.jpg" style="width: 17px; height: 17px;" /></td><td>&nbsp;+373-22-885616</td></tr><tr><td><img alt="" src="/sites/default/files/img/phone2.jpg" style="width: 17px; height: 17px;" /></td><td>&nbsp;+373-60799935; +373-68381231</td></tr><tr><td><img alt="" src="/sites/default/files/img/mail1.jpg" style="width: 17px; height: 17px;" /></td><td>&nbsp;<a href="mailto:support@ipgroup.md" target="_blank">support@ipgroup.md</a></td></tr></tbody></table><p>&nbsp;</p>';
 
   $export['footer_phone'] = $fe_block_boxes;
 
@@ -30,7 +30,7 @@ function ipg_footer_default_fe_block_boxes() {
   $fe_block_boxes->info = 'Logo Footer';
   $fe_block_boxes->format = 'wysiwyg_';
   $fe_block_boxes->machine_name = 'logo_footer';
-  $fe_block_boxes->body = '<div id="logo_footer"><img src="http://ipgroup.loc/profiles/ipgroup/themes/custom/air/logo.png" /></div>';
+  $fe_block_boxes->body = '<div id="logo_footer"><img src="http://id.ipgroup.dev.inlead.dk//profiles/ipgroup/themes/custom/air/logo.png" /></div>';
 
   $export['logo_footer'] = $fe_block_boxes;
 
