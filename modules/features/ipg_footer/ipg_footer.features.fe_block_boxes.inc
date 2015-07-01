@@ -30,7 +30,7 @@ function ipg_footer_default_fe_block_boxes() {
   $fe_block_boxes->info = 'Logo Footer';
   $fe_block_boxes->format = 'wysiwyg_';
   $fe_block_boxes->machine_name = 'logo_footer';
-  $fe_block_boxes->body = '<div id="logo_footer"><img src="/profiles/ipgroup/themes/custom/air/logo.png" style="width: 440px; height: 187px;" /></div>';
+  $fe_block_boxes->body = '<div id="logo_footer"><img src="/profiles/ipgroup/themes/custom/air/logo.png" style="width: 175px; height: 74px;" /></div>';
 
   $export['logo_footer'] = $fe_block_boxes;
 
