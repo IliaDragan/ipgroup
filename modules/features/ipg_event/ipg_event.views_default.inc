@@ -468,7 +468,7 @@ function ipg_event_views_default_views() {
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['body']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['body']['alter']['path'] = 'node/[nid] ';
+  $handler->display->display_options['fields']['body']['alter']['path'] = 'node/[nid]';
   $handler->display->display_options['fields']['body']['element_type'] = 'div';
   $handler->display->display_options['fields']['body']['element_class'] = 'prose';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
