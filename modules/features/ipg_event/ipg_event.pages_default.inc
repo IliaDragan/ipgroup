@@ -193,7 +193,7 @@ function ipg_event_default_page_manager_handlers() {
     $pane->panel = 'left-3';
     $pane->type = 'views_panes';
     $pane->subtype = 'event_gallery-event_gallery_pane';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'context' => array(

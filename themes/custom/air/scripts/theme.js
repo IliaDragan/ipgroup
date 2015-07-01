@@ -5,7 +5,7 @@
 Drupal.behaviors.allEvent  = {
   attach: function (context, settings) {
     var $row = jQuery(".view-all-event .views-row", context);
-    var bgcolor = ['#EAEAEA','#FF7200'];
+    var bgcolor = ['#EAEAEA','#2a2a2a'];
     var count = 0, colorCount = 0;
     var color = ['#464646','#ffffff']
 
