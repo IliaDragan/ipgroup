@@ -99,7 +99,8 @@ function ipg_common_block_configure($delta = '') {
       break;
 
     case 'text_before_vacancies':
-      $data = unserialize(variable_get('text_before_vacancies', ''));
+      $var = variable_get('text_before_vacancies', '');
+      $data = (!empty($var)) ? unserialize($var) : array();
       $languages = language_list();
       foreach ($languages as $lang) {
         $form['text_' . $lang->language] = array(
@@ -112,7 +113,8 @@ function ipg_common_block_configure($delta = '') {
       break;
 
     case 'text_after_vacancies':
-      $data = unserialize(variable_get('text_after_vacancies', ''));
+      $var = variable_get('text_after_vacancies', '');
+      $data = (!empty($var)) ? unserialize($var) : array();
       $languages = language_list();
       foreach ($languages as $lang) {
         $form['text_' . $lang->language] = array(
@@ -228,35 +230,40 @@ function ipg_common_block_view($delta = '') {
 function ipg_common_three_articles_block() {
   global $language;
   $lang = $language->language;
-  $data = unserialize(variable_get('three_articles_block_data', ''));
+  $var = variable_get('three_articles_block_data', '');
+  $data = (!empty($var)) ? unserialize($var) : array();
 
   $items = array();
   foreach ($data as $node_info) {
-    $node = node_load($node_info['nid']);
-    if ($node->language != $lang) {
-      $translations = translation_node_get_translations($node->tnid);
-      if (!empty($translations[$lang])) {
-        $node = node_load($translations[$lang]->nid);
+    if (!empty($node_info['nid'])) {
+      $node = node_load($node_info['nid']);
+      if (is_object($node)) {
+        if ($node->language != $lang) {
+          $translations = translation_node_get_translations($node->tnid);
+          if (!empty($translations[$lang])) {
+            $node = node_load($translations[$lang]->nid);
+          }
+        }
+        if (!empty($node_info['fid'])) {
+          $photo = file_load($node_info['fid']);
+          $photo_path = image_style_url('article_thumb', $photo->uri);
+          $image = theme('image', array('path' => $photo_path));
+        }
+        elseif (!empty($node->field_image[$lang][0]['uri'])) {
+          $photo_path = image_style_url('article_thumb', $node->field_image[$lang][0]['uri']);
+          $image = theme('image', array('path' => $photo_path));
+        }
+        elseif (!empty($node->field_image[LANGUAGE_NONE][0]['uri'])) {
+          $photo_path = image_style_url('article_thumb', $node->field_image[LANGUAGE_NONE][0]['uri']);
+          $image = theme('image', array('path' => $photo_path));
+        }
+        else {
+          $image = '<img src="http://dummyimage.com/200x170/eaeaea/ffffff.jpg&text=NO+IMAGE" />';
+        }
+
+        $items[] = l($image, 'node/' . $node->nid, array('html' => TRUE));
       }
     }
-    if (!empty($node_info['fid'])) {
-      $photo = file_load($node_info['fid']);
-      $photo_path = image_style_url('article_thumb', $photo->uri);
-      $image = theme('image', array('path' => $photo_path));
-    }
-    elseif (!empty($node->field_image[$lang][0]['uri'])) {
-      $photo_path = image_style_url('article_thumb', $node->field_image[$lang][0]['uri']);
-      $image = theme('image', array('path' => $photo_path));
-    }
-    elseif (!empty($node->field_image[LANGUAGE_NONE][0]['uri'])) {
-      $photo_path = image_style_url('article_thumb', $node->field_image[LANGUAGE_NONE][0]['uri']);
-      $image = theme('image', array('path' => $photo_path));
-    }
-    else {
-      $image = '<img src="http://dummyimage.com/200x170/eaeaea/ffffff.jpg&text=NO+IMAGE" />';
-    }
-
-    $items[] = l($image, 'node/' . $node->nid, array('html' => TRUE));
   }
 
   return theme('item_list', array('items' => $items, 'attributes' => array('class' => array('three-articles-list'))));
@@ -270,7 +277,8 @@ function ipg_common_three_articles_block() {
  */
 function ipg_common_simple_text_block($delta) {
   global $language;
-  $data = unserialize(variable_get($delta, ''));
+  $var = variable_get($delta, '');
+  $data = (!empty($var)) ? unserialize($var) : array();
   if (isset($data[$language->language]['value'])) {
     return $data[$language->language]['value'];
   }

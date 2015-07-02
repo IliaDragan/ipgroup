@@ -303,9 +303,9 @@ section.panel-pane ul#slide-nav li:hover {
   float: left;
 }
 .page-projects .image-project a img:hover {
-    -webkit-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
-    -moz-box-shadow:    4px 4px 9px 0px rgba(50, 50, 50, 0.8);
-    box-shadow:         4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+  -webkit-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+  -moz-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+  box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
 }
 /* @end */
 /* End projects page view */
@@ -431,7 +431,7 @@ section.panel-pane ul#slide-nav li:hover {
   clear: both;
   overflow: hidden;
 }
-.page-events .view-all-event .views-row-odd a p{
+.page-events .view-all-event .views-row-odd a p {
   color: #464646;
 }
 .page-events .view-all-event .views-row-even a p {
@@ -446,6 +446,85 @@ section.panel-pane ul#slide-nav li:hover {
 span.date-display-single {
   font-size: x-small;
 }
+
+/* Front page one node view -- start. */
+.view-front-page-nodes {
+  color: #2a2a2a;
+  padding-bottom: 15px;
+}
+.view-front-page-nodes.grey {
+  background: #eaeaea none repeat scroll 0 0;
+}
+.view-front-page-nodes.dark {
+  background: #2a2a2a none repeat scroll 0 0;
+  color: #ffffff;
+}
+.view-front-page-nodes.dark .prose {
+  color: #ffffff;
+}
+.view-front-page-nodes.orange {
+  background: #ff7200 none repeat scroll 0 0;
+  color: #ffffff;
+}
+.view-front-page-nodes.orange a,
+.view-front-page-nodes.orange .prose {
+  color: #ffffff;
+}
+.view-front-page-nodes .views-field {
+  margin: 0;
+  padding: 0 12px;
+}
+.view-front-page-nodes .views-field .field-content {
+  margin: 0;
+  padding: 0;
+}
+.view-front-page-nodes .views-field-field-image {
+  margin: 0;
+  padding: 0;
+}
+.view-front-page-nodes .views-field-field-image img {
+  display: block;
+}
+.view-front-page-nodes .views-field-type,
+.view-front-page-nodes .views-field-field-category {
+  font-size: 0.714286em;
+  line-height: 15px;
+  padding-top: 15px;
+  padding-bottom: 3px;
+}
+.view-front-page-nodes .views-field-type .field-content a,
+.view-front-page-nodes .views-field-field-category a {
+  color: #6a6a6a;
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.view-front-page-nodes.orange .views-field-type a,
+.view-front-page-nodes.dark .views-field-type a,
+.view-front-page-nodes.orange .views-field-field-category a,
+.view-front-page-nodes.dark .views-field-field-category a {
+  color: #ffffff;
+}
+.view-front-page-nodes.grey .views-field-field-body a,
+.view-front-page-nodes.grey .views-field-body a {
+  color: #2a2a2a;
+}
+.view-front-page-nodes.dark .views-field-field-body a,
+.view-front-page-nodes.dark .views-field-body a {
+  color: #ffffff;
+}
+.view-front-page-nodes .views-field-title h1 {
+  font-size: 1.34em;
+  line-height: 1.34em;
+  margin: 0;
+  padding: 0;
+}
+.view-front-page-nodes .views-field-title a {
+  font-size: 1.34em;
+  font-weight: bold;
+}
+/* Front page one node view -- end. */
+
 /* style for views vacancies in front-page */
 .front-page-vacancies .views-row {
   background-color: #3c3c3c;

@@ -54,7 +54,8 @@ h1 {
   font-size: 2.571428571em;
 }
 h2 {
-  font-size: 1.714285714em;
+  font-size: 1.4em;
+  font-weight: bold;
 }
 h3,
 h4,
@@ -804,7 +805,7 @@ footer {
 }
 
 /*unclickable  status project*/
-.field-name-field-status .field-items .even a{
+.field-name-field-status .field-items .even a {
   pointer-events: none;
 }
 
@@ -820,6 +821,6 @@ footer {
 
 /* Page contacts styles start. */
 #leaflet-map {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 /* Page contacts styles end. */
