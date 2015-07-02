@@ -98,7 +98,7 @@ function ipg_front_page_slideshow__default_page_manager_pages() {
     $display->content['new-46d00f3b-fe62-4b4a-a90f-462590283f5f'] = $pane;
     $display->panels['header'][0] = 'new-46d00f3b-fe62-4b4a-a90f-462590283f5f';
     $pane = new stdClass();
-    $pane->pid = 'new-890c5cc9-018a-4ec2-ad7e-66150151cb9b';
+    $pane->pid = 'new-fba1d1ba-e181-4eab-86f4-dbbc6533d4da';
     $pane->panel = 'left-2';
     $pane->type = 'views_panes';
     $pane->subtype = 'front_page_nodes-article_pane';
