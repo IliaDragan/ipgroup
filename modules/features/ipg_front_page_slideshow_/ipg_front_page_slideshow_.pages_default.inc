@@ -112,10 +112,15 @@ function ipg_front_page_slideshow__default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '890c5cc9-018a-4ec2-ad7e-66150151cb9b';
-    $display->content['new-890c5cc9-018a-4ec2-ad7e-66150151cb9b'] = $pane;
-    $display->panels['left-2'][0] = 'new-890c5cc9-018a-4ec2-ad7e-66150151cb9b';
+    $pane->locks = array(
+      'type' => 'none',
+      'regions' => array(
+        'left-2' => 'left-2',
+      ),
+    );
+    $pane->uuid = 'fba1d1ba-e181-4eab-86f4-dbbc6533d4da';
+    $display->content['new-fba1d1ba-e181-4eab-86f4-dbbc6533d4da'] = $pane;
+    $display->panels['left-2'][0] = 'new-fba1d1ba-e181-4eab-86f4-dbbc6533d4da';
     $pane = new stdClass();
     $pane->pid = 'new-08481a79-2179-4c1c-9fa3-c5ef665ceedd';
     $pane->panel = 'left-2';
@@ -211,7 +216,10 @@ function ipg_front_page_slideshow__default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'front-page-vacancies',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();

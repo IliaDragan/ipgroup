@@ -524,3 +524,19 @@ span.date-display-single {
   font-weight: bold;
 }
 /* Front page one node view -- end. */
+
+/* style for views vacancies in front-page */
+.front-page-vacancies .views-row {
+  background-color: #3c3c3c;
+  margin-top: 10px;
+}
+.front-page-vacancies .views-row .views-field-title h2 a {
+    font-weight: bold;
+}
+.front-page-vacancies .views-row .views-field-field-body {
+  color: #ffffff;
+}
+.front-page-vacancies .views-row .views-field-field-image {
+    padding-left: 5px;
+}
+/*end style*/
