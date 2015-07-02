@@ -450,25 +450,31 @@ span.date-display-single {
 /* Front page one node view -- start. */
 .view-front-page-nodes {
   color: #2a2a2a;
-  padding-bottom: 15px;
 }
-.view-front-page-nodes.grey {
+.view-front-page-nodes.grey .views-row,
+.view-front-page-nodes.orange .views-row-even {
   background: #eaeaea none repeat scroll 0 0;
 }
-.view-front-page-nodes.dark {
+.view-front-page-nodes.dark .views-row {
   background: #2a2a2a none repeat scroll 0 0;
+  color: #ffffff;
+}
+.view-front-page-nodes.orange .views-row-odd {
+  background: #ff7200 none repeat scroll 0 0;
   color: #ffffff;
 }
 .view-front-page-nodes.dark .prose {
   color: #ffffff;
 }
-.view-front-page-nodes.orange {
-  background: #ff7200 none repeat scroll 0 0;
+.view-front-page-nodes.orange .views-row-odd a,
+.view-front-page-nodes.orange .views-row-odd .prose {
   color: #ffffff;
 }
-.view-front-page-nodes.orange a,
-.view-front-page-nodes.orange .prose {
-  color: #ffffff;
+.view-front-page-nodes .views-row {
+  padding-bottom: 15px;
+}
+.view-front-page-nodes .views-row-even {
+  margin-top: 15px;
 }
 .view-front-page-nodes .views-field {
   margin: 0;
@@ -499,14 +505,16 @@ span.date-display-single {
   font-weight: bold;
   text-transform: uppercase;
 }
-.view-front-page-nodes.orange .views-field-type a,
+.view-front-page-nodes.orange .views-row-odd .views-field-type a,
 .view-front-page-nodes.dark .views-field-type a,
 .view-front-page-nodes.orange .views-field-field-category a,
 .view-front-page-nodes.dark .views-field-field-category a {
   color: #ffffff;
 }
 .view-front-page-nodes.grey .views-field-field-body a,
-.view-front-page-nodes.grey .views-field-body a {
+.view-front-page-nodes.grey .views-field-body a,
+.view-front-page-nodes.orange .views-row-even .views-field-field-body a,
+.view-front-page-nodes.orange .views-row-even .views-field-body a {
   color: #2a2a2a;
 }
 .view-front-page-nodes.dark .views-field-field-body a,
@@ -531,12 +539,12 @@ span.date-display-single {
   margin-top: 10px;
 }
 .front-page-vacancies .views-row .views-field-title h2 a {
-    font-weight: bold;
+  font-weight: bold;
 }
 .front-page-vacancies .views-row .views-field-field-body {
   color: #ffffff;
 }
 .front-page-vacancies .views-row .views-field-field-image {
-    padding-left: 5px;
+  padding-left: 5px;
 }
 /*end style*/
