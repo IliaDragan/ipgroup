@@ -261,41 +261,6 @@ function ipg_article_default_page_manager_handlers() {
     $display->content['new-9c19830c-d66e-400a-af04-6c0a674ed8f0'] = $pane;
     $display->panels['left-3'][3] = 'new-9c19830c-d66e-400a-af04-6c0a674ed8f0';
     $pane = new stdClass();
-    $pane->pid = 'new-534de015-7a01-4535-87d9-7df7e5c495b4';
-    $pane->panel = 'right-3';
-    $pane->type = 'views';
-    $pane->subtype = 'new_event';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '3',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'block',
-      'override_title' => 0,
-      'override_title_text' => 'Upcoming event',
-      'override_title_heading' => 'h2',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $pane->uuid = '534de015-7a01-4535-87d9-7df7e5c495b4';
-    $display->content['new-534de015-7a01-4535-87d9-7df7e5c495b4'] = $pane;
-    $display->panels['right-3'][0] = 'new-534de015-7a01-4535-87d9-7df7e5c495b4';
-    $pane = new stdClass();
     $pane->pid = 'new-2d93bc23-7ccf-40e1-b105-fa607aa23a3b';
     $pane->panel = 'right-3';
     $pane->type = 'views_panes';
@@ -316,11 +281,11 @@ function ipg_article_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = '2d93bc23-7ccf-40e1-b105-fa607aa23a3b';
     $display->content['new-2d93bc23-7ccf-40e1-b105-fa607aa23a3b'] = $pane;
-    $display->panels['right-3'][1] = 'new-2d93bc23-7ccf-40e1-b105-fa607aa23a3b';
+    $display->panels['right-3'][0] = 'new-2d93bc23-7ccf-40e1-b105-fa607aa23a3b';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
