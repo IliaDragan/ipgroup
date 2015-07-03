@@ -537,12 +537,14 @@ span.date-display-single {
 .front-page-vacancies .views-row {
   background-color: #3c3c3c;
   margin-top: 10px;
+  padding-left: 5px;
 }
 .front-page-vacancies .views-row .views-field-title h2 a {
   font-weight: bold;
 }
 .front-page-vacancies .views-row .views-field-field-body {
   color: #ffffff;
+  text-align: left;
 }
 .front-page-vacancies .views-row .views-field-field-image {
   padding-left: 5px;
