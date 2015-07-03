@@ -302,10 +302,13 @@ section.panel-pane ul#slide-nav li:hover {
   padding-right: 10px;
   float: left;
 }
-.page-projects .image-project a img:hover {
-    -webkit-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
-    -moz-box-shadow:    4px 4px 9px 0px rgba(50, 50, 50, 0.8);
-    box-shadow:         4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+.project-field .project-wrapper:hover {
+  -webkit-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+  -moz-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+  box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+}
+.project-field .views-field-field-image{
+  padding: 0 0 15px 20px;
 }
 /* @end */
 /* End projects page view */
