@@ -376,6 +376,9 @@
   div[role="navigation"] nav.active ul {
     display: block;
   }
+  nav h2 {
+    display: none;
+  }
   div[role="navigation"] nav h2 {
     display: block;
     float: left;

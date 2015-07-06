@@ -97,6 +97,9 @@ projects[rabbit_hole][subdir] = "contrib"
 projects[references][version] = "2.1"
 projects[references][subdir] = "contrib"
 
+projects[responsive_menus][version] = "1.5"
+projects[responsive_menus][subdir] = "contrib"
+
 projects[strongarm][version] = "2.0"
 projects[strongarm][subdir] = "contrib"
 
