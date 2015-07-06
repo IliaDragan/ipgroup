@@ -36,4 +36,5 @@ features[variable][] = responsive_menus_mean_menu_css_selectors
 features[variable][] = responsive_menus_mean_menu_media_size
 features[variable][] = responsive_menus_mean_menu_position
 features[variable][] = responsive_menus_sidr_css_selectors
+features[variable][] = responsive_menus_style
 features[wysiwyg][] = full_html
