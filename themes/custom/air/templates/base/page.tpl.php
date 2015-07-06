@@ -108,7 +108,7 @@
 
         <div class="navhead">
           <?php if (!empty($main_menu)): ?>
-           <nav>
+           <nav id="main-menu-block">
              <?php
                print theme('links__system_main_menu',
                  array(
