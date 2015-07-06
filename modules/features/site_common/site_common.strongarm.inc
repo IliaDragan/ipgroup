@@ -82,5 +82,12 @@ function site_common_strongarm() {
   $strongarm->value = '.responsive-menus ';
   $export['responsive_menus_sidr_css_selectors'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'responsive_menus_style';
+  $strongarm->value = 'mean_menu';
+  $export['responsive_menus_style'] = $strongarm;
+
   return $export;
 }
