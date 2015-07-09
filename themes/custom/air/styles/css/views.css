@@ -386,7 +386,7 @@ section.panel-pane ul#slide-nav li:hover {
 }
 /*end style*/
 
-/* Style for events view. */
+/* Style for new event view. */
 .view-new-event {
   height: auto;
 }
@@ -446,8 +446,21 @@ section.panel-pane ul#slide-nav li:hover {
   margin-left: 10px;
   color: #ff7200;
 }
-.panel-pane .pane-views .pane-all-event .view-all-even {
-  height: auto;
+
+/* Style for all events view. */
+.view-all-event .views-row-odd {
+  background-color: #eaeaea;
+  color: #464646;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.view-all-event .views-row-even {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
 }
 .view-all-event .views-row-even a {
   color: #ffffff;
