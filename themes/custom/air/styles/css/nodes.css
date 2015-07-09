@@ -202,7 +202,6 @@ article.node div.image.slideshow.slide-processed .item-list ul li {
 .node-type-project .panel-col-top .panel-separator,
 .node-type-project .panel-col-top .pane-node-title,
 .node-type-project .panel-col-top .pane-node-title h2 {
-  margin: 0;
   padding: 0;
 }
 .node-type-project .panel-col-top .field-name-field-status .field-label {
