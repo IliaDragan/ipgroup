@@ -44,6 +44,22 @@ function ipg_front_page_slideshow__image_default_styles() {
     ),
   );
 
+  // Exported image style: front-width-300.
+  $styles['front-width-300'] = array(
+    'label' => 'Front page width 300',
+    'effects' => array(
+      4 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 300,
+          'height' => '',
+          'upscale' => 1,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }
 

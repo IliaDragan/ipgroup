@@ -468,7 +468,7 @@ function ipg_front_page_slideshow__views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'image_06col',
+    'image_style' => 'front-width-300',
     'image_link' => 'content',
   );
   /* Field: Content: Type */

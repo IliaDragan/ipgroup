@@ -110,12 +110,11 @@ function ipg_article_image_default_styles() {
   $styles['image_views_article'] = array(
     'label' => 'image_views_article',
     'effects' => array(
-      2 => array(
-        'name' => 'image_scale',
+      3 => array(
+        'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 200,
           'height' => 150,
-          'upscale' => 0,
         ),
         'weight' => 1,
       ),
@@ -126,11 +125,11 @@ function ipg_article_image_default_styles() {
   $styles['vacancy_thumb'] = array(
     'label' => 'Vacancy thumb',
     'effects' => array(
-      3 => array(
+      1 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 65,
-          'height' => 65,
+          'width' => 100,
+          'height' => 100,
         ),
         'weight' => 1,
       ),

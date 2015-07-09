@@ -115,6 +115,9 @@ projects[view_profiles_perms][subdir] = "contrib"
 projects[views][version] = "3.11"
 projects[views][subdir] = "contrib"
 
+projects[views_infinite_scroll][version] = "1.1"
+projects[views_infinite_scroll][subdir] = "contrib"
+
 projects[views_slideshow][version] = "3.1"
 projects[views_slideshow][subdir] = "contrib"
 
@@ -150,3 +153,8 @@ libraries[leaflet][destination]    = "libraries"
 libraries[leaflet][directory_name] = "leaflet"
 libraries[leaflet][download][type] = "get"
 libraries[leaflet][download][url]  = "http://leaflet-cdn.s3.amazonaws.com/build/leaflet-0.7.3.zip"
+
+libraries[autopager][destination]    = "libraries"
+libraries[autopager][directory_name] = "autopager"
+libraries[autopager][download][type] = "get"
+libraries[autopager][download][url]  = "http://jquery-autopager.googlecode.com/files/jquery.autopager-1.0.0.js"
