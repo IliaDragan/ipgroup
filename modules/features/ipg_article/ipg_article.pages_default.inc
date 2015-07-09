@@ -269,7 +269,7 @@ function ipg_article_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'context' => array(
-        0 => 'empty',
+        0 => 'argument_entity_id:node_1',
       ),
       'override_title' => 1,
       'override_title_text' => '',

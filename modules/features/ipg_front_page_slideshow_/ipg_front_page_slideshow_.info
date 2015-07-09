@@ -27,6 +27,7 @@ features[field_instance][] = node-image_content-body
 features[field_instance][] = node-image_content-field_image_content
 features[field_instance][] = node-image_content-field_link_field
 features[image][] = 960x500
+features[image][] = front-width-300
 features[node][] = image_content
 features[page_manager_pages][] = front_pages
 features[variable][] = field_bundle_settings_node__image_content

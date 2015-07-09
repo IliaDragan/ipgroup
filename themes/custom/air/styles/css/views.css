@@ -279,7 +279,6 @@ section.panel-pane ul#slide-nav li:hover {
 
 /* Projects page view - IPGroup*/
 .page-projects .view-projects td .project-wrapper {
-  /*border-top: 1px solid #eaeaea;*/
   margin: 3%;
 }
 .page-projects .view-projects .views-field-title h2 {
@@ -307,7 +306,7 @@ section.panel-pane ul#slide-nav li:hover {
   -moz-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
   box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
 }
-.project-field .views-field-field-image{
+.project-field .views-field-field-image {
   padding: 0 0 15px 20px;
 }
 /* @end */
@@ -335,18 +334,32 @@ section.panel-pane ul#slide-nav li:hover {
 
 .view-display-id-vacancies_list_pane .views-field-field-image {
   float: left;
+  padding: 0;
 }
-
+.view-display-id-vacancies_list_pane .views-field-field-image .field-content {
+  margin-right: 15px;
+}
+.view-display-id-vacancies_list_pane .views-field-field-image img {
+  display: block;
+}
+.view-display-id-vacancies_list_pane .views-field-title .field-content {
+  margin: 0;
+}
 .view-display-id-vacancies_list_pane .views-field-title h2 {
   font: bold 1.28571em/1em "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin-bottom: 5px;
   padding: 0;
 }
+.view-display-id-vacancies_list_pane .views-field-title h2 a {
+  font-weight: bold;
+}
 .view-display-id-vacancies_list_pane .views-field-field-body {
   color: #3c3c3c;
   line-height: 1.5em;
   font-size: 100%;
-  text-align: justify;
+}
+.view-display-id-vacancies_list_pane .views-field-field-body .field-content {
+  margin: 0;
 }
 .view-display-id-vacancies_list_pane .views-field-field-body p {
   padding: 0;
@@ -362,6 +375,18 @@ section.panel-pane ul#slide-nav li:hover {
   width: 34%;
 }
 /* End vacancies page view  */
+/* style for views vacancies in front-page */
+.front-page-vacancies .views-row {
+  background-color: #3c3c3c;
+  margin-top: 10px;
+  padding: 15px;
+}
+.front-page-vacancies .views-row .views-field-field-body {
+  color: #ffffff;
+}
+/*end style*/
+
+/* Style for events view. */
 .view-new-event {
   height: auto;
 }
@@ -535,21 +560,3 @@ span.date-display-single {
   font-weight: bold;
 }
 /* Front page one node view -- end. */
-
-/* style for views vacancies in front-page */
-.front-page-vacancies .views-row {
-  background-color: #3c3c3c;
-  margin-top: 10px;
-  padding-left: 5px;
-}
-.front-page-vacancies .views-row .views-field-title h2 a {
-  font-weight: bold;
-}
-.front-page-vacancies .views-row .views-field-field-body {
-  color: #ffffff;
-  text-align: left;
-}
-.front-page-vacancies .views-row .views-field-field-image {
-  padding-left: 5px;
-}
-/*end style*/
