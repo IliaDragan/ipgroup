@@ -99,6 +99,7 @@ projects[references][subdir] = "contrib"
 
 projects[responsive_menus][version] = "1.5"
 projects[responsive_menus][subdir] = "contrib"
+projects[responsive_menus][patch][] = "http://drupal.org/files/issues/responsive_menus-jquery-version-verification-2174553-4-D7.patch"
 
 projects[strongarm][version] = "2.0"
 projects[strongarm][subdir] = "contrib"
@@ -134,6 +135,11 @@ projects[imce][version] = "1.9"
 projects[imce][subdir] = "contrib"
 
 ; Libraries
+libraries[autopager][destination]    = "libraries"
+libraries[autopager][directory_name] = "autopager"
+libraries[autopager][download][type] = "get"
+libraries[autopager][download][url]  = "http://jquery-autopager.googlecode.com/files/jquery.autopager-1.0.0.js"
+
 libraries[ckeditor][destination]    = "libraries"
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][download][type] = "get"
@@ -144,17 +150,12 @@ libraries[colorbox][directory_name] = "colorbox"
 libraries[colorbox][download][type] = "get"
 libraries[colorbox][download][url]  = "http://github.com/jackmoore/colorbox/archive/1.x.zip"
 
-libraries[owl-carousel][destination]    = "libraries"
-libraries[owl-carousel][directory_name] = "owl-carousel"
-libraries[owl-carousel][download][type] = "get"
-libraries[owl-carousel][download][url]  = "http://owlgraphic.com/owlcarousel/owl.carousel.zip"
-
 libraries[leaflet][destination]    = "libraries"
 libraries[leaflet][directory_name] = "leaflet"
 libraries[leaflet][download][type] = "get"
 libraries[leaflet][download][url]  = "http://leaflet-cdn.s3.amazonaws.com/build/leaflet-0.7.3.zip"
 
-libraries[autopager][destination]    = "libraries"
-libraries[autopager][directory_name] = "autopager"
-libraries[autopager][download][type] = "get"
-libraries[autopager][download][url]  = "http://jquery-autopager.googlecode.com/files/jquery.autopager-1.0.0.js"
+libraries[owl-carousel][destination]    = "libraries"
+libraries[owl-carousel][directory_name] = "owl-carousel"
+libraries[owl-carousel][download][type] = "get"
+libraries[owl-carousel][download][url]  = "http://owlgraphic.com/owlcarousel/owl.carousel.zip"
