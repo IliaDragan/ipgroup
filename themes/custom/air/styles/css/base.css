@@ -728,6 +728,9 @@ div.languages-and-navigation {
 .contextual-links-region h2 {
   padding-bottom: 5px;
 }
+.views-field-title .title-event-row {
+padding-bottom: 5px!important;
+}
 #edit-message {
   width: 300px!important;
   height: 160px;
