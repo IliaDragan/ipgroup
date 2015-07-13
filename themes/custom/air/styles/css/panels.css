@@ -501,7 +501,9 @@ div.view-testimonials span.views-field-field-name {
 #mini-panel-cta_contact_person_no .cta-title h2 {
   line-height: 0.8em;
 }
-.field-content {
-  margin-right: 20px;
+.last-event img:hover {
+  -webkit-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+  -moz-box-shadow:    4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+  box-shadow:         4px 4px 9px 0px rgba(50, 50, 50, 0.8);
 }
 /* @end */
