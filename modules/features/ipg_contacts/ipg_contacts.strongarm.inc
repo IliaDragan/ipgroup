@@ -44,7 +44,10 @@ function ipg_contacts_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '4',
+          'weight' => '5',
+        ),
+        'language' => array(
+          'weight' => '1',
         ),
       ),
       'display' => array(
