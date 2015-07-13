@@ -506,4 +506,7 @@ div.view-testimonials span.views-field-field-name {
   -moz-box-shadow:    4px 4px 9px 0px rgba(50, 50, 50, 0.8);
   box-shadow:         4px 4px 9px 0px rgba(50, 50, 50, 0.8);
 }
+.views-field-field-image .all-img-event {
+ margin-right: 15px;
+}
 /* @end */
