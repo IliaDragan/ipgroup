@@ -49,13 +49,13 @@ function ipg_contacts_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_e_mail'
-  $field_bases['field_e_mail'] = array(
+  // Exported field_base: 'field_e_maill'
+  $field_bases['field_e_maill'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_e_mail',
+    'field_name' => 'field_e_maill',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -65,10 +65,9 @@ function ipg_contacts_field_default_field_bases() {
     'module' => 'text',
     'settings' => array(
       'entity_translation_sync' => FALSE,
-      'max_length' => 255,
     ),
     'translatable' => 0,
-    'type' => 'text',
+    'type' => 'text_with_summary',
   );
 
   // Exported field_base: 'field_geocode'

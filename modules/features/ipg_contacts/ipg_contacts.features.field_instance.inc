@@ -51,7 +51,7 @@ function ipg_contacts_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -107,7 +107,7 @@ function ipg_contacts_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -149,19 +149,19 @@ function ipg_contacts_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
-  // Exported field_instance: 'node-address-field_e_mail'
-  $field_instances['node-address-field_e_mail'] = array(
+  // Exported field_instance: 'node-address-field_e_maill'
+  $field_instances['node-address-field_e_maill'] = array(
     'bundle' => 'address',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -176,22 +176,24 @@ function ipg_contacts_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_e_mail',
+    'field_name' => 'field_e_maill',
     'label' => 'E-mail',
     'required' => 1,
     'settings' => array(
+      'display_summary' => 0,
       'entity_translation_sync' => FALSE,
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'rows' => 20,
+        'summary_rows' => 5,
       ),
-      'type' => 'text_textfield',
-      'weight' => 3,
+      'type' => 'text_textarea_with_summary',
+      'weight' => 4,
     ),
   );
 
@@ -341,7 +343,7 @@ function ipg_contacts_field_default_field_instances() {
         ),
       ),
       'type' => 'geocoder',
-      'weight' => 34,
+      'weight' => 9,
     ),
   );
 
@@ -383,7 +385,7 @@ function ipg_contacts_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -425,7 +427,7 @@ function ipg_contacts_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
