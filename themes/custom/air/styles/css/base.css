@@ -731,6 +731,10 @@ div.languages-and-navigation {
 .views-field-title .title-event-row {
 padding-bottom: 5px!important;
 }
+.views-field-field-image .img-last-event a {
+  float: left;
+  padding-right: 5px;
+}
 #edit-message {
   width: 300px!important;
   height: 160px;
