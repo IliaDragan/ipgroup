@@ -24,6 +24,7 @@ scripts[] = scripts/theme.js
 stylesheets[all][] = styles/css/drupal.css
 
 ; Theme
+stylesheets[all][] = styles/css/drupal.css
 stylesheets[all][] = styles/css/fonts.css
 stylesheets[all][] = styles/css/reset.css
 stylesheets[all][] = styles/css/base.css
