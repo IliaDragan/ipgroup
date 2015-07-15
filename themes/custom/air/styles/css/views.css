@@ -280,7 +280,7 @@ section.panel-pane ul#slide-nav li:hover {
   margin: 3%;
 }
 .page-projects .view-projects .views-field-title h2 {
-  width: 233px;
+  width: 100%;
   font: bold 1.5em/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
   margin: 0;
