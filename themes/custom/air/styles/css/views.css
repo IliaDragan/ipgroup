@@ -566,3 +566,10 @@ span.date-display-single {
   font-weight: bold;
 }
 /* Front page one node view -- end. */
+
+/* Last events view styles -- start. */
+.view-last-evente .views-field-title h2 {
+  margin-top: 10px;
+  padding-bottom: 5px;
+}
+/* Last events view styles -- end. */
