@@ -1,8 +1,7 @@
 ; General information
 name        = Air
 version     = 7.x-1.0
-description = IPGroup theme from Peytz & Co.
-screenshot  = images/screenshot.png
+description = IPGroup theme.
 
 ; Technical specifications
 core   = 7.x
@@ -25,7 +24,6 @@ scripts[] = scripts/theme.js
 stylesheets[all][] = styles/css/drupal.css
 
 ; Theme
-stylesheets[all][] = styles/css/drupal.css
 stylesheets[all][] = styles/css/fonts.css
 stylesheets[all][] = styles/css/reset.css
 stylesheets[all][] = styles/css/base.css

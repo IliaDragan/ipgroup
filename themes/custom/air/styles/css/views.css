@@ -102,8 +102,7 @@ div.view-slideshow-frontpage div.views-field-field-image-gallery {
   left: 0;
   z-index: 5;
 }
-div.block-system .content > header div.view-slideshow-frontpage h1,
-div.block-system .content .contextual-links-region > header div.view-slideshow-frontpage h1 {
+div.block-system .content > header div.view-slideshow-frontpage h1 {
   position: absolute;
   left: 3.125%;
   bottom: 20%;
@@ -275,7 +274,6 @@ section.panel-pane ul#slide-nav li:hover {
   background-color: #ff7200;
 }
 /* @end */
-/* @end */
 
 /* Projects page view - IPGroup*/
 .page-projects .view-projects td .project-wrapper {
@@ -291,11 +289,7 @@ section.panel-pane ul#slide-nav li:hover {
   margin: 0;
   text-align: justify;
 }
-.page-projects .item-list ul.pager li.pager-previous,
-.page-projects .item-list ul.pager li.pager-current,
-.page-projects .item-list ul.pager li.pager-next {
-  border-bottom: medium none;
-}
+
 #mini-panel-cp_productpage_graybox div.view.view-employees div.views-row div.views-field-field-name,
 #mini-panel-cp_productpage_graybox div.view.view-employees div.views-row div.views-field-field-job-title {
   padding-right: 10px;
@@ -311,7 +305,6 @@ section.panel-pane ul#slide-nav li:hover {
 }
 /* @end */
 /* End projects page view */
-
 
 /* Vacancies page view - IPGroup */
 .page-vacancies #block-system-main {
@@ -331,7 +324,6 @@ section.panel-pane ul#slide-nav li:hover {
   overflow: hidden;
   padding: 15px 0;
 }
-
 .view-display-id-vacancies_list_pane .views-field-field-image {
   float: left;
   padding: 0;
@@ -375,6 +367,7 @@ section.panel-pane ul#slide-nav li:hover {
   width: 34%;
 }
 /* End vacancies page view  */
+
 /* style for views vacancies in front-page */
 .front-page-vacancies .views-row {
   background-color: #3c3c3c;
