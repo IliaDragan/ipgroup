@@ -47,6 +47,9 @@ function ipg_wysiwyg_templates_wysiwyg_default_profiles() {
         'templates' => array(
           'Templates' => 1,
         ),
+        'drupal_path' => array(
+          'Link' => 1,
+        ),
       ),
       'toolbar_loc' => 'top',
       'toolbar_align' => 'left',

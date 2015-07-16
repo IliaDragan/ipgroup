@@ -4,6 +4,7 @@ core = 7.x
 package = IPGroup
 version = 7.x-1.0
 project = site_common
+dependencies[] = ckeditor_link
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = filter

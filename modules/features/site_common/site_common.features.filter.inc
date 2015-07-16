@@ -18,6 +18,11 @@ function site_common_filter_default_formats() {
     'status' => 1,
     'weight' => 1,
     'filters' => array(
+      'ckeditor_link_filter' => array(
+        'weight' => 0,
+        'status' => 1,
+        'settings' => array(),
+      ),
       'filter_autop' => array(
         'weight' => 1,
         'status' => 1,
