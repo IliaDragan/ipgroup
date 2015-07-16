@@ -303,6 +303,14 @@ section.panel-pane ul#slide-nav li:hover {
 .project-field .views-field-field-image {
   padding: 0 20px 15px 20px;
 }
+.project-field .project-wrapper h2 {
+  padding-bottom: 0;
+}
+.project-field .project-wrapper h2 a {
+  display: block;
+  padding-bottom: 10px;
+  width: 100%;
+}
 /* @end */
 /* End projects page view */
 
