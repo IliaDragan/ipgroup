@@ -55,12 +55,12 @@ function ipg_article_default_page_manager_handlers() {
             'field_category' => array(
               'und' => array(
                 0 => array(
-                  'tid' => '4',
+                  'tid' => '27',
                 ),
               ),
             ),
             'field_category_tid' => array(
-              0 => '4',
+              0 => '27',
             ),
           ),
           'context' => 'argument_entity_id:node_1',
@@ -272,7 +272,7 @@ function ipg_article_default_page_manager_handlers() {
         0 => 'argument_entity_id:node_1',
       ),
       'override_title' => 1,
-      'override_title_text' => '',
+      'override_title_text' => 'Wanted',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
