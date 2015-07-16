@@ -112,9 +112,7 @@ article.node div.image.slideshow.slide-processed .item-list ul li {
   margin: 5px;
 }
 
-
 /*Node type project - IPGroup*/
-
 .node-type-project .center-wrapper .panel-col-last {
   position: relative;
 }
@@ -228,10 +226,10 @@ article.node div.image.slideshow.slide-processed .item-list ul li {
 }
 
 .node-type-event .column.left .pane-page-title {
-  margin: -60px 0 0 0;
+  margin: -50px 0 0 0;
   background: #464646;
   opacity: 0.8;
-  padding: 20px 10px;
+  padding: 10px 10px 0;
 }
 .node-type-event .column.left .pane-page-title h2 {
   color: white;
@@ -246,5 +244,19 @@ article.node div.image.slideshow.slide-processed .item-list ul li {
 }
 .node-type-event .column.left .pane-node-field-image img {
   display: block;
+}
+.node-type-event .column.left .pane-node-field-date {
+  margin: 0;
+  background: #464646;
+  opacity: 0.8;
+  padding: 0 10px;
+}
+.node-type-event .column.left .field-name-field-date {
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 20px;
+  opacity: 1;
+  padding: 0;
 }
 /*End event node*/
