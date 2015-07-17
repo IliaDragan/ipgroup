@@ -1,8 +1,7 @@
 ; General information
 name        = Air
 version     = 7.x-1.0
-description = IPGroup theme from Peytz & Co.
-screenshot  = images/screenshot.png
+description = IPGroup theme.
 
 ; Technical specifications
 core   = 7.x

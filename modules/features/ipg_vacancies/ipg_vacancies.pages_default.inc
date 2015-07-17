@@ -47,12 +47,12 @@ function ipg_vacancies_default_page_manager_handlers() {
             'field_category' => array(
               'und' => array(
                 0 => array(
-                  'tid' => '4',
+                  'tid' => '27',
                 ),
               ),
             ),
             'field_category_tid' => array(
-              0 => '4',
+              0 => '27',
             ),
           ),
           'context' => 'argument_entity_id:node_1',
@@ -162,7 +162,7 @@ function ipg_vacancies_default_page_manager_handlers() {
         'nid' => '',
       ),
       'override_title' => 1,
-      'override_title_text' => 'More vacancies',
+      'override_title_text' => 'Wanted',
       'override_title_heading' => 'h2',
       'context' => array(
         0 => 'argument_entity_id:node_1',

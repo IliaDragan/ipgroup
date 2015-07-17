@@ -12,6 +12,9 @@ projects[addressfield][subdir] = "contrib"
 projects[better_exposed_filters][version] = "3.2"
 projects[better_exposed_filters][subdir] = "contrib"
 
+projects[ckeditor_link][version] = "2.3"
+projects[ckeditor_link][subdir] = "contrib"
+
 projects[ctools][version] = "1.7"
 projects[ctools][subdir] = "contrib"
 

@@ -231,7 +231,6 @@ figcaption,
 figure,
 footer,
 header,
-hgroup,
 nav,
 section {
   display: block;
@@ -431,34 +430,26 @@ header[role="section-head"] h1 {
   color: #ffffff;
 }
 /* @group block-system / header */
-div.block-system .content .contextual-links-region > header {
-  color: #ffffff;
-  font: normal 1em/1.5em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
-  background: #ff7200;
-}
-.front div.block-system .content > header,
-.front div.block-system .content .contextual-links-region > header {
+
+.front div.block-system .content > header {
   padding: 0;
   background: #dadada;
 }
-div.block-system .content > header h1,
-div.block-system .content .contextual-links-region > header h1 {
+div.block-system .content > header h1 {
   float: left;
   width: 50.4375%; /* 465 / 960 */
   font-size: 4.285714286em;
   line-height: 1em;
   color: #ffffff;
 }
-div.block-system .content > header div.description,
-div.block-system .content .contextual-links-region > header div.description {
+div.block-system .content > header div.description {
   float: right;
   margin: 10px 0 20px;
   width: 48.4375%;  /* 465 / 960 */
   font-size: 1.428571429em;
   line-height: 1.2em;
 }
-div.block-system .content > header div.description p,
-div.block-system .content .contextual-links-region > header div.description p {
+div.block-system .content > header div.description p {
   margin: 0;
   padding: 0;
 }
@@ -725,18 +716,15 @@ div.languages-and-navigation {
 #leaflet-map {
   margin-top: 30px;
 }
-.contextual-links-region h2 {
-  padding-bottom: 5px;
-}
 .views-field-title .title-event-row {
-padding-bottom: 5px!important;
+  padding-bottom: 5px !important;
 }
 .views-field-field-image .img-last-event a {
   float: left;
   padding-right: 5px;
 }
 #edit-message {
-  width: 300px!important;
+  width: 300px !important;
   height: 160px;
   resize: none;
   overflow: auto;
