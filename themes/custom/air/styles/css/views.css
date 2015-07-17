@@ -512,21 +512,29 @@ span.date-display-single {
 .view-front-page-nodes.orange .views-row-odd .prose {
   color: #ffffff;
 }
-.view-front-page-nodes .views-row {
+.view-front-page-nodes .views-row .views-field-body a,
+.view-front-page-nodes .views-row .views-field-field-body a,
+.view-front-page-nodes.view-display-id-project_pane .views-row .views-field-title a {
+  display: block;
   padding-bottom: 15px;
 }
 .view-front-page-nodes .views-row-even {
   margin-top: 15px;
 }
-.view-front-page-nodes .views-field {
-  margin: 0;
-  padding: 0 12px;
-}
+.view-front-page-nodes .views-field,
 .view-front-page-nodes .views-field .field-content {
   margin: 0;
   padding: 0;
 }
-.view-front-page-nodes .views-field-field-image {
+
+.view-front-page-nodes .views-field .field-content a {
+  display: block;
+  margin: 0;
+  padding: 0 12px;
+}
+
+.view-front-page-nodes .views-field-field-image,
+.view-front-page-nodes .views-field-field-image a {
   margin: 0;
   padding: 0;
 }
@@ -537,14 +545,15 @@ span.date-display-single {
 .view-front-page-nodes .views-field-field-category {
   font-size: 0.714286em;
   line-height: 15px;
-  padding-top: 15px;
-  padding-bottom: 3px;
 }
 .view-front-page-nodes .views-field-type .field-content a,
 .view-front-page-nodes .views-field-field-category a {
   color: #6a6a6a;
+  display: block;
   font-size: 100%;
   font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 3px;
   text-transform: uppercase;
 }
 .view-front-page-nodes.orange .views-row-odd .views-field-type a,
