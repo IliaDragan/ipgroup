@@ -379,7 +379,6 @@ section.panel-pane ul#slide-nav li:hover {
 /* End vacancies page view  */
 
 /* style for views vacancies in front-page */
-
 .front-page-vacancies h2.pane-title {
   padding: 0;
 }
@@ -400,7 +399,6 @@ section.panel-pane ul#slide-nav li:hover {
 
 /* Style for new event view. */
 .pane-new-event h2.pane-title {
-  margin-left: 10px;
   padding: 0 0 10px 0;
 }
 .view-new-event {
@@ -455,9 +453,6 @@ section.panel-pane ul#slide-nav li:hover {
   margin-bottom: 10px;
   padding-top: 10px;
   padding-left: 10px;
-}
-.view-all-event .views-row-even a {
-  color: #ffffff;
 }
 .page-events .view-all-event .views-field-field-image {
   float: left;
@@ -520,7 +515,7 @@ span.date-display-single {
 .view-front-page-nodes .views-field .field-content a {
   display: block;
   margin: 0;
-  padding: 0 12px;
+  padding: 0 12px 8px;
 }
 
 .view-front-page-nodes .views-field-field-image,
@@ -543,7 +538,7 @@ span.date-display-single {
   font-size: 100%;
   font-weight: bold;
   padding-top: 15px;
-  padding-bottom: 3px;
+  padding-bottom: 5px;
   text-transform: uppercase;
 }
 .view-front-page-nodes.orange .views-row-odd .views-field-type a,
