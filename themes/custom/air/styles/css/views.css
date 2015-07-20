@@ -512,9 +512,9 @@ span.date-display-single {
 .view-front-page-nodes.orange .views-row-odd .prose {
   color: #ffffff;
 }
-.view-front-page-nodes .views-row .views-field-body a,
-.view-front-page-nodes .views-row .views-field-field-body a,
-.view-front-page-nodes.view-display-id-project_pane .views-row .views-field-title a {
+.view-front-page-nodes .views-row .views-field-body .field-content a,
+.view-front-page-nodes .views-row .views-field-field-body .field-content a,
+.view-front-page-nodes.view-display-id-project_pane .views-row .views-field-title .field-content a {
   display: block;
   padding-bottom: 15px;
 }
@@ -534,7 +534,7 @@ span.date-display-single {
 }
 
 .view-front-page-nodes .views-field-field-image,
-.view-front-page-nodes .views-field-field-image a {
+.view-front-page-nodes .views-field-field-image .field-content a {
   margin: 0;
   padding: 0;
 }
