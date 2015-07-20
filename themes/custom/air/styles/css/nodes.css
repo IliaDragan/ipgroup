@@ -259,4 +259,7 @@ article.node div.image.slideshow.slide-processed .item-list ul li {
   opacity: 1;
   padding: 0;
 }
+.node-type-event .column.left .pane-node-body {
+  margin-top: 15px;
+}
 /*End event node*/
