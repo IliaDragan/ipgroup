@@ -379,6 +379,13 @@ section.panel-pane ul#slide-nav li:hover {
 /* End vacancies page view  */
 
 /* style for views vacancies in front-page */
+
+.front-page-vacancies h2.pane-title {
+  padding: 0;
+}
+.front-page-vacancies .view-display-id-vacancies_list_pane .view-content {
+  border-top: none;
+}
 .front-page-vacancies .views-row {
   background-color: #3c3c3c;
   margin-top: 10px;
@@ -392,64 +399,46 @@ section.panel-pane ul#slide-nav li:hover {
 /*end style*/
 
 /* Style for new event view. */
+.pane-new-event h2.pane-title {
+  margin-left: 10px;
+  padding: 0 0 10px 0;
+}
 .view-new-event {
   height: auto;
 }
-.view-new-event .view-content {
-  background-color: #ffffff;
-}
-.view-new-event .view-content .views-row-1 {
-  background-color: #ff7200!important;
+.view-new-event .view-content .views-row {
+  background-color: #ff7200;
   margin-bottom: 20px;
-  color: #ffffff!important;
+  color: #ffffff;
 }
-.view-new-event .view-content .views-row-1 .views-field-title a {
-  color: #ffffff!important;
-  font-weight: 900;
+.view-new-event .view-content a {
+  color: #ffffff;
 }
-.view-new-event .view-content .views-row-1 a {
-  color: #ffffff!important;
+.view-new-event .view-content .views-field-field-image a {
+  display: block;
 }
-.view-new-event .view-content .views-row-2 {
-  background-color: #eaeaea !important;
-  margin-bottom: 20px;
-  color: #2a2a2a!important;
-}
-.view-new-event .view-content .views-row-2 .views-field-title a {
-  color: #ff7200!important;
-  font-weight: 900;
-}
-.view-new-event .view-content .views-row-2 a {
-  color: #ff7200!important;
-}
-.view-content .views-row-2 .views-field-type {
-  color: #6a6a6a;
-}
-.view-new-event .view-content .views-row-3 {
-  background-color: #2a2a2a!important;
-  margin-bottom: 20px;
-  color: #ffffff!important;
-}
-.view-new-event .view-content .views-row-3 a {
-  color: #ff7200!important;
-}
-.view-new-event .views-field-type {
+.view-new-event .views-field-type a {
+  display: block;
+  font-size: 0.714285714em;
+  font-weight: bold;
   padding-left: 10px;
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: .714285714em;
 }
-.view-new-event .views-field-title {
+.view-new-event .views-field-title h2 {
+  padding: 0;
+}
+.view-new-event .view-content .views-field-title a {
+  display: block;
+  font-weight: bold;
   padding-left: 10px;
-  font-weight: bold;
-  line-height: 30px;
 }
-.view-new-event .views-field-body {
+.view-new-event .views-field-body a {
+  display: block;
   padding: 0 10px 10px 10px;
 }
-.pane-new-event h2.pane-title {
-  margin-left: 10px;
-  color: #ff7200;
+.view-new-event .views-field-body a p {
+  color: #ffffff;
+  padding: 0;
 }
 
 /* Style for all events view. */
@@ -481,9 +470,6 @@ section.panel-pane ul#slide-nav li:hover {
   color: #464646;
 }
 .page-events .view-all-event .views-row-even a p {
-  color: #ffffff;
-}
-.pane-new-event .view-new-event .views-row-odd a p {
   color: #ffffff;
 }
 .views-field-field-date .date-style {

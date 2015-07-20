@@ -474,6 +474,8 @@ function ipg_event_views_default_views() {
   $handler->display->display_options['fields']['type']['table'] = 'node';
   $handler->display->display_options['fields']['type']['field'] = 'type';
   $handler->display->display_options['fields']['type']['label'] = '';
+  $handler->display->display_options['fields']['type']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['type']['alter']['path'] = 'events';
   $handler->display->display_options['fields']['type']['element_label_colon'] = FALSE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
