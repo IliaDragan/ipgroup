@@ -330,14 +330,13 @@ section.panel-pane ul#slide-nav li:hover {
   font-size: 1em;
   line-height: 1.5em;
   overflow: hidden;
-  padding: 15px 0;
 }
 .view-display-id-vacancies_list_pane .views-field-field-image {
   float: left;
-  padding: 0;
 }
-.view-display-id-vacancies_list_pane .views-field-field-image .field-content {
-  margin-right: 15px;
+.view-display-id-vacancies_list_pane .views-field-field-image a {
+  display: block;
+  padding: 15px 15px 15px 0;
 }
 .view-display-id-vacancies_list_pane .views-field-field-image img {
   display: block;
@@ -347,22 +346,25 @@ section.panel-pane ul#slide-nav li:hover {
 }
 .view-display-id-vacancies_list_pane .views-field-title h2 {
   font: bold 1.28571em/1em "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-bottom: 5px;
   padding: 0;
+  width: 100%;
 }
 .view-display-id-vacancies_list_pane .views-field-title h2 a {
+  display: block;
   font-weight: bold;
+  padding: 15px 15px 5px 0;
 }
 .view-display-id-vacancies_list_pane .views-field-field-body {
-  color: #3c3c3c;
   line-height: 1.5em;
   font-size: 100%;
 }
 .view-display-id-vacancies_list_pane .views-field-field-body .field-content {
   margin: 0;
 }
-.view-display-id-vacancies_list_pane .views-field-field-body p {
-  padding: 0;
+.view-display-id-vacancies_list_pane .views-field-field-body a {
+  color: #3c3c3c;
+  display: block;
+  padding: 0 15px 15px 0;
 }
 .view-display-id-vacancies_list_pane .views-field-created {
   margin-bottom: 5px;
@@ -380,9 +382,11 @@ section.panel-pane ul#slide-nav li:hover {
 .front-page-vacancies .views-row {
   background-color: #3c3c3c;
   margin-top: 10px;
-  padding: 15px;
 }
-.front-page-vacancies .views-row .views-field-field-body {
+.front-page-vacancies .views-row .views-field-field-image a {
+  padding-left: 15px;
+}
+.front-page-vacancies .views-row .views-field-field-body a {
   color: #ffffff;
 }
 /*end style*/
