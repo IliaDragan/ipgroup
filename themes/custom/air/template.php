@@ -179,10 +179,10 @@ function air_preprocess_field(&$variables) {
       $entity = $item['#options']['entity'];
       $path = 'employee/' . $entity->name;
       if (!empty($entity->field_name[$lang][0]['value'])) {
-        $item['name_link'] = l($entity->field_name[$lang][0]['value'], $path);
+        $item['name'] = $entity->field_name[$lang][0]['value'];
       }
       elseif (!empty($entity->field_name[LANGUAGE_NONE][0]['value'])) {
-        $item['name_link'] = l($entity->field_name[LANGUAGE_NONE][0]['value'], $path);
+        $item['name'] = $entity->field_name[LANGUAGE_NONE][0]['value'];
       }
       if (!empty($entity->field_position[$lang][0]['value'])) {
         $item['position'] = $entity->field_position[$lang][0]['value'];

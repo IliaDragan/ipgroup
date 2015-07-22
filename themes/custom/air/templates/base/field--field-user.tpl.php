@@ -15,9 +15,9 @@
       <?php endif; ?>
     </div>
     <div class="team-member-info-right">
-    <?php if (!empty($item['name_link'])): ?>
+    <?php if (!empty($item['name'])): ?>
     <div class="team-member-field-name">
-      <?php print $item['name_link']; ?>
+      <?php print $item['name']; ?>
     </div>
     <?php endif; ?>
     <?php if (!empty($item['position'])): ?>
