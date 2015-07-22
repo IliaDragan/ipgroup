@@ -63,6 +63,20 @@ function ipg_article_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_extended_article';
+  $strongarm->value = '1';
+  $export['i18n_node_extended_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'i18n_node_options_article';
+  $strongarm->value = array();
+  $export['i18n_node_options_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_article';
   $strongarm->value = '2';
   $export['language_content_type_article'] = $strongarm;
@@ -90,7 +104,6 @@ function ipg_article_strongarm() {
   $strongarm->value = array(
     0 => 'status',
     1 => 'promote',
-    2 => 'revision',
   );
   $export['node_options_article'] = $strongarm;
 
@@ -119,7 +132,7 @@ function ipg_article_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_article_pattern';
-  $strongarm->value = 'articles/[node:title]';
+  $strongarm->value = '[node:field_category]/[node:title]';
   $export['pathauto_node_article_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -128,6 +141,34 @@ function ipg_article_strongarm() {
   $strongarm->name = 'pathauto_taxonomy_term_categories_pattern';
   $strongarm->value = '[term:vocabulary]/[term:name]';
   $export['pathauto_taxonomy_term_categories_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_action_categories';
+  $strongarm->value = '2';
+  $export['rh_taxonomy_term_action_categories'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_override_categories';
+  $strongarm->value = 0;
+  $export['rh_taxonomy_term_override_categories'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_redirect_categories';
+  $strongarm->value = '';
+  $export['rh_taxonomy_term_redirect_categories'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_taxonomy_term_redirect_response_categories';
+  $strongarm->value = '301';
+  $export['rh_taxonomy_term_redirect_response_categories'] = $strongarm;
 
   return $export;
 }

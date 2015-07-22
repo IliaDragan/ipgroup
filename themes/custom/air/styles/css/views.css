@@ -7,35 +7,10 @@
  *
  */
 
-/* @group view-employees */
-.node-type-product .contact-person .view-employees .view-header {
-  display: none;
-}
-.node-type-product .contact-person .view-employees div.views-row {
-  width: 100%;
-}
-.node-type-product .contact-person .view-employees div.views-row > div {
-  padding: 137px 0 0;
-  height: 100%;
-}
-.node-type-product .contact-person .view-employees div.views-row .views-field {
-  padding-left: 10px;
-}
-.node-type-product .contact-person .view-employees div.views-row .views-field-picture {
-  text-align: right;
-  border-bottom: 1px solid #eaeaea;
-  height: 49.7%;
-  position: absolute;
-  top: 0;
-  width: 96.7%;
-}
-.node-type-product .contact-person .view-employees div.views-row img {
-  position: relative;
-}
 /* IPGroup change view styles -- start */
 div.view.view-employees-list .department-employees-list {
   clear: both;
-  font: 1em/1.5em "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+  font: 1em/1.5em "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0 0 30px;
   overflow: hidden;
 }
@@ -74,8 +49,9 @@ div.view.view-employees-list div.views-row img {
   max-height: 100%;
 }
 div.view.view-employees-list div.views-row div.views-field-field-name {
-  font-family: NewsGothicBT-Bold, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.285714286em;
+  font-weight: bold;
   line-height: 1.5em;
 }
 div.view.view-employees-list div.views-row div.views-field-field-position {
@@ -126,17 +102,15 @@ div.view-slideshow-frontpage div.views-field-field-image-gallery {
   left: 0;
   z-index: 5;
 }
-div.block-system .content > header div.view-slideshow-frontpage h1,
-div.block-system .content .contextual-links-region > header div.view-slideshow-frontpage h1 {
+div.block-system .content > header div.view-slideshow-frontpage h1 {
   position: absolute;
   left: 3.125%;
   bottom: 20%;
   z-index: 10;
   max-width: 90%;
-  /* 800 / 960 */
   width: auto;
   word-wrap: break-word;
-  font: normal 3.428571429em/1.2em NewsGothicBT-Roman, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
+  font: normal 3.428571429em/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 div.view-slideshow-frontpage h1 a {
   color: #ffffff;
@@ -145,8 +119,8 @@ div.view-slideshow-frontpage h1 a:hover {
   text-decoration: none;
 }
 div.view-slideshow-frontpage h1 strong {
-  font-family: NewsGothicBT-Bold, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
-  font-weight: normal;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 div.view-slideshow-frontpage h1 span {
   float: left;
@@ -218,9 +192,9 @@ section.panel-pane ul#slide-nav li:hover {
 .views-slideshow-controls-text-previous-processed a {
   position: absolute;
   left: 0;
-  top: 1;
+  top: 1px;
 }
-.views-slideshow-controls-text-status-pause a{
+.views-slideshow-controls-text-status-pause a {
   display: none;
 }
 .views-slideshow-controls-bottom {
@@ -229,7 +203,7 @@ section.panel-pane ul#slide-nav li:hover {
   margin-right: auto;
   position: relative;
 }
-.views-slideshow-controls-text-next-processed  {
+.views-slideshow-controls-text-next-processed {
   position: absolute;
   right: 0;
   display: block;
@@ -243,7 +217,7 @@ section.panel-pane ul#slide-nav li:hover {
   background-color: rgb(255, 114, 0);
   border-radius: 2px;
 }
-.views-slideshow-controls-text-previous-processed  {
+.views-slideshow-controls-text-previous-processed {
   position: absolute;
   left: 0;
   display: block;
@@ -296,269 +270,308 @@ section.panel-pane ul#slide-nav li:hover {
 .views-slideshow-controls-text-pause-processed {
   display: none;
 }
-.views-slideshow-pager-field-processed .active div{
+.views-slideshow-pager-field-processed .active div {
   background-color: #ff7200;
 }
 /* @end */
-/* @end */
-/* @group view-blog */
-div.view ul li > div.content {
-  overflow: hidden;
-  padding: 15px 0;
-  font-size: 1em;
-  line-height: 1.5em;
-  color: #3c3c3c;
+
+/* Projects page view - IPGroup*/
+.page-projects .view-projects td .project-wrapper {
+  margin: 3%;
 }
-div.view ul li > div.content h2 {
-  margin: 0 0 5px -1px;
-  padding: 0;
-  font: normal 1.285714286em/1em NewsGothicBT-Bold, Arial, sans-serif;
-}
-div.view ul li > div.content p {
-  margin: 0;
-  padding: 0;
-}
-div.view ul li > div.content div.meta {
-  margin: 0 0 5px -2px;
-}
-section.panel-pane div.attachment > div.view ul {
-  border: none;
-}
-div.attachment > div.view ul li {
-  clear: both;
-  overflow: hidden;
-  margin: 0 0 20px;
-  border-width: 1px 0 1px 0;
-  border-style: solid;
-  border-color: #eaeaea;
-}
-section.panel-pane div.attachment > div.view div.image {
-  width: 47.6190476%;  /* 300 / 630 */
-}
-section.panel-pane div.attachment > div.view div.image,
-section.panel-pane div.attachment > div.view div.image a,
-section.panel-pane div.attachment > div.view div.image div,
-section.panel-pane div.attachment > div.view div.image img {
-  display: block;
-  float: left;
-}
-section.panel-pane div.attachment > div.view div.image a,
-section.panel-pane div.attachment > div.view div.image div,
-section.panel-pane div.attachment > div.view div.image img {
+.page-projects .view-projects .views-field-title h2 {
   width: 100%;
-}
-section.panel-pane div.attachment > div.view div.image img {
-  display: block;
-  float: left;
-  width: 100%;
-}
-section.panel-pane div.attachment > div.view div.content {
-  padding: 4.7619048% 4.7619048% 0;  /* 30 / 630 */
-  font-size: 1em;
-}
-section.panel-pane div.attachment > div.view ul li.no-image div.content {
-  padding: 15px 0;
-}
-section.panel-pane div.attachment > div.view ul li.views-row-1.no-image div.content {
-  color: #0e0e0e;
-  background: #ffffff;
-}
-section.panel-pane div.attachment > div.view ul li.views-row-1.no-image > div.content div.meta {
-  color: #6a6a6a;
-}
-section.panel-pane div.attachment > div.view ul li.views-row-1.no-image > div.content div.meta a {
-  color: #ff7200;
-}
-section.panel-pane div.attachment > div.view ul li.views-row-1.no-image > div.content div.meta a:hover {
-  color: #ff9900;
-}
-section.panel-pane div.attachment > div.view h2 {
-  font: 1.5em/1em NewsGothicBT-Bold, Arial, sans-serif;
-}
-section.panel-pane div.attachment > div.view ul li.views-row-1 {
-  background: #2a2a2a;
-}
-section.panel-pane div.attachment > div.view ul li.views-row-1 > div.content {
-  color: #ffffff;
-}
-section.panel-pane div.attachment > div.view ul li.views-row-1 > div.content div.meta,
-section.panel-pane div.attachment > div.view ul li.views-row-1 > div.content div.meta a {
-  color: #ffffff;
-}
-section.panel-pane div.attachment > div.view ul li.views-row-1 > div.content div.meta a:hover {
-  text-decoration: underline;
-}
-/* @end */
-/* @group view-testimonials.view-display-id-panel_pane_2 */
-div.view-testimonials.view-display-id-panel_pane_2 {
-  position: relative;
-  padding: 9%;
-  font-size: .857142857em;
-  line-height: 1.5em;
-  color: #6a6a6a;
-  text-align: right;
-  border: 1px solid #eaeaea;
-}
-div.view-testimonials.view-display-id-panel_pane_2 div.views-field-body {
-  text-align: left;
-  margin: 0 0 5px;
-  color: #0e0e0e;
-  font: italic 1.166666667em/1.5em Georgia, Times, "Times New Roman", serif;
-}
-div.view-testimonials.view-display-id-panel_pane_2 .view-content:before {
-  content: "“";
-  position: absolute;
-  top: -21px;
-  left: 15px;
-  padding: 0 10px 0 0;
-  color: #eaeaea;
-  font: italic 5.142857143em/80px Georgia, Times, "Times New Roman", serif;
-  background: #ffffff;
-}
-div.view-testimonials.view-display-id-panel_pane_2 .view-content:after {
-  content: "”";
-  position: absolute;
-  bottom: -60px;
-  right: 15px;
-  padding: 0 10px 0 0;
-  color: #eaeaea;
-  font: italic 5.142857143em/80px Georgia, Times, "Times New Roman", serif;
-  background: #ffffff;
-}
-div.view-testimonials.view-display-id-panel_pane_2 div.field-content {
-  position: relative;
-  z-index: 200;
-}
-/* @end */
-/* @group view-morgeninspiration */
-.view-morgeninspiration {
-  font-size: 14px;
-  position: relative;
-}
-.view-morgeninspiration .view-content {
-  position: relative;
-  overflow: hidden;
-}
-.view-morgeninspiration .view-header {
-  background: #ffffff;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 50;
-}
-.view-morgeninspiration .view-header .smooth-load {
-  background: url('../../images/miniload.gif') no-repeat 50% 21px;
-  position: absolute;
-  font-size: 12px;
-  width: 50px;
-  height: 50px;
-  margin-top: 170px;
-  margin-left: 50%;
-}
-.view-morgeninspiration .views-row {
-  width: 300px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-}
-.view-morgeninspiration .views-row .views-field:not(.views-field-field-image-gallery) {
-  padding: 0 15px;
-  color: #ffffff;
-}
-.view-morgeninspiration .views-row .views-field:not(.views-field-field-image-gallery).views-field-title a {
-  font: 1.5em/1.2em NewsGothicBT-Bold, "Arial Narrow", Helvetica, Arial, sans-serif;
-  color: #ffffff;
-}
-.view-morgeninspiration .views-row.orange {
-  background: #ff7200;
-  color: #ffffff;
-}
-.view-morgeninspiration .views-row.orange .views-field-field-dato-for-event {
-  color: #2a2a2a;
-}
-.view-morgeninspiration .views-row.gray {
-  background: #2a2a2a;
-}
-.view-morgeninspiration .views-row.gray .views-field-body {
-  padding-bottom: 20px;
-}
-.view-morgeninspiration .views-row.gray:before {
-  content: attr(data-cta-msg);
-  background: #ff7200;
-  width: 50%;
-  position: absolute;
-  padding: 5px 10px;
-  bottom: 0;
-  right: 0;
-  color: #ffffff;
-}
-.view-morgeninspiration .views-row.gray .views-field-field-dato-for-event {
-  color: #ff7200;
-}
-.view-morgeninspiration .views-row.gray .views-field-title a {
-  font: 1.5em/1.2em NewsGothicBT-Bold, "Arial Narrow", Helvetica, Arial, sans-serif;
-  color: #ff7200;
-}
-/* @group view-employees-product-page */
-#mini-panel-cp_productpage_graybox .node-type-product .contact-person .view-employees .view-header {
-  display: block;
-}
-#mini-panel-cp_productpage_graybox .node-type-product .contact-person .view-employees div.views-row {
-  width: auto;
-}
-#mini-panel-cp_productpage_graybox .node-type-product .contact-person .view-employees div.views-row > div {
-  padding: 0;
-  height: auto;
-  min-height: 1.5em;
-}
-#mini-panel-cp_productpage_graybox .node-type-product .contact-person .view-employees div.views-row .views-field {
-  padding-left: 10px;
-}
-#mini-panel-cp_productpage_graybox .node-type-product .contact-person .view-employees div.views-row .views-field-picture {
-  text-align: right;
-  border-bottom: 1px solid #eaeaea;
-  height: auto;
-  width: auto;
-  position: absolute;
-  top: 0;
-}
-#mini-panel-cp_productpage_graybox .node-type-product .contact-person .view-employees div.views-row img {
-  position: relative;
-}
-#mini-panel-cp_productpage_graybox div.view.view-employees div.views-row {
-  min-height: 1.5em;
-  margin: 0;
-  width: auto;
-}
-#mini-panel-cp_productpage_graybox .column.seven div.view.view-employees div.views-row {
-  width: 100%;
-}
-#mini-panel-cp_productpage_graybox div.view.view-employees div.views-row > div {
-  position: relative;
-  padding: 0;
-  min-height: 1.5em;
-  color: #787878;
-  border: 1px solid #eaeaea;
-}
-#mini-panel-cp_productpage_graybox div.view.view-employees div.views-row.views-row-even {
+  font: bold 1.5em/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
   margin: 0;
 }
-#mini-panel-cp_productpage_graybox div.view.view-employees div.views-row img {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  max-width: none;
-  max-height: none;
+.page-projects .view-projects .views-field-body .field-content {
+  margin: 0;
+  text-align: justify;
 }
-#mini-panel-cp_productpage_graybox div.view.view-employees div.views-row div.views-field-field-name {
-  font-size: 1.285714286em;
-  line-height: 1em;
-}
+
 #mini-panel-cp_productpage_graybox div.view.view-employees div.views-row div.views-field-field-name,
 #mini-panel-cp_productpage_graybox div.view.view-employees div.views-row div.views-field-field-job-title {
   padding-right: 10px;
   float: left;
 }
+.project-field .project-wrapper:hover {
+  -webkit-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+  -moz-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+  box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+}
+.project-field .views-field-field-image {
+  padding: 0 20px 15px 20px;
+}
+.project-field .project-wrapper h2 {
+  padding-bottom: 0;
+}
+.project-field .project-wrapper h2 a {
+  display: block;
+  padding-bottom: 10px;
+  width: 100%;
+}
 /* @end */
+/* End projects page view */
+
+/* Vacancies page view - IPGroup */
+.page-vacancies #block-system-main {
+  margin-top: 20px;
+}
+.page-vacancies .center-wrapper .panel-col-first {
+  width: 65%;
+}
+.view-display-id-vacancies_list_pane .view-content {
+  border-top: 1px solid #eaeaea;
+}
+.view-display-id-vacancies_list_pane .views-row {
+  border-bottom: 1px solid #eaeaea;
+  color: #3c3c3c;
+  font-size: 1em;
+  line-height: 1.5em;
+  overflow: hidden;
+}
+.view-display-id-vacancies_list_pane .views-field-field-image {
+  float: left;
+}
+.view-display-id-vacancies_list_pane .views-field-field-image a {
+  display: block;
+  padding: 15px 15px 15px 0;
+}
+.view-display-id-vacancies_list_pane .views-field-field-image img {
+  display: block;
+}
+.view-display-id-vacancies_list_pane .views-field-title .field-content {
+  margin: 0;
+}
+.view-display-id-vacancies_list_pane .views-field-title h2 {
+  font: bold 1.28571em/1em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 0;
+  width: 100%;
+}
+.view-display-id-vacancies_list_pane .views-field-title h2 a {
+  display: block;
+  font-weight: bold;
+  padding: 15px 15px 5px 0;
+}
+.view-display-id-vacancies_list_pane .views-field-field-body {
+  line-height: 1.5em;
+  font-size: 100%;
+}
+.view-display-id-vacancies_list_pane .views-field-field-body .field-content {
+  margin: 0;
+}
+.view-display-id-vacancies_list_pane .views-field-field-body a {
+  color: #3c3c3c;
+  display: block;
+  padding: 0 15px 15px 0;
+}
+.view-display-id-vacancies_list_pane .views-field-created {
+  margin-bottom: 5px;
+  color: #6a6a6a;
+  font-size: 0.714286em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.view-display-id-vacancies_list_pane .center-wrapper .panel-col-last {
+  width: 34%;
+}
+/* End vacancies page view  */
+
+/* style for views vacancies in front-page */
+.front-page-vacancies h2.pane-title {
+  padding: 0;
+}
+.front-page-vacancies .view-display-id-vacancies_list_pane .view-content {
+  border-top: none;
+}
+.front-page-vacancies .views-row {
+  background-color: #3c3c3c;
+  margin-top: 10px;
+}
+.front-page-vacancies .views-row .views-field-field-image a {
+  padding-left: 15px;
+}
+.front-page-vacancies .views-row .views-field-field-body a {
+  color: #ffffff;
+}
+/*end style*/
+
+/* Style for new event view. */
+.pane-new-event h2.pane-title {
+  padding: 0 0 10px 0;
+}
+.view-new-event {
+  height: auto;
+}
+.view-new-event .view-content .views-row {
+  background-color: #ff7200;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.view-new-event .view-content a {
+  color: #ffffff;
+}
+.view-new-event .view-content .views-field-field-image a {
+  display: block;
+}
+.view-new-event .views-field-type a {
+  display: block;
+  font-size: 0.714285714em;
+  font-weight: bold;
+  padding-left: 10px;
+  text-transform: uppercase;
+}
+.view-new-event .views-field-title h2 {
+  padding: 0;
+}
+.view-new-event .view-content .views-field-title a {
+  display: block;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.view-new-event .views-field-body a {
+  display: block;
+  padding: 0 10px 10px 10px;
+}
+.view-new-event .views-field-body a p {
+  color: #ffffff;
+  padding: 0;
+}
+
+/* Style for all events view. */
+.view-all-event .views-row-odd {
+  background-color: #eaeaea;
+  color: #464646;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.view-all-event .views-row-even {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.page-events .view-all-event .views-field-field-image {
+  float: left;
+}
+.page-events .view-all-event .views-row {
+  clear: both;
+  overflow: hidden;
+}
+.page-events .view-all-event .views-row-odd a p {
+  color: #464646;
+}
+.page-events .view-all-event .views-row-even a p {
+  color: #ffffff;
+}
+.views-field-field-date .date-style {
+  font-size: x-small;
+}
+span.date-display-single {
+  font-size: x-small;
+}
+
+/* Front page one node view -- start. */
+.view-front-page-nodes {
+  color: #2a2a2a;
+}
+.view-front-page-nodes.grey .views-row,
+.view-front-page-nodes.orange .views-row-even {
+  background: #eaeaea none repeat scroll 0 0;
+}
+.view-front-page-nodes.dark .views-row {
+  background: #2a2a2a none repeat scroll 0 0;
+  color: #ffffff;
+}
+.view-front-page-nodes.orange .views-row-odd {
+  background: #ff7200 none repeat scroll 0 0;
+  color: #ffffff;
+}
+.view-front-page-nodes.dark .prose {
+  color: #ffffff;
+}
+.view-front-page-nodes.orange .views-row-odd a,
+.view-front-page-nodes.orange .views-row-odd .prose {
+  color: #ffffff;
+}
+.view-front-page-nodes .views-row .views-field-body .field-content a,
+.view-front-page-nodes .views-row .views-field-field-body .field-content a,
+.view-front-page-nodes.view-display-id-project_pane .views-row .views-field-title .field-content a {
+  display: block;
+  padding-bottom: 15px;
+}
+.view-front-page-nodes .views-row-even {
+  margin-top: 15px;
+}
+.view-front-page-nodes .views-field,
+.view-front-page-nodes .views-field .field-content {
+  margin: 0;
+  padding: 0;
+}
+
+.view-front-page-nodes .views-field .field-content a {
+  display: block;
+  margin: 0;
+  padding: 0 12px 8px;
+}
+
+.view-front-page-nodes .views-field-field-image,
+.view-front-page-nodes .views-field-field-image .field-content a {
+  margin: 0;
+  padding: 0;
+}
+.view-front-page-nodes .views-field-field-image img {
+  display: block;
+}
+.view-front-page-nodes .views-field-type,
+.view-front-page-nodes .views-field-field-category {
+  font-size: 0.714286em;
+  line-height: 15px;
+}
+.view-front-page-nodes .views-field-type .field-content a,
+.view-front-page-nodes .views-field-field-category a {
+  color: #6a6a6a;
+  display: block;
+  font-size: 100%;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+.view-front-page-nodes.orange .views-row-odd .views-field-type a,
+.view-front-page-nodes.dark .views-field-type a,
+.view-front-page-nodes.orange .views-field-field-category a,
+.view-front-page-nodes.dark .views-field-field-category a {
+  color: #ffffff;
+}
+.view-front-page-nodes.grey .views-field-field-body a,
+.view-front-page-nodes.grey .views-field-body a,
+.view-front-page-nodes.orange .views-row-even .views-field-field-body a,
+.view-front-page-nodes.orange .views-row-even .views-field-body a {
+  color: #2a2a2a;
+}
+.view-front-page-nodes.dark .views-field-field-body a,
+.view-front-page-nodes.dark .views-field-body a {
+  color: #ffffff;
+}
+.view-front-page-nodes .views-field-title h1 {
+  font-size: 1.34em;
+  line-height: 1.34em;
+  margin: 0;
+  padding: 0;
+}
+.view-front-page-nodes .views-field-title a {
+  font-size: 1.34em;
+  font-weight: bold;
+}
+/* Front page one node view -- end. */
+
+/* Last events view styles -- start. */
+.view-last-evente .views-field-title h2 {
+  margin-top: 10px;
+  padding-bottom: 5px;
+}
+/* Last events view styles -- end. */

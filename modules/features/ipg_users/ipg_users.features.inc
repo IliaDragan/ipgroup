@@ -51,13 +51,23 @@ function ipg_users_image_default_styles() {
   $styles['miniavatar'] = array(
     'label' => 'Miniavatar (136x136)',
     'effects' => array(
-      1 => array(
-        'name' => 'image_scale_and_crop',
+      6 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 136,
+          'height' => '',
+          'upscale' => 1,
+        ),
+        'weight' => 2,
+      ),
+      7 => array(
+        'name' => 'image_crop',
         'data' => array(
           'width' => 136,
           'height' => 136,
+          'anchor' => 'center-top',
         ),
-        'weight' => 1,
+        'weight' => 3,
       ),
     ),
   );

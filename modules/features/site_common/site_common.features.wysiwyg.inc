@@ -54,6 +54,9 @@ function site_common_wysiwyg_default_profiles() {
           'Flash' => 1,
           'Iframe' => 1,
         ),
+        'drupal_path' => array(
+          'Link' => 1,
+        ),
         'drupal' => array(
           'break' => 1,
         ),

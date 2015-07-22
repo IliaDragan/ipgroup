@@ -4,16 +4,11 @@
  */
 Drupal.behaviors.userImageToggle = {
   attach: function (context, settings) {
-    var $picture = jQuery('.user-picture img', context);
-    $picture.mouseenter(function() {
-      var $this = jQuery(this);
-      var $link = $this.parent('a');
-      $this.attr('src', $link.attr('img_src'));
-    });
-    $picture.mouseleave(function() {
-      var $this = jQuery(this);
-      var $link = $this.parent('a');
-      $this.attr('src', $link.attr('photo_src'));
-    });
+    var $content = jQuery('.profile .content', context);
+    var $header = jQuery('.profile header', context);
+    if ($content.length && $header.length) {
+      var width = $header.width() - 185;
+      $content.css('width', width + 'px');
+    }
   }
 }

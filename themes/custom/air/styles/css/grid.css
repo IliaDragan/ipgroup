@@ -4,13 +4,6 @@
  *
  * These follow after primary styles so they will successfully override.
  */
-/* Import LESS files */
-/**
- * @file
- * less/radius.css
- *
- * Contains variables and other LESS-specific CSS.
- */
 
 /**
  * (max-width: 966px)
@@ -38,8 +31,7 @@
  * Navigation and search positioning is changed.
  */
 @media all and (max-width: 920px) {
-  div.block-system .content > header div.description,
-  div.block-system .content .contextual-links-region > header div.description {
+  div.block-system .content > header div.description {
     margin: 0 0 20px;
   }
   /* @group Navigation */
@@ -157,11 +149,10 @@
   }
   /* @end */
   /* @group Slider */
-  div.block-system .content > header div.view-slideshow-frontpage h1,
-  div.block-system .content .contextual-links-region > header div.view-slideshow-frontpage h1 {
+  div.block-system .content > header div.view-slideshow-frontpage h1 {
     left: 3.125%;
     bottom: 20%;
-    font: normal 2.571428571em/1.2em NewsGothicBT-Roman, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
+    font: normal 2.4em/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   div.view-slideshow-frontpage div.actions {
     position: absolute;
@@ -280,12 +271,10 @@
     font-size: 12px;
     line-height: 18px;
   }
-  div.block-system .content > header h1,
-  div.block-system .content .contextual-links-region > header h1 {
+  div.block-system .content > header h1 {
     font-size: 2.857142857em;
   }
-  div.block-system .content > header div.description,
-  div.block-system .content .contextual-links-region > header div.description {
+  div.block-system .content > header div.description {
     margin: 0 0 20px;
     font-size: 1.142857143em;
     line-height: 1.3;
@@ -383,6 +372,9 @@
   div[role="navigation"] nav.active ul {
     display: block;
   }
+  nav h2 {
+    display: none;
+  }
   div[role="navigation"] nav h2 {
     display: block;
     float: left;
@@ -391,7 +383,7 @@
     cursor: pointer;
     text-transform: uppercase;
     color: #ffffff;
-    font: normal 1.071428571em/1.3em NewsGothicBT-Bold, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
+    font: bold 1em/1.3em "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: #6a6a6a url(../../images/icons.png) no-repeat 100% -452px;
     border-radius: 3px;
     -moz-border-radius: 3px;
@@ -486,11 +478,10 @@
   footer div.deck.deck-2 .column.six {
     clear: both;
     margin: 0;
-    padding: 0;
+    padding-left: 10px;
     width: 100%;
   }
-  div.block-system .content > header div.description,
-  div.block-system .content .contextual-links-region > header div.description {
+  div.block-system .content > header div.description {
     display: none;
   }
   .deck-5 section.pane-pco-blocks.strict > div.pane-content {
@@ -596,9 +587,8 @@
   section.panel-pane div.view-slideshow-frontpage div.view-content ul li img {
     top: 0;
   }
-  div.block-system .content > header div.view-slideshow-frontpage h1,
-  div.block-system .content .contextual-links-region > header div.view-slideshow-frontpage h1 {
-    font: normal 2.2em/1.2em NewsGothicBT-Roman, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
+  div.block-system .content > header div.view-slideshow-frontpage h1 {
+    font: normal 2.2em/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   section.panel-pane div.view-slideshow-frontpage div.view-content {
     padding: 0 0 45%;
@@ -642,10 +632,9 @@
  */
 @media all and (max-width: 320px) {
   /* @group Layout */
-  div.block-system .content > header div.view-slideshow-frontpage h1,
-  div.block-system .content .contextual-links-region > header div.view-slideshow-frontpage h1 {
+  div.block-system .content > header div.view-slideshow-frontpage h1 {
     bottom: 5%;
-    font: normal 1.7em/1.2em NewsGothicBT-Roman, "Arial Narrow", Helvetica Neue, Arial, sans-serif;
+    font: normal 1.7em/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   div.view-slideshow-frontpage div.actions {
     display: none;

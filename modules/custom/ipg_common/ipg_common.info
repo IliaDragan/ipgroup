@@ -1,0 +1,4 @@
+name = IPGroup common
+description = Defines common IPGroup specific functionalities.
+core = 7.x
+package = IPGroup
