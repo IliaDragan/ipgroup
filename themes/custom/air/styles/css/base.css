@@ -331,7 +331,7 @@ footer div.content {
 }
 footer div.content > header {
   padding: 40px 0 30px;
-  color: #262626;
+  color: #2a2a2a;
   background: #eaeaea;
 }
 footer div.content > header h2 {
@@ -769,7 +769,7 @@ footer {
 }
 
 #cboxCurrent {
-  color: #262626;
+  color: #2a2a2a;
 }
 #cboxClose,
 #cboxClose:hover {
@@ -784,7 +784,7 @@ footer {
   background: url(../../images/colorbox_controls.png) transparent no-repeat -15px 5px;
 }
 #cboxCurrent {
-  color: #262626;
+  color: #2a2a2a;
   left: 0;
   position: absolute;
   text-align: center;

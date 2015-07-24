@@ -18,7 +18,7 @@
   text-align: center;
 }
 .views-exposed-widget label {
-  color: rgb(255, 114, 0);
+  color: #ff7200;
   font: normal 1.5em/1.2em "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 div .form-item div .form-item .form-type-bef-link a.active {
@@ -44,7 +44,7 @@ div .form-item div .form-item .form-type-bef-link a.active {
   /*right:100%;*/
   z-index: 999;
   text-indent: -9999px;
-  background: rgb(255, 114, 0) url(../../images/icons.png) no-repeat -3px -78px!important;
+  background: #ff7200 url(../../images/icons.png) no-repeat -3px -78px!important;
   border-radius: 20px;
   cursor: pointer;
   bottom: 50%;
@@ -58,7 +58,7 @@ div .form-item div .form-item .form-type-bef-link a.active {
   height: 20px;
   text-indent: -9999px;
   z-index: 999;
-  background: rgb(255, 114, 0) url(../../images/icons.png) no-repeat -3px -153px!important;
+  background: #ff7200 url(../../images/icons.png) no-repeat -3px -153px!important;
   border-radius: 20px;
   cursor: pointer;
   bottom: 50%;
@@ -95,7 +95,7 @@ div .form-item div .form-item .form-type-bef-link a.active {
   z-index: 25;
   background-color: #fff;
   opacity: 0;
-  border: 1px solid #ededed;
+  border: 1px solid #eaeaea;
   text-align: center;
   padding: 15px;
 }

@@ -41,17 +41,17 @@ th.active img {
   display: inline;
 }
 td.active {
-  background-color: #ddd;
+  background-color: #dadada;
 }
 td.checkbox,
 th.checkbox {
   text-align: center;
 }
 .error {
-  color: #e55;
+  color: #ee5555;
 }
 .warning {
-  color: #e09010;
+  color: #ff7200;
 }
 .ok {
   color: #008000;
@@ -66,28 +66,28 @@ div.messages {
   border-radius: 3px;
 }
 div.error {
-  border: 1px solid #d77;
+  border: 1px solid #dd7777;
 }
 div.warning {
-  border: 1px solid #f0c020;
+  border: 1px solid #ff9900;
 }
 div.ok {
   border: 1px solid #00aa00;
 }
 div.error,
 tr.error {
-  background: #fcc;
-  color: #200;
+  background: #ffcccc;
+  color: #000000;
 }
 div.warning,
 tr.warning {
-  background: #ffd;
-  color: #220;
+  background: #ffffdd;
+  color: #000000;
 }
 div.ok,
 tr.ok {
-  background: #dfd;
-  color: #020;
+  background: #ddffdd;
+  color: #000000;
 }
 .form-item input.error,
 .form-item textarea.error,
@@ -157,7 +157,7 @@ dl.multiselect dd.a .form-item {
   cursor: default;
 }
 #autocomplete li.selected {
-  background: #0072b9;
+  background: #0077bb;
   color: #fff;
 }
 
@@ -170,8 +170,8 @@ dl.multiselect dd.a .form-item {
 .resizable-textarea .grippie {
   height: 9px;
   overflow: hidden;
-  background: #eee;
-  border: 1px solid #ddd;
+  background: #eaeaea;
+  border: 1px solid #dadada;
   border-top: 0px;
   cursor: s-resize;
 }
@@ -237,11 +237,11 @@ html.js .no-js {
   font-weight: bold;
 }
 .progress .bar {
-  border: 1px solid #035;
+  border: 1px solid #003355;
   height: 18px;
 }
 .progress .filled {
-  background: #07b;
+  background: #0077bb;
   height: 18px;
   width: 0%;
 }
@@ -272,14 +272,14 @@ html.js .no-js {
  * To be used with tableselect.js
  */
 tr.selected td {
-  background: #ffc;
+  background: #ffffdd;
 }
 /**
  * Floating header for tableheader.js
  */
 table.sticky-header {
   margin-top: 0px;
-  background: #fff;
+  background: #ffffff;
 }
 /**
  * Installation clean URLs
@@ -328,10 +328,10 @@ div.password-description {
   white-space: nowrap;
 }
 .update tr.error .version-recommended {
-  background: #fdd;
+  background: #ffcccc;
 }
 .update tr.warning .version-recommended {
-  background-color: #ffffee;
+  background-color: #ffffdd;
 }
 .current-version,
 .new-version {
@@ -339,7 +339,7 @@ div.password-description {
   direction: ltr;
 }
 .update tr.unknown {
-  background: #ddd;
+  background: #dadada;
 }
 .update table.version-security .version-title {
   color: #991100;

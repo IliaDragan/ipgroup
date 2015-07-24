@@ -14,7 +14,7 @@
   /* Black prints faster: sanbeiji.com/archives/953 */
   a,
   a:visited {
-    color: #444 !important;
+    color: #464646 !important;
     text-decoration: underline;
   }
   a[href]:after {
@@ -31,7 +31,7 @@
   /* Don't show links for images, or javascript/internal links */
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid;
   }
   thead {

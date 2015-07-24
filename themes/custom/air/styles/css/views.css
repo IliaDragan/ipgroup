@@ -55,7 +55,7 @@ div.view.view-employees-list div.views-row div.views-field-field-name {
   line-height: 1.5em;
 }
 div.view.view-employees-list div.views-row div.views-field-field-position {
-  color: #262626;
+  color: #2a2a2a;
 }
 div.view.view-employees-list div.views-row div.views-field-field-name,
 div.view.view-employees-list div.views-row div.views-field-field-position,
@@ -88,7 +88,7 @@ section.panel-pane div.view-slideshow-frontpage div.view-content ul li {
   width: 100%;
   height: 100%;
   z-index: 10;
-  background: #262626;
+  background: #2a2a2a;
 }
 section.panel-pane div.view-slideshow-frontpage div.view-content ul li img {
   display: block;
@@ -214,7 +214,7 @@ section.panel-pane ul#slide-nav li:hover {
   background-image: url(../../images/icons.png);
   background-position: -3px -153px;
   background-repeat: no-repeat;
-  background-color: rgb(255, 114, 0);
+  background-color: #ff7200;
   border-radius: 2px;
 }
 .views-slideshow-controls-text-previous-processed {
@@ -228,7 +228,7 @@ section.panel-pane ul#slide-nav li:hover {
   background-image: url(../../images/icons.png);
   background-position: -3px -78px;
   background-repeat: no-repeat;
-  background-color: rgb(255, 114, 0);
+  background-color: #ff7200;
   border-radius: 2px;
 }
 .views-slideshow-controls-text-previous-processed a {
@@ -265,7 +265,7 @@ section.panel-pane ul#slide-nav li:hover {
   width: 10px;
   height: 10px;
   text-decoration: none;
-  background: #cccccc;
+  background: #cacaca;
 }
 .views-slideshow-controls-text-pause-processed {
   display: none;
@@ -326,7 +326,7 @@ section.panel-pane ul#slide-nav li:hover {
 }
 .view-display-id-vacancies_list_pane .views-row {
   border-bottom: 1px solid #eaeaea;
-  color: #3c3c3c;
+  color: #3e3e3e;
   font-size: 1em;
   line-height: 1.5em;
   overflow: hidden;
@@ -362,7 +362,7 @@ section.panel-pane ul#slide-nav li:hover {
   margin: 0;
 }
 .view-display-id-vacancies_list_pane .views-field-field-body a {
-  color: #3c3c3c;
+  color: #3e3e3e;
   display: block;
   padding: 0 15px 15px 0;
 }
@@ -386,7 +386,7 @@ section.panel-pane ul#slide-nav li:hover {
   border-top: none;
 }
 .front-page-vacancies .views-row {
-  background-color: #3c3c3c;
+  background-color: #3e3e3e;
   margin-top: 10px;
 }
 .front-page-vacancies .views-row .views-field-field-image a {
