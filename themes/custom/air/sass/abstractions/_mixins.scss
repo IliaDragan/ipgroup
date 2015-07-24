@@ -1,0 +1,26 @@
+/* Header */
+@mixin heading() {
+  color: $dark;
+  font-family: $base-font-family;
+  font-weight: normal;
+  &:empty {
+    display: none;
+  }
+}
+
+@mixin set-font($size: inherit, $line-height: inherit, $weight: inherit, $style: inherit) {
+  font-family: $base-font-family;
+
+  @if $line-height != inherit {
+    line-height: $line-height;
+  }
+  @if $size != inherit {
+    font-size: $size;
+  }
+  @if $weight != inherit {
+    font-weight: $weight;
+  }
+  @if $style != inherit {
+    font-style: $style;
+  }
+}

@@ -1,4 +1,7 @@
-$base-font    : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family    : "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $base-font-size: 14px;
 $base-line-height: 21px;
+
+$base-font : normal $base-font-size/$base-line-height $base-font-family;
+
