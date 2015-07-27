@@ -14,25 +14,6 @@
             <?php print render($page['languages']); ?>
           </div>
         <?php endif; ?>
-        <?php if (!empty($secondary_menu)): ?>
-          <div id="secondary-navigation">
-            <?php if ($site_slogan): ?>
-              <small><?php print $site_slogan; ?></small>
-            <?php endif; ?>
-            <?php
-            // Todo: move it to preprocess function.
-            print theme('links__system_secondary_menu',
-              array(
-                'links' => $secondary_menu,
-                'attributes' => array(
-                  'id' => 'secondary-menu',
-                  'class' => array('secondary'),
-                ),
-              )
-            );
-            ?>
-          </div>
-        <?php endif; ?>
       </div>
     </div>
 
@@ -46,22 +27,6 @@
       <?php endif; ?>
 
       <div class="navhead">
-        <?php if (!empty($main_menu)): ?>
-          <nav>
-            <?php
-            print theme('links__system_main_menu',
-              array(
-                'links' => $main_menu,
-                'attributes' => array(
-                  'id' => 'main-menu',
-                  'class' => array('primary'),
-                ),
-                'heading' => t('Main menu'),
-              )
-            );
-            ?>
-          </nav>
-        <?php endif; ?>
         <?php if (!empty($page['header'])): ?>
           <?php print render($page['header']); ?>
         <?php endif; ?>
