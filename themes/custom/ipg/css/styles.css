@@ -1,0 +1,49 @@
+/**
+Language block subtheming IPG
+*/
+.language-switcher-locale-url {
+  list-style: none;
+  text-align: right;
+}
+.language-switcher-locale-url li {
+  display: inline;
+  text-decoration: none;
+}
+.language-switcher-locale-url li.active a {
+  text-decoration: underline !important;
+  color: #ff7200;
+  font-weight: bold;
+}
+/** End language block */
+/** links */
+a,
+a:visited {
+  text-decoration: none;
+  color: #ff7200;
+  outline: none;
+  font-weight: normal;
+}
+a:hover {
+  color: #ff9900;
+}
+a:active {
+  color: #ff7200;
+}
+/** end links */
+/** footer start*/
+#block-panels-mini-footer {
+  background-color: #000000;
+  color: #ffffff;
+}
+@media  (max-width: 600px) {
+  .column.six.right,
+  .column.six.left {
+    display: none;
+  }
+}
+@media  (max-width: 600px) {
+  .column.six.middle {
+    color: #ffffff;
+  }
+}
+/**end footer */
