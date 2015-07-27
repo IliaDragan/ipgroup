@@ -93,7 +93,7 @@ function site_common_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'responsive_menus_mean_menu_css_selectors';
-  $strongarm->value = '#main-menu-block';
+  $strongarm->value = '#block-system-main-menu';
   $export['responsive_menus_mean_menu_css_selectors'] = $strongarm;
 
   $strongarm = new stdClass();
