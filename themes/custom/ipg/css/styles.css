@@ -33,9 +33,9 @@ a:hover {
   color: #ff9900;
 }
 a:active {
-  text-decoration: underline;
+  color: #ff7200;
 }
-/* @end */
+/** end links */
 
 /* @group Lists */
 ul, ol {
@@ -45,6 +45,22 @@ ul, ol {
   padding: 0;
 }
 /* @end */
+
+/**Language block subtheming IPG*/
+.language-switcher-locale-url {
+  list-style: none;
+  text-align: right;
+}
+.language-switcher-locale-url li {
+  display: inline;
+  text-decoration: none;
+}
+.language-switcher-locale-url li.active a {
+  text-decoration: underline !important;
+  color: #ff7200;
+  font-weight: bold;
+}
+/** End language block */
 
 /* @group Logo */
 header .logo {
@@ -91,3 +107,21 @@ header .navhead nav ul li a.active {
   -o-border-radius: 3px;
 }
 /* @end */
+
+/** footer start*/
+#block-panels-mini-footer {
+  background-color: #000000;
+  color: #ffffff;
+}
+@media  (max-width: 600px) {
+  .column.six.right,
+  .column.six.left {
+    display: none;
+  }
+}
+@media  (max-width: 600px) {
+  .column.six.middle {
+    color: #ffffff;
+  }
+}
+/**end footer */
