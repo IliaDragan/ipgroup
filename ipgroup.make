@@ -137,6 +137,10 @@ projects[imce_wysiwyg][subdir] = "contrib"
 projects[imce][version] = "1.9"
 projects[imce][subdir] = "contrib"
 
+;Themes
+projects[omega][version] = "4.4"
+projects[omega][subdir] = "contrib"
+
 ; Libraries
 libraries[autopager][destination]    = "libraries"
 libraries[autopager][directory_name] = "autopager"
