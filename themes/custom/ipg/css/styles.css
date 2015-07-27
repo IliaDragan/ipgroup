@@ -1,0 +1,93 @@
+/* @group Global */
+body {
+  color: #0e0e0e;
+  font: normal 14px/21px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+header {
+  clear: both;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+}
+header div.top {
+  margin: 0 auto 20px;
+  overflow: hidden;
+  position: relative;
+}
+#main-content {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+}
+/* @end */
+
+/* @group Links */
+a,
+a:visited {
+  text-decoration: none;
+  color: #ff7200;
+  outline: none;
+}
+a:hover {
+  color: #ff9900;
+}
+a:active {
+  text-decoration: underline;
+}
+/* @end */
+
+/* @group Lists */
+ul, ol {
+  list-style: outside none none;
+  margin: 0;
+  outline: 0 none;
+  padding: 0;
+}
+/* @end */
+
+/* @group Logo */
+header .logo {
+  float: left;
+  width: 180px;
+  height: 75px;
+  margin-top: 3px;
+  line-height: 0;
+}
+header .logo a {
+  display: block;
+}
+header .logo img {
+  vertical-align: bottom;
+  height: 70px;
+}
+/* @end */
+
+/* @group Navigation */
+header .navhead {
+  float: left;
+}
+header .navhead nav {
+  padding: 40px 3px 0;
+}
+header .navhead nav ul li {
+  display: inline;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+header .navhead nav ul li a {
+  font-weight: bold;
+  margin: 0 0.071428571em;
+  padding: 2px 8px;
+}
+header .navhead nav ul li a.active {
+  color: #ffffff;
+  background: #ff7200;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+/* @end */
