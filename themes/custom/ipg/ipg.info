@@ -20,3 +20,6 @@ regions[content] = Content
 
 ; Styles
 stylesheets[all][] = css/styles.css
+
+; Features
+features[] = favicon
