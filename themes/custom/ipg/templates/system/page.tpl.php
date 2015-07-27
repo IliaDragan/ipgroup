@@ -66,8 +66,8 @@
  * @see template_process()
  */
 ?>
-  <header role="banner">
-    <div role="navigation">
+  <header>
+    <div class="navigation">
       <div class="header">
         <div class="languages-and-navigation">
           <?php if (!empty($page['languages'])): ?>
@@ -91,16 +91,10 @@
           <?php endif; ?>
         </div>
       </div>
-    </div> <!-- /div[role="navigation"] -->
-  </header> <!-- /header[role="banner"] -->
+    </div> <!-- /div[class="navigation"] -->
+  </header>
+
   <div id="main-content" role="main">
-    <?php if (!empty($section_head)): ?>
-      <header role="section-head">
-        <div class="section-head">
-          <h1><?php print $section_head; ?></h1>
-        </div>
-      </header>
-    <?php endif; ?>
     <?php if (drupal_is_front_page()) : ?>
       <?php if (!empty($page['promo'])) : ?>
         <?php print render($page['promo']); ?>
@@ -130,6 +124,7 @@
       </div></div> <!-- /.section, /#sidebar-second -->
     <?php endif; ?>
   </div>
+
   <footer>
     <?php print render($page['footer']); ?>
   </footer> <!-- /.section, /#footer -->

@@ -5,8 +5,8 @@
  * Theme implementation to display a 404 Drupal page.
  */
 ?>
-<header role="banner">
-  <div role="navigation">
+<header role="navigation">
+  <div class="navigation">
     <div class="header">
       <div class="languages-and-navigation">
         <?php if (!empty($page['languages'])): ?>
@@ -32,17 +32,10 @@
         <?php endif; ?>
       </div>
     </div>
-  </div> <!-- /div[role="navigation"] -->
+  </div> <!-- /div[class="navigation"] -->
 
-</header> <!-- /header[role="banner"] -->
+</header> <!-- /header[role="navigation"] -->
 <div id="main-content" role="main">
-  <?php if (!empty($section_head)): ?>
-    <header role="section-head">
-      <div class="section-head">
-        <h1><?php print $section_head; ?></h1>
-      </div>
-    </header>
-  <?php endif; ?>
   <section>
     <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
     <div class="page-not-found-content">
