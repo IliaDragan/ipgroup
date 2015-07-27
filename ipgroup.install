@@ -90,7 +90,7 @@ function ipgroup_install() {
   db_update('system')
     ->fields(array('status' => 1))
     ->condition('type', 'theme')
-    ->condition('name', 'air')
+    ->condition('name', 'ipg')
     ->execute();
-  variable_set('theme_default', 'air');
+  variable_set('theme_default', 'ipg');
 }
