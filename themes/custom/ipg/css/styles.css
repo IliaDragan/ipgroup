@@ -134,10 +134,6 @@ footer{
     display: none;
   }
 }
-@media  (max-width: 600px) {
-  footer.column.six.middle {
-  }
-}
 @media  (min-width:600px) and (max-width: 1440px) {
   #facebook_like {
     display: none;
@@ -184,5 +180,44 @@ footer{
   .pane-new-event {
     display: block;
   }
+}
+/*@end*/
+
+/*vacancies*/
+.front-page-vacancies .views-row {
+  background-color: #3c3c3c;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-left: 5px;
+}
+@media  (min-width:600px) and (max-width: 1440px) {
+  .front-page-vacancies .views-row {
+    width: 300px;
+    height: 150px;
+  }
+}
+@media  (max-width:599px) {
+   .front-page-vacancies .views-row {
+    width: 100px;
+    height: 57px;
+  }
+}
+.front-page-vacancies .views-row a {
+  color: #ffffff;
+}
+.front-page-vacancies .views-field-field-image {
+  float: left;
+  padding: 20px 10px 0 0 ;
+}
+.front-page-vacancies .views-field-title a {
+  color: #ff7200;
+}
+.front-page-vacancies .views-field-field-body a {
+  padding-right: 15px;
+  display: block;
+  text-align: left;
+}
+.front-page-vacancies {
+
 }
 /*@end*/
