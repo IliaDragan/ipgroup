@@ -26,12 +26,13 @@ embed,
 object {
   max-width: 100%;
 }
-@media  (max-width: 700px) {
+@media  (max-width: 959px) {
   header,
   #main-content,
   #block-panels-mini-footer {
     margin-left: 10px;
     margin-right: 10px;
+    width: auto;
   }
 }
 /* @end */
@@ -64,8 +65,8 @@ ol {
 /**Language block subtheming IPG*/
 @media  (max-width: 700px) {
   .language-switcher-locale-url {
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
     position: absolute;
     z-index: 999999;
   }
@@ -141,7 +142,7 @@ footer {
 #block-panels-mini-footer {
   width: 960px;
   margin: auto;
-  }
+}
 @media  (max-width: 960px) {
   #block-panels-mini-footer {
     width: auto;
@@ -163,6 +164,9 @@ footer {
   #facebook_like {
     display: block!important;
   }
+  div.fb-page {
+    display: none;
+  }
 }
 /**end footer */
 
@@ -173,6 +177,9 @@ footer {
 .view-front-page-nodes.orange .views-row-even .views-field-field-body a,
 .view-front-page-nodes.orange .views-row-even .views-field-body a {
   color: #2a2a2a;
+}
+.view-front-page-nodes .views-row {
+  max-width: 300px;
 }
 .view-front-page-nodes.grey .views-row,
 .view-front-page-nodes.orange .views-row-even {
@@ -269,6 +276,7 @@ section.panel-pane {
 }
 .view-new-event {
   background-color: #ff7200;
+  max-width: 300px;
 }
 .view-new-event img {
   display: block;
@@ -311,26 +319,26 @@ section.panel-pane {
   padding-top: 5px;
   padding-left: 5px;
 }
-@media  (min-width:600px) and (max-width: 1440px) {
+@media  (min-width:701px) {
   .front-page-vacancies .views-row {
     width: 300px;
     height: 150px;
   }
 }
-@media  (max-width:599px) {
-   .front-page-vacancies .views-row {
+@media  (max-width:700px) {
+  .front-page-vacancies .views-row {
     width: auto;
     height: auto;
   }
 }
-@media  (max-width:599px) {
-  .view-display-id-vacancies_list_pane .views-field-title h2{
+@media  (max-width:700px) {
+  .view-display-id-vacancies_list_pane .views-field-title h2 {
     padding: 0 0 10px 10px;
   }
 }
-@media  (max-width:599px) {
+@media  (max-width:700px) {
   .view-display-id-vacancies_list_pane .views-field-field-image,
-  .views-field-field-body  {
+  .views-field-field-body {
     display: none;
   }
 }
@@ -339,7 +347,7 @@ section.panel-pane {
 }
 .front-page-vacancies .views-field-field-image {
   float: left;
-  padding: 15px 10px 0 10px ;
+  padding: 15px 10px 0 10px;
 }
 .front-page-vacancies .views-field-title a {
   color: #ff7200;
