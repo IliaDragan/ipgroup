@@ -26,6 +26,15 @@ embed,
 object {
   max-width: 100%;
 }
+@media  (max-width: 959px) {
+  header,
+  #main-content,
+  #block-panels-mini-footer {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+  }
+}
 /* @end */
 
 /* @group Links */
@@ -54,13 +63,20 @@ ol {
 /* @end */
 
 /**Language block subtheming IPG*/
+@media  (max-width: 700px) {
+  .language-switcher-locale-url {
+    top: 15px;
+    right: 15px;
+    position: absolute;
+    z-index: 999999;
+  }
+}
 .language-switcher-locale-url {
   list-style: none;
   text-align: right;
 }
 .language-switcher-locale-url li {
   display: inline;
-  text-decoration: none;
 }
 .language-switcher-locale-url li.active a {
   text-decoration: underline !important;
@@ -123,32 +139,33 @@ footer {
 #block-panels-mini-footer {
   padding: 40px 0 30px;
 }
-@media  (max-width: 1440px) {
-  #block-panels-mini-footer {
-    width: 960px;
-    margin: auto;
-  }
+#block-panels-mini-footer {
+  width: 960px;
+  margin: auto;
 }
-@media  (max-width: 800px) {
+@media  (max-width: 960px) {
   #block-panels-mini-footer {
     width: auto;
   }
 }
-@media  (max-width: 600px) {
+@media  (max-width: 700px) {
   #logo_footer,
   footer .column.six.left {
     display: none;
   }
 }
-@media  (min-width:600px) and (max-width: 1440px) {
+@media  (min-width:701px) {
   #facebook_like {
     display: none;
   }
 }
-@media  (max-width: 599px) {
+@media  (max-width: 700px) {
   footer.column.six.right,
   #facebook_like {
     display: block!important;
+  }
+  div.fb-page {
+    display: none;
   }
 }
 /**end footer */
@@ -160,6 +177,9 @@ footer {
 .view-front-page-nodes.orange .views-row-even .views-field-field-body a,
 .view-front-page-nodes.orange .views-row-even .views-field-body a {
   color: #2a2a2a;
+}
+.view-front-page-nodes .views-row {
+  max-width: 300px;
 }
 .view-front-page-nodes.grey .views-row,
 .view-front-page-nodes.orange .views-row-even {
@@ -233,12 +253,12 @@ footer {
 /* Front page one node view -- end. */
 
 /* @group Panels */
-@media  (max-width: 600px) {
+@media  (max-width: 700px) {
   div.deck .column.six {
     width: 47%;
   }
 }
-@media  (max-width: 315px) {
+@media  (max-width: 400px) {
   div.deck .column.six {
     width: 100%;
   }
@@ -256,6 +276,11 @@ section.panel-pane {
 }
 .view-new-event {
   background-color: #ff7200;
+  max-width: 300px;
+}
+.view-new-event img {
+  display: block;
+  height: auto;
 }
 .view-new-event .views-field-type a {
   color: #ffffff;
@@ -280,7 +305,7 @@ section.panel-pane {
 .view-new-event .views-field-body p {
   margin: 0;
 }
-@media  (max-width: 599px) {
+@media  (max-width: 700px) {
   .pane-new-event {
     display: block;
   }
@@ -294,26 +319,26 @@ section.panel-pane {
   padding-top: 5px;
   padding-left: 5px;
 }
-@media  (min-width:600px) and (max-width: 1440px) {
+@media  (min-width:701px) {
   .front-page-vacancies .views-row {
     width: 300px;
     height: 150px;
   }
 }
-@media  (max-width:599px) {
-   .front-page-vacancies .views-row {
+@media  (max-width:700px) {
+  .front-page-vacancies .views-row {
     width: auto;
     height: auto;
   }
 }
-@media  (max-width:599px) {
-  .view-display-id-vacancies_list_pane .views-field-title h2{
+@media  (max-width:700px) {
+  .view-display-id-vacancies_list_pane .views-field-title h2 {
     padding: 0 0 10px 10px;
   }
 }
-@media  (max-width:599px) {
+@media  (max-width:700px) {
   .view-display-id-vacancies_list_pane .views-field-field-image,
-  .views-field-field-body  {
+  .views-field-field-body {
     display: none;
   }
 }
@@ -322,7 +347,7 @@ section.panel-pane {
 }
 .front-page-vacancies .views-field-field-image {
   float: left;
-  padding: 15px 10px 0 10px ;
+  padding: 15px 10px 0 10px;
 }
 .front-page-vacancies .views-field-title a {
   color: #ff7200;
