@@ -21,6 +21,11 @@ header div.top {
   width: 100%;
   max-width: 960px;
 }
+img,
+embed,
+object {
+  max-width: 100%;
+}
 /* @end */
 
 /* @group Links */
@@ -39,7 +44,8 @@ a:active {
 /** end links */
 
 /* @group Lists */
-ul, ol {
+ul,
+ol {
   list-style: outside none none;
   margin: 0;
   outline: 0 none;
@@ -110,7 +116,7 @@ header .navhead nav ul li a.active {
 /* @end */
 
 /** footer start*/
-footer{
+footer {
   background-color: #000000;
   color: #ffffff;
 }
@@ -130,12 +136,8 @@ footer{
 }
 @media  (max-width: 600px) {
   #logo_footer,
- footer .column.six.left {
+  footer .column.six.left {
     display: none;
-  }
-}
-@media  (max-width: 600px) {
-  footer.column.six.middle {
   }
 }
 @media  (min-width:600px) and (max-width: 1440px) {
@@ -151,12 +153,109 @@ footer{
 }
 /**end footer */
 
+/* Front page one node view -- start. */
+.view-front-page-nodes,
+.view-front-page-nodes.grey .views-field-field-body a,
+.view-front-page-nodes.grey .views-field-body a,
+.view-front-page-nodes.orange .views-row-even .views-field-field-body a,
+.view-front-page-nodes.orange .views-row-even .views-field-body a {
+  color: #2a2a2a;
+}
+.view-front-page-nodes.grey .views-row,
+.view-front-page-nodes.orange .views-row-even {
+  background: #eaeaea none repeat scroll 0 0;
+}
+.view-front-page-nodes.dark .views-row {
+  background: #2a2a2a none repeat scroll 0 0;
+  color: #ffffff;
+}
+.view-front-page-nodes.orange .views-row-odd {
+  background: #ff7200 none repeat scroll 0 0;
+  color: #ffffff;
+}
+.view-front-page-nodes .views-row .views-field-body .field-content a,
+.view-front-page-nodes .views-row .views-field-field-body .field-content a,
+.view-front-page-nodes.view-display-id-project_pane .views-row .views-field-title .field-content a {
+  display: block;
+  padding-bottom: 15px;
+}
+.view-front-page-nodes .views-row-even {
+  margin-top: 15px;
+}
+.view-front-page-nodes .views-field,
+.view-front-page-nodes .views-field .field-content {
+  margin: 0;
+  padding: 0;
+}
+
+.view-front-page-nodes .views-field .field-content a {
+  display: block;
+  padding: 0 12px 8px;
+}
+
+.view-front-page-nodes .views-field-field-image,
+.view-front-page-nodes .views-field-field-image .field-content a {
+  margin: 0;
+  padding: 0;
+}
+.view-front-page-nodes .views-field-field-image img {
+  display: block;
+  height: auto;
+}
+.view-front-page-nodes .views-field-type,
+.view-front-page-nodes .views-field-field-category {
+  font-size: 0.714286em;
+  line-height: 15px;
+}
+.view-front-page-nodes .views-field-type .field-content a,
+.view-front-page-nodes .views-field-field-category a {
+  color: #6a6a6a;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+.view-front-page-nodes.dark .prose,
+.view-front-page-nodes.orange .views-row-odd a,
+.view-front-page-nodes.orange .views-row-odd .prose,
+.view-front-page-nodes.orange .views-row-odd .views-field-type a,
+.view-front-page-nodes.dark .views-field-type a,
+.view-front-page-nodes.orange .views-field-field-category a,
+.view-front-page-nodes.dark .views-field-field-category a,
+.view-front-page-nodes.dark .views-field-field-body a,
+.view-front-page-nodes.dark .views-field-body a {
+  color: #ffffff;
+}
+.view-front-page-nodes .views-field-title a {
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+/* Front page one node view -- end. */
+
+/* @group Panels */
+@media  (max-width: 600px) {
+  div.deck .column.six {
+    width: 47%;
+  }
+}
+@media  (max-width: 315px) {
+  div.deck .column.six {
+    width: 100%;
+  }
+}
+section.panel-pane {
+  clear: both;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+/* @end*/
+
 /*upcoming event*/
 .pane-new-event .view-new-event {
   margin: 20px 0 20px 0;
 }
 .view-new-event {
-   background-color: #FF7200;
+  background-color: #ff7200;
 }
 .view-new-event .views-field-type a {
   color: #ffffff;
@@ -167,20 +266,21 @@ footer{
 }
 .view-new-event .views-field-title h2 a {
   color: #ffffff;
-  font-weight: bold;
-  padding-left: 10px;
+  display: block;
+  padding: 0 10px;
 }
 .view-new-event .views-field-title h2 {
   margin: 0 0 5px 0;
 }
 .view-new-event .views-field-body a {
   color: #ffffff;
+  display: block;
+  padding: 0 10px 10px;
 }
 .view-new-event .views-field-body p {
   margin: 0;
-  padding-left: 10px;
 }
-@media  (max-width: 599px){
+@media  (max-width: 599px) {
   .pane-new-event {
     display: block;
   }
