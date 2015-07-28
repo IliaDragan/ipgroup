@@ -3,6 +3,7 @@ body {
   color: #0e0e0e;
   font: normal 14px/21px "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  margin: 0;
 }
 header {
   clear: both;
@@ -115,23 +116,42 @@ header .navhead nav ul li a.active {
 /* @end */
 
 /** footer start*/
-footer #block-panels-mini-footer {
+footer {
   background-color: #000000;
   color: #ffffff;
 }
+#block-panels-mini-footer {
+  padding: 40px 0 30px;
+}
+@media  (max-width: 1440px) {
+  #block-panels-mini-footer {
+    width: 960px;
+    margin: auto;
+  }
+}
+@media  (max-width: 800px) {
+  #block-panels-mini-footer {
+    width: auto;
+  }
+}
 @media  (max-width: 600px) {
-  footer .column.six.right,
+  #logo_footer,
   footer .column.six.left {
     display: none;
   }
 }
-@media  (max-width: 600px) {
-  footer .column.six.middle {
-    color: #ffffff;
+@media  (min-width:600px) and (max-width: 1440px) {
+  #facebook_like {
+    display: none;
+  }
+}
+@media  (max-width: 599px) {
+  footer.column.six.right,
+  #facebook_like {
+    display: block!important;
   }
 }
 /**end footer */
-
 
 /* Front page one node view -- start. */
 .view-front-page-nodes,
@@ -190,8 +210,6 @@ footer #block-panels-mini-footer {
 .view-front-page-nodes .views-field-type .field-content a,
 .view-front-page-nodes .views-field-field-category a {
   color: #6a6a6a;
-  display: block;
-  font-size: 100%;
   font-weight: bold;
   padding-top: 15px;
   padding-bottom: 5px;
@@ -231,3 +249,40 @@ section.panel-pane {
   overflow: hidden;
 }
 /* @end*/
+
+/*upcoming event*/
+.pane-new-event .view-new-event {
+  margin: 20px 0 20px 0;
+}
+.view-new-event {
+  background-color: #ff7200;
+}
+.view-new-event .views-field-type a {
+  color: #ffffff;
+  font-size: 0.714285714em;
+  font-weight: bold;
+  padding-left: 10px;
+  text-transform: uppercase;
+}
+.view-new-event .views-field-title h2 a {
+  color: #ffffff;
+  display: block;
+  padding: 0 10px;
+}
+.view-new-event .views-field-title h2 {
+  margin: 0 0 5px 0;
+}
+.view-new-event .views-field-body a {
+  color: #ffffff;
+  display: block;
+  padding: 0 10px 10px;
+}
+.view-new-event .views-field-body p {
+  margin: 0;
+}
+@media  (max-width: 599px) {
+  .pane-new-event {
+    display: block;
+  }
+}
+/*@end*/
