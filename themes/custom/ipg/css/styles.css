@@ -3,6 +3,7 @@ body {
   color: #0e0e0e;
   font: normal 14px/21px "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  margin: 0;
 }
 header {
   clear: both;
@@ -109,19 +110,34 @@ header .navhead nav ul li a.active {
 /* @end */
 
 /** footer start*/
-#block-panels-mini-footer {
+footer{
   background-color: #000000;
   color: #ffffff;
 }
+#block-panels-mini-footer {
+}
 @media  (max-width: 600px) {
-  .column.six.right,
+  #logo_footer,
   .column.six.left {
     display: none;
   }
 }
 @media  (max-width: 600px) {
   .column.six.middle {
-    color: #ffffff;
+    margin: 20px 0 0 20px;
+  }
+}
+@media  (min-width:600px) and (max-width: 1440px) {
+  #facebook_like {
+    display: none;
+  }
+}
+@media  (max-width: 599px) {
+  .column.six.right,
+  #facebook_like {
+    margin-top: 35px;
+    margin-right: 5px;
+    display: block!important;
   }
 }
 /**end footer */
