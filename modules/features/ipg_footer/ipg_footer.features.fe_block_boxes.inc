@@ -19,6 +19,14 @@ function ipg_footer_default_fe_block_boxes() {
   $export['contacts_us'] = $fe_block_boxes;
 
   $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'facebook_like';
+  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->machine_name = 'facebook_like';
+  $fe_block_boxes->body = '<div id="fb-root">&nbsp;</div><div class="fb-like" data-action="like" data-href="https://www.facebook.com/IPGroupMD?fref=ts" data-layout="button" data-share="false" data-show-faces="false">&nbsp;</div>';
+
+  $export['facebook_like'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'footer_phone';
   $fe_block_boxes->format = 'wysiwyg_';
   $fe_block_boxes->machine_name = 'footer_phone';
