@@ -115,16 +115,27 @@ footer{
   color: #ffffff;
 }
 #block-panels-mini-footer {
+  padding: 40px 0 30px;
+}
+@media  (max-width: 1440px) {
+  #block-panels-mini-footer {
+    width: 960px;
+    margin: auto;
+  }
+}
+@media  (max-width: 800px) {
+  #block-panels-mini-footer {
+    width: auto;
+  }
 }
 @media  (max-width: 600px) {
   #logo_footer,
-  .column.six.left {
+ footer .column.six.left {
     display: none;
   }
 }
 @media  (max-width: 600px) {
-  .column.six.middle {
-    margin: 20px 0 0 20px;
+  footer.column.six.middle {
   }
 }
 @media  (min-width:600px) and (max-width: 1440px) {
@@ -133,11 +144,45 @@ footer{
   }
 }
 @media  (max-width: 599px) {
-  .column.six.right,
+  footer.column.six.right,
   #facebook_like {
-    margin-top: 35px;
-    margin-right: 5px;
     display: block!important;
   }
 }
 /**end footer */
+
+/*upcoming event*/
+.pane-new-event .view-new-event {
+  margin: 20px 0 20px 0;
+}
+.view-new-event {
+   background-color: #FF7200;
+}
+.view-new-event .views-field-type a {
+  color: #ffffff;
+  font-size: 0.714285714em;
+  font-weight: bold;
+  padding-left: 10px;
+  text-transform: uppercase;
+}
+.view-new-event .views-field-title h2 a {
+  color: #ffffff;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.view-new-event .views-field-title h2 {
+  margin: 0 0 5px 0;
+}
+.view-new-event .views-field-body a {
+  color: #ffffff;
+}
+.view-new-event .views-field-body p {
+  margin: 0;
+  padding-left: 10px;
+}
+@media  (max-width: 599px){
+  .pane-new-event {
+    display: block;
+  }
+}
+/*@end*/
