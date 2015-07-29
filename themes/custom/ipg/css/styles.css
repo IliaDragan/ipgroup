@@ -172,6 +172,7 @@ footer {
 /* @group Section head */
 .section-head {
   background: #ff7200;
+  margin-bottom: 60px;
 }
 .section-head section {
   margin: 0 auto;
@@ -301,6 +302,9 @@ section.panel-pane {
   clear: both;
   margin-bottom: 15px;
   overflow: hidden;
+}
+section.pane-page-title {
+  margin: 0;
 }
 /* @end*/
 
