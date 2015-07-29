@@ -162,7 +162,7 @@ footer {
 @media  (max-width: 700px) {
   footer.column.six.right,
   #facebook_like {
-    display: block!important;
+    display: block;
   }
   div.fb-page {
     display: none;
@@ -254,14 +254,19 @@ footer {
 
 /* @group Panels */
 @media  (max-width: 700px) {
-  div.deck .column.six,
-  div.deck .column.twelve {
+  div.deck .column.six {
     width: 47%;
+  }
+  div.deck-3 .column.twelve {
+    width: 100%;
+  }
+  div.deck-3 .column.six {
+    width: 100%;
+    padding: 0;
   }
 }
 @media  (max-width: 400px) {
-  div.deck .column.six,
-  div.deck .column.twelve {
+  div.deck .column.six {
     width: 100%;
     padding: 0;
   }
@@ -454,4 +459,66 @@ section.panel-pane {
     height: 5px;
   }
 }
+/*@end*/
+
+/*Event list*/
+.view-all-event .views-row img {
+  float: left;
+  margin-right: 15px;
+  margin: 0 15px 15px 0;
+}
+.view-all-event .views-row {
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
+  width: auto;
+  max-height: 156px;
+  height: auto;
+}
+.page-events .view-all-event .views-row {
+  clear: both;
+  overflow: hidden;
+}
+.view-all-event .views-row-odd {
+  background-color: #eaeaea;
+  color: #464646;
+}
+.view-all-event .views-row-odd .views-field-body a {
+  color: #464646;
+}
+.view-all-event .views-row-even {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+.view-all-event .views-row-even .views-field-body a {
+  color: #ffffff;
+}
+.view-all-event .views-row-even .views-field-body a p {
+ margin-top: 5px;
+}
+.view-all-event .views-row-odd .views-field-body a p {
+  margin-top: 5px;
+}
+.view-all-event .views-field-field-date {
+  font-size: x-small;
+}
+.view-all-event .views-field-title h2 {
+  margin: 0;
+}
+/*@media (max-width: 700px) {*/
+  /*.page-events,*/
+  /*.column .left .twelve*/
+  /*.pane-all-event .view-all-event {*/
+    /*width: 100%;*/
+    /*width: 630px!important;*/
+  /*}*/
+/*}*/
+@media (max-width: 700px) {
+  .page-events,
+   div .deck-3 .column.right,
+  .pane-new-event {
+    width: 100%;
+  }
+}
+
 /*@end*/
