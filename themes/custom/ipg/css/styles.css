@@ -159,7 +159,7 @@ footer {
     display: none;
   }
 }
-@media  (max-width: 700px) {
+@media (max-width: 700px) {
   footer.column.six.right,
   #facebook_like {
     display: block;
@@ -505,14 +505,6 @@ section.panel-pane {
 .view-all-event .views-field-title h2 {
   margin: 0;
 }
-/*@media (max-width: 700px) {*/
-  /*.page-events,*/
-  /*.column .left .twelve*/
-  /*.pane-all-event .view-all-event {*/
-    /*width: 100%;*/
-    /*width: 630px!important;*/
-  /*}*/
-/*}*/
 @media (max-width: 700px) {
   .page-events,
    div .deck-3 .column.right,
@@ -520,5 +512,39 @@ section.panel-pane {
     width: 100%;
   }
 }
-
+/*@end*/
+/*page event*/
+.node-type-event .pane-page-title {
+  margin: 0;
+  color: #cccfd2;
+}
+.node-type-event .pane-page-title h2 {
+  margin: 0;
+}
+.node-type-event .field--name-field-date {
+  font-size: x-small;
+}
+.node-type-event .pane-node-field-date {
+  margin: 0;
+}
+.node-type-event .pane-page-title {
+  margin: -71px 0 0 0;
+  background: #464646;
+  opacity: 0.8;
+  padding: 10px 10px 0;
+}
+.node-type-event .pane-node-field-date {
+  margin: 0;
+  background: #464646;
+  opacity: 0.8;
+  padding: 0 10px;
+}
+.node-type-event .field--name-field-date {
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 20px;
+  opacity: 1;
+  padding: 0;
+}
 /*@end*/
