@@ -328,6 +328,7 @@ section.panel-pane {
 @media  (max-width:700px) {
   .front-page-vacancies .views-row {
     width: auto;
+    max-width: 300px;
     height: auto;
   }
 }
