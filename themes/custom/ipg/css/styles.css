@@ -254,13 +254,16 @@ footer {
 
 /* @group Panels */
 @media  (max-width: 700px) {
-  div.deck .column.six {
+  div.deck .column.six,
+  div.deck .column.twelve {
     width: 47%;
   }
 }
 @media  (max-width: 400px) {
-  div.deck .column.six {
+  div.deck .column.six,
+  div.deck .column.twelve {
     width: 100%;
+    padding: 0;
   }
 }
 section.panel-pane {

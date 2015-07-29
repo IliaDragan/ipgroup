@@ -319,7 +319,7 @@ function ipg_project_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'flexible';
+  $display->layout = 'flex';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -334,7 +334,7 @@ function ipg_project_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-dda680af-13b7-4d0b-9d1f-a9ec9882b64f';
-    $pane->panel = 'center';
+    $pane->panel = 'full';
     $pane->type = 'views_panes';
     $pane->subtype = 'projects-projects_list_pane';
     $pane->shown = TRUE;
@@ -350,7 +350,7 @@ function ipg_project_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = 'dda680af-13b7-4d0b-9d1f-a9ec9882b64f';
     $display->content['new-dda680af-13b7-4d0b-9d1f-a9ec9882b64f'] = $pane;
-    $display->panels['center'][0] = 'new-dda680af-13b7-4d0b-9d1f-a9ec9882b64f';
+    $display->panels['full'][0] = 'new-dda680af-13b7-4d0b-9d1f-a9ec9882b64f';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
