@@ -363,3 +363,88 @@ section.panel-pane {
   text-align: left;
 }
 /*@end*/
+
+/*slideshow*/
+#views_slideshow_cycle_teaser_section_front_page_slideshow-block {
+  max-height: 300px;
+}
+#views_slideshow_cycle_teaser_section_front_page_slideshow-block img {
+  height: auto;
+  max-height: 300px;
+  width: 100%;
+  max-width: 960px;
+}
+.views-slideshow-controls-bottom {
+  padding-bottom: 20px;
+}
+#block-views-front-page-slideshow-block .views-field-counter {
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 10px;
+  height: 10px;
+  text-decoration: none;
+  background: #cccccc;
+}
+.views-slideshow-pager-field-processed .active div {
+  background-color: #ff7200;
+}
+.views_slideshow_pager_field.views-slideshow-pager-field-processed {
+  position: absolute;
+  z-index: 102;
+  height: 20px;
+  text-align: center !important;
+  width: auto;
+  border: none;
+  left: 50%;
+  margin: 0;
+  margin-right: -50%;
+  transform: translate(-50%);
+  clear: both;
+}
+.views-slideshow-pager-field-item {
+  margin: 0 4px;
+  display: inline-block;
+  border: none;
+  float: left !important;
+}
+.views-slideshow-controls-text-pause-processed a {
+  display: none;
+}
+.views-slideshow-controls-text-next-processed {
+  float: right;
+  overflow: hidden;
+  width: 30px;
+  height: 20px;
+  text-indent: -9999px;
+  background-image: url(../images/icons.png);
+  background-position: -6px -153px;
+  background-repeat: no-repeat;
+  background-color: rgb(255, 114, 0);
+  border-radius: 2px;
+}
+.views-slideshow-controls-text-previous-processed {
+  position: absolute;
+  overflow: hidden;
+  width: 30px;
+  height: 20px;
+  text-indent: -9999px;
+  background-image: url(../images/icons.png);
+  background-position: -3px -78px;
+  background-repeat: no-repeat;
+  background-color: rgb(255, 114, 0);
+  border-radius: 2px;
+}
+@media (max-width: 400px) {
+  .views-slideshow-controls-text-next-processed,
+  .views-slideshow-controls-text-previous-processed {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  #block-views-front-page-slideshow-block .views-field-counter {
+    width: 5px;
+    height: 5px;
+  }
+}
+/*@end*/
