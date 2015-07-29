@@ -93,13 +93,14 @@
       </div>
     </div> <!-- /div[class="navigation"] -->
   </header>
-
+  <?php if (!empty($section_head)): ?>
+    <div class="section-head">
+      <section>
+        <h1><?php print $section_head; ?></h1>
+      </section>
+    </div>
+  <?php endif; ?>
   <div id="main-content" role="main">
-    <?php if (drupal_is_front_page()) : ?>
-      <?php if (!empty($page['promo'])) : ?>
-        <?php print render($page['promo']); ?>
-      <?php endif; ?>
-    <?php endif;?>
     <section>
       <?php print $messages; ?>
       <?php if ($page['highlighted']): ?>
