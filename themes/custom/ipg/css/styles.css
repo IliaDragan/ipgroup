@@ -265,6 +265,10 @@ footer {
     width: 100%;
     padding: 0;
   }
+  .panel-2col-stacked .panel-col-first,
+  .panel-2col-stacked .panel-col-last {
+    width: 100%;
+  }
 }
 section.panel-pane {
   clear: both;
