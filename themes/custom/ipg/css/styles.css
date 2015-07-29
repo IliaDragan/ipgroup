@@ -162,7 +162,7 @@ footer {
 @media  (max-width: 700px) {
   footer.column.six.right,
   #facebook_like {
-    display: block!important;
+    display: block;
   }
   div.fb-page {
     display: none;
@@ -462,10 +462,10 @@ section.panel-pane {
 /*@end*/
 
 /*Event list*/
-
 .view-all-event .views-row img {
   float: left;
   margin-right: 15px;
+  margin: 0 15px 15px 0;
 }
 .view-all-event .views-row {
   margin-bottom: 10px;
