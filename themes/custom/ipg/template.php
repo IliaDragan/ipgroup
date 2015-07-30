@@ -80,7 +80,7 @@ function ipg_preprocess_page(&$vars) {
  * Implements template_preprocess_user_profile().
  */
 function ipg_preprocess_user_profile(&$vars) {
-  $theme_path = path_to_theme();
+  $theme_path = drupal_get_path('theme', 'ipg');
   $link_options = array(
     'html' => TRUE,
   );
@@ -102,7 +102,7 @@ function ipg_preprocess_user_profile(&$vars) {
 function ipg_preprocess_views_view(&$vars) {
   $view = $vars['view'];
   if ($view->current_display == 'owl_employee_carousel') {
-    $theme_path = path_to_theme();
+    $theme_path = drupal_get_path('theme', 'ipg');
     drupal_add_js($theme_path . '/scripts/employe-carousel.js',
       array('scope' => 'footer', 'weight' => 100));
   }
@@ -141,7 +141,7 @@ function ipg_preprocess_field(&$variables) {
         $item['photo'] = theme('image', array('path' => $photo_path));
       }
       else {
-        $photo_path = path_to_theme() . '/images/silhouette.png';
+        $photo_path = drupal_get_path('theme', 'ipg') . '/images/silhouette.png';
         $item['photo'] = theme('image', array('path' => $photo_path));
       }
       if (!empty($entity->field_phone[$lang][0]['value'])) {
@@ -151,7 +151,7 @@ function ipg_preprocess_field(&$variables) {
         $item['phone'] = $entity->field_phone[LANGUAGE_NONE][0]['value'];
       }
     }
-    $theme_path = path_to_theme();
+    $theme_path = drupal_get_path('theme', 'ipg');
     drupal_add_js($theme_path . '/scripts/field_user.js');
   }
   elseif ($variables['element']['#field_name'] == 'field_body') {

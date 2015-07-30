@@ -631,5 +631,119 @@ section.pane-page-title {
     width: 100%;
   }
 }
-
 /*@end*/
+
+/*Node type project - IPGroup*/
+body {
+  border: red solid;
+}
+.node-type-project .center-wrapper .panel-col-last {
+  position: relative;
+}
+.node-type-project .center-wrapper .panel-col-last .inside {
+  position: absolute;
+  width: 100%;
+}
+.node-type-project .pane-node-field-user h2.pane-title {
+  background: #eaeaea;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: #787878;
+  margin: 0;
+  padding: 2%;
+  text-align: center;
+}
+.node-type-project .pane-node-field-user {
+  display: block;
+  overflow: visible;
+}
+.node-type-project .pane-node-field-user .pane-content {
+  display: block;
+  height: 100%;
+  position: relative;
+}
+.node-type-project .team-members {
+  background: none repeat scroll 0 0 white;
+  /*border: 1px solid  #eaeaea;*/
+  border: 1px solid  #000000;
+  padding: 5px 5px 22px;
+  overflow: hidden;
+}
+.node-type-project .team-members-collapse-expand {
+  background: white url(../images/icons.png) no-repeat 50% -325px;
+  border-bottom: 1px solid  #eaeaea;
+  bottom: 0;
+  cursor: pointer;
+  display: block;
+  height: 23px;
+  position: absolute;
+  text-align: center;
+  width: 99%;
+  right: 1px;
+}
+.node-type-project .team-members-collapse-expand.expanded {
+  background-position: 50% -255px;
+}
+.node-type-project .team-member {
+  padding-top: 15px;
+}
+.node-type-project .team-member-field-name {
+  color: #464646;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+.node-type-project .team-member-field-position {
+  color: #787878;
+  margin-left: 1%;
+}
+.node-type-project .field--name-body {
+  color: #464646;
+  text-align: justify;
+}
+.node-type-project .field--name-field-image img {
+  /*border: 1px solid #eaeaea;*/
+  border: 1px solid #000000;
+  border-radius: 5px;
+  height: auto;
+  width: 99%;
+}
+.node-type-project .team-member-photo img {
+  border-radius: 5px;
+}
+.team-member-info-left {
+  display: inline-block;
+  width: 30%;
+}
+.team-member-info-right {
+  display: inline-block;
+  vertical-align: top;
+  width: 69%;
+}
+.node-type-project .center-wrapper .panel-col-first,
+.node-type-project .center-wrapper .panel-col-last {
+  min-width: 190px;
+}
+.node-type-project .panel-col-top .panel-separator,
+.node-type-project .panel-col-top .pane-node-title,
+.node-type-project .panel-col-top .pane-node-title h2 {
+  padding: 0;
+}
+.node-type-project .panel-col-top .field--name-field-status .field-label {
+  color: #464646;
+  font-weight: normal;
+}
+@media (max-width: 700px) {
+  .team-member-info-right {
+    width: 67%;
+  }
+}
+@media (max-width: 400px) {
+  .node-type-project .center-wrapper .panel-col-last .inside {
+    position: relative;
+  }
+  .node-type-project .team-members-collapse-expand {
+    display: none;
+  }
+}
+/*End node project*/
