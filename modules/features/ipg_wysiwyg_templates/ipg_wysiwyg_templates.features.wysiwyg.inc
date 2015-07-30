@@ -63,7 +63,7 @@ function ipg_wysiwyg_templates_wysiwyg_default_profiles() {
       'paste_auto_cleanup_on_paste' => 1,
       'block_formats' => 'p,address,pre,h1,h2,h3',
       'css_setting' => 'self',
-      'css_path' => '%b%t/styles/css/wysiwyg.css',
+      'css_path' => '%b%t/css/wysiwyg.css',
       'css_classes' => '',
     ),
     'rdf_mapping' => array(),
