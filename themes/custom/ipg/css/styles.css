@@ -159,13 +159,30 @@ footer {
     display: none;
   }
 }
-@media  (max-width: 700px) {
-  footer.column.six.right,
+#facebook_like p {
+  margin: 0;
+}
+@media (max-width: 400px) {
+  #mini-panel-footer div.column.right.six {
+    width: 30%;
+  }
+  #mini-panel-footer div.column.middle.six {
+    width: 55%;
+  }
+}
+@media (max-width: 700px) {
   #facebook_like {
     display: block;
+    width: auto;
+    height: auto;
+    margin-left:  20px;
   }
   div.fb-page {
     display: none;
+  }
+  footer .column .middle ,
+  .pane-block-2 {
+    margin-left: 20px;
   }
 }
 /**end footer */
