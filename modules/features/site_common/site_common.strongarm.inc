@@ -107,7 +107,7 @@ function site_common_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'responsive_menus_mean_menu_position';
-  $strongarm->value = 'left';
+  $strongarm->value = 'right';
   $export['responsive_menus_mean_menu_position'] = $strongarm;
 
   $strongarm = new stdClass();
