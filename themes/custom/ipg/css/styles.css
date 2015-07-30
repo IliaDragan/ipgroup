@@ -680,7 +680,7 @@ section.pane-page-title {
   -moz-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
   box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
 }
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .jcarousel-skin-default {
     display: none;
   }
