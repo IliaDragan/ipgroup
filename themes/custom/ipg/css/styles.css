@@ -686,3 +686,32 @@ section.pane-page-title {
   }
 }
 /*@end*/
+/*projects page*/
+.page-projects .view-projects .project-wrapper {
+   margin: 3%;
+}
+.views-row .views-row-odd .project-field {
+  width: 270px;
+}
+.views-row .views-row-even .project-field {
+  width: 270px;
+}
+.project-field .project-wrapper:hover {
+  -webkit-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+  -moz-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+  box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+}
+.project-field .views-field-title h2 {
+  text-align: center;
+  margin: 0;
+  padding: 5px 0 5px 0;
+}
+.project-field .image-project {
+  padding: 0 20px 15px 20px;
+}
+@media (max-width: 810px) {
+  .col-3 .project-field {
+    display: none;
+  }
+}
+/*@end*/
