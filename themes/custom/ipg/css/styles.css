@@ -159,16 +159,53 @@ footer {
     display: none;
   }
 }
+#facebook_like p {
+  margin: 0;
+}
+@media (max-width: 400px) {
+  #mini-panel-footer div.column.right.six {
+    width: 30%;
+  }
+  #mini-panel-footer div.column.middle.six {
+    width: 55%;
+  }
+}
 @media (max-width: 700px) {
-  footer.column.six.right,
   #facebook_like {
     display: block;
+    width: auto;
+    height: auto;
+    margin-left:  20px;
   }
   div.fb-page {
     display: none;
   }
+  footer .column .middle ,
+  .pane-block-2 {
+    margin-left: 20px;
+  }
 }
 /**end footer */
+/* @group Section head */
+.section-head {
+  background: #ff7200;
+  margin-bottom: 60px;
+}
+.section-head section {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 96.9697%;
+}
+.section-head section  h1 {
+  color: #ffffff;
+  font-size: 3.8em;
+  font-weight: normal;
+  line-height: 1em;
+  margin: 0;
+  padding: 20px 0;
+  width: 48.4375%;
+}
+/* @end */
 
 /* Front page one node view -- start. */
 .view-front-page-nodes,
@@ -264,6 +301,9 @@ footer {
     width: 100%;
     padding: 0;
   }
+  div.deck .column.right {
+    float: left;
+  }
 }
 @media  (max-width: 400px) {
   div.deck .column.six {
@@ -279,6 +319,9 @@ section.panel-pane {
   clear: both;
   margin-bottom: 15px;
   overflow: hidden;
+}
+section.pane-page-title {
+  margin: 0;
 }
 /* @end*/
 
@@ -325,54 +368,79 @@ section.panel-pane {
 /*@end*/
 
 /*vacancies*/
-.front-page-vacancies .views-row {
+.three-articles-list {
+  border-top: none !important;
+}
+.three-articles-list li {
+  border-bottom: none !important;
+  float: left;
+  margin: 1%;
+  max-width: 200px;
+  width: 31%;
+}
+.view-display-id-vacancies_list_pane .view-content {
+  border-top: 1px solid #eaeaea;
+}
+.view-display-id-vacancies_list_pane .views-row {
+  border-bottom: 1px solid #eaeaea;
+  overflow: hidden;
+}
+.view-display-id-vacancies_list_pane .views-field-field-image {
+  float: left;
+}
+.view-display-id-vacancies_list_pane .views-field-field-image a {
+  display: block;
+  padding: 15px 15px 15px 0;
+}
+.view-display-id-vacancies_list_pane .views-field-field-image img {
+  display: block;
+}
+.view-display-id-vacancies_list_pane .views-field-title h2 {
+  font-size: 1.28571em;
+  margin: 0;
+}
+.view-display-id-vacancies_list_pane .views-field-title h2 a {
+  display: block;
+  padding: 15px 15px 5px 0;
+}
+.view-display-id-vacancies_list_pane .views-field-field-body {
+  line-height: 1.5em;
+}
+.view-display-id-vacancies_list_pane .views-field-field-body a {
+  color: #3c3c3c;
+  display: block;
+  padding: 0 15px 15px 0;
+}
+.front-page-vacancies .view-display-id-vacancies_list_pane .view-content {
+  border-top: none;
+}
+.front-page-vacancies .view-display-id-vacancies_list_pane .views-row {
   background-color: #3c3c3c;
   margin-top: 10px;
-  padding-top: 5px;
-  padding-left: 5px;
 }
 @media  (min-width:701px) {
-  .front-page-vacancies .views-row {
+  .front-page-vacancies .view-display-id-vacancies_list_pane .views-row {
     width: 300px;
-    height: 150px;
   }
 }
 @media  (max-width:700px) {
-  .front-page-vacancies .views-row {
+  .front-page-vacancies .view-display-id-vacancies_list_pane .views-row {
     width: auto;
     max-width: 300px;
-    height: auto;
   }
-}
-@media  (max-width:700px) {
-  .view-display-id-vacancies_list_pane .views-field-title h2 {
-    padding: 0 0 10px 10px;
+  .front-page-vacancies .view-display-id-vacancies_list_pane .views-field-title h2 a {
+    padding: 15px;
   }
-}
-@media  (max-width:700px) {
-  .view-display-id-vacancies_list_pane .views-field-field-image,
-  .views-field-field-body {
+  .front-page-vacancies .view-display-id-vacancies_list_pane .views-field-field-image,
+  .front-page-vacancies .view-display-id-vacancies_list_pane .views-field-field-body {
     display: none;
   }
 }
-.front-page-vacancies .views-row a {
+.front-page-vacancies .view-display-id-vacancies_list_pane .views-field-field-image a {
+  padding-left: 15px;
+}
+.front-page-vacancies .view-display-id-vacancies_list_pane .views-field-field-body a {
   color: #ffffff;
-}
-.front-page-vacancies .views-field-field-image {
-  float: left;
-  padding: 15px 10px 0 10px;
-}
-.front-page-vacancies .views-field-title a {
-  color: #ff7200;
-}
-.front-page-vacancies .views-field-title h2 {
-  margin-bottom: 5px;
-  margin-top: 15px;
-}
-.front-page-vacancies .views-field-field-body a {
-  padding-right: 15px;
-  display: block;
-  text-align: left;
 }
 /*@end*/
 
@@ -528,23 +596,43 @@ section.panel-pane {
   margin: 0;
 }
 .node-type-event .pane-page-title {
-  margin: -71px 0 0 0;
+  margin: -70px 0 0 0;
   background: #464646;
   opacity: 0.8;
-  padding: 10px 10px 0;
+  width: auto;
+  max-width: 630px;
+  padding: 0 0 0 10px;
 }
 .node-type-event .pane-node-field-date {
   margin: 0;
   background: #464646;
   opacity: 0.8;
-  padding: 0 10px;
+  width: auto;
+  max-width: 630px;
+  padding: 0 0 8px 10px;
 }
 .node-type-event .field--name-field-date {
-  color: white;
+  color: #cccfd2;
   font-size: 10px;
   font-weight: bold;
   line-height: 20px;
   opacity: 1;
   padding: 0;
+}
+.last-event img {
+  height: auto;
+  max-height: 473px;
+  width: 100%;
+  max-width: 630px;
+}
+.last-event img:hover {
+  -webkit-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+  -moz-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+  box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+}
+@media (max-width: 400px) {
+  .jcarousel-skin-default {
+    display: none;
+  }
 }
 /*@end*/
