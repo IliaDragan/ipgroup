@@ -201,7 +201,7 @@ footer {
     display: block;
     width: auto;
     height: auto;
-    margin-left:  20px;
+    margin-left: 20px;
   }
   div.fb-page {
     display: none;
@@ -634,9 +634,6 @@ section.pane-page-title {
 /*@end*/
 
 /*Node type project - IPGroup*/
-body {
-  border: red solid;
-}
 .node-type-project .center-wrapper .panel-col-last {
   position: relative;
 }
@@ -658,14 +655,21 @@ body {
   overflow: visible;
 }
 .node-type-project .pane-node-field-user .pane-content {
+  border: 1px solid  #eaeaea;
   display: block;
   height: 100%;
   position: relative;
+  width: 100%;
+}
+.node-type-project .pane-node-field-user .pane-content,
+.node-type-project .pane-node-field-user .pane-content:before,
+.node-type-project .pane-node-field-user .pane-content:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .node-type-project .team-members {
   background: none repeat scroll 0 0 white;
-  /*border: 1px solid  #eaeaea;*/
-  border: 1px solid  #000000;
   padding: 5px 5px 22px;
   overflow: hidden;
 }
@@ -702,11 +706,17 @@ body {
   text-align: justify;
 }
 .node-type-project .field--name-field-image img {
-  /*border: 1px solid #eaeaea;*/
-  border: 1px solid #000000;
+  border: 1px solid #eaeaea;
   border-radius: 5px;
   height: auto;
-  width: 99%;
+  width: 100%;
+}
+.node-type-project .field--name-field-image img,
+.node-type-project .field--name-field-image img:before,
+.node-type-project .field--name-field-image img:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .node-type-project .team-member-photo img {
   border-radius: 5px;
@@ -740,6 +750,7 @@ body {
 }
 @media (max-width: 400px) {
   .node-type-project .center-wrapper .panel-col-last .inside {
+    margin: 0;
     position: relative;
   }
   .node-type-project .team-members-collapse-expand {
