@@ -20,9 +20,9 @@ function ipg_footer_default_fe_block_boxes() {
 
   $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'facebook_like';
-  $fe_block_boxes->format = 'full_html';
+  $fe_block_boxes->format = 'wysiwyg_';
   $fe_block_boxes->machine_name = 'facebook_like';
-  $fe_block_boxes->body = '<div id="fb-root">&nbsp;</div><div class="fb-like" data-action="like" data-href="https://www.facebook.com/IPGroupMD?fref=ts" data-layout="button" data-share="false" data-show-faces="false">&nbsp;</div>';
+  $fe_block_boxes->body = '<p><a href="https://www.facebook.com/IPGroupMD?fref=ts"><img alt="" src="/sites/default/files/img/facebook.png" style="width: 36px; height: 36px;" /></a></p>';
 
   $export['facebook_like'] = $fe_block_boxes;
 

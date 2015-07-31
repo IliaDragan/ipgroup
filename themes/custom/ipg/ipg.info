@@ -20,6 +20,7 @@ regions[content] = Content
 
 ; Styles
 stylesheets[all][] = css/styles.css
+stylesheets[all][] = css/wysiwyg.css
 
 ; Features
 features[] = favicon

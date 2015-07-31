@@ -492,7 +492,6 @@ section.pane-page-title {
 .front-page-vacancies .view-display-id-vacancies_list_pane .views-field-field-body a {
   color: #ffffff;
 }
-
 /*@end*/
 
 /*slideshow*/
@@ -629,6 +628,61 @@ section.pane-page-title {
   div .deck-3 .column.right,
   .pane-new-event {
     width: 100%;
+  }
+}
+/*@end*/
+/*page event*/
+.node-type-event .pane-page-title {
+  margin: 0;
+  color: #cccfd2;
+}
+.node-type-event .pane-page-title h2 {
+  margin: 0;
+}
+.node-type-event .field--name-field-date {
+  font-size: x-small;
+}
+.node-type-event .pane-node-field-date {
+  margin: 0;
+}
+.node-type-event .pane-page-title {
+  margin: -70px 0 0 0;
+  background: #464646;
+  opacity: 0.8;
+  width: auto;
+  max-width: 630px;
+  padding: 0 0 0 10px;
+}
+.node-type-event .pane-node-field-date {
+  margin: 0;
+  background: #464646;
+  opacity: 0.8;
+  width: auto;
+  max-width: 630px;
+  padding: 0 0 8px 10px;
+}
+.node-type-event .field--name-field-date {
+  color: #cccfd2;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 20px;
+  opacity: 1;
+  padding: 0;
+}
+.last-event img {
+  height: auto;
+  max-height: 473px;
+  width: 100%;
+  max-width: 630px;
+}
+.last-event img:hover {
+  -webkit-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+  -moz-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+  box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
+}
+@media (max-width: 480px) {
+  .jcarousel-skin-default {
+    display: none;
   }
 }
 /*@end*/
