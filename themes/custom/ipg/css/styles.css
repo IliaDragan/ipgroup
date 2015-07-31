@@ -459,6 +459,11 @@ section.pane-page-title {
   max-width: 200px;
   width: 31%;
 }
+@media  (max-width:400px) {
+  .pane-ipg-common-three-articles .pane-title {
+    text-align: center;
+  }
+}
 .view-display-id-vacancies_list_pane .view-content {
   border-top: 1px solid #eaeaea;
 }
@@ -954,3 +959,18 @@ div .item-list ul {
   }
 }
 /*@end*/
+/* Page 404 styles start. */
+.page-not-found-content,
+.page-not-found-image,
+.page-not-found-text {
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 700px) {
+  .page-not-found-text {
+    font-size: 1.5em;
+    padding-bottom: 5px;
+  }
+}
+/* Page 404 styles end. */
