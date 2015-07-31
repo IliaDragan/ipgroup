@@ -30,8 +30,8 @@ object {
   header,
   #main-content,
   #block-panels-mini-footer {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
     width: auto;
   }
 }
@@ -230,7 +230,23 @@ footer {
   line-height: 1em;
   margin: 0;
   padding: 20px 0;
-  width: 48.4375%;
+  width: 60%;
+}
+@media (max-width: 700px) {
+  .section-head {
+    margin-bottom: 40px;
+  }
+  .section-head section  h1 {
+    font-size: 3.2em;
+  }
+}
+@media (max-width: 400px) {
+  .section-head {
+    margin-bottom: 20px;
+  }
+  .section-head section  h1 {
+    font-size: 2.8em;
+  }
 }
 /* @end */
 
@@ -324,6 +340,13 @@ footer {
   }
 }
 @media  (max-width: 400px) {
+  .view-front-page-nodes .view-content {
+    text-align: center;
+  }
+  .view-front-page-nodes .views-row {
+    display: inline-block;
+    text-align: left;
+  }
   .view-front-page-nodes .views-field-type,
   .view-front-page-nodes .views-field-field-category {
     font-size: 1.2em;
@@ -412,6 +435,13 @@ section.pane-page-title {
   }
 }
 @media  (max-width: 400px) {
+  .pane-new-event {
+    text-align: center;
+  }
+  .view-new-event {
+    display: inline-block;
+    text-align: left;
+  }
   .view-new-event .views-field-type a {
     font-size: 1.2em;
   }
@@ -475,9 +505,14 @@ section.pane-page-title {
   }
 }
 @media  (max-width:700px) {
+  .front .pane-article-vacancies-list-pane {
+    text-align: center;
+  }
   .front-page-vacancies .view-display-id-vacancies_list_pane .views-row {
-    width: auto;
+    display: inline-block;
     max-width: 300px;
+    text-align: left;
+    width: 100%;
   }
   .front-page-vacancies .view-display-id-vacancies_list_pane .views-field-title h2 a {
     padding: 15px;
@@ -861,7 +896,7 @@ div.prose ol > li {
 
 /*projects page*/
 .page-projects .view-projects .project-wrapper {
-   margin: 5px 20px 20px 20px;
+  margin: 5px 20px 20px 20px;
 }
 div .item-list ul {
   list-style: none;
@@ -879,9 +914,9 @@ div .item-list ul {
   max-height: 278px;
 }
 .project-field .views-field-field-image {
-margin: 0 5px 0 5px;
+  margin: 0 5px 0 5px;
 }
-@media   (min-width:600px) and (max-width: 1440px) {
+@media (min-width:600px) and (max-width: 1440px) {
   .project-field:hover {
     -webkit-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
     -moz-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
@@ -915,8 +950,7 @@ margin: 0 5px 0 5px;
 }
 @media (max-width: 899px) {
   .page-projects .view-projects ul {
-   text-align: center;
+    text-align: center;
   }
 }
 /*@end*/
-
