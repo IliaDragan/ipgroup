@@ -959,6 +959,7 @@ div .item-list ul {
   }
 }
 /*@end*/
+
 /* Page 404 styles start. */
 .page-not-found-content,
 .page-not-found-image,
@@ -974,3 +975,47 @@ div .item-list ul {
   }
 }
 /* Page 404 styles end. */
+
+/*section-contacts*/
+.node__content .field__item p {
+  margin: 0;
+}
+#edit-name,
+#edit-mail,
+#edit-subject {
+  width: auto;
+  max-width: 280px;
+}
+#edit-message {
+  width: auto;
+  max-width: 290px !important;
+  height: 160px;
+  resize: none;
+  overflow: auto;
+}
+.resizable-textarea .grippie {
+  display: none;
+}
+@media (max-width: 951px) {
+ .page-contacts  .deck-3 .right {
+    display: none;
+ }
+}
+@media (max-width: 951px) {
+  .page-contacts  .deck-3 .twelve {
+    width: 800px;
+  }
+  .page-contacts .node__content {
+    text-align: center;
+  }
+}
+@media (max-width: 400px) {
+  .page-contacts .section-head {
+    margin-bottom: 20px;
+  }
+}
+.field--name-field-geocode {
+  margin-bottom: 20px;
+}
+/*@end*/
+
