@@ -30,8 +30,8 @@ object {
   header,
   #main-content,
   #block-panels-mini-footer {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
     width: auto;
   }
 }
@@ -114,6 +114,7 @@ header .logo img {
     top: 4px;
   }
   header .logo {
+    height: 40px;
     position: absolute;
     z-index: 999999;
   }
@@ -229,7 +230,23 @@ footer {
   line-height: 1em;
   margin: 0;
   padding: 20px 0;
-  width: 48.4375%;
+  width: 60%;
+}
+@media (max-width: 700px) {
+  .section-head {
+    margin-bottom: 40px;
+  }
+  .section-head section  h1 {
+    font-size: 3.2em;
+  }
+}
+@media (max-width: 400px) {
+  .section-head {
+    margin-bottom: 20px;
+  }
+  .section-head section  h1 {
+    font-size: 2.8em;
+  }
 }
 /* @end */
 
@@ -323,6 +340,13 @@ footer {
   }
 }
 @media  (max-width: 400px) {
+  .view-front-page-nodes .view-content {
+    text-align: center;
+  }
+  .view-front-page-nodes .views-row {
+    display: inline-block;
+    text-align: left;
+  }
   .view-front-page-nodes .views-field-type,
   .view-front-page-nodes .views-field-field-category {
     font-size: 1.2em;
@@ -411,6 +435,13 @@ section.pane-page-title {
   }
 }
 @media  (max-width: 400px) {
+  .pane-new-event {
+    text-align: center;
+  }
+  .view-new-event {
+    display: inline-block;
+    text-align: left;
+  }
   .view-new-event .views-field-type a {
     font-size: 1.2em;
   }
@@ -427,6 +458,11 @@ section.pane-page-title {
   margin: 1%;
   max-width: 200px;
   width: 31%;
+}
+@media  (max-width:400px) {
+  .pane-ipg-common-three-articles .pane-title {
+    text-align: center;
+  }
 }
 .view-display-id-vacancies_list_pane .view-content {
   border-top: 1px solid #eaeaea;
@@ -475,9 +511,14 @@ section.pane-page-title {
   }
 }
 @media  (max-width:700px) {
+  .front .pane-article-vacancies-list-pane {
+    text-align: center;
+  }
   .front-page-vacancies .view-display-id-vacancies_list_pane .views-row {
-    width: auto;
+    display: inline-block;
     max-width: 300px;
+    text-align: left;
+    width: 100%;
   }
   .front-page-vacancies .view-display-id-vacancies_list_pane .views-field-title h2 a {
     padding: 15px;
@@ -818,9 +859,54 @@ section.pane-page-title {
 }
 /*End node project*/
 
+/* @group Body field */
+div.prose {
+  clear: both;
+  color: #3e3e3e;
+  font-size: 1.071428571em;
+  line-height: 1.5em;
+}
+div.prose h2 {
+  color: #2a2a2a;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+div.prose h3 {
+  color: #2a2a2a;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+div.prose h4 {
+  color: #2a2a2a;
+}
+div.prose td {
+  padding: 15px;
+}
+div.prose ul,
+div.prose ol,
+section.panel-pane div.prose ul {
+  margin: 0 0 20px;
+  padding: 0 0 0 40px;
+  border: none;
+}
+div.prose ol {
+  padding: 0 0 0 40px;
+}
+div.prose ul > li,
+section.panel-pane div.prose ul > li {
+  margin: 0;
+  padding: 0;
+  list-style: square url(../images/square.png);
+  border: none;
+}
+div.prose ol > li {
+  list-style: decimal-leading-zero;
+}
+/* @end */
+
 /*projects page*/
 .page-projects .view-projects .project-wrapper {
-   margin: 5px 20px 20px 20px;
+  margin: 5px 20px 20px 20px;
 }
 div .item-list ul {
   list-style: none;
@@ -838,9 +924,9 @@ div .item-list ul {
   max-height: 278px;
 }
 .project-field .views-field-field-image {
-margin: 0 5px 0 5px;
+  margin: 0 5px 0 5px;
 }
-@media   (min-width:600px) and (max-width: 1440px) {
+@media (min-width:600px) and (max-width: 1440px) {
   .project-field:hover {
     -webkit-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
     -moz-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
@@ -874,10 +960,26 @@ margin: 0 5px 0 5px;
 }
 @media (max-width: 899px) {
   .page-projects .view-projects ul {
-   text-align: center;
+    text-align: center;
   }
 }
 /*@end*/
+
+/* Page 404 styles start. */
+.page-not-found-content,
+.page-not-found-image,
+.page-not-found-text {
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 700px) {
+  .page-not-found-text {
+    font-size: 1.5em;
+    padding-bottom: 5px;
+  }
+}
+/* Page 404 styles end. */
 
 /*section-contacts*/
 .node__content .field__item p {
@@ -921,3 +1023,4 @@ margin: 0 5px 0 5px;
   margin-bottom: 20px;
 }
 /*@end*/
+
