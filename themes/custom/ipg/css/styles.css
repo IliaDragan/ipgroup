@@ -715,6 +715,10 @@ section.pane-page-title {
   opacity: 1;
   padding: 0;
 }
+.node-type-event .field--name-field-image img {
+  width: auto;
+  height: auto;
+}
 .last-event img {
   height: auto;
   max-height: 473px;
