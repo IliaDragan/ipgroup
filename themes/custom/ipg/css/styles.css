@@ -94,6 +94,7 @@ ol {
 
 /* @group Logo */
 header .logo {
+  display: block !important;
   float: left;
   width: 180px;
   height: 75px;
@@ -101,7 +102,7 @@ header .logo {
   line-height: 0;
 }
 header .logo a {
-  display: block;
+  display: block !important;
   background: url(../images/logo-mobile.png) no-repeat;
 }
 header .logo img {
@@ -160,6 +161,14 @@ header .navhead nav ul li a.active {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
+}
+@media  (max-width: 700px) {
+  header .navhead nav {
+    width: 137px;
+    height: 36px;
+    display: block !important;
+    visibility: hidden;
+  }
 }
 /* @end */
 
@@ -684,7 +693,7 @@ section.pane-page-title {
   }
 }
 @media (max-width: 250px) {
- .view-all-event .views-field-field-date {
+  .view-all-event .views-field-field-date {
     display: none;
   }
 }
@@ -1062,9 +1071,9 @@ div .item-list ul {
   display: none;
 }
 @media (max-width: 951px) {
- .page-contacts  .deck-3 .right {
+  .page-contacts .deck-3 .right {
     display: none;
- }
+  }
 }
 @media (max-width: 951px) {
   .page-contacts  .deck-3 .twelve {
@@ -1083,4 +1092,3 @@ div .item-list ul {
   margin-bottom: 20px;
 }
 /*@end*/
-
