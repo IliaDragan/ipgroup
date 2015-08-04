@@ -635,6 +635,8 @@ section.pane-page-title {
   float: left;
   margin-right: 15px;
   margin: 0 15px 15px 0;
+  width: 30%;
+  height: auto;
 }
 .view-all-event .views-row {
   margin-bottom: 10px;
@@ -663,10 +665,10 @@ section.pane-page-title {
   color: #ffffff;
 }
 .view-all-event .views-row-even .views-field-body a p {
-  margin-top: 5px;
+  margin: 0;
 }
 .view-all-event .views-row-odd .views-field-body a p {
-  margin-top: 5px;
+  margin: 0;
 }
 .view-all-event .views-field-field-date {
   font-size: x-small;
@@ -679,6 +681,11 @@ section.pane-page-title {
   div .deck-3 .column.right,
   .pane-new-event {
     width: 100%;
+  }
+}
+@media (max-width: 250px) {
+ .view-all-event .views-field-field-date {
+    display: none;
   }
 }
 /*@end*/
