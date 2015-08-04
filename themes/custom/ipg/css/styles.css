@@ -369,6 +369,14 @@ footer {
 /* Front page one node view -- end. */
 
 /* @group Panels */
+section.panel-pane {
+  clear: both;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+section.pane-page-title {
+  margin: 0;
+}
 @media  (max-width: 700px) {
   div.deck .column.six {
     width: 47%;
@@ -383,10 +391,22 @@ footer {
   div.deck .column.right {
     float: left;
   }
+  div.deck-5 .column.middle {
+    float: right;
+    padding-right: 0;
+  }
+  div.deck-5 .column.right {
+    width: 100%;
+    padding: 0;
+  }
 }
 @media  (max-width: 400px) {
   div.deck .column.six {
     width: 100%;
+    padding: 0;
+  }
+  div.deck-5 .column.middle {
+    float: none;
     padding: 0;
   }
   .panel-2col-stacked .panel-col-first,
@@ -394,14 +414,7 @@ footer {
     width: 100%;
   }
 }
-section.panel-pane {
-  clear: both;
-  margin-bottom: 15px;
-  overflow: hidden;
-}
-section.pane-page-title {
-  margin: 0;
-}
+
 /* @end*/
 
 /*upcoming event*/
@@ -441,6 +454,13 @@ section.pane-page-title {
   margin: 0;
 }
 @media  (max-width: 700px) {
+  .front .pane-new-event {
+    clear: none;
+    float: right;
+    max-width: 300px;
+    padding: 0 0 0 1.5625%;
+    width: 47%;
+  }
   .pane-new-event {
     display: block;
   }
@@ -449,6 +469,13 @@ section.pane-page-title {
   }
 }
 @media  (max-width: 400px) {
+  .front .pane-new-event {
+    clear: both;
+    float: none;
+    max-width: none;
+    padding: 0;
+    width: 100%;
+  }
   .pane-new-event {
     text-align: center;
   }
@@ -518,6 +545,16 @@ section.pane-page-title {
   background-color: #3c3c3c;
   margin-top: 10px;
 }
+.front-page-vacancies .view-display-id-vacancies_list_pane .views-field-field-image a {
+  padding-left: 15px;
+}
+.front-page-vacancies .view-display-id-vacancies_list_pane .views-field-field-body a {
+  color: #ffffff;
+  padding-left: 10px;
+}
+.front-page-vacancies .views-field-title h2 a {
+  padding-left: 10px;
+}
 @media  (max-width:859px) {
   .front-page-vacancies .view-display-id-vacancies_list_pane .views-field-field-image img {
     width: 50px;
@@ -526,7 +563,13 @@ section.pane-page-title {
 }
 @media  (max-width:700px) {
   .front .pane-article-vacancies-list-pane {
+    clear: none;
+    display: block;
+    float: left;
+    max-width: 300px;
+    padding: 0 1.5625% 0 0;
     text-align: center;
+    width: 47%;
   }
   .front-page-vacancies .view-display-id-vacancies_list_pane .views-row {
     display: inline-block;
@@ -542,15 +585,14 @@ section.pane-page-title {
     display: none;
   }
 }
-.front-page-vacancies .view-display-id-vacancies_list_pane .views-field-field-image a {
-  padding-left: 15px;
-}
-.front-page-vacancies .view-display-id-vacancies_list_pane .views-field-field-body a {
-  color: #ffffff;
-  padding-left: 10px;
-}
-.front-page-vacancies .views-field-title h2 a {
-  padding-left: 10px;
+@media  (max-width:400px) {
+  .front .pane-article-vacancies-list-pane {
+    clear: both;
+    float: none;
+    max-width: none;
+    padding: 0;
+    width: 100%;
+  }
 }
 /*@end*/
 
@@ -776,15 +818,15 @@ section.pane-page-title {
 }
 #cboxClose,
 #cboxClose:hover {
-  background: url(../../images/colorbox_controls.png) transparent no-repeat -36px 5px;
+  background: url(../images/colorbox_controls.png) transparent no-repeat -36px 5px;
 }
 #cboxPrevious,
 #cboxPrevious:hover {
-  background: url(../../images/colorbox_controls.png) transparent no-repeat 0 5px;
+  background: url(../images/colorbox_controls.png) transparent no-repeat 0 5px;
 }
 #cboxNext,
 #cboxNext:hover {
-  background: url(../../images/colorbox_controls.png) transparent no-repeat -15px 5px;
+  background: url(../images/colorbox_controls.png) transparent no-repeat -15px 5px;
 }
 #cboxCurrent {
   color: #262626;
