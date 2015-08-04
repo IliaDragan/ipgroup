@@ -749,6 +749,46 @@ section.pane-page-title {
 }
 /*@end*/
 
+/* Colorbox default style change. */
+#cboxMiddleLeft,
+#cboxMiddleRight,
+#cboxTopCenter,
+#cboxTopLeft,
+#cboxTopRight,
+#cboxContent,
+#cboxBottomCenter,
+#cboxBottomLeft,
+#cboxBottomRight {
+  background-color: #ff7200;
+}
+
+#cboxCurrent {
+  color: #262626;
+}
+#cboxClose,
+#cboxClose:hover {
+  background: url(../../images/colorbox_controls.png) transparent no-repeat -36px 5px;
+}
+#cboxPrevious,
+#cboxPrevious:hover {
+  background: url(../../images/colorbox_controls.png) transparent no-repeat 0 5px;
+}
+#cboxNext,
+#cboxNext:hover {
+  background: url(../../images/colorbox_controls.png) transparent no-repeat -15px 5px;
+}
+#cboxCurrent {
+  color: #262626;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.resizable-textarea .grippie {
+  display: none;
+}
+/*@end*/
+
 /*Node type project - IPGroup*/
 .node-type-project .center-wrapper .panel-col-last {
   position: relative;
