@@ -1004,9 +1004,11 @@ div .item-list ul {
   }
   .page-projects .view-projects li {
     max-width: 200px;
-    width: auto;
     height: auto;
   }
+}
+.page-projects .view-projects .views-field-field-image img {
+  height: auto;
 }
 .project-field:hover {
   -webkit-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
