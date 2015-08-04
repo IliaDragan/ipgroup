@@ -756,6 +756,9 @@ section.pane-page-title {
 /*@end*/
 
 /*page event*/
+.node-type-event .deck.deck-3 {
+  padding-left: 15px;
+}
 .node-type-event .pane-page-title {
   margin: 0;
   color: #cccfd2;
@@ -825,6 +828,14 @@ section.pane-page-title {
 @media (max-width: 480px) {
   .node-type-event .jcarousel-skin-default {
     display: none;
+  }
+}
+@media (min-width: 600px) and (max-width: 801px) {
+  .node-type-event div.deck .twelve {
+    max-width: 60%;
+  }
+  .node-type-event .column.right {
+    max-width: 35%;
   }
 }
 /*@end*/
