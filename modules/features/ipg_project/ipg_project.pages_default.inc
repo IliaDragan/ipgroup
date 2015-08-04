@@ -239,7 +239,7 @@ function ipg_project_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'inline',
-      'formatter' => 'taxonomy_term_reference_link',
+      'formatter' => 'taxonomy_term_reference_plain',
       'delta_limit' => 0,
       'delta_offset' => '0',
       'delta_reversed' => FALSE,
