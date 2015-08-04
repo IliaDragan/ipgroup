@@ -734,12 +734,27 @@ section.pane-page-title {
     width: 100%;
   }
 }
-@media (max-width: 250px) {
-  .view-all-event .views-field-field-date {
+@media (max-width: 795px) {
+  .view-all-event p {
+    display: block;
+    display: -webkit-box;
+    max-width: 400px;
+    height: 109.2px;
+    margin: 0 auto;
+    line-height: 1.4;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 481px) {
+  .view-all-event .views-row img {
     display: none;
   }
 }
 /*@end*/
+
 /*page event*/
 .node-type-event .pane-page-title {
   margin: 0;
