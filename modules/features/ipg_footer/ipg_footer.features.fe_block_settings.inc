@@ -23,17 +23,17 @@ function ipg_footer_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'air' => array(
+      'ipg' => array(
         'region' => 'footer',
         'status' => 1,
-        'theme' => 'air',
+        'theme' => 'ipg',
         'weight' => 2,
       ),
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
+      'omega' => array(
+        'region' => 'footer',
+        'status' => 1,
+        'theme' => 'omega',
+        'weight' => 2,
       ),
       'seven' => array(
         'region' => '',

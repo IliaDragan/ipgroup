@@ -20,20 +20,20 @@ function ipg_front_page_slideshow__default_fe_block_settings() {
     'i18n_mode' => 0,
     'module' => 'views',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => '<front>',
     'roles' => array(),
     'themes' => array(
-      'air' => array(
+      'ipg' => array(
         'region' => 'promo',
         'status' => 1,
-        'theme' => 'air',
+        'theme' => 'ipg',
         'weight' => -11,
       ),
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
+      'omega' => array(
+        'region' => 'branding',
+        'status' => 1,
+        'theme' => 'omega',
+        'weight' => -11,
       ),
       'seven' => array(
         'region' => '',
@@ -43,7 +43,7 @@ function ipg_front_page_slideshow__default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   return $export;
