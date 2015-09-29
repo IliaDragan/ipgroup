@@ -15,13 +15,13 @@ projects[better_exposed_filters][subdir] = "contrib"
 projects[ckeditor_link][version] = "2.3"
 projects[ckeditor_link][subdir] = "contrib"
 
-projects[ctools][version] = "1.7"
+projects[ctools][version] = "1.9"
 projects[ctools][subdir] = "contrib"
 
 projects[colorbox][version] = "2.9"
 projects[colorbox][subdir] = "contrib"
 
-projects[date][version] = "2.8"
+projects[date][version] = "2.9"
 projects[date][subdir] = "contrib"
 
 projects[devel][version] = "1.5"
@@ -36,7 +36,7 @@ projects[entity_translation][subdir] = "contrib"
 projects[features][version] = "2.6"
 projects[features][subdir] = "contrib"
 
-projects[features_extra][version] = "1.0-beta1"
+projects[features_extra][version] = "1.0"
 projects[features_extra][subdir] = "contrib"
 
 projects[field_group][version] = "1.4"
@@ -54,7 +54,7 @@ projects[geophp][subdir] = "contrib"
 projects[jcarousel][version] = "2.7"
 projects[jcarousel][subdir] = "contrib"
 
-projects[jquery_update][version] = "2.6"
+projects[jquery_update][version] = "3.0-alpha2"
 projects[jquery_update][subdir] = "contrib"
 
 projects[i18n][version] = "1.13"
@@ -137,6 +137,10 @@ projects[imce_wysiwyg][subdir] = "contrib"
 projects[imce][version] = "1.9"
 projects[imce][subdir] = "contrib"
 
+;Themes
+projects[omega][version] = "4.4"
+projects[omega][subdir] = "contrib"
+
 ; Libraries
 libraries[autopager][destination]    = "libraries"
 libraries[autopager][directory_name] = "autopager"
@@ -156,7 +160,7 @@ libraries[colorbox][download][url]  = "http://github.com/jackmoore/colorbox/arch
 libraries[leaflet][destination]    = "libraries"
 libraries[leaflet][directory_name] = "leaflet"
 libraries[leaflet][download][type] = "get"
-libraries[leaflet][download][url]  = "http://leaflet-cdn.s3.amazonaws.com/build/leaflet-0.7.3.zip"
+libraries[leaflet][download][url]  = "http://cdn.leafletjs.com/downloads/leaflet-0.7.3.zip"
 
 libraries[owl-carousel][destination]    = "libraries"
 libraries[owl-carousel][directory_name] = "owl-carousel"

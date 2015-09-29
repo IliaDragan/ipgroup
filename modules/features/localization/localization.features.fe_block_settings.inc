@@ -16,22 +16,24 @@ function localization_default_fe_block_settings() {
     'cache' => -1,
     'custom' => 0,
     'delta' => 'language',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
     'module' => 'locale',
     'node_types' => array(),
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'air' => array(
+      'ipg' => array(
         'region' => 'languages',
         'status' => 1,
-        'theme' => 'air',
+        'theme' => 'ipg',
         'weight' => -12,
       ),
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
+      'omega' => array(
+        'region' => 'branding',
+        'status' => 1,
+        'theme' => 'omega',
+        'weight' => -12,
       ),
       'seven' => array(
         'region' => '',
