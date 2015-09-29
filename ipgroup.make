@@ -15,13 +15,13 @@ projects[better_exposed_filters][subdir] = "contrib"
 projects[ckeditor_link][version] = "2.3"
 projects[ckeditor_link][subdir] = "contrib"
 
-projects[ctools][version] = "1.7"
+projects[ctools][version] = "1.9"
 projects[ctools][subdir] = "contrib"
 
 projects[colorbox][version] = "2.9"
 projects[colorbox][subdir] = "contrib"
 
-projects[date][version] = "2.8"
+projects[date][version] = "2.9"
 projects[date][subdir] = "contrib"
 
 projects[devel][version] = "1.5"
@@ -36,7 +36,7 @@ projects[entity_translation][subdir] = "contrib"
 projects[features][version] = "2.6"
 projects[features][subdir] = "contrib"
 
-projects[features_extra][version] = "1.0-beta1"
+projects[features_extra][version] = "1.0"
 projects[features_extra][subdir] = "contrib"
 
 projects[field_group][version] = "1.4"
@@ -54,7 +54,7 @@ projects[geophp][subdir] = "contrib"
 projects[jcarousel][version] = "2.7"
 projects[jcarousel][subdir] = "contrib"
 
-projects[jquery_update][version] = "2.6"
+projects[jquery_update][version] = "3.0-alpha2"
 projects[jquery_update][subdir] = "contrib"
 
 projects[i18n][version] = "1.13"
