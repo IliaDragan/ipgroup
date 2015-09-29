@@ -205,10 +205,10 @@ footer {
 }
 @media (max-width: 400px) {
   #mini-panel-footer div.column.right.six {
-    width: 30%;
+    width: 25%;
   }
   #mini-panel-footer div.column.middle.six {
-    width: 55%;
+    width: 75%;
   }
 }
 @media (max-width: 700px) {
