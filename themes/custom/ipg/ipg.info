@@ -1,0 +1,27 @@
+; General information
+name        = IPG
+version     = 7.x-1.0
+description = IPGroup omega based theme.
+base theme = omega
+screenshot = screenshot.png
+engine = phptemplate
+core = 7.x
+
+; Regions
+regions[languages] = Languages
+regions[help] = Help
+regions[highlighted] = Highlighted
+regions[header] = Header
+regions[promo] = Promo section
+regions[footer] = Footer
+regions[sidebar_first] = Sidebar First
+regions[sidebar_second] = Sidebar Second
+regions[content] = Content
+
+; Styles
+stylesheets[all][] = css/styles.css
+stylesheets[all][] = css/wysiwyg.css
+
+; Features
+features[] = favicon
+features[] = logo

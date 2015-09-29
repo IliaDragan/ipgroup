@@ -123,6 +123,32 @@ function ipg_footer_default_panels_mini() {
     $pane->uuid = '24d4f923-bb69-42e9-8402-ad3b721c0f93';
     $display->content['new-24d4f923-bb69-42e9-8402-ad3b721c0f93'] = $pane;
     $display->panels['right'][0] = 'new-24d4f923-bb69-42e9-8402-ad3b721c0f93';
+    $pane = new stdClass();
+    $pane->pid = 'new-1fc81f4f-c807-4f62-bf9e-64081fc2645a';
+    $pane->panel = 'right';
+    $pane->type = 'block';
+    $pane->subtype = 'block-4';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => 'facebook_like',
+      'css_class' => '',
+    );
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = '1fc81f4f-c807-4f62-bf9e-64081fc2645a';
+    $display->content['new-1fc81f4f-c807-4f62-bf9e-64081fc2645a'] = $pane;
+    $display->panels['right'][1] = 'new-1fc81f4f-c807-4f62-bf9e-64081fc2645a';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $mini->display = $display;
