@@ -17,3 +17,21 @@ Drupal.behaviors.userImageToggle = {
         });
     }
 }
+
+Drupal.behaviors.resizeNavOnScroll = {
+    attach: function (context, settings) {
+        jQuery(function($){
+            var width = $(window).width();
+            if ( width > 700) {
+                $(window).bind('scroll', function() {
+                    if ($(window).scrollTop() != 0) {
+                        $('header').addClass('fixed');
+                    }
+                    else {
+                        $('header').removeClass('fixed').removeAttr('class');
+                    }
+                });
+            }
+        });
+    }
+}

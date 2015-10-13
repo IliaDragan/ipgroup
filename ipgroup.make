@@ -60,6 +60,9 @@ projects[jquery_update][subdir] = "contrib"
 projects[i18n][version] = "1.13"
 projects[i18n][subdir] = "contrib"
 
+projects[languageicons][version] = "1.1"
+projects[languageicons][subdir] = "contrib"
+
 projects[leaflet][version] = "1.1"
 projects[leaflet][subdir] = "contrib"
 
