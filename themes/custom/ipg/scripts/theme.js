@@ -35,3 +35,14 @@ Drupal.behaviors.resizeNavOnScroll = {
         });
     }
 }
+
+Drupal.behaviors.slideToRight = {
+    attach: function (context, settings) {
+        jQuery(function($){
+            $('.imgohidden').hide();
+            $('.imgohover').hover(function() {
+                $('.imgohidden').animate({width: 'toggle'}, 500);
+            });
+        });
+    }
+}
