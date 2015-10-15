@@ -240,3 +240,29 @@ function ipg_item_list($variables) {
 
   return '<div class="item-list">' . $output . '</div>';
 }
+
+/**
+ * Implements hook_languageicons_icon().
+ */
+function ipg_languageicons_icon($variables) {
+  $language = $variables['language'];
+  $title    = $variables['title'];
+
+  if ($path = drupal_get_path('theme', variable_get('theme_default', NULL)) . '/images/*_icon.png') {
+    $title = $title ? $title : $language->native;
+    // Build up $image for theme_image() consumption.
+    $image = array(
+        'path' => str_replace('*', $language->language, check_plain($path)),
+        'alt' => $title,
+        'title' => $title,
+        'attributes' => array(
+            'class' => array('language-icon'),
+        ),
+    );
+    if ($size = check_plain('30x20')) {
+      list($width, $height) = explode('x', $size);
+      $image += array('width' => $width, 'height' => $height);
+    }
+    return theme('image', $image);
+  }
+}

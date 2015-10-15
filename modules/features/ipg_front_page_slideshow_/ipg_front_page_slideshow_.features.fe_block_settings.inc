@@ -23,16 +23,22 @@ function ipg_front_page_slideshow__default_fe_block_settings() {
     'pages' => '<front>',
     'roles' => array(),
     'themes' => array(
+      'air' => array(
+        'region' => 'promo',
+        'status' => 1,
+        'theme' => 'air',
+        'weight' => -11,
+      ),
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
       'ipg' => array(
         'region' => 'promo',
         'status' => 1,
         'theme' => 'ipg',
-        'weight' => -11,
-      ),
-      'omega' => array(
-        'region' => 'branding',
-        'status' => 1,
-        'theme' => 'omega',
         'weight' => -11,
       ),
       'seven' => array(
