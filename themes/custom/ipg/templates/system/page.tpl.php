@@ -100,10 +100,10 @@
       </section>
     </div>
   <?php endif; ?>
+  <?php if (!empty($page['promo'])) : ?>
+    <?php print render($page['promo']); ?>
+  <?php endif; ?>
   <div id="main-content" role="main">
-    <?php if (!empty($page['promo'])) : ?>
-      <?php print render($page['promo']); ?>
-    <?php endif; ?>
     <section>
       <?php print $messages; ?>
       <?php if ($page['highlighted']): ?>

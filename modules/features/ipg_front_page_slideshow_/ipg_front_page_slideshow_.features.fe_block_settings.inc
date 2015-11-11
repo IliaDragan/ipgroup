@@ -36,10 +36,10 @@ function ipg_front_page_slideshow__default_fe_block_settings() {
         'weight' => 0,
       ),
       'ipg' => array(
-        'region' => 'promo',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'ipg',
-        'weight' => -11,
+        'weight' => -17,
       ),
       'seven' => array(
         'region' => '',
@@ -50,6 +50,46 @@ function ipg_front_page_slideshow__default_fe_block_settings() {
     ),
     'title' => '',
     'visibility' => 1,
+  );
+
+  $export['views-front_page_slideshow-block_1'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'front_page_slideshow-block_1',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '<front>',
+    'roles' => array(),
+    'themes' => array(
+      'air' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'air',
+        'weight' => 0,
+      ),
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'ipg' => array(
+        'region' => 'promo',
+        'status' => 1,
+        'theme' => 'ipg',
+        'weight' => 4,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
   );
 
   return $export;
