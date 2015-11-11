@@ -141,8 +141,8 @@ projects[imce][version] = "1.9"
 projects[imce][subdir] = "contrib"
 
 ;Themes
+projects[omega][type] = "theme"
 projects[omega][version] = "4.4"
-projects[omega][subdir] = "contrib"
 
 ; Libraries
 libraries[autopager][destination]    = "libraries"
