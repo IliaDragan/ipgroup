@@ -49,8 +49,8 @@ function ipg_preprocess_page(&$vars) {
       }
     }
     elseif (!empty($vars['node']->type)) {
-      if (!empty($vars['node']->field_category['und'][0]['taxonomy_term']->name)) {
-        $vars['section_head'] = t($vars['node']->field_category['und'][0]['taxonomy_term']->name);
+      if (!empty($vars['node']->field_category[LANGUAGE_NONE][0]['taxonomy_term']->name)) {
+        $vars['section_head'] = t($vars['node']->field_category[LANGUAGE_NONE][0]['taxonomy_term']->name);
       }
       else {
         $type = $vars['node']->type;
