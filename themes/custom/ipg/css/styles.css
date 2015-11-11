@@ -22,7 +22,7 @@ header div.top {
   float: left;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 701px) {
   .header {
     float: right;
     padding: 40px 0;
@@ -120,10 +120,11 @@ ol {
 .language-switcher-locale-url li {
   display: inline;
 }
-.language-switcher-locale-url li.active a {
-  text-decoration: underline !important;
-  color: #ff7200;
-  font-weight: bold;
+.language-icon {
+  filter: opacity(0.3);
+}
+.active .language-icon {
+  filter: opacity(1);
 }
 @media  (max-width: 700px) {
   .language-switcher-locale-url {
@@ -134,8 +135,6 @@ ol {
     margin: 1%;
   }
   .language-switcher-locale-url li a {
-    background: #2a2a2a;
-    border-radius: 5px;
     display: inline-block;
     padding: 5px 10px;
   }
