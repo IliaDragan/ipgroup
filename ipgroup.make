@@ -51,6 +51,9 @@ projects[geofield][subdir] = "contrib"
 projects[geophp][version] = "1.7"
 projects[geophp][subdir] = "contrib"
 
+projects[google_analytics][version] = "2.1"
+projects[google_analytics][subdir] = "contrib"
+
 projects[jcarousel][version] = "2.7"
 projects[jcarousel][subdir] = "contrib"
 
