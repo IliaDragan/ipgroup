@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the IPG statistics feature.
+ */
+
+include_once 'ipg_statistics.features.inc';

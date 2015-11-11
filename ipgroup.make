@@ -51,6 +51,9 @@ projects[geofield][subdir] = "contrib"
 projects[geophp][version] = "1.7"
 projects[geophp][subdir] = "contrib"
 
+projects[google_analytics][version] = "2.1"
+projects[google_analytics][subdir] = "contrib"
+
 projects[jcarousel][version] = "2.7"
 projects[jcarousel][subdir] = "contrib"
 
@@ -141,8 +144,8 @@ projects[imce][version] = "1.9"
 projects[imce][subdir] = "contrib"
 
 ;Themes
+projects[omega][type] = "theme"
 projects[omega][version] = "4.4"
-projects[omega][subdir] = "contrib"
 
 ; Libraries
 libraries[autopager][destination]    = "libraries"
