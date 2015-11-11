@@ -89,7 +89,7 @@ function ipg_front_page_slideshow__default_fe_block_settings() {
       ),
     ),
     'title' => '',
-    'visibility' => 0,
+    'visibility' => 1,
   );
 
   return $export;
