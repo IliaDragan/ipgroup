@@ -23,16 +23,22 @@ function site_common_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
+      'air' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'air',
+        'weight' => 0,
+      ),
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
       'ipg' => array(
         'region' => 'header',
         'status' => 1,
         'theme' => 'ipg',
-        'weight' => 0,
-      ),
-      'omega' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'omega',
         'weight' => 0,
       ),
       'seven' => array(
