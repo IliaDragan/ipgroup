@@ -46,3 +46,15 @@ Drupal.behaviors.slideToRight = {
         });
     }
 }
+
+Drupal.behaviors.promoFrontpageSlider = {
+    attach: function (context, settings) {
+        var sliderWidth = 0;
+        jQuery('.view-front-page-slideshow ul li img', context).each(function(index) {
+            sliderWidth += this.width;
+        });
+        if (sliderWidth > 0) {
+            jQuery('.view-front-page-slideshow div.item-list', context).width(sliderWidth);
+        }
+    }
+}

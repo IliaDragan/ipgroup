@@ -126,6 +126,16 @@ function ipg_roles_and_permision_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'administer features'.
+  $permissions['administer features'] = array(
+    'name' => 'administer features',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Employee' => 'Employee',
+    ),
+    'module' => 'features',
+  );
+
   // Exported permission: 'administer image styles'.
   $permissions['administer image styles'] = array(
     'name' => 'administer image styles',
@@ -142,6 +152,15 @@ function ipg_roles_and_permision_user_default_permissions() {
       'Administrator' => 'Administrator',
     ),
     'module' => 'menu',
+  );
+
+  // Exported permission: 'administer modules'.
+  $permissions['administer modules'] = array(
+    'name' => 'administer modules',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'system',
   );
 
   // Exported permission: 'administer nodes'.
@@ -477,6 +496,16 @@ function ipg_roles_and_permision_user_default_permissions() {
     'module' => 'admin_menu',
   );
 
+  // Exported permission: 'generate features'.
+  $permissions['generate features'] = array(
+    'name' => 'generate features',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Employee' => 'Employee',
+    ),
+    'module' => 'features',
+  );
+
   // Exported permission: 'geocoder_service_all_handlers'.
   $permissions['geocoder_service_all_handlers'] = array(
     'name' => 'geocoder_service_all_handlers',
@@ -585,6 +614,26 @@ function ipg_roles_and_permision_user_default_permissions() {
       'Employee' => 'Employee',
     ),
     'module' => 'geocoder',
+  );
+
+  // Exported permission: 'manage features'.
+  $permissions['manage features'] = array(
+    'name' => 'manage features',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Employee' => 'Employee',
+    ),
+    'module' => 'features',
+  );
+
+  // Exported permission: 'rename features'.
+  $permissions['rename features'] = array(
+    'name' => 'rename features',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Employee' => 'Employee',
+    ),
+    'module' => 'features',
   );
 
   // Exported permission: 'revert revisions'.

@@ -22,7 +22,7 @@ header div.top {
   float: left;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 701px) {
   .header {
     float: right;
     padding: 40px 0;
@@ -120,10 +120,11 @@ ol {
 .language-switcher-locale-url li {
   display: inline;
 }
-.language-switcher-locale-url li.active a {
-  text-decoration: underline !important;
-  color: #ff7200;
-  font-weight: bold;
+.language-icon {
+  filter: opacity(0.3);
+}
+.active .language-icon {
+  filter: opacity(1);
 }
 @media  (max-width: 700px) {
   .language-switcher-locale-url {
@@ -134,8 +135,6 @@ ol {
     margin: 1%;
   }
   .language-switcher-locale-url li a {
-    background: #2a2a2a;
-    border-radius: 5px;
     display: inline-block;
     padding: 5px 10px;
   }
@@ -603,6 +602,9 @@ section.pane-page-title {
   color: #3c3c3c;
   display: block;
   padding: 0 15px 15px 0;
+}
+.front-page-vacancies h2 {
+  margin: 0 0 15px 0;
 }
 .front-page-vacancies .view-display-id-vacancies_list_pane .view-content {
   border-top: none;
@@ -1268,4 +1270,46 @@ div .item-list ul {
 .page-vacancies .pane-ipg-common-three-articles img:hover {
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
   -webkit-filter: grayscale(0%);
+}
+/* Frontpage css slideshow */
+.front .grid-display .deck-5 .column {
+  margin-top: 15px;
+}
+@keyframes frontslider {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -50%;
+  }
+}
+@-webkit-keyframes frontslider {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -50%;
+  }
+}
+
+.l-region--promo {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.view-front-page-slideshow div.item-list {
+  position: relative;
+}
+.view-front-page-slideshow div .item-list ul {
+  animation: frontslider 50s linear 0s normal none infinite running;
+  display: block;
+  font-size: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  white-space: nowrap;
+}
+.view-front-page-slideshow div .item-list ul li {
+  display: inline-block;
 }
