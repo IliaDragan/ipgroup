@@ -87,6 +87,11 @@ function ipg_project_views_default_views() {
   $handler->display->display_options['sorts']['field_status_tid']['table'] = 'field_data_field_status';
   $handler->display->display_options['sorts']['field_status_tid']['field'] = 'field_status_tid';
   $handler->display->display_options['sorts']['field_status_tid']['order'] = 'DESC';
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
