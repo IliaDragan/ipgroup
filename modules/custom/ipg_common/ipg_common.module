@@ -5,6 +5,20 @@
  */
 
 /**
+ * Implements hook_menu().
+ */
+function ipg_common_menu() {
+  $items['project-info/%node'] = array(
+    'page callback' => 'ipg_common_project_info_popup',
+    'page arguments' => array(1),
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+
+  return $items;
+}
+
+/**
  * Implements hook_block_info().
  */
 function ipg_common_block_info() {
@@ -285,4 +299,17 @@ function ipg_common_simple_text_block($delta) {
   else {
     return '';
   }
+}
+
+/**
+ * Callback function for project popup information.
+ *
+ * @param $node
+ */
+function ipg_common_project_info_popup($node) {
+  $node_view = node_view($node);
+  $rendered_node = drupal_render($node_view);
+  echo $rendered_node;
+
+  exit(0);
 }
