@@ -1141,6 +1141,12 @@ div .item-list ul {
   max-width: 250px;
   max-height: 278px;
 }
+.project-field .views-field-title h2 {
+  color: #ff7200;
+  margin: 0;
+  padding: 5px 0 5px 0;
+  text-align: center;
+}
 .project-field .views-field-field-image {
   margin: 0 5px 0 5px;
 }
@@ -1171,10 +1177,9 @@ div .item-list ul {
 .page-projects .view-projects li:hover {
   animation: projecthoverli 5s linear 0s normal none infinite running;
 }
-.page-projects .view-projects li:hover .project-title a {
+.page-projects .view-projects li:hover .views-field-title h2 {
   color: #2a2a2a;
 }
-
 .page-projects .view-projects li:hover  .image-project img {
   -webkit-filter: opacity(0.1);
   filter: opacity(0.1);
@@ -1207,11 +1212,7 @@ div .item-list ul {
     box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
   }
 }
-.project-field .views-field-title h2 {
-  text-align: center;
-  margin: 0;
-  padding: 5px 0 5px 0;
-}
+
 @media (max-width: 663px) {
   .page-projects .project-wrapper {
     width: auto;
