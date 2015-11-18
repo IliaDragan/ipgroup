@@ -1199,6 +1199,12 @@ div .item-list ul {
   height: auto;
 }
 .page-projects #cboxLoadedContent .node--project .field--name-field-status {
+  float: left;
+  margin: 10px 0;
+}
+.page-projects #cboxLoadedContent .node--project .field--name-field-link-field {
+  float: right;
+  font-weight: bold;
   margin: 10px 0;
 }
 .page-projects #cboxLoadedContent .node--project .field--name-body {

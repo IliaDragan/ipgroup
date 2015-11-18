@@ -44,7 +44,7 @@ function ipg_project_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
         'language' => array(
           'weight' => '1',
@@ -53,7 +53,7 @@ function ipg_project_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
-            'weight' => '3',
+            'weight' => '4',
             'visible' => FALSE,
           ),
         ),
