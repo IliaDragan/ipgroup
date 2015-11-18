@@ -1130,11 +1130,11 @@ div .item-list ul {
   list-style: none;
   margin: 20px;
 }
-.page-projects li {
+.page-projects .view-projects li {
   display: inline-block;
 }
-.page-projects li .views-row-odd ,
-.page-projects li .views-row-even {
+.page-projects .view-projects li .views-row-odd ,
+.page-projects .view-projects li .views-row-even {
   text-align: center;
   width: auto;
   height: auto;
@@ -1144,6 +1144,62 @@ div .item-list ul {
 .project-field .views-field-field-image {
   margin: 0 5px 0 5px;
 }
+
+@keyframes projecthoverli {
+  0%   {background-color: #ffffff;}
+  10%   {background-color: #ffff00;}
+  30%  {background-color: #ff7200;}
+  50% {background-color: #ff0000;}
+  70%  {background-color: #ff7200;}
+  90%   {background-color: #ffff00;}
+  100%   {background-color: #ffffff;}
+}
+@-webkit-keyframes projecthoverli {
+  0%   {background-color: #ffffff;}
+  10%   {background-color: #ffff00;}
+  30%  {background-color: #ff7200;}
+  50% {background-color: #ff0000;}
+  70%  {background-color: #ff7200;}
+  90%   {background-color: #ffff00;}
+  100%   {background-color: #ffffff;}
+}
+.page-projects .view-projects .project-field .image-project a {
+  display: block;
+  line-height: 0;
+  background: url("../images/fullscreen-dark.png") 50% 50% no-repeat;
+}
+.page-projects .view-projects li:hover {
+  animation: projecthoverli 5s linear 0s normal none infinite running;
+}
+.page-projects .view-projects li:hover .project-title a {
+  color: #2a2a2a;
+}
+
+.page-projects .view-projects li:hover  .image-project img {
+  -webkit-filter: opacity(0.1);
+  filter: opacity(0.1);
+}
+/*project colorbox*/
+.page-projects #cboxLoadedContent {
+  background-color: #ffffff;
+  padding: 20px;
+}
+.page-projects #cboxLoadedContent h2 {
+  margin-top: 0;
+  text-align: center;
+}
+.page-projects #cboxLoadedContent .node--project .field--name-field-image img {
+  border-radius: 5px;
+  display: block;
+  height: auto;
+}
+.page-projects #cboxLoadedContent .node--project .field--name-field-status {
+  margin: 10px 0;
+}
+.page-projects #cboxLoadedContent .node--project .field--name-body {
+  text-align: justify;
+}
+
 @media (min-width:600px) and (max-width: 1440px) {
   .project-field:hover {
     -webkit-box-shadow: 4px 4px 9px 0px rgba(50, 50, 50, 0.8);
