@@ -60,6 +60,22 @@ function ipg_front_page_slideshow__image_default_styles() {
     ),
   );
 
+  // Exported image style: frontpage_slider.
+  $styles['frontpage_slider'] = array(
+    'label' => 'Frontpage slider',
+    'effects' => array(
+      2 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => '',
+          'height' => 250,
+          'upscale' => 1,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   return $styles;
 }
 

@@ -51,6 +51,9 @@ projects[geofield][subdir] = "contrib"
 projects[geophp][version] = "1.7"
 projects[geophp][subdir] = "contrib"
 
+projects[google_analytics][version] = "2.1"
+projects[google_analytics][subdir] = "contrib"
+
 projects[jcarousel][version] = "2.7"
 projects[jcarousel][subdir] = "contrib"
 
@@ -59,6 +62,9 @@ projects[jquery_update][subdir] = "contrib"
 
 projects[i18n][version] = "1.13"
 projects[i18n][subdir] = "contrib"
+
+projects[languageicons][version] = "1.1"
+projects[languageicons][subdir] = "contrib"
 
 projects[leaflet][version] = "1.1"
 projects[leaflet][subdir] = "contrib"
@@ -138,8 +144,8 @@ projects[imce][version] = "1.9"
 projects[imce][subdir] = "contrib"
 
 ;Themes
+projects[omega][type] = "theme"
 projects[omega][version] = "4.4"
-projects[omega][subdir] = "contrib"
 
 ; Libraries
 libraries[autopager][destination]    = "libraries"
