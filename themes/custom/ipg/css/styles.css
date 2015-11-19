@@ -121,9 +121,11 @@ ol {
   display: inline;
 }
 .language-icon {
+  -webkit-filter: opacity(0.3);
   filter: opacity(0.3);
 }
 .active .language-icon {
+  -webkit-filter: opacity(1);
   filter: opacity(1);
 }
 @media  (max-width: 700px) {
