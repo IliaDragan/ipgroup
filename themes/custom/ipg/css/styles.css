@@ -634,6 +634,72 @@ section.pane-page-title {
   background-color: #3c3c3c;
   margin-top: 10px;
 }
+
+
+
+
+
+
+@keyframes vacancy_image {
+  0%   {filter: blur(0) opacity(1); width: 130px;}
+  50% {filter: blur(2px) opacity(0.3); width: 130px;}
+  100%   {width: 0;}
+}
+@-webkit-keyframes vacancy_image {
+  0%   {-webkit-filter: blur(0) opacity(1); width: 130px;}
+  50% {-webkit-filter: blur(2px) opacity(0.3); width: 130px;}
+  100%   {width: 0;}
+}
+
+@keyframes vacancy_title {
+  0%   {font-size: 13px; padding: 0; text-align: left;}
+  50%   {font-size: 13px; padding: 0; text-align: left;}
+  100%   {font-size: 18px; padding: 0 10px; text-align: center;}
+}
+@-webkit-keyframes vacancy_title {
+  0%   {font-size: 13px; padding: 0; text-align: left;}
+  50%   {font-size: 13px; padding: 0; text-align: left;}
+  100%   {font-size: 18px; padding: 0 10px; text-align: center;}
+}
+
+@keyframes vacancy_body {
+  0%   {font-size: 13px; font-weight: normal; padding: 0; text-align: left;}
+  50%   {font-size: 13px; font-weight: normal; padding: 0; text-align: left;}
+  100%   {font-size: 15px; font-weight: bold; padding: 0 10px; text-align: justify;}
+}
+@-webkit-keyframes vacancy_body {
+  0%   {font-size: 13px; font-weight: normal; padding: 0; text-align: left;}
+  50%   {font-size: 13px; font-weight: normal; padding: 0; text-align: left;}
+  100%   {font-size: 15px; font-weight: bold; padding: 0 10px; text-align: justify;}
+}
+
+.front-page-vacancies .view-display-id-vacancies_list_pane .views-row:hover {
+  box-shadow: inset 0 0 20px #ff7200;
+}
+.view-display-id-vacancies_list_pane .views-row:hover .views-field-field-image {
+  animation: vacancy_image 1s linear 0s normal none 1 running;
+  filter: blur(2px) opacity(0.3);
+  -webkit-filter: blur(2px) opacity(0.3);
+  width: 0;
+  overflow: visible;
+}
+.view-display-id-vacancies_list_pane .views-row:hover .views-field-field-image img {
+  max-width: none;
+}
+.view-display-id-vacancies_list_pane .views-row:hover .views-field-title {
+  animation: vacancy_title 1s linear 0s normal none 1 running;
+  font-size: 18px;
+  text-align: center;
+  padding: 0 10px;
+}
+.view-display-id-vacancies_list_pane .views-row:hover .views-field-field-body {
+  animation: vacancy_body 1s linear 0s normal none 1 running;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 0 10px;
+  text-align: justify;
+}
+
 .front-page-vacancies .view-display-id-vacancies_list_pane .views-field-field-image a {
   padding-left: 15px;
 }
