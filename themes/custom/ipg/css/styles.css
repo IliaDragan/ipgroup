@@ -331,6 +331,26 @@ footer {
 .view-front-page-nodes .views-row {
   max-width: 300px;
 }
+
+/* Frontpage nodes images sepia effect*/
+.view-front-page-nodes .views-row img {
+  filter: sepia(70%);
+  -webkit-filter: sepia(70%);
+}
+@keyframes frontnode {
+  0%   {filter: sepia(70%);}
+  100%   {filter: sepia(0);}
+}
+@-webkit-keyframes frontnode {
+  0%   {-webkit-filter: sepia(70%);}
+  100%   {-webkit-filter: sepia(0);}
+}
+.view-front-page-nodes .views-row img:hover {
+  animation: frontnode 500ms linear 0s normal none 1 running;
+  filter: sepia(0);
+  -webkit-filter: sepia(0);
+}
+
 .view-front-page-nodes.grey .views-row,
 .view-front-page-nodes.orange .views-row-even {
   background: #eaeaea none repeat scroll 0 0;
@@ -360,7 +380,7 @@ footer {
 
 .view-front-page-nodes .views-field .field-content a {
   display: block;
-  padding: 0 12px 8px;
+  padding: 12px 12px 0;
 }
 
 .view-front-page-nodes .views-field-field-image,
@@ -382,7 +402,6 @@ footer {
   color: #6a6a6a;
   font-weight: bold;
   padding-top: 15px;
-  padding-bottom: 5px;
   text-transform: uppercase;
 }
 .view-front-page-nodes.dark .prose,
@@ -1361,6 +1380,9 @@ div .item-list ul {
   margin: 0;
   padding: 0;
   width: 100%;
+}
+.view-front-page-slideshow div.view-content {
+  overflow: hidden;
 }
 .view-front-page-slideshow div.item-list {
   position: relative;
