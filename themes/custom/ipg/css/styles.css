@@ -899,6 +899,9 @@ section.pane-page-title {
 .node-type-event .pane-last-evente div.item-list ul {
   margin: 0;
 }
+.node-type-event .pane-last-evente div.item-list ul li {
+  margin-bottom: 10px;
+}
 .node-type-event .img-last-event img {
   height: auto;
   width: 100%;
