@@ -778,38 +778,49 @@ section.pane-page-title {
 /*@end*/
 
 /*Event list*/
-.view-all-event .views-row img {
-  float: left;
-  margin-right: 15px;
-  margin: 0 15px 15px 0;
-  width: 30%;
-  height: auto;
-}
 .view-all-event .views-row {
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-left: 10px;
-  width: auto;
-  max-height: 156px;
-  height: auto;
-}
-.page-events .view-all-event .views-row {
   clear: both;
+  height: auto;
+  margin-bottom: 10px;
+  max-height: 156px;
   overflow: hidden;
+  width: auto;
 }
 .view-all-event .views-row-odd {
   background-color: #eaeaea;
   color: #464646;
 }
-.view-all-event .views-field-field-date {
-  font-size: 10px;
-}
-.view-all-event .views-row-odd .views-field-body a {
-  color: #464646;
-}
 .view-all-event .views-row-even {
   background-color: #2a2a2a;
   color: #ffffff;
+}
+.view-all-event .views-field-field-image {
+  float: left;
+  width: 30%;
+}
+.view-all-event .views-field-field-image a {
+  display: block;
+  line-height: 0;
+  padding: 15px;
+}
+.view-all-event .views-field-field-image img {
+  height: auto;
+}
+.view-all-event .views-field-field-date {
+  font-size: 10px;
+  line-height: 10px;
+  padding: 15px 15px 10px;
+}
+.view-all-event .views-field-title a {
+  display: block;
+  padding: 0 15px;
+}
+.view-all-event .views-field-body a {
+  display: block;
+  padding: 0 15px 15px 15px;
+}
+.view-all-event .views-row-odd .views-field-body a {
+  color: #464646;
 }
 .view-all-event .views-row-even .views-field-body a {
   color: #ffffff;
@@ -819,16 +830,6 @@ section.pane-page-title {
 }
 .view-all-event .views-row-odd .views-field-body a p {
   margin: 0;
-}
-.view-all-event .views-field-title h2 {
-  margin: 0;
-}
-@media (max-width: 700px) {
-  .page-events,
-  div .deck-3 .column.right,
-  .pane-new-event {
-    width: 100%;
-  }
 }
 @media (max-width: 795px) {
   .view-all-event p {
@@ -844,8 +845,16 @@ section.pane-page-title {
     text-overflow: ellipsis;
   }
 }
+
+@media (max-width: 700px) {
+  .page-events,
+  div .deck-3 .column.right,
+  .pane-new-event {
+    width: 100%;
+  }
+}
 @media (max-width: 481px) {
-  .view-all-event .views-row img {
+  .view-all-event .views-field-field-image {
     display: none;
   }
 }
