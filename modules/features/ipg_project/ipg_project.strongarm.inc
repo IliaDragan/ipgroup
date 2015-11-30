@@ -56,6 +56,10 @@ function ipg_project_strongarm() {
             'weight' => '4',
             'visible' => FALSE,
           ),
+          'teaser' => array(
+            'weight' => '4',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),
@@ -128,6 +132,34 @@ function ipg_project_strongarm() {
   $strongarm->name = 'pathauto_node_project_pattern';
   $strongarm->value = 'projects/[node:title]';
   $export['pathauto_node_project_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_action_project';
+  $strongarm->value = '2';
+  $export['rh_node_action_project'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_override_project';
+  $strongarm->value = 0;
+  $export['rh_node_override_project'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_redirect_project';
+  $strongarm->value = '';
+  $export['rh_node_redirect_project'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'rh_node_redirect_response_project';
+  $strongarm->value = '301';
+  $export['rh_node_redirect_response_project'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

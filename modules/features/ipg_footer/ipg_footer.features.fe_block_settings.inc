@@ -23,12 +23,6 @@ function ipg_footer_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'air' => array(
-        'region' => 'footer',
-        'status' => 1,
-        'theme' => 'air',
-        'weight' => 2,
-      ),
       'bartik' => array(
         'region' => '',
         'status' => 0,

@@ -36,12 +36,15 @@ Drupal.behaviors.resizeNavOnScroll = {
 
 Drupal.behaviors.slideToRight = {
   attach: function (context, settings) {
-    var $imgohidden = jQuery('.imgohidden', context);
-    var $imgohover = jQuery('.imgohover', context);
-    $imgohidden.hide();
-    $imgohover.hover(function() {
-      $imgohidden.animate({width: 'toggle'}, 500);
-    });
+    var $imgo = jQuery('p.imgo', context);
+    if ($imgo.width() >= 580) {
+      var $imgohidden = jQuery('.imgohidden', context);
+      var $imgohover = jQuery('.imgohover', context);
+      $imgohidden.hide();
+      $imgohover.hover(function() {
+        $imgohidden.animate({width: 'toggle'}, 500);
+      });
+    }
   }
 }
 
