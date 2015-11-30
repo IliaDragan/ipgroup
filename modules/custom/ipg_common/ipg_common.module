@@ -307,7 +307,7 @@ function ipg_common_simple_text_block($delta) {
  * @param $node
  */
 function ipg_common_project_info_popup($node) {
-  $node_view = node_view($node);
+  $node_view = node_view($node, 'teaser');
   $rendered_node = drupal_render($node_view);
   echo $rendered_node;
 

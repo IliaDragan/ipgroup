@@ -23,12 +23,6 @@ function localization_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'air' => array(
-        'region' => 'languages',
-        'status' => 1,
-        'theme' => 'air',
-        'weight' => -12,
-      ),
       'bartik' => array(
         'region' => '',
         'status' => 0,

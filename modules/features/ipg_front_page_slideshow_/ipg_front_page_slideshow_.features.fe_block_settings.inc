@@ -23,12 +23,6 @@ function ipg_front_page_slideshow__default_fe_block_settings() {
     'pages' => '<front>',
     'roles' => array(),
     'themes' => array(
-      'air' => array(
-        'region' => 'promo',
-        'status' => 1,
-        'theme' => 'air',
-        'weight' => -11,
-      ),
       'bartik' => array(
         'region' => '',
         'status' => 0,
@@ -63,12 +57,6 @@ function ipg_front_page_slideshow__default_fe_block_settings() {
     'pages' => '<front>',
     'roles' => array(),
     'themes' => array(
-      'air' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'air',
-        'weight' => 0,
-      ),
       'bartik' => array(
         'region' => '',
         'status' => 0,
