@@ -97,6 +97,12 @@ function ipg_event_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
+  /* Field: Content: Category */
+  $handler->display->display_options['fields']['field_category_event']['id'] = 'field_category_event';
+  $handler->display->display_options['fields']['field_category_event']['table'] = 'field_data_field_category_event';
+  $handler->display->display_options['fields']['field_category_event']['field'] = 'field_category_event';
+  $handler->display->display_options['fields']['field_category_event']['label'] = '';
+  $handler->display->display_options['fields']['field_category_event']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: date -  start date (field_date) */
   $handler->display->display_options['sorts']['field_date_value']['id'] = 'field_date_value';
   $handler->display->display_options['sorts']['field_date_value']['table'] = 'field_data_field_date';

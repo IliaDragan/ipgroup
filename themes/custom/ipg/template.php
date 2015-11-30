@@ -111,6 +111,30 @@ function ipg_preprocess_views_view(&$vars) {
 }
 
 /**
+ * Prepare variables for display the simple view of rows one after another.
+ */
+function ipg_preprocess_views_view_unformatted(&$vars) {
+  $view = $vars['view'];
+  if ($view->name == 'all_event') {
+    if (empty($vars['classes_array'])) {
+      $vars['classes_array'] = array();
+    }
+    foreach ($view->result as $id => $result) {
+      if (!empty($result->field_field_category_event[0]['raw']['value'])) {
+        if (empty($vars['classes_array'][$id])) {
+          $vars['classes_array'][$id] = $result->field_field_category_event[0]['raw']['value'];
+        }
+        else {
+          $vars['classes_array'][$id] .= ' ' . $result->field_field_category_event[0]['raw']['value'];
+        }
+      }
+    }
+    $theme_path = drupal_get_path('theme', 'ipg');
+    drupal_add_js($theme_path . '/scripts/events_view.js');
+  }
+}
+
+/**
  * Implements hook_preprocess_field().
  */
 function ipg_preprocess_field(&$variables) {
