@@ -1,6 +1,5 @@
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font: normal 14px/21px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 a {
   color: #ff7200;
@@ -9,8 +8,6 @@ a {
 blockquote {
   margin: 0 0 20px;
   padding: 16px 5.7692308% 15px;
-  font-size: .933333333em;
-  line-height: 1.5em;
   font-style: italic;
   background: #eaeaea;
 }
@@ -23,7 +20,6 @@ blockquote.darkgray {
 }
 blockquote.darkgray strong {
   color: #ff7200;
-  font-size: 14px;
 }
 blockquote.lightgray {
   background: #eaeaea;

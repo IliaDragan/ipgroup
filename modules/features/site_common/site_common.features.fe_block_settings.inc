@@ -23,12 +23,6 @@ function site_common_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
-      'air' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'air',
-        'weight' => 0,
-      ),
       'bartik' => array(
         'region' => '',
         'status' => 0,

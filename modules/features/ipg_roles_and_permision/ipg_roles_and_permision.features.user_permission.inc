@@ -181,6 +181,27 @@ function ipg_roles_and_permision_user_default_permissions() {
     'module' => 'owlcarousel_ui',
   );
 
+  // Exported permission: 'administer rh_node'.
+  $permissions['administer rh_node'] = array(
+    'name' => 'administer rh_node',
+    'roles' => array(),
+    'module' => 'rabbit_hole',
+  );
+
+  // Exported permission: 'administer rh_taxonomy'.
+  $permissions['administer rh_taxonomy'] = array(
+    'name' => 'administer rh_taxonomy',
+    'roles' => array(),
+    'module' => 'rabbit_hole',
+  );
+
+  // Exported permission: 'administer rh_user'.
+  $permissions['administer rh_user'] = array(
+    'name' => 'administer rh_user',
+    'roles' => array(),
+    'module' => 'rabbit_hole',
+  );
+
   // Exported permission: 'administer taxonomy'.
   $permissions['administer taxonomy'] = array(
     'name' => 'administer taxonomy',
@@ -216,6 +237,33 @@ function ipg_roles_and_permision_user_default_permissions() {
       'Administrator' => 'Administrator',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'bypass rh_node'.
+  $permissions['bypass rh_node'] = array(
+    'name' => 'bypass rh_node',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'rabbit_hole',
+  );
+
+  // Exported permission: 'bypass rh_taxonomy'.
+  $permissions['bypass rh_taxonomy'] = array(
+    'name' => 'bypass rh_taxonomy',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'rabbit_hole',
+  );
+
+  // Exported permission: 'bypass rh_user'.
+  $permissions['bypass rh_user'] = array(
+    'name' => 'bypass rh_user',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'rabbit_hole',
   );
 
   // Exported permission: 'create address content'.
@@ -624,6 +672,27 @@ function ipg_roles_and_permision_user_default_permissions() {
       'Employee' => 'Employee',
     ),
     'module' => 'features',
+  );
+
+  // Exported permission: 'php redirect rh_node'.
+  $permissions['php redirect rh_node'] = array(
+    'name' => 'php redirect rh_node',
+    'roles' => array(),
+    'module' => 'rabbit_hole',
+  );
+
+  // Exported permission: 'php redirect rh_taxonomy'.
+  $permissions['php redirect rh_taxonomy'] = array(
+    'name' => 'php redirect rh_taxonomy',
+    'roles' => array(),
+    'module' => 'rabbit_hole',
+  );
+
+  // Exported permission: 'php redirect rh_user'.
+  $permissions['php redirect rh_user'] = array(
+    'name' => 'php redirect rh_user',
+    'roles' => array(),
+    'module' => 'rabbit_hole',
   );
 
   // Exported permission: 'rename features'.
