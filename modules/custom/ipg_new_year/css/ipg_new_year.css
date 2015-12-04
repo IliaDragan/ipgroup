@@ -7,9 +7,12 @@ body {
   box-shadow: inset 0px 0px 50px 40px #cafafc;
 }
 #ny-content {
+  height: 533px;
   position: fixed;
   top: 95px;
-  right: calc(50% - 225px);
+  right: calc(50% - 231px);
+  width: 462px;
+  z-index: 9999;
 }
 #ny-content img {
   width: 100%;
@@ -20,22 +23,22 @@ body {
 @-webkit-keyframes nystar {
   0% {top: 0; right: 20px; width: 0;}
   50% {top: 0; right: 20px; width: 0;}
-  100% {top: 100px; right: calc(50% - 31px); width: 70px;}
+  100% {top: 115px; right: calc(50% - 31px); width: 70px;}
 }
 @-moz-keyframes nystar {
   0% {top: 0; right: 20px; width: 0;}
   50% {top: 0; right: 20px; width: 0;}
-  100% {top: 100px; right: calc(50% - 31px); width: 70px;}
+  100% {top: 115px; right: calc(50% - 31px); width: 70px;}
 }
 @-o-keyframes nystar {
   0% {top: 0; right: 20px; width: 0;}
   50% {top: 0; right: 20px; width: 0;}
-  100% {top: 100px; right: calc(50% - 31px); width: 70px;}
+  100% {top: 115px; right: calc(50% - 35px); width: 70px;}
 }
 @keyframes nystar {
   0% {top: 0; right: 20px; width: 0;}
   50% {top: 0; right: 20px; width: 0;}
-  100% {top: 100px; right: calc(50% - 31px); width: 70px;}
+  100% {top: 115px; right: calc(50% - 35px); width: 70px;}
 }
 #ny-star-unclicked {
   -webkit-animation-name: nystar;
@@ -63,8 +66,8 @@ body {
   animation-timing-function: linear;
 
   position: fixed;
-  top: 100px;
-  right: calc(50% - 31px);
+  top: 115px;
+  right: calc(50% - 35px);
   width: 70px;
   z-index: 99999;
 }
@@ -120,6 +123,7 @@ body {
   animation-timing-function: linear;
 }
 /* -end-Before click on star */
+
 #ny-close {
   position: absolute;
   top: 0;
@@ -128,9 +132,9 @@ body {
   z-index: 99999;
 }
 #ny-star {
+  left: 194px;
   position: absolute;
-  top: 5px;
-  right: 194px;
+  top: 20px;
   width: 70px;
   z-index: 99999;
 }
@@ -141,6 +145,114 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 450px;
+  width: 462px;
   z-index: 99990;
 }
+#ny-garland {
+  left: 97px;
+  position: absolute;
+  top: 96px;
+  width: 297px;
+  z-index: 99997;
+}
+/* Christmas tree toys. */
+.ny-toy {
+  position: absolute;
+  z-index: 99999;
+}
+#ny-toy-1 {
+  left: 329px;
+  top: 395px;
+  width: 34px;
+}
+#ny-toy-2 {
+  left: 232px;
+  top: 100px;
+  width: 36px;
+}
+#ny-toy-3 {
+  left: 118px;
+  top: 286px;
+  width: 36px;
+}
+#ny-toy-4 {
+  left: 70px;
+  top: 299px;
+  width: 45px;
+}
+#ny-toy-5 {
+  left: 154px;
+  top: 91px;
+  width: 47px;
+}
+#ny-toy-6 {
+  left: 303px;
+  top: 186px;
+  width: 67px;
+}
+#ny-toy-7 {
+  left: 282px;
+  top: 220px;
+  width: 37px;
+}
+#ny-toy-8 {
+  left: 71px;
+  top: 343px;
+  width: 41px;
+}
+#ny-toy-9 {
+  left: 159px;
+  top: 138px;
+  width: 60px;
+}
+#ny-toy-10 {
+  left: 268px;
+  top: 280px;
+  width: 64px;
+}
+#ny-toy-11 {
+  left: 195px;
+  top: 90px;
+  width: 39px;
+}
+#ny-toy-12 {
+  left: 263px;
+  top: 366px;
+  width: 42px;
+}
+#ny-toy-13 {
+  left: 295px;
+  top: 142px;
+  width: 28px;
+}
+#ny-toy-14 {
+  left: 98px;
+  top: 353px;
+  width: 77px;
+}
+#ny-toy-15 {
+  left: 223px;
+  top: 203px;
+  width: 47px;
+}
+#ny-toy-16 {
+  left: 329px;
+  top: 350px;
+  width: 36px;
+}
+#ny-toy-17 {
+  left: 177px;
+  top: 244px;
+  width: 36px;
+}
+#ny-toy-18 {
+  left: 380px;
+  top: 340px;
+  width: 35px;
+}
+#ny-toy-19 {
+  left: 167px;
+  top: 318px;
+  width: 64px;
+}
+/* -end-Christmas tree toys. */

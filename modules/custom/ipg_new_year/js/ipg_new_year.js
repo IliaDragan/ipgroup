@@ -11,7 +11,23 @@ Drupal.behaviors.ipgNewYear = {
     var $star = jQuery('#ny-star-unclicked', context);
     $star.on('click', function() {
       $star.replaceWith(settings.nyContent);
-      jQuery('#ny-tree').animate({height: '520px'}, 3000);
+      var $toys = jQuery('.ny-toy');
+      var $garland = jQuery('#ny-garland');
+      $toys.hide();
+      $garland.hide();
+      jQuery('#ny-tree').animate(
+        {
+          height: '533px'
+        },
+        {
+          duration:3000,
+          complete: function() {
+            $garland.show();
+            $toys.first().show("fast", function showNext() {
+              jQuery(this).next('.ny-toy').show(100, showNext);
+            });
+          }
+        });
     });
   }
 }
