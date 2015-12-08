@@ -48,6 +48,28 @@ Drupal.behaviors.slideToRight = {
   }
 }
 
+Drupal.behaviors.numbersGrowUp = {
+  attach: function (context, settings) {
+    var $number = jQuery('span.integer-number', context);
+
+    $number.each(function() {
+      var $this = jQuery(this);
+      var currentNumber = parseInt($this.html());
+      jQuery({numberValue: 0}).animate({numberValue: currentNumber}, {
+        duration: 3000,
+        easing: 'linear',
+        step: function () {
+          $this.html(Math.ceil(this.numberValue));
+        },
+        complete: function () {
+          $this.css("font-weight", "bold");
+          jQuery('span.integer-number-detail', context).show(1000);
+        }
+      });
+    });
+  }
+}
+
 Drupal.behaviors.promoFrontpageSlider = {
   attach: function (context, settings) {
     var sliderWidth = 0;
