@@ -68,5 +68,61 @@
   <div id="ny-toy-19" class="ny-toy">
     <img src="/<?php print $path; ?>/img/ystar.png" />
   </div>
+  <div id="ny-toy-1-action" class="ny-action">
+    <img src="/<?php print $path; ?>/img/gif/reindeer_antlers_ani.gif" />
+  </div>
+  <div id="ny-toy-2-action" class="ny-action">
+    <img src="/<?php print $path; ?>/img/gif/cat.gif" />
+  </div>
+  <div id="ny-toy-3-action" class="ny-action">
+    <img src="/<?php print $path; ?>/img/gif/snowman-waving.gif" />
+  </div>
+  <div id="ny-toy-4-action" class="ny-action">
+    <img src="/<?php print $path; ?>/img/gif/sledding.gif" />
+  </div>
+  <div id="ny-toy-5-action" class="ny-action">
+    <img src="/<?php print $path; ?>/img/gif/smile_hug.gif" />
+  </div>
+  <div id="ny-toy-6-action" class="ny-action">
+    <img src="/<?php print $path; ?>/img/gif/skating-santa.gif" />
+  </div>
+  <div id="ny-toy-7-action" class="ny-action">
+    <img src="/<?php print $path; ?>/img/gif/prostokvashino.png" />
+  </div>
+  <div id="ny-toy-8-action" class="ny-action hide-toy">
+    <img src="/<?php print $path; ?>/img/gif/santa-animated-elf.gif" />
+  </div>
+  <div id="ny-toy-9-action" class="ny-action">
+    <img src="/<?php print $path; ?>/img/gif/reindeer-dancing.gif" />
+  </div>
+  <div id="ny-toy-10-action" class="ny-action">
+    <img src="/<?php print $path; ?>/img/gif/nu-pogodi.png" />
+  </div>
+  <div id="ny-toy-11-action" class="ny-action">
+    <img src="/<?php print $path; ?>/img/gif/bell.gif" />
+  </div>
+  <div id="ny-toy-12-action" class="ny-action hide-toy">
+    <img src="/<?php print $path; ?>/img/gif/dog-play-with-ball.gif" />
+  </div>
+  <div id="ny-toy-13-action" class="ny-action hide-toy">
+    <img src="/<?php print $path; ?>/img/gif/cat-playing-with-ball.gif" />
+  </div>
+  <div id="ny-toy-14-action" class="ny-action">
+    <img src="/<?php print $path; ?>/img/gif/elf_presents_balance.gif" />
+  </div>
+  <div id="ny-toy-15-action" class="ny-action">
+    <img src="/<?php print $path; ?>/img/gif/snowman.gif" />
+  </div>
+  <div id="ny-toy-16-action" class="ny-action">
+    <img src="/<?php print $path; ?>/img/gif/cat-joy.gif" />
+  </div>
+  <div id="ny-toy-17-action" class="ny-action">
+    <img src="/<?php print $path; ?>/img/gif/sneguro4ka.png" />
+  </div>
+  <div id="ny-toy-18-action" class="ny-action">
+    <img src="/<?php print $path; ?>/img/gif/poussi.gif" />
+  </div>
+  <div id="ny-toy-19-action" class="ny-action hide-toy">
+    <img src="/<?php print $path; ?>/img/gif/santa-and-star.gif" />
+  </div>
 </div>
-

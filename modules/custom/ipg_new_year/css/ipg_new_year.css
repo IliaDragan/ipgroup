@@ -121,10 +121,13 @@ body {
   transform-origin:50% 50%;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+
+  cursor: pointer;
 }
 /* -end-Before click on star */
 
 #ny-close {
+  cursor: pointer;
   position: absolute;
   top: 0;
   right: 0;
@@ -132,6 +135,7 @@ body {
   z-index: 99999;
 }
 #ny-star {
+  cursor: pointer;
   left: 194px;
   position: absolute;
   top: 20px;
@@ -157,8 +161,9 @@ body {
 }
 /* Christmas tree toys. */
 .ny-toy {
+  cursor: pointer;
   position: absolute;
-  z-index: 99999;
+  z-index: 99998;
 }
 #ny-toy-1 {
   left: 329px;
@@ -256,3 +261,101 @@ body {
   width: 64px;
 }
 /* -end-Christmas tree toys. */
+
+/* Christmas toys actions. */
+.ny-action {
+  display: none;
+  position: absolute;
+  z-index: 99999;
+}
+#ny-toy-1-action {
+  bottom: 73px;
+  left: 80px;
+}
+#ny-toy-2-action {
+  left: 216px;
+  top: 82px;
+  width: 86px;
+}
+#ny-toy-3-action {
+  left: 77px;
+  top: 222px;
+}
+#ny-toy-4-action {
+  left: 50px;
+  top: 254px;
+}
+#ny-toy-5-action {
+  left: 20px;
+  top: 70px;
+}
+#ny-toy-6-action {
+  bottom: 15px;
+  left: 0;
+  width: 475px;
+}
+#ny-toy-7-action {
+  bottom: 0;
+  left: 0;
+  width: 425px;
+}
+#ny-toy-8-action {
+  bottom: 121px;
+  left: -5px;
+  width: 200px;
+}
+#ny-toy-9-action {
+  bottom: 0;
+  left: 35px;
+  width: 400px;
+}
+#ny-toy-10-action {
+  bottom: 0;
+  left: 0;
+  width: 462px;
+}
+#ny-toy-11-action {
+  left: 179px;
+  top: 59px;
+  width: 100px;
+}
+#ny-toy-12-action {
+  left: 168px;
+  top: 353px;
+  width: 165px;
+}
+#ny-toy-13-action {
+  left: 212px;
+  top: 98px;
+}
+#ny-toy-14-action {
+  bottom: 0;
+  left: 20px;
+  width: 200px;
+}
+#ny-toy-15-action {
+  bottom: 0;
+  left: 80px;
+  width: 300px;
+}
+#ny-toy-16-action {
+  bottom: 0;
+  left: 272px;
+  width: 170px;
+}
+#ny-toy-17-action {
+  bottom: 10px;
+  left: 165px;
+  width: 260px;
+}
+#ny-toy-18-action {
+  left: 356px;
+  top: 279px;
+  width: 80px;
+}
+#ny-toy-19-action {
+  bottom: -3px;
+  left: -10px;
+  width: 380px;
+}
+/* -end-Christmas toys actions. */
