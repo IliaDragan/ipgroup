@@ -1,0 +1,361 @@
+body, a:hover, textarea, input {
+  cursor: url("../img/cursor-tree.png"), default !important;
+}
+body {
+  -webkit-box-shadow: inset 0px 0px 50px 40px #cafafc;
+  -moz-box-shadow: inset 0px 0px 50px 40px #cafafc;
+  box-shadow: inset 0px 0px 50px 40px #cafafc;
+}
+#ny-content {
+  height: 533px;
+  position: fixed;
+  top: 95px;
+  right: calc(50% - 231px);
+  width: 462px;
+  z-index: 9999;
+}
+#ny-content img {
+  width: 100%;
+  height: auto;
+}
+
+/* Before click on star */
+@-webkit-keyframes nystar {
+  0% {top: 0; right: 20px; width: 0;}
+  50% {top: 0; right: 20px; width: 0;}
+  100% {top: 115px; right: calc(50% - 31px); width: 70px;}
+}
+@-moz-keyframes nystar {
+  0% {top: 0; right: 20px; width: 0;}
+  50% {top: 0; right: 20px; width: 0;}
+  100% {top: 115px; right: calc(50% - 31px); width: 70px;}
+}
+@-o-keyframes nystar {
+  0% {top: 0; right: 20px; width: 0;}
+  50% {top: 0; right: 20px; width: 0;}
+  100% {top: 115px; right: calc(50% - 35px); width: 70px;}
+}
+@keyframes nystar {
+  0% {top: 0; right: 20px; width: 0;}
+  50% {top: 0; right: 20px; width: 0;}
+  100% {top: 115px; right: calc(50% - 35px); width: 70px;}
+}
+#ny-star-unclicked {
+  -webkit-animation-name: nystar;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+
+  -moz-animation-name: nystar;
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 5s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: linear;
+
+  -o-animation-name: nystar;
+  -o-animation-delay: 0s;
+  -o-animation-duration: 5s;
+  -o-animation-iteration-count: 1;
+  -o-animation-timing-function: linear;
+
+  animation-name: nystar;
+  animation-delay: 0s;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+
+  position: fixed;
+  top: 115px;
+  right: calc(50% - 35px);
+  width: 70px;
+  z-index: 99999;
+}
+
+@-webkit-keyframes shakestar {
+  0% { -webkit-transform: scale(1); transform: scale(1);}
+  50% { -webkit-transform: scale(0.9); transform: scale(1);}
+  100% { -webkit-transform: scale(1); transform: scale(1);}
+}
+@-moz-keyframes shakestar {
+  0% { -moz-transform: scale(1); transform: scale(1);}
+  50% { -moz-transform: scale(0.9); transform: scale(1);}
+  100% { -moz-transform: scale(1); transform: scale(1);}
+}
+@-o-keyframes shakestar {
+  0% { -o-transform: scale(1); transform: scale(1);}
+  50% { -o-transform: scale(0.9); transform: scale(1);}
+  100% { -o-transform: scale(1); transform: scale(1);}
+}
+@keyframes shakestar {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+#ny-star-unclicked img
+{
+  -webkit-animation-name: shakestar;
+  -webkit-animation-delay: 5s;
+  -webkit-animation-duration: 200ms;
+  -webkit-transform-origin:50% 50%;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+
+  -moz-animation-name: shakestar;
+  -moz-animation-delay: 5s;
+  -moz-animation-duration: 200ms;
+  -moz-transform-origin:50% 50%;
+  -moz-animation-iteration-count: 2;
+  -moz-animation-timing-function: linear;
+
+  -o-animation-name: shakestar;
+  -o-animation-delay: 5s;
+  -o-animation-duration: 200ms;
+  -o-transform-origin:50% 50%;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: linear;
+
+  animation-name: shakestar;
+  animation-delay: 5s;
+  animation-duration: 200ms;
+  transform-origin:50% 50%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  cursor: pointer;
+}
+/* -end-Before click on star */
+
+#ny-close {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  z-index: 99999;
+}
+#ny-star {
+  cursor: pointer;
+  left: 194px;
+  position: absolute;
+  top: 20px;
+  width: 70px;
+  z-index: 99999;
+}
+
+#ny-tree {
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 462px;
+  z-index: 99990;
+}
+#ny-garland {
+  left: 97px;
+  position: absolute;
+  top: 96px;
+  width: 297px;
+  z-index: 99997;
+}
+/* Christmas tree toys. */
+.ny-toy {
+  cursor: pointer;
+  position: absolute;
+  z-index: 99998;
+}
+#ny-toy-1 {
+  left: 329px;
+  top: 395px;
+  width: 34px;
+}
+#ny-toy-2 {
+  left: 232px;
+  top: 100px;
+  width: 36px;
+}
+#ny-toy-3 {
+  left: 118px;
+  top: 286px;
+  width: 36px;
+}
+#ny-toy-4 {
+  left: 70px;
+  top: 299px;
+  width: 45px;
+}
+#ny-toy-5 {
+  left: 154px;
+  top: 91px;
+  width: 47px;
+}
+#ny-toy-6 {
+  left: 303px;
+  top: 186px;
+  width: 67px;
+}
+#ny-toy-7 {
+  left: 282px;
+  top: 220px;
+  width: 37px;
+}
+#ny-toy-8 {
+  left: 71px;
+  top: 343px;
+  width: 41px;
+}
+#ny-toy-9 {
+  left: 159px;
+  top: 138px;
+  width: 60px;
+}
+#ny-toy-10 {
+  left: 268px;
+  top: 280px;
+  width: 64px;
+}
+#ny-toy-11 {
+  left: 195px;
+  top: 90px;
+  width: 39px;
+}
+#ny-toy-12 {
+  left: 263px;
+  top: 366px;
+  width: 42px;
+}
+#ny-toy-13 {
+  left: 295px;
+  top: 142px;
+  width: 28px;
+}
+#ny-toy-14 {
+  left: 98px;
+  top: 353px;
+  width: 77px;
+}
+#ny-toy-15 {
+  left: 223px;
+  top: 203px;
+  width: 47px;
+}
+#ny-toy-16 {
+  left: 329px;
+  top: 350px;
+  width: 36px;
+}
+#ny-toy-17 {
+  left: 177px;
+  top: 244px;
+  width: 36px;
+}
+#ny-toy-18 {
+  left: 380px;
+  top: 340px;
+  width: 35px;
+}
+#ny-toy-19 {
+  left: 167px;
+  top: 318px;
+  width: 64px;
+}
+/* -end-Christmas tree toys. */
+
+/* Christmas toys actions. */
+.ny-action {
+  display: none;
+  position: absolute;
+  z-index: 99999;
+}
+#ny-toy-1-action {
+  bottom: 73px;
+  left: 80px;
+}
+#ny-toy-2-action {
+  left: 216px;
+  top: 82px;
+  width: 86px;
+}
+#ny-toy-3-action {
+  left: 77px;
+  top: 222px;
+}
+#ny-toy-4-action {
+  left: 50px;
+  top: 254px;
+}
+#ny-toy-5-action {
+  left: 20px;
+  top: 70px;
+}
+#ny-toy-6-action {
+  bottom: 15px;
+  left: 0;
+  width: 475px;
+}
+#ny-toy-7-action {
+  bottom: 0;
+  left: 0;
+  width: 425px;
+}
+#ny-toy-8-action {
+  bottom: 121px;
+  left: -5px;
+  width: 200px;
+}
+#ny-toy-9-action {
+  bottom: 0;
+  left: 35px;
+  width: 400px;
+}
+#ny-toy-10-action {
+  bottom: 0;
+  left: 0;
+  width: 462px;
+}
+#ny-toy-11-action {
+  left: 179px;
+  top: 59px;
+  width: 100px;
+}
+#ny-toy-12-action {
+  left: 168px;
+  top: 353px;
+  width: 165px;
+}
+#ny-toy-13-action {
+  left: 212px;
+  top: 98px;
+}
+#ny-toy-14-action {
+  bottom: 0;
+  left: 20px;
+  width: 200px;
+}
+#ny-toy-15-action {
+  bottom: 0;
+  left: 80px;
+  width: 300px;
+}
+#ny-toy-16-action {
+  bottom: 0;
+  left: 272px;
+  width: 170px;
+}
+#ny-toy-17-action {
+  bottom: 10px;
+  left: 165px;
+  width: 260px;
+}
+#ny-toy-18-action {
+  left: 356px;
+  top: 279px;
+  width: 80px;
+}
+#ny-toy-19-action {
+  bottom: -3px;
+  left: -10px;
+  width: 380px;
+}
+/* -end-Christmas toys actions. */
