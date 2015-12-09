@@ -1740,3 +1740,68 @@ div .item-list ul {
 .view-front-page-slideshow div .item-list ul li {
   display: inline-block;
 }
+
+/* integer numbers animations */
+@-webkit-keyframes nrcolor {
+  0% {color: yellow;}
+  100% {color: #ff0000;}
+}
+@-moz-keyframes nrcolor {
+  0% {color: yellow;}
+  100% {color: #ff0000;}
+}
+@-o-keyframes nrcolor {
+  0% {color: yellow;}
+  100% {color: #ff0000;}
+}
+@keyframes nrcolor {
+  0% {color: yellow;}
+  100% {color: #ff0000;}
+}
+
+.integer-number {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: none;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-play-state: running;
+  -webkit-animation-name: nrcolor;
+
+  -moz-animation-duration: 3s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-delay: 0s;
+  -moz-animation-direction: normal;
+  -moz-animation-fill-mode: none;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-play-state: running;
+  -moz-animation-name: nrcolor;
+
+  -o-animation-duration: 3s;
+  -o-animation-timing-function: linear;
+  -o-animation-delay: 0s;
+  -o-animation-direction: normal;
+  -o-animation-fill-mode: none;
+  -o-animation-iteration-count: 1;
+  -o-animation-play-state: running;
+  -o-animation-name: nrcolor;
+
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+  animation-name: nrcolor;
+
+  color: #ff0000;
+  font-size: 20px;
+}
+.integer-number-detail {
+  color: #ff0000;
+  display: none;
+  font-size: 20px;
+  font-weight: bold;
+}
