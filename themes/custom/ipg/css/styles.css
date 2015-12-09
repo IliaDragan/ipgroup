@@ -1797,9 +1797,11 @@ div .item-list ul {
   animation-name: nrcolor;
 
   color: #ff0000;
+  font-size: 20px;
 }
 .integer-number-detail {
   color: #ff0000;
   display: none;
+  font-size: 20px;
   font-weight: bold;
 }
