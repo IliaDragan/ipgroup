@@ -151,6 +151,32 @@ function ipg_vacancies_default_page_manager_handlers() {
     $display->content['new-7096bd25-90cf-4c5f-bf46-fbc645706681'] = $pane;
     $display->panels['left'][1] = 'new-7096bd25-90cf-4c5f-bf46-fbc645706681';
     $pane = new stdClass();
+    $pane->pid = 'new-be377a79-a01f-4e7b-9488-bbce2b05e261';
+    $pane->panel = 'left';
+    $pane->type = 'ipg_vacancy_form_link';
+    $pane->subtype = 'ipg_vacancy_form_link';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'argument_entity_id:node_1',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = 'be377a79-a01f-4e7b-9488-bbce2b05e261';
+    $display->content['new-be377a79-a01f-4e7b-9488-bbce2b05e261'] = $pane;
+    $display->panels['left'][2] = 'new-be377a79-a01f-4e7b-9488-bbce2b05e261';
+    $pane = new stdClass();
     $pane->pid = 'new-2830f58e-314b-418c-9d4b-b1c28919e576';
     $pane->panel = 'right';
     $pane->type = 'views_panes';

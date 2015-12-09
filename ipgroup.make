@@ -75,6 +75,12 @@ projects[libraries][subdir] = "contrib"
 projects[link][version] = "1.3"
 projects[link][subdir] = "contrib"
 
+projects[mailsystem][version] = "7.x-2.34"
+projects[mailsystem][subdir] = "contrib"
+
+projects[mimemail][version] = "7.x-1.0-beta4"
+projects[mimemail][subdir] = "contrib"
+
 projects[module_filter][version] = "2.0"
 projects[module_filter][subdir] = "contrib"
 
