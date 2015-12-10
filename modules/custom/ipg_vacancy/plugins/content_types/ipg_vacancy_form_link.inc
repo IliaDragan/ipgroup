@@ -32,9 +32,16 @@ function ipg_vacancy_form_link_edit_form($form, &$form_state) {
  */
 function ipg_vacancy_form_link_render($subtype, $conf, $panel_args, $context) {
   if (!empty($context[0]->data)) {
+    $path_to_module = drupal_get_path('module', 'ipg_vacancy');
+    drupal_add_css($path_to_module . '/css/ipg_vacancy.css');
+
     $node = $context[0]->data;
     $block = new stdClass();
-    $block->content = l(t('Apply'), 'vacancies/feedback/' . $node->nid);
+    $options = array(
+      'attributes' => array('class' => array('colorbox-load')),
+      'query' => array('iframe' => 'true', 'width' => '500px', 'height' => '500px'),
+    );
+    $block->content = l(t('Apply'), 'vacancy-apply/' . $node->nid, $options);
 
     return $block;
   }

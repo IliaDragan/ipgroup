@@ -1,0 +1,138 @@
+@-webkit-keyframes shakebutton {
+  0% { -webkit-transform: scale(1); transform: scale(1);}
+  50% { -webkit-transform: scale(0.98); transform: scale(1);}
+  100% { -webkit-transform: scale(1); transform: scale(1);}
+}
+@-moz-keyframes shakebutton {
+  0% { -moz-transform: scale(1); transform: scale(1);}
+  50% { -moz-transform: scale(0.98); transform: scale(1);}
+  100% { -moz-transform: scale(1); transform: scale(1);}
+}
+@-o-keyframes shakebutton {
+  0% { -o-transform: scale(1); transform: scale(1);}
+  50% { -o-transform: scale(0.98); transform: scale(1);}
+  100% { -o-transform: scale(1); transform: scale(1);}
+}
+@keyframes shakebutton {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.98); }
+  100% { transform: scale(1); }
+}
+
+.pane-ipg-vacancy-form-link a {
+  -webkit-animation-name: shakebutton;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 200ms;
+  -webkit-transform-origin:50% 50%;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+
+  -moz-animation-name: shakebutton;
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 200ms;
+  -moz-transform-origin:50% 50%;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+
+  -o-animation-name: shakebutton;
+  -o-animation-delay: 0s;
+  -o-animation-duration: 200ms;
+  -o-transform-origin:50% 50%;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: linear;
+
+  animation-name: shakebutton;
+  animation-delay: 0s;
+  animation-duration: 200ms;
+  transform-origin:50% 50%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  background-color: #ff7200;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  padding: 10px 30px;
+}
+.pane-ipg-vacancy-form-link a:hover {
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+
+  color: #ffffff;
+}
+.pane-ipg-vacancy-form-link a:visited {
+  color: #ffffff;
+}
+
+/* form styles */
+#ipg-vacancy-feedback-form {
+  background-color: white;
+  padding: 30px;
+}
+#ipg-vacancy-feedback-form .form-item,
+#ipg-vacancy-feedback-form input,
+#ipg-vacancy-feedback-form textarea {
+  max-width: 400px;
+}
+
+#ipg-vacancy-feedback-form .form-item-vacancy label {
+  display: inline-block;
+}
+
+@-webkit-keyframes waitcolor {
+  0% {color: #ffff00;}
+  30% {color: red;}
+  100% {color: #ffff00;}
+}
+@-moz-keyframes waitcolor {
+  0% {color: #ffff00;}
+  30% {color: red;}
+  100% {color: #ffff00;}
+}
+@-o-keyframes waitcolor {
+  0% {color: #ffff00;}
+  30% {color: red;}
+  100% {color: #ffff00;}
+}
+@keyframes waitcolor {
+  0% {color: #ffff00;}
+  30% {color: red;}
+  100% {color: #ffff00;}
+}
+#ipg-vacancy-feedback-form #form-wait-msg {
+  -webkit-animation-name: waitcolor;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+
+  -moz-animation-name: waitcolor;
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+
+  -o-animation-name: waitcolor;
+  -o-animation-delay: 0s;
+  -o-animation-duration: 2s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: linear;
+
+  animation-name: waitcolor;
+  animation-delay: 0s;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  font-size: 20px;
+  color: #ff7200;
+  padding: 50px;
+  position: fixed;
+  top: 40%;
+  z-index: 10;
+}

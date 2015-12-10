@@ -8,7 +8,7 @@
  * Implements hook_menu().
  */
 function ipg_vacancy_menu() {
-  $items['vacancies/feedback'] = array(
+  $items['vacancy-apply'] = array(
     'page callback' => 'ipg_vacancy_feedback_page',
     'access arguments' => array('access content'),
     'type' => MENU_CALLBACK,
@@ -18,12 +18,13 @@ function ipg_vacancy_menu() {
 }
 
 function ipg_vacancy_feedback_page() {
-  $nid = arg(2);
-  return drupal_get_form('ipg_vacancy_feedback_form', $nid);
+  $nid = arg(1);
+  $form = drupal_get_form('ipg_vacancy_feedback_form', $nid);
+
+  return $form;
 }
 
 function ipg_vacancy_feedback_form($form, &$form_state, $nid) {
-
   $view = views_get_view('article');
   $view->set_display('vacancies_list_pane');
   $view->pre_execute();
@@ -38,7 +39,6 @@ function ipg_vacancy_feedback_form($form, &$form_state, $nid) {
     '#type' => 'select',
     '#title' => t('Vacancy'),
     '#options' => $vacancies,
-    '#description' => t('Select the vacancy you want to apply to.'),
     '#required' => TRUE,
     '#default_value' => $nid,
   );
@@ -57,7 +57,6 @@ function ipg_vacancy_feedback_form($form, &$form_state, $nid) {
   $form['mail'] = array(
     '#type' => 'textfield',
     '#title' => t('E-mail'),
-    '#description' => t('Insert your e-mail address.'),
     '#required' => TRUE,
     '#default_value' => NULL,
   );
@@ -77,6 +76,20 @@ function ipg_vacancy_feedback_form($form, &$form_state, $nid) {
     '#value' => t('Send'),
   );
 
+  $wait_text = '<div id="form-wait-msg">' . t('Please wait ...') . '</div>';
+  $form['#attached'] = array(
+    'css' => array(
+      drupal_get_path('module', 'ipg_vacancy') . '/css/ipg_vacancy.css',
+    ),
+    'js' => array(
+      drupal_get_path('module', 'ipg_vacancy') . '/js/ipg_vacancy.js',
+      array(
+        'data' => array('vacancyFormWaitText' => $wait_text),
+        'type' => 'setting',
+      ),
+    ),
+  );
+
   return $form;
 }
 
@@ -86,8 +99,6 @@ function ipg_vacancy_feedback_form_validate(&$form, &$form_state) {
   if (!valid_email_address($values['mail'])){
     form_set_error('mail', t('The mail is invalid.'));
   }
-
-
 
   $file = file_save_upload('file', array());
   if ($file) {
