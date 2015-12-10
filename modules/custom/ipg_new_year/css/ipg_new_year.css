@@ -105,7 +105,7 @@ body {
   -moz-animation-delay: 5s;
   -moz-animation-duration: 200ms;
   -moz-transform-origin:50% 50%;
-  -moz-animation-iteration-count: 2;
+  -moz-animation-iteration-count: infinite;
   -moz-animation-timing-function: linear;
 
   -o-animation-name: shakestar;
