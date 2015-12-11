@@ -20,14 +20,16 @@ Drupal.behaviors.resizeNavOnScroll = {
   attach: function (context, settings) {
     var $window = jQuery(window, context);
     var $header = jQuery('header', context);
+    $header.clone().addClass('header--2').appendTo('body');
+    var $fixedHeader = jQuery('header.header--2', context);
     var width = $window.width();
     if ( width > 700) {
       $window.bind('scroll', function() {
         if ($window.scrollTop() != 0) {
-          $header.addClass('fixed');
+          $fixedHeader.addClass('fixed');
         }
         else {
-          $header.removeClass('fixed').removeAttr('class');
+          $fixedHeader.removeClass('fixed');
         }
       });
     }
