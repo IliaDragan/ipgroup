@@ -17,6 +17,9 @@ function ipg_vacancy_menu() {
   return $items;
 }
 
+/**
+ * Callback function for vacancy form page.
+ */
 function ipg_vacancy_feedback_page() {
   $nid = arg(1);
   $form = drupal_get_form('ipg_vacancy_feedback_form', $nid);
@@ -24,6 +27,9 @@ function ipg_vacancy_feedback_page() {
   return $form;
 }
 
+/**
+ * Vacancy apply form.
+ */
 function ipg_vacancy_feedback_form($form, &$form_state, $nid) {
   $view = views_get_view('article');
   $view->set_display('vacancies_list_pane');
@@ -44,26 +50,34 @@ function ipg_vacancy_feedback_form($form, &$form_state, $nid) {
   );
   $form['first_name'] = array(
     '#type' => 'textfield',
-    '#title' => t('First name'),
     '#required' => TRUE,
     '#default_value' => NULL,
+    '#attributes' => array(
+      'placeholder' => t('First name'),
+    ),
   );
   $form['last_name'] = array(
     '#type' => 'textfield',
-    '#title' => t('Last name'),
     '#required' => TRUE,
     '#default_value' => NULL,
+    '#attributes' => array(
+      'placeholder' => t('Last name'),
+    ),
   );
   $form['mail'] = array(
     '#type' => 'textfield',
-    '#title' => t('E-mail'),
     '#required' => TRUE,
     '#default_value' => NULL,
+    '#attributes' => array(
+      'placeholder' => t('Your e-mail'),
+    ),
   );
   $form['text'] = array(
     '#type' => 'textarea',
-    '#title' => t('Some comments'),
     '#default_value' => NULL,
+    '#attributes' => array(
+      'placeholder' => t('Comments'),
+    ),
   );
   $form['file'] = array(
     '#type' => 'file',
@@ -76,7 +90,7 @@ function ipg_vacancy_feedback_form($form, &$form_state, $nid) {
     '#value' => t('Send'),
   );
 
-  $wait_text = '<div id="form-wait-msg">' . t('Please wait ...') . '</div>';
+  $wait_text = '<div id="form-wait-overlay"></div><div id="form-wait-msg">' . t('Please wait ...') . '</div>';
   $form['#attached'] = array(
     'css' => array(
       drupal_get_path('module', 'ipg_vacancy') . '/css/ipg_vacancy.css',
@@ -93,6 +107,9 @@ function ipg_vacancy_feedback_form($form, &$form_state, $nid) {
   return $form;
 }
 
+/**
+ * Vacancy apply form validate.
+ */
 function ipg_vacancy_feedback_form_validate(&$form, &$form_state) {
   $values = $form_state['values'];
 
@@ -108,6 +125,9 @@ function ipg_vacancy_feedback_form_validate(&$form, &$form_state) {
   }
 }
 
+/**
+ * Vacancy apply form submit.
+ */
 function ipg_vacancy_feedback_form_submit(&$form, &$form_state) {
   global $language;
   $values = $form_state['values'];
@@ -116,7 +136,7 @@ function ipg_vacancy_feedback_form_submit(&$form, &$form_state) {
   $params['vacancy'] = $form['vacancy']['#options'][$values['vacancy']];
   $params['file'] = $form_state['storage']['file'];
 
-  drupal_mail('ipg_vacancy', 'ipg_vacancy_feedback', 'job@ipgroup.md', $language, $params, $from = NULL, $send = TRUE);
+  drupal_mail('ipg_vacancy', 'ipg_vacancy_feedback', 'helloworld@ipgroup.md', $language, $params, $from = NULL, $send = TRUE);
   drupal_set_message(t('Your application has been sent. We will contact you soon.'));
 }
 

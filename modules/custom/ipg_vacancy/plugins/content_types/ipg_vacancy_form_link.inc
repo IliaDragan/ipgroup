@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * File-hook for define custom ctools plugin.
+ */
 
 $plugin = array(
   'title' => t('Vacancy form link'),
@@ -39,7 +43,7 @@ function ipg_vacancy_form_link_render($subtype, $conf, $panel_args, $context) {
     $block = new stdClass();
     $options = array(
       'attributes' => array('class' => array('colorbox-load')),
-      'query' => array('iframe' => 'true', 'width' => '500px', 'height' => '500px'),
+      'query' => array('iframe' => 'true', 'width' => '500px', 'height' => '400px'),
     );
     $block->content = l(t('Apply'), 'vacancy-apply/' . $node->nid, $options);
 

@@ -131,8 +131,17 @@
 
   font-size: 20px;
   color: #ff7200;
-  padding: 50px;
   position: fixed;
-  top: 40%;
+  top: 45%;
   z-index: 10;
+}
+#ipg-vacancy-feedback-form #form-wait-overlay {
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  opacity: 0.7;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
 }
