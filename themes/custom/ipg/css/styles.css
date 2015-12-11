@@ -73,6 +73,12 @@ header div.top {
   }
 }
 
+header.header--2 {
+  display: none;
+}
+header.header--2.fixed {
+  display: block;
+}
 .fixed {
   z-index: 100;
   background: #2a2a2a;
@@ -264,6 +270,7 @@ header .navhead nav ul li a.active {
 footer {
   background-color: #000000;
   color: #ffffff;
+  overflow: hidden;
 }
 #block-panels-mini-footer {
   padding: 40px 0 30px;
