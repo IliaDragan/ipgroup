@@ -73,6 +73,12 @@ header div.top {
   }
 }
 
+header.header--2 {
+  display: none;
+}
+header.header--2.fixed {
+  display: block;
+}
 .fixed {
   z-index: 100;
   background: #2a2a2a;
@@ -159,12 +165,13 @@ ol {
   display: inline;
 }
 .language-icon {
-  -webkit-filter: opacity(0.3);
-  filter: opacity(0.3);
+  opacity: 0.3;
+  filter: alpha(opacity: 30);
+
 }
 .active .language-icon {
-  -webkit-filter: opacity(1);
-  filter: opacity(1);
+  opacity: 1;
+  filter: alpha(opacity: 100);
 }
 @media  (max-width: 700px) {
   .language-switcher-locale-url {
@@ -263,6 +270,7 @@ header .navhead nav ul li a.active {
 footer {
   background-color: #000000;
   color: #ffffff;
+  overflow: hidden;
 }
 #block-panels-mini-footer {
   padding: 40px 0 30px;
@@ -362,21 +370,68 @@ footer {
 
 /* Frontpage nodes images sepia effect*/
 .view-front-page-nodes .views-row img {
-  filter: sepia(70%);
   -webkit-filter: sepia(70%);
+  filter: sepia(70%);
+}
+
+@-webkit-keyframes frontnode {
+  0%   {-webkit-filter: sepia(70%); filter: sepia(70%);}
+  100%   {-webkit-filter: sepia(0); filter: sepia(0);}
+}
+@-moz-keyframes frontnode {
+  0%   {-moz-filter: sepia(70%); filter: sepia(70%);}
+  100%   {-moz-filter: sepia(0); filter: sepia(0);}
+}
+@-o-keyframes frontnode {
+  0%   {-o-filter: sepia(70%); filter: sepia(70%);}
+  100%   {-o-filter: sepia(0); filter: sepia(0);}
 }
 @keyframes frontnode {
   0%   {filter: sepia(70%);}
   100%   {filter: sepia(0);}
 }
-@-webkit-keyframes frontnode {
-  0%   {-webkit-filter: sepia(70%);}
-  100%   {-webkit-filter: sepia(0);}
-}
+
 .view-front-page-nodes .views-row img:hover {
-  animation: frontnode 500ms linear 0s normal none 1 running;
-  filter: sepia(0);
+  -webkit-animation-duration: 500ms;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: none;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-play-state: running;
+  -webkit-animation-name: frontnode;
+
+  -moz-animation-duration: 500ms;
+  -moz-animation-timing-function: linear;
+  -moz-animation-delay: 0s;
+  -moz-animation-direction: normal;
+  -moz-animation-fill-mode: none;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-play-state: running;
+  -moz-animation-name: frontnode;
+
+  -o-animation-duration: 500ms;
+  -o-animation-timing-function: linear;
+  -o-animation-delay: 0s;
+  -o-animation-direction: normal;
+  -o-animation-fill-mode: none;
+  -o-animation-iteration-count: 1;
+  -o-animation-play-state: running;
+  -o-animation-name: frontnode;
+
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+  animation-name: frontnode;
+
   -webkit-filter: sepia(0);
+  -moz-filter: sepia(0);
+  -o-filter: sepia(0);
+  filter: sepia(0);
 }
 
 .view-front-page-nodes.grey .views-row,
@@ -787,15 +842,15 @@ section.pane-page-title {
 .events-filter-button {
   cursor: pointer;
   display: block;
-  -webkit-filter: opacity(0.3);
-  filter: opacity(0.3);
+  opacity: 0.3;
+  filter: alpha(opacity: 30);
   height: 30px;
   position: relative;
   width: 200px;
 }
 .events-filter-button.active {
-  -webkit-filter: opacity(1);
-  filter: opacity(1);
+  opacity: 1;
+  filter: alpha(opacity: 100);
 }
 .events-filter-button .info {
   height: 30px;
@@ -835,40 +890,130 @@ section.pane-page-title {
   width: auto;
 }
 
-@keyframes eventhoverliodd {
-  0%   {background-color: #eaeaea;}
-  50%  {background-color: #b7b7b7;}
-  100%   {background-color: #eaeaea;}
-}
 @-webkit-keyframes eventhoverliodd {
   0%   {background-color: #eaeaea;}
   50%  {background-color: #b7b7b7;}
   100%   {background-color: #eaeaea;}
 }
+@-moz-keyframes eventhoverliodd {
+  0%   {background-color: #eaeaea;}
+  50%  {background-color: #b7b7b7;}
+  100%   {background-color: #eaeaea;}
+}
+@-o-keyframes eventhoverliodd {
+  0%   {background-color: #eaeaea;}
+  50%  {background-color: #b7b7b7;}
+  100%   {background-color: #eaeaea;}
+}
+@keyframes eventhoverliodd {
+  0%   {background-color: #eaeaea;}
+  50%  {background-color: #b7b7b7;}
+  100%   {background-color: #eaeaea;}
+}
+
 .view-all-event .views-row-odd {
   background-color: #eaeaea;
   color: #464646;
 }
 .view-all-event .views-row-odd:hover {
-  animation: eventhoverliodd 1s linear 0s normal none infinite running;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: none;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+  -webkit-animation-name: eventhoverliodd;
+
+  -moz-animation-duration: 1s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-delay: 0s;
+  -moz-animation-direction: normal;
+  -moz-animation-fill-mode: none;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-play-state: running;
+  -moz-animation-name: eventhoverliodd;
+
+  -o-animation-duration: 1s;
+  -o-animation-timing-function: linear;
+  -o-animation-delay: 0s;
+  -o-animation-direction: normal;
+  -o-animation-fill-mode: none;
+  -o-animation-iteration-count: infinite;
+  -o-animation-play-state: running;
+  -o-animation-name: eventhoverliodd;
+
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-name: eventhoverliodd;
 }
 
-@keyframes eventhoverlieven {
-  0%   {background-color: #2a2a2a;}
-  50%  {background-color: #5b5b5b;}
-  100%   {background-color: #2a2a2a;}
-}
 @-webkit-keyframes eventhoverlieven {
   0%   {background-color: #2a2a2a;}
   50%  {background-color: #5b5b5b;}
   100%   {background-color: #2a2a2a;}
 }
+@-moz-keyframes eventhoverlieven {
+  0%   {background-color: #2a2a2a;}
+  50%  {background-color: #5b5b5b;}
+  100%   {background-color: #2a2a2a;}
+}
+@-o-keyframes eventhoverlieven {
+  0%   {background-color: #2a2a2a;}
+  50%  {background-color: #5b5b5b;}
+  100%   {background-color: #2a2a2a;}
+}
+@keyframes eventhoverlieven {
+  0%   {background-color: #2a2a2a;}
+  50%  {background-color: #5b5b5b;}
+  100%   {background-color: #2a2a2a;}
+}
+
 .view-all-event .views-row-even {
   background-color: #2a2a2a;
   color: #ffffff;
 }
 .view-all-event .views-row-even:hover {
-  animation: eventhoverlieven 1s linear 0s normal none infinite running;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: none;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+  -webkit-animation-name: eventhoverlieven;
+
+  -moz-animation-duration: 1s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-delay: 0s;
+  -moz-animation-direction: normal;
+  -moz-animation-fill-mode: none;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-play-state: running;
+  -moz-animation-name: eventhoverlieven;
+
+  -o-animation-duration: 1s;
+  -o-animation-timing-function: linear;
+  -o-animation-delay: 0s;
+  -o-animation-direction: normal;
+  -o-animation-fill-mode: none;
+  -o-animation-iteration-count: infinite;
+  -o-animation-play-state: running;
+  -o-animation-name: eventhoverlieven;
+
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-name: eventhoverlieven;
 }
 .view-all-event .views-field-field-image {
   display: table-cell;
@@ -1028,6 +1173,7 @@ section.pane-page-title {
 /*@end*/
 
 /* Colorbox default style change. */
+#cboxWrapper,
 #cboxMiddleLeft,
 #cboxMiddleRight,
 #cboxTopCenter,
@@ -1045,15 +1191,15 @@ section.pane-page-title {
 }
 #cboxClose,
 #cboxClose:hover {
-  background: url(../images/colorbox_controls.png) transparent no-repeat -36px 5px;
+  background: url(../images/colorbox_controls_medium.png) transparent no-repeat -70px 0px;
 }
 #cboxPrevious,
 #cboxPrevious:hover {
-  background: url(../images/colorbox_controls.png) transparent no-repeat 0 5px;
+  background: url(../images/colorbox_controls_medium.png) transparent no-repeat 0 0;
 }
 #cboxNext,
 #cboxNext:hover {
-  background: url(../images/colorbox_controls.png) transparent no-repeat -15px 5px;
+  background: url(../images/colorbox_controls_medium.png) transparent no-repeat -32px 0px;
 }
 #cboxCurrent {
   color: #262626;
@@ -1064,6 +1210,24 @@ section.pane-page-title {
 }
 .resizable-textarea .grippie {
   display: none;
+}
+@media (max-width: 700px) {
+  #cboxCurrent {
+    font-size: 18px;
+  }
+  #cboxClose,
+  #cboxClose:hover {
+    background: url(../images/colorbox_controls_big.png) transparent no-repeat -128px -13px;
+  }
+  #cboxPrevious,
+  #cboxPrevious:hover {
+    background: url(../images/colorbox_controls_big.png) transparent no-repeat 0 -13px;
+  }
+  #cboxNext,
+  #cboxNext:hover {
+    background: url(../images/colorbox_controls_big.png) transparent no-repeat -70px -13px;
+    margin-left: 30px;
+  }
 }
 /*@end*/
 
@@ -1267,15 +1431,6 @@ div .item-list ul {
   margin: 0 5px 0 5px;
 }
 
-@keyframes projecthoverli {
-  0%   {background-color: #ffffff;}
-  10%   {background-color: #ffff00;}
-  30%  {background-color: #ff7200;}
-  50% {background-color: #ff0000;}
-  70%  {background-color: #ff7200;}
-  90%   {background-color: #ffff00;}
-  100%   {background-color: #ffffff;}
-}
 @-webkit-keyframes projecthoverli {
   0%   {background-color: #ffffff;}
   10%   {background-color: #ffff00;}
@@ -1285,20 +1440,83 @@ div .item-list ul {
   90%   {background-color: #ffff00;}
   100%   {background-color: #ffffff;}
 }
+@-moz-keyframes projecthoverli {
+  0%   {background-color: #ffffff;}
+  10%   {background-color: #ffff00;}
+  30%  {background-color: #ff7200;}
+  50% {background-color: #ff0000;}
+  70%  {background-color: #ff7200;}
+  90%   {background-color: #ffff00;}
+  100%   {background-color: #ffffff;}
+}
+@-o-keyframes projecthoverli {
+  0%   {background-color: #ffffff;}
+  10%   {background-color: #ffff00;}
+  30%  {background-color: #ff7200;}
+  50% {background-color: #ff0000;}
+  70%  {background-color: #ff7200;}
+  90%   {background-color: #ffff00;}
+  100%   {background-color: #ffffff;}
+}
+@keyframes projecthoverli {
+  0%   {background-color: #ffffff;}
+  10%   {background-color: #ffff00;}
+  30%  {background-color: #ff7200;}
+  50% {background-color: #ff0000;}
+  70%  {background-color: #ff7200;}
+  90%   {background-color: #ffff00;}
+  100%   {background-color: #ffffff;}
+}
+
 .page-projects .view-projects .project-field .image-project a {
   display: block;
   line-height: 0;
   background: url("../images/fullscreen-dark.png") 50% 50% no-repeat;
 }
 .page-projects .view-projects li:hover {
-  animation: projecthoverli 5s linear 0s normal none infinite running;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: none;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+  -webkit-animation-name: projecthoverli;
+
+  -moz-animation-duration: 5s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-delay: 0s;
+  -moz-animation-direction: normal;
+  -moz-animation-fill-mode: none;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-play-state: running;
+  -moz-animation-name: projecthoverli;
+
+  -o-animation-duration: 5s;
+  -o-animation-timing-function: linear;
+  -o-animation-delay: 0s;
+  -o-animation-direction: normal;
+  -o-animation-fill-mode: none;
+  -o-animation-iteration-count: infinite;
+  -o-animation-play-state: running;
+  -o-animation-name: projecthoverli;
+
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-name: projecthoverli;
 }
 .page-projects .view-projects li:hover .views-field-title h2 {
   color: #2a2a2a;
 }
-.page-projects .view-projects li:hover  .image-project img {
-  -webkit-filter: opacity(0.1);
-  filter: opacity(0.1);
+.page-projects .view-projects li:hover .image-project img {
+  opacity: 0.1;
+  filter: alpha(opacity: 10);
+;
 }
 /*project colorbox*/
 .page-projects #cboxLoadedContent {
@@ -1437,37 +1655,37 @@ div .item-list ul {
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
   filter: grayscale(100%);
-  -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%);
-  -ms-filter: grayscale(100%); -o-filter: grayscale(100%);
-  filter: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale');
-  filter: gray;
-  -webkit-filter: grayscale(1);
 }
 
 .page-vacancies .pane-ipg-common-three-articles img:hover {
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
   -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: grayscale(0%);
 }
 /* Frontpage css slideshow */
 .front .grid-display .deck-5 .column {
   margin-top: 15px;
 }
-@keyframes frontslider {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -50%;
-  }
-}
 @-webkit-keyframes frontslider {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -50%;
-  }
+  0% {left: 0;}
+  100% {left: -50%;}
+}
+@-moz-keyframes frontslider {
+  0% {left: 0;}
+  100% {left: -50%;}
+}
+@-o-keyframes frontslider {
+  0% {left: 0;}
+  100% {left: -50%;}
+}
+@keyframes frontslider {
+  0% {left: 0;}
+  100% {left: -50%;}
 }
 
 .l-region--promo {
@@ -1482,7 +1700,42 @@ div .item-list ul {
   position: relative;
 }
 .view-front-page-slideshow div .item-list ul {
-  animation: frontslider 50s linear 0s normal none infinite running;
+  -webkit-animation-duration: 50s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: none;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+  -webkit-animation-name: frontslider;
+
+  -moz-animation-duration: 50s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-delay: 0s;
+  -moz-animation-direction: normal;
+  -moz-animation-fill-mode: none;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-play-state: running;
+  -moz-animation-name: frontslider;
+
+  -o-animation-duration: 50s;
+  -o-animation-timing-function: linear;
+  -o-animation-delay: 0s;
+  -o-animation-direction: normal;
+  -o-animation-fill-mode: none;
+  -o-animation-iteration-count: infinite;
+  -o-animation-play-state: running;
+  -o-animation-name: frontslider;
+
+  animation-duration: 50s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-name: frontslider;
+
   display: block;
   font-size: 0;
   list-style: none;
@@ -1493,4 +1746,69 @@ div .item-list ul {
 }
 .view-front-page-slideshow div .item-list ul li {
   display: inline-block;
+}
+
+/* integer numbers animations */
+@-webkit-keyframes nrcolor {
+  0% {color: yellow;}
+  100% {color: #ff0000;}
+}
+@-moz-keyframes nrcolor {
+  0% {color: yellow;}
+  100% {color: #ff0000;}
+}
+@-o-keyframes nrcolor {
+  0% {color: yellow;}
+  100% {color: #ff0000;}
+}
+@keyframes nrcolor {
+  0% {color: yellow;}
+  100% {color: #ff0000;}
+}
+
+.integer-number {
+  -webkit-animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-direction: normal;
+  -webkit-animation-fill-mode: none;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-play-state: running;
+  -webkit-animation-name: nrcolor;
+
+  -moz-animation-duration: 3s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-delay: 0s;
+  -moz-animation-direction: normal;
+  -moz-animation-fill-mode: none;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-play-state: running;
+  -moz-animation-name: nrcolor;
+
+  -o-animation-duration: 3s;
+  -o-animation-timing-function: linear;
+  -o-animation-delay: 0s;
+  -o-animation-direction: normal;
+  -o-animation-fill-mode: none;
+  -o-animation-iteration-count: 1;
+  -o-animation-play-state: running;
+  -o-animation-name: nrcolor;
+
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+  animation-name: nrcolor;
+
+  color: #ff0000;
+  font-size: 20px;
+}
+.integer-number-detail {
+  color: #ff0000;
+  display: none;
+  font-size: 20px;
+  font-weight: bold;
 }

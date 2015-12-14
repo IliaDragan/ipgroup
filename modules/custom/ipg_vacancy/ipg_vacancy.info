@@ -1,0 +1,7 @@
+name = IPGroup Vacancy
+description = Creates vacancy feedback form.
+core = 7.x
+package = IPGroup
+
+dependencies[] = mimemail
+dependencies[] = panels

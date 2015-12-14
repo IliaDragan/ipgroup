@@ -20,14 +20,16 @@ Drupal.behaviors.resizeNavOnScroll = {
   attach: function (context, settings) {
     var $window = jQuery(window, context);
     var $header = jQuery('header', context);
+    $header.clone().addClass('header--2').appendTo('body');
+    var $fixedHeader = jQuery('header.header--2', context);
     var width = $window.width();
     if ( width > 700) {
       $window.bind('scroll', function() {
         if ($window.scrollTop() != 0) {
-          $header.addClass('fixed');
+          $fixedHeader.addClass('fixed');
         }
         else {
-          $header.removeClass('fixed').removeAttr('class');
+          $fixedHeader.removeClass('fixed');
         }
       });
     }
@@ -45,6 +47,28 @@ Drupal.behaviors.slideToRight = {
         $imgohidden.animate({width: 'toggle'}, 500);
       });
     }
+  }
+}
+
+Drupal.behaviors.numbersGrowUp = {
+  attach: function (context, settings) {
+    var $number = jQuery('span.integer-number', context);
+
+    $number.each(function() {
+      var $this = jQuery(this);
+      var currentNumber = parseInt($this.html());
+      jQuery({numberValue: 0}).animate({numberValue: currentNumber}, {
+        duration: 3000,
+        easing: 'linear',
+        step: function () {
+          $this.html(Math.ceil(this.numberValue));
+        },
+        complete: function () {
+          $this.css("font-weight", "bold");
+          jQuery('span.integer-number-detail', context).show(1000);
+        }
+      });
+    });
   }
 }
 

@@ -1,0 +1,34 @@
+<?php
+/**
+ * @file
+ * Provide custom IPGroup New Year site behaviors and hooks implementations.
+ */
+
+/**
+ * Implements hook_init().
+ */
+function ipg_new_year_init() {
+  if (drupal_is_front_page()) {
+    $path = drupal_get_path('module', 'ipg_new_year');
+    $js_settings = array(
+      'nyStar' => '<div id="ny-star-unclicked"><img src="/'.$path.'/img/star.png" /></div>',
+      'nyContent' => theme('ipg_new_year_content', array('path' => $path)),
+    );
+    drupal_add_js($js_settings, 'setting');
+    drupal_add_js($path . '/js/ipg_new_year.js');
+    drupal_add_css($path . '/css/ipg_new_year.css');
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ipg_new_year_theme() {
+  return array(
+    'ipg_new_year_content' => array(
+      'variables' => array('path' => NULL),
+      'path' => drupal_get_path('module', 'ipg_new_year') . '/templates',
+      'template' => 'ipg-new-year-content',
+    ),
+  );
+}
