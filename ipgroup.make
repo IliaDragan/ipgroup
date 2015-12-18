@@ -112,6 +112,9 @@ projects[rabbit_hole][subdir] = "contrib"
 projects[references][version] = "2.1"
 projects[references][subdir] = "contrib"
 
+projects[responsive_imagemaps][version] = "1.1"
+projects[responsive_imagemaps][subdir] = "contrib"
+
 projects[responsive_menus][version] = "1.5"
 projects[responsive_menus][subdir] = "contrib"
 projects[responsive_menus][patch][] = "http://drupal.org/files/issues/responsive_menus-jquery-version-verification-2174553-4-D7.patch"
@@ -178,3 +181,8 @@ libraries[owl-carousel][destination]    = "libraries"
 libraries[owl-carousel][directory_name] = "owl-carousel"
 libraries[owl-carousel][download][type] = "get"
 libraries[owl-carousel][download][url]  = "http://owlgraphic.com/owlcarousel/owl.carousel.zip"
+
+libraries[responsive-imagemaps][destination]    = "libraries"
+libraries[responsive-imagemaps][directory_name] = "responsive-imagemaps"
+libraries[responsive-imagemaps][download][type] = "get"
+libraries[responsive-imagemaps][download][url]  = "http://github.com/stowball/jQuery-rwdImageMaps/archive/master.zip"
