@@ -114,6 +114,8 @@ projects[references][subdir] = "contrib"
 
 projects[responsive_imagemaps][version] = "1.1"
 projects[responsive_imagemaps][subdir] = "contrib"
+; Use drupal behaviors in javascript.
+projects[responsive_imagemaps][patch][] = "http://drupal.org/files/issues/responsive_imagemaps-drupal_behaviors-2506677-1.patch"
 
 projects[responsive_menus][version] = "1.5"
 projects[responsive_menus][subdir] = "contrib"
