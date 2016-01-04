@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function ipg_imagemap_schema() {
+  $schema['ipg_imagemap'] = array(
+    'description' => 'Stores data for image maps.',
+    'fields' => array(
+      'mid' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key: Unique map ID.',
+      ),
+      'fid' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+        'description' => 'Primary Key: File ID that contains map.',
+      ),
+      'language' => array(
+        'type' => 'varchar',
+        'length' => 12,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => "Language code",
+      ),
+      'coordinates' => array(
+        'type' => 'text',
+        'not null' => TRUE,
+        'description' => 'The map area coordinates.',
+      ),
+    ),
+    'primary key' => array('mid', 'fid'),
+  );
+
+  return $schema;
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function ipg_imagemap_uninstall() {
+  variable_del('ipg_imagemap_fields');
+}

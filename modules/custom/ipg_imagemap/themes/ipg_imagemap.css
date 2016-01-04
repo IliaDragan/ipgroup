@@ -1,0 +1,41 @@
+/* edit imagemaps */
+.image-imagemap-edit {
+  clear: both;
+}
+.image-imagemap-img {
+  float: left;
+}
+.image-imagemap-form {
+  display: none;
+}
+.image-imagemap-data {
+  float: left;
+  border: 1px solid #ccc;
+  width: 200px;
+  margin-left: 10px;
+  background-color: #eee;
+  padding: 7px;
+}
+.image-imagemap-data label {
+  font-size: 10px;
+  font-weight: normal;
+}
+.image-imagemap-data input {
+  width: 100%;
+  box-sizing: border-box;
+}
+.image-imagemap-data-item {
+  padding: 3px;
+  border: 1px solid #ddd;
+  margin-bottom: 3px;
+}
+.img-imagemap-data-title {
+  cursor: pointer;
+}
+
+img[usemap] {
+  height: auto;
+  max-width: 100%;
+  width: auto;
+}
+

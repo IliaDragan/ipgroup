@@ -1,0 +1,6 @@
+name = IPG imagemaps
+description = Module allows you to mark the different areas of the image by text labels.
+core = 7.x
+
+dependencies[] = image
+dependencies[] = responsive_imagemaps

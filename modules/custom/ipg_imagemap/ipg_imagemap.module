@@ -1,0 +1,280 @@
+<?php
+
+include_once 'includes/ipg_imagemap.db.inc';
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function ipg_imagemap_form_field_ui_field_edit_form_alter(&$form, &$form_state) {
+  if ($form['#field']['type'] == 'image') {
+    $imagemap_fields = variable_get('ipg_imagemap_fields', array());
+    $form['instance']['settings']['image_imagemap'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Use image map'),
+      '#weight' => 12,
+      '#default_value' => isset($imagemap_fields[$form['instance']['bundle']['#value']][$form['instance']['field_name']['#value']]) ? TRUE : FALSE,
+    );
+
+    $form['#submit'][] = 'ipg_imagemap_form_field_ui_submit';
+  }
+}
+
+/**
+ * Save field name with imagemaps.
+ */
+function ipg_imagemap_form_field_ui_submit($form, $form_state) {
+  $imagemap_fields = variable_get('ipg_imagemap_fields', array());
+  $content_type = $form_state['values']['instance']['bundle'];
+  $field_name = $form_state['values']['instance']['field_name'];
+
+  if ($form_state['values']['instance']['settings']['image_imagemap']) {
+    $imagemap_fields[$content_type][$field_name] = array(
+      'field' => $field_name,
+    );
+    variable_set('ipg_imagemap_fields', $imagemap_fields);
+  }
+  elseif (isset($imagemap_fields[$content_type][$field_name])) {
+    unset($imagemap_fields[$content_type][$field_name]);
+    variable_set('ipg_imagemap_fields', $imagemap_fields);
+  }
+}
+
+/**
+ * Implements hook_element_info_alter().
+ */
+function ipg_imagemap_element_info_alter(&$type) {
+  $type['managed_file']['#after_build'][] = 'ipg_imagemap_process_form_element';
+}
+
+/**
+ * After build function to process the imagemap widget on forms.
+ */
+function ipg_imagemap_process_form_element($element, &$form_state) {
+  if (!isset($element['#field_name'])) {
+    return $element;
+  }
+
+  $imagemap_fields = variable_get('ipg_imagemap_fields', array());
+  if (!isset($imagemap_fields[$element['#bundle']][$element['#field_name']]) || !$element['fid']['#value']) {
+    return $element;
+  }
+
+  $imagemap_data = '';
+  $exist_value = '';
+  $id = explode('-', $element['#id']);
+  $delta = array_pop($id);
+  $map_id = 'map-' . $element['#field_name'] . '-' . $delta;
+  $flag_value = isset($form_state['values'][$element['#field_name']][$element['#language']][$delta]['image_imagemap_flag']) ? $form_state['values'][$element['#field_name']][$element['#language']][$delta]['image_imagemap_flag'] : 'create';
+
+  if (isset($form_state['values'][$element['#field_name']][$element['#language']][$delta]['image_imagemap'])) {
+    $exist_imagemap = $form_state['values'][$element['#field_name']][$element['#language']][$delta]['image_hotspot'];
+  }
+  else {
+    $language = entity_language($element['#entity_type'], $element['#entity']);
+    $exist_imagemap = ipg_imagemap_db_get_coordinates_array($element['fid']['#value'], $language);
+  }
+  $map = '';
+  if (!empty($exist_imagemap)) {
+    $flag_value = 'update';
+    foreach ($exist_imagemap as $key => $map_area) {
+      $map .= '<area shape="poly" coords="' . $map_area['coordinates'] . '" href="#area' . $key . '" title="' . $map_area['description'] . '" alt="' . $map_area['title'] . '">';
+      $imagemap_data .= '<div class="image-imagemap-data-item">';
+      $imagemap_data .= '<div class="img-imagemap-data-title">' . $map_area['title'] . '</div>';
+      $imagemap_data .= '<div class="img-imagemap-data-wrapper">';
+      $imagemap_data .= '<label>' . t('Coordinates') . '</label><input type="text" class="img-imagemap-points" value="' . $map_area['coordinates'] . '" />';
+      $imagemap_data .= '<label>' . t('Title') . '</label><input type="text" class="img-imagemap-title" value="' . $map_area['title'] . '" />';
+      $imagemap_data .= '<label>' . t('Description') . '</label><input type="text" class="img-imagemap-descr" value="' . $map_area['description'] . '" />';
+      $imagemap_data .= '<button class="img-imagemap-remove">' . t('Remove') . '</button>';
+      $imagemap_data .= '</div></div>';
+    }
+  $map = '<map id="' . $map_id . '" name="' . $map_id . '">' . $map . '</map>';
+  }
+
+  $element['image_imagemap_flag'] = array(
+    '#type' => 'hidden',
+    '#value' => $flag_value,
+    '#id' => $element['#id'] . '-image_imagemap_flag',
+    '#name' => $element['#name'] . '[image_imagemap_flag]',
+    '#weight' => 10,
+  );
+
+  $element['image_imagemap'] = array(
+    '#type' => 'hidden',
+    '#value' => $exist_value,
+    '#id' => $element['#id'] . '-image_imagemap',
+    '#name' => $element['#name'] . '[image_imagemap]',
+    '#weight' => 10,
+  );
+
+  $element['image_imagemap']['#prefix'] = '<div class="image-imagemap-edit">';
+  $element['image_imagemap']['#prefix'] .= '<label>' . t('Add image map areas') . '</label>';
+  $element['image_imagemap']['#prefix'] .= '<div class="image-imagemap-img">' . ipg_imagemap_widget($element, $map, $map_id) . '</div>';
+  $element['image_imagemap']['#prefix'] .= '<div class="image-imagemap-coordinates">';
+
+  $element['image_imagemap']['#suffix'] = '</div>';
+  $element['image_imagemap']['#suffix'] .= '<div class="image-imagemap-data">' . $imagemap_data . '</div>';
+  $element['image_imagemap']['#suffix'] .= '<div class="image-imagemap-form">';
+  $element['image_imagemap']['#suffix'] .= '<div class="image-imagemap-inputs">';
+  $element['image_imagemap']['#suffix'] .= '<div class="image-imagemap-data-item">';
+  $element['image_imagemap']['#suffix'] .= '<div class="img-imagemap-data-title"></div>';
+  $element['image_imagemap']['#suffix'] .= '<div class="img-imagemap-data-wrapper">';
+  $element['image_imagemap']['#suffix'] .= '<label>' . t('Coordinates') . '</label><input type="text" class="img-imagemap-points" />';
+  $element['image_imagemap']['#suffix'] .= '<label>' . t('Title') . '</label><input type="text" class="img-imagemap-title" />';
+  $element['image_imagemap']['#suffix'] .= '<label>' . t('Description') . '</label><input type="text" class="img-imagemap-descr" />';
+  $element['image_imagemap']['#suffix'] .= '<button class="img-imagemap-remove">' . t('Remove') . '</button>';
+  $element['image_imagemap']['#suffix'] .= '</div></div></div>';
+  $element['image_imagemap']['#suffix'] .= '<div class="image-imagemap-add"><button class="img-imagemap-add">' . t('Add') . '</button></div>';
+  $element['image_imagemap']['#suffix'] .= '<div class="image-imagemap-save"><button class="img-imagemap-save">' . t('Save') . '</button></div>';
+  $element['image_imagemap']['#suffix'] .= '</div></div>';
+
+  $form_state['ipg_imagemap_fields'][$element['#field_name']] = $element['#field_name'];
+
+  return $element;
+}
+
+/**
+ * Create a widget to create and manage map areas.
+ *
+ * @param $element
+ *   Form element of the image.
+ * @param $map
+ *   HTML of map with areas.
+ * @param $map_id
+ *   Id/name attribute of map tag.
+ */
+function ipg_imagemap_widget(&$element, $map, $map_id) {
+  $output = '';
+
+  if (isset($element['#file']->uri)) {
+    $image_vars = array(
+      'path' => $element['#file']->uri,
+      'attributes' => array(
+        'usemap' => '#' . $map_id,
+      ),
+    );
+
+    $output .= theme('image', $image_vars) . $map;
+
+    $module_path = drupal_get_path('module', 'ipg_imagemap');
+    $element['#attached'] = array(
+      'js' => array(
+        $module_path . '/themes/jquery.json-2.4.min.js',
+        $module_path . '/themes/ipg_imagemap.js',
+      ),
+      'css' => array(
+        $module_path . '/themes/ipg_imagemap.css',
+      )
+    );
+  }
+
+  return $output;
+}
+
+/**
+ * Implements hook_node_submit().
+ */
+function ipg_imagemap_node_submit($node, $form, &$form_state) {
+  if (isset($form_state['ipg_imagemap_fields'])) {
+    foreach ($form_state['ipg_imagemap_fields'] as $imagemap_field) {
+      $images = current($form_state['values'][$imagemap_field]);
+
+      foreach ($images as $image) {
+        if (!$image['fid']) {
+          continue;
+        }
+        $language = entity_language('node', $node);
+        if ($image['image_imagemap'] == '') {
+          ipg_imagemap_db_delete($image['fid'], $language);
+        }
+        elseif ($image['image_imagemap_flag'] == 'create') {
+          ipg_imagemap_db_save($image['fid'], $language, $image['image_imagemap']);
+        }
+        elseif ($image['image_imagemap_flag'] == 'update') {
+          ipg_imagemap_db_update($image['fid'], $language, $image['image_imagemap']);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_field_delete_instance().
+ */
+function ipg_imagemap_field_delete_instance($instance) {
+  $imagemap_fields = variable_get('ipg_imagemap_fields', array());
+
+  if (isset($imagemap_fields[$instance['bundle']]['field_name'])) {
+    unset($imagemap_fields[$instance['bundle']]['field_name']);
+    variable_set('ipg_imagemap_fields', $imagemap_fields);
+  }
+}
+
+/**
+ * Callback function that returns map coordinates and attributes for image.
+ *
+ * @param int $fid
+ *   Image file identifier.
+ * @param $language
+ *   Language code.
+ *
+ * @return array
+ *   Map coordinates and attributes for given image.
+ */
+function ipg_imagemap_db_get_coordinates_array($fid, $language) {
+  $result = ipg_imagemap_db_get_coordinates($fid, $language);
+  $data = array();
+  if (!empty($result[0]->coordinates)) {
+    $data = drupal_json_decode($result[0]->coordinates);
+  }
+  return $data;
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function ipg_imagemap_field_formatter_info() {
+  return array(
+    'imagemap' => array(
+      'label' => t('Image with map'),
+      'field types' => array('image'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function ipg_imagemap_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+  $lang = $entity->language;
+
+  if ($display['type'] == 'imagemap') {
+    foreach ($items as $delta => $item) {
+      $map_id = 'map-' . $field['field_name'] . '-' . $delta;
+      $fid = $item['fid'];
+      $coordinates = ipg_imagemap_db_get_coordinates_array($fid, $lang);
+      $map = '';
+      if (!empty($coordinates)) {
+        foreach ($coordinates as $key => $map_area) {
+          $area_href = "#$map_id-area-$key";
+          $map .= '<area shape="poly" coords="' . $map_area['coordinates'] . '" href="' . $area_href . '" title="' . $map_area['description'] . '" alt="' . $map_area['title'] . '">';
+        }
+        $map = '<map id="' . $map_id . '" name="' . $map_id . '">' . $map . '</map>';
+      }
+
+      $image_vars = array(
+        'path' => $item['uri'],
+        'attributes' => array(
+          'usemap' => '#' . $map_id,
+        ),
+      );
+
+      $element[$delta] = array('#markup' => '<div class="image-with-map">' . theme('image', $image_vars) . $map . '</div>');
+    }
+  }
+
+  $module_path = drupal_get_path('module', 'ipg_imagemap');
+  drupal_add_css($module_path . '/themes/ipg_imagemap.css');
+
+  return $element;
+}
