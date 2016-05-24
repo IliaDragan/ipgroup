@@ -6,19 +6,19 @@ api = 2
 projects[admin_menu][version] = "3.0-rc5"
 projects[admin_menu][subdir] = "contrib"
 
-projects[addressfield][version] = "1.1"
+projects[addressfield][version] = "1.2"
 projects[addressfield][subdir] = "contrib"
 
 projects[better_exposed_filters][version] = "3.2"
 projects[better_exposed_filters][subdir] = "contrib"
 
-projects[ckeditor_link][version] = "2.3"
+projects[ckeditor_link][version] = "2.4"
 projects[ckeditor_link][subdir] = "contrib"
 
 projects[ctools][version] = "1.9"
 projects[ctools][subdir] = "contrib"
 
-projects[colorbox][version] = "2.9"
+projects[colorbox][version] = "2.10"
 projects[colorbox][subdir] = "contrib"
 
 projects[date][version] = "2.9"
@@ -30,19 +30,19 @@ projects[devel][subdir] = "contrib"
 projects[diff][version] = "3.2"
 projects[diff][subdir] = "contrib"
 
-projects[entity_translation][version] = "1.0-beta4"
+projects[entity_translation][version] = "1.0-beta5"
 projects[entity_translation][subdir] = "contrib"
 
-projects[features][version] = "2.6"
+projects[features][version] = "2.10"
 projects[features][subdir] = "contrib"
 
 projects[features_extra][version] = "1.0"
 projects[features_extra][subdir] = "contrib"
 
-projects[field_group][version] = "1.4"
+projects[field_group][version] = "1.5"
 projects[field_group][subdir] = "contrib"
 
-projects[geocoder][version] = "1.2"
+projects[geocoder][version] = "1.3"
 projects[geocoder][subdir] = "contrib"
 
 projects[geofield][version] = "2.3"
@@ -54,25 +54,31 @@ projects[geophp][subdir] = "contrib"
 projects[google_analytics][version] = "2.1"
 projects[google_analytics][subdir] = "contrib"
 
+projects[i18n][version] = "1.13"
+projects[i18n][subdir] = "contrib"
+
+projects[imce][version] = "1.10"
+projects[imce][subdir] = "contrib"
+
+projects[imce_wysiwyg][version] = "1.0"
+projects[imce_wysiwyg][subdir] = "contrib"
+
 projects[jcarousel][version] = "2.7"
 projects[jcarousel][subdir] = "contrib"
 
-projects[jquery_update][version] = "3.0-alpha2"
+projects[jquery_update][version] = "3.0-alpha3"
 projects[jquery_update][subdir] = "contrib"
-
-projects[i18n][version] = "1.13"
-projects[i18n][subdir] = "contrib"
 
 projects[languageicons][version] = "1.1"
 projects[languageicons][subdir] = "contrib"
 
-projects[leaflet][version] = "1.1"
+projects[leaflet][version] = "1.3"
 projects[leaflet][subdir] = "contrib"
 
-projects[libraries][version] = "2.2"
+projects[libraries][version] = "2.3"
 projects[libraries][subdir] = "contrib"
 
-projects[link][version] = "1.3"
+projects[link][version] = "1.4"
 projects[link][subdir] = "contrib"
 
 projects[mailsystem][version] = "2.34"
@@ -99,10 +105,10 @@ projects[navigation404][subdir] = "contrib"
 projects[panels][version] = "3.5"
 projects[panels][subdir] = "contrib"
 
-projects[pathauto][version] = "1.2"
+projects[pathauto][version] = "1.3"
 projects[pathauto][subdir] = "contrib"
 
-projects[owlcarousel][version] = "1.4"
+projects[owlcarousel][version] = "1.6"
 projects[owlcarousel][subdir] = "contrib"
 projects[owlcarousel][patch][] = "http://am.storage.dev.inlead.dk/owlcarousel-fixed_libraries_owlcarousel_path.patch"
 
@@ -128,7 +134,7 @@ projects[variable][subdir] = "contrib"
 projects[view_profiles_perms][version] = "1.0"
 projects[view_profiles_perms][subdir] = "contrib"
 
-projects[views][version] = "3.11"
+projects[views][version] = "3.13"
 projects[views][subdir] = "contrib"
 
 projects[views_infinite_scroll][version] = "1.1"
@@ -137,17 +143,11 @@ projects[views_infinite_scroll][subdir] = "contrib"
 projects[views_slideshow][version] = "3.1"
 projects[views_slideshow][subdir] = "contrib"
 
-projects[wysiwyg_template][version] = "2.11"
+projects[wysiwyg_template][version] = "2.12"
 projects[wysiwyg_template][subdir] = "contrib"
 
 projects[wysiwyg][version] = "2.2"
 projects[wysiwyg][subdir] = "contrib"
-
-projects[imce_wysiwyg][version] = "1.0"
-projects[imce_wysiwyg][subdir] = "contrib"
-
-projects[imce][version] = "1.9"
-projects[imce][subdir] = "contrib"
 
 ;Themes
 projects[omega][type] = "theme"
